@@ -63,6 +63,8 @@ Client/GameOff/crashlytics-build.properties
 Client/GameOff/UserSettings/Layouts/default-2021.dwlt
 
 # Unity---------------------------------------------------------------------------
+
+# Wwise files
 *.validationcache
 *.akd
 Client/GameOff/GameOff_WwiseProject/.cache/
