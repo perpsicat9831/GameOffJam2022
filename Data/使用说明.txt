@@ -1,0 +1,9 @@
+Excels文件夹内新建表格
+将对应表格配置填写到__tables__.xlsx 内
+
+自动生成需要.net SDK 6.0.0 x64 环境
+https://dotnet.microsoft.com/download/dotnet/6.0
+
+运行Client.bat
+显示== succ == 
+即为打表完成
