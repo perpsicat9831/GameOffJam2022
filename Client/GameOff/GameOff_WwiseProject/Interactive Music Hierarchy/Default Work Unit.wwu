@@ -3,7 +3,6 @@
 	<InteractiveMusic>
 		<WorkUnit Name="Default Work Unit" ID="{EB1C20CB-8F68-4BAC-B43C-E5726DB48E3C}" PersistMode="Standalone">
 			<ChildrenList>
-				<WorkUnit Name="Music_Main" ID="{88AA5FC4-8EE0-44DD-810C-0218BEC8AD7E}" PersistMode="Reference"/>
 				<MusicPlaylistContainer Name="mus_test" ID="{7A791E96-C6F4-4CEA-8026-08A1FC0C2A80}" ShortID="510675452">
 					<ReferenceList>
 						<Reference Name="Conversion">

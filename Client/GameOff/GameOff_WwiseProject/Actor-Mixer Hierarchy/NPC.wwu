@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{4C0E4DEE-ED68-4AF4-92E3-B0B9D6112345}" SchemaVersion="103">
+	<AudioObjects>
+		<WorkUnit Name="NPC" ID="{4C0E4DEE-ED68-4AF4-92E3-B0B9D6112345}" PersistMode="Standalone">
+			<ChildrenList>
+				<ActorMixer Name="NPC" ID="{5BD73698-B3BD-4635-AB5B-01408FEC60B1}" ShortID="379748434">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E1BE0BEA-3F5B-4A86-8597-3688E3CF6288}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="NPC" ID="{A18E9599-A6B9-4BE6-B5C5-9C738397747D}" WorkUnitID="{881B6AFD-C15B-45D7-9A90-5260F7D4E557}"/>
+						</Reference>
+					</ReferenceList>
+					<ObjectLists/>
+				</ActorMixer>
+			</ChildrenList>
+		</WorkUnit>
+	</AudioObjects>
+</WwiseDocument>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{E61C4380-5B3B-491B-A6B6-8EC8F3A76D87}" SchemaVersion="103">
+	<Events>
+		<WorkUnit Name="NPC" ID="{E61C4380-5B3B-491B-A6B6-8EC8F3A76D87}" PersistMode="Standalone"/>
+	</Events>
+</WwiseDocument>
