@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86f06b9fdfbdd2f40a7d03c75f57f1c7, type: 3}
+  m_Name: WwisePathSettings
+  m_EditorClassIdentifier: 
+  CurrentPlugin: 1
+  LoadBankFromWwiseProjectFolder: 1
+  SeparateBankPlatforms: 0
+  CopyBanksWhenBuild: 1
+  ExcludeDLCBanks: 1
+  GizmosSphereColor: 1
+  GizmosIconScaling: 1
+  WaapiPort: 8080
+  WwiseProjectFilePath: ../GameOff_WwiseProject/GameOff_WwiseProject.wproj
+  _editorBankLoadPath: 
+  AudioPackagePath: 
+  WwisePluginsPath: Wwise/API/Runtime/Plugins
+  StartScenePath: ResourseAB/Scenes/GameStart.unity
