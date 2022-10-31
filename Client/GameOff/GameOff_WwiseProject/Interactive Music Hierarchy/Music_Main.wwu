@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{88AA5FC4-8EE0-44DD-810C-0218BEC8AD7E}" SchemaVersion="103" RootDocumentID="{EB1C20CB-8F68-4BAC-B43C-E5726DB48E3C}" ParentDocumentID="{EB1C20CB-8F68-4BAC-B43C-E5726DB48E3C}">
+	<InteractiveMusic>
+		<WorkUnit Name="Music_Main" ID="{88AA5FC4-8EE0-44DD-810C-0218BEC8AD7E}" OwnerID="{EB1C20CB-8F68-4BAC-B43C-E5726DB48E3C}" PersistMode="Nested"/>
+	</InteractiveMusic>
+</WwiseDocument>

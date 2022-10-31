@@ -66,7 +66,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 081c80301739f54fb5562f33bfa0f0d6
     GuidInternal: 
-    m_lastTime: -8585344050148459769
+    m_lastTime: -8585344018548326899
     List:
     - name: Player
       guid: 9a33dadb454b1447b2495ca1a390a5b2
@@ -96,6 +96,36 @@ MonoBehaviour:
     GuidInternal: 
     m_lastTime: -8585344063653248312
     List: []
+  - PhysicalPath: Events\Player.wwu
+    PathAndIcons:
+    - ElementName: Events
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Player
+      ObjectType: 12
+      guid: c72524b77b0b7d4a8e03f2574a7e1afa
+    ParentPath: Events\Player
+    guid: c72524b77b0b7d4a8e03f2574a7e1afa
+    GuidInternal: 
+    m_lastTime: -8585344018099577912
+    List:
+    - name: test_music
+      guid: 2669daf7d70ffd4e81a0cc318aab88c3
+      id: 379521629
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Player
+        ObjectType: 12
+        guid: c72524b77b0b7d4a8e03f2574a7e1afa
+      - ElementName: test_music
+        ObjectType: 3
+        guid: 2669daf7d70ffd4e81a0cc318aab88c3
+      Path: Events\Player\test_music
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     PathAndIcons:
@@ -152,7 +182,7 @@ MonoBehaviour:
     GuidInternal: 
     m_lastTime: -8585344063652919192
     List: []
-  ExpandedFileSystemItemIds: 
+  ExpandedFileSystemItemIds: 0200000004000000
   ExpandedWaapiItemIds: 
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
