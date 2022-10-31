@@ -19,6 +19,18 @@ MonoBehaviour:
   - idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: 1f2b9dfb2c13fbe4ba153ac236a5d28c, type: 2}
+  - idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: c413b531e8b6dcb47ae930f55602fbe3, type: 2}
+  - idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 439f8ecc75d1c6740b5693c3830cd2dd, type: 2}
+  - idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 33ced6c169b6a964bbdafe7a529d047d, type: 2}
+  - idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 02cbac032afe80945b75b9b03c61bb0b, type: 2}
   PostEvents: 0
   AudioEvents: []
   SetStates: 0

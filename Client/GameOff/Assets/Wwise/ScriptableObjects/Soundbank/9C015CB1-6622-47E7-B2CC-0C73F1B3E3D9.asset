@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5972badd910c29443bdb1bf15e445ded, type: 3}
+  m_Name: 9C015CB1-6622-47E7-B2CC-0C73F1B3E3D9
+  m_EditorClassIdentifier: 
+  objectName: Interface
+  id: 1088520938
+  guid: 9C015CB1-6622-47E7-B2CC-0C73F1B3E3D9
