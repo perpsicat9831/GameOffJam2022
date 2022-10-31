@@ -63,11 +63,8 @@ Client/GameOff/crashlytics-build.properties
 Client/GameOff/UserSettings/Layouts/default-2021.dwlt
 
 # Unity---------------------------------------------------------------------------
+
+# Wwise files
 *.validationcache
 *.akd
-GameOff/GameOff_WwiseProject/.cache/
-Client/GameOff/GameOff_WwiseProject/.cache/Mac/SFX/Music/test/DECISIVE BATTLE_D79FB2B7.wem
-Client/GameOff/GameOff_WwiseProject/.cache/Mac/SFX/Music/test/Wwise.dat
-Client/GameOff/GameOff_WwiseProject/.cache/SoundBankInfoCache.dat
-Client/GameOff/GameOff_WwiseProject/.cache/Windows/SFX/Music/test/DECISIVE BATTLE_D79FB2B7.wem
-Client/GameOff/GameOff_WwiseProject/.cache/Windows/SFX/Music/test/Wwise.dat
+Client/GameOff/GameOff_WwiseProject/.cache/
