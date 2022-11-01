@@ -1,4 +1,4 @@
-using System;
+ï»¿using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.IO;
@@ -19,7 +19,7 @@ namespace Framework
     public class Tool
     {
         private static readonly Dictionary<string, Shader> CacheShaders = new Dictionary<string, Shader>();
-        // Shader.FindÊÇÒ»¸ö·Ç³£ÏûºÄµÄº¯Êı£¬Òò´Ë¾¡Á¿»º´æÆğÀ´
+        // Shader.Findæ˜¯ä¸€ä¸ªéå¸¸æ¶ˆè€—çš„å‡½æ•°ï¼Œå› æ­¤å°½é‡ç¼“å­˜èµ·æ¥
 
         /// <summary>
         /// Whether In Wifi or Cable Network
@@ -32,7 +32,7 @@ namespace Framework
 
 
         /// <summary>
-        /// »ñÈ¡×î½üµÄ2´Î·½
+        /// è·å–æœ€è¿‘çš„2æ¬¡æ–¹
         /// </summary>
         /// <param name="num"></param>
         /// <returns></returns>
@@ -42,7 +42,7 @@ namespace Framework
         }
 
         /// <summary>
-        /// ÅĞ¶ÏÒ»¸öÊıÊÇ·ñ2µÄ´Î·½
+        /// åˆ¤æ–­ä¸€ä¸ªæ•°æ˜¯å¦2çš„æ¬¡æ–¹
         /// </summary>
         /// <param name="num"></param>
         /// <returns></returns>
@@ -60,7 +60,7 @@ namespace Framework
         }
 
         /// <summary>
-        /// Ä£·Â NGUISelectionToolµÄÍ¬Ãû·½·¨£¬½«Î»ÖÃĞı×ªËõ·ÅÇåÁã
+        /// æ¨¡ä»¿ NGUISelectionToolçš„åŒåæ–¹æ³•ï¼Œå°†ä½ç½®æ—‹è½¬ç¼©æ”¾æ¸…é›¶
         /// </summary>
         /// <param name="t"></param>
         public static void ResetLocalTransform(Transform t)
@@ -70,7 +70,7 @@ namespace Framework
             t.localScale = Vector3.one;
         }
 
-        // ×î´ó¹«Ô¼Êı
+        // æœ€å¤§å…¬çº¦æ•°
         public static int GetGCD(int a, int b)
         {
             if (a < b)
@@ -118,7 +118,7 @@ namespace Framework
 
 
         /// <summary>
-        /// Çå³ıÒ»¸öGameObjectÏÂÃæËùÓĞµÄº¢×Ó
+        /// æ¸…é™¤ä¸€ä¸ªGameObjectä¸‹é¢æ‰€æœ‰çš„å­©å­
         /// </summary>
         /// <param name="go"></param>
         public static void DestroyGameObjectChildren(GameObject go)
@@ -131,20 +131,20 @@ namespace Framework
 
                 if (Application.isEditor && !Application.isPlaying)
                 {
-                    child.parent = null; // Çå¿Õ¸¸, ÒòÎª.Destroy·ÇÍ¬²½µÄ
+                    child.parent = null; // æ¸…ç©ºçˆ¶, å› ä¸º.DestroyéåŒæ­¥çš„
                     GameObject.DestroyImmediate(child.gameObject);
                 }
                 else
                 {
                     GameObject.Destroy(child.gameObject);
-                    // Ô¤·À´¥·¢¶ÔÏóµÄOnEnable£¬ÏÈDestroy
-                    child.parent = null; // Çå¿Õ¸¸, ÒòÎª.Destroy·ÇÍ¬²½µÄ
+                    // é¢„é˜²è§¦å‘å¯¹è±¡çš„OnEnableï¼Œå…ˆDestroy
+                    child.parent = null; // æ¸…ç©ºçˆ¶, å› ä¸º.DestroyéåŒæ­¥çš„
                 }
             }
         }
 
         /// <summary>
-        /// ×Öµä×ªµ½×Ö·û´®A:1|B:2|C:3ÕâÀà
+        /// å­—å…¸è½¬åˆ°å­—ç¬¦ä¸²A:1|B:2|C:3è¿™ç±»
         /// </summary>
         /// <typeparam name="T"></typeparam>
         /// <typeparam name="K"></typeparam>
@@ -163,13 +163,13 @@ namespace Framework
         }
 
         /// <summary>
-        /// A:1|B:2|C:3ÕâÀà×Ö·û´®×ª³É×Öµä
+        /// A:1|B:2|C:3è¿™ç±»å­—ç¬¦ä¸²è½¬æˆå­—å…¸
         /// </summary>
         /// <typeparam name="T">string</typeparam>
         /// <typeparam name="K">string</typeparam>
-        /// <param name="str">Ô­Ê¼×Ö·û´®</param>
-        /// <param name="delimeter1">·Ö¸ô·û1</param>
-        /// <param name="delimeter2">·Ö¸ô·û2</param>
+        /// <param name="str">åŸå§‹å­—ç¬¦ä¸²</param>
+        /// <param name="delimeter1">åˆ†éš”ç¬¦1</param>
+        /// <param name="delimeter2">åˆ†éš”ç¬¦2</param>
         /// <returns></returns>
         public static Dictionary<T, K> SplitToDict<T, K>(string str, char delimeter1 = '|', char delimeter2 = ':')
         {
@@ -201,7 +201,7 @@ namespace Framework
         }
 
         /// <summary>
-        /// ½Ø¶Ï×Ö·û´®±ä³ÉÊı×é
+        /// æˆªæ–­å­—ç¬¦ä¸²å˜æˆæ•°ç»„
         /// </summary>
         /// <typeparam name="T"></typeparam>
         /// <param name="str"></param>
@@ -211,7 +211,7 @@ namespace Framework
         {
             if (args.Length == 0)
             {
-                args = new[] { '|' }; // Ä¬ÈÏ
+                args = new[] { '|' }; // é»˜è®¤
             }
 
             var retList = new List<T>();
@@ -236,7 +236,7 @@ namespace Framework
         }
 
         /// <summary>
-        /// ´ÓÒ»¸öListÖĞËæ»ú»ñÈ¡
+        /// ä»ä¸€ä¸ªListä¸­éšæœºè·å–
         /// </summary>
         /// <typeparam name="T"></typeparam>
         /// <param name="list"></param>
@@ -250,7 +250,7 @@ namespace Framework
         }
 
         /// <summary>
-        /// ²¨ÀËËæ»úÊıÕûÊı°æ
+        /// æ³¢æµªéšæœºæ•°æ•´æ•°ç‰ˆ
         /// </summary>
         /// <param name="waveNumberStr"></param>
         /// <returns></returns>
@@ -260,9 +260,9 @@ namespace Framework
         }
 
         /// <summary>
-        /// »ñÈ¡²¨ÀËËæ»úÊı,   ¼´Ìî¡°1¡±»òÌî¡°1~2¡±ÕâÑùµÄ×Ö·û´®ÖĞ·µ»ØÒ»¸öÊı£¡
-        /// ÈçÌî"1"£¬Ö±½Ó·µ»Ø1
-        /// Èç¹ûÌî"1~10"ÕâÑùµÄ£¬ÄÇÃ´Ëæ»ú·µ»Ø1~10ÖĞ¼äÒ»¸öÊı
+        /// è·å–æ³¢æµªéšæœºæ•°,   å³å¡«â€œ1â€æˆ–å¡«â€œ1~2â€è¿™æ ·çš„å­—ç¬¦ä¸²ä¸­è¿”å›ä¸€ä¸ªæ•°ï¼
+        /// å¦‚å¡«"1"ï¼Œç›´æ¥è¿”å›1
+        /// å¦‚æœå¡«"1~10"è¿™æ ·çš„ï¼Œé‚£ä¹ˆéšæœºè¿”å›1~10ä¸­é—´ä¸€ä¸ªæ•°
         /// </summary>
         /// <param name="waveNumberStr"></param>
         /// <returns></returns>
@@ -288,7 +288,7 @@ namespace Framework
         }
 
         /// <summary>
-        /// »ñÈ¡²¨ÀËËæ»úÊıµÄ×î´ó×îĞ¡
+        /// è·å–æ³¢æµªéšæœºæ•°çš„æœ€å¤§æœ€å°
         /// </summary>
         /// <param name="str"></param>
         /// <returns></returns>
@@ -308,7 +308,7 @@ namespace Framework
         }
 
         /// <summary>
-        /// ÊÇ·ñÔÚ²¨ÀËÊıÖ®¼ä
+        /// æ˜¯å¦åœ¨æ³¢æµªæ•°ä¹‹é—´
         /// </summary>
         /// <param name="waveNumberStr"></param>
         /// <param name="testNumber"></param>
@@ -329,11 +329,11 @@ namespace Framework
         }
 
         /// <summary>
-        /// ÊÇ·ñ°üº¬ÔÚ¶ººÅÊı×éÄÚ
+        /// æ˜¯å¦åŒ…å«åœ¨é€—å·æ•°ç»„å†…
         /// </summary>
-        /// <param name="numberStr">Êı×é×Ö·û´®</param>
-        /// <param name="testValue">±»²âÊıÖµ</param>
-        /// <param name="sp">Êı×é·Ö¸ô·û</param>
+        /// <param name="numberStr">æ•°ç»„å­—ç¬¦ä¸²</param>
+        /// <param name="testValue">è¢«æµ‹æ•°å€¼</param>
+        /// <param name="sp">æ•°ç»„åˆ†éš”ç¬¦</param>
         /// <returns></returns>
         public static bool IsContains(string numberStr, string testValue, char sp = ',')
         {
@@ -352,7 +352,7 @@ namespace Framework
                 shader = Shader.Find(shaderName);
                 CacheShaders[shaderName] = shader;
                 if (shader == null)
-                    Log.Error("È±ÉÙShader£º{0}  £¬ ¼ì²éGraphics SettingsµÄÔ¤ÖÃshader", shaderName);
+                    Log.Error("ç¼ºå°‘Shaderï¼š{0}  ï¼Œ æ£€æŸ¥Graphics Settingsçš„é¢„ç½®shader", shaderName);
             }
 
             return shader;
@@ -385,17 +385,17 @@ namespace Framework
             return structObject;
         }
 
-        // ½«×Ö·û´®×ª³ÉÖ¸¶¨ÀàĞÍµÄÊı×é , µ¥Ôª²âÊÔÔÚTest_StrBytesToArray
+        // å°†å­—ç¬¦ä¸²è½¬æˆæŒ‡å®šç±»å‹çš„æ•°ç»„ , å•å…ƒæµ‹è¯•åœ¨Test_StrBytesToArray
         public static T[] StrBytesToArray<T>(string str, int arraySize)
         {
             int typeSize = Marshal.SizeOf(typeof(T));
             byte[] strBytes = Encoding.Unicode.GetBytes(str);
-            byte[] bytes = new byte[typeSize * arraySize]; // Ç¿ÖÆÊı×é´óĞ¡
+            byte[] bytes = new byte[typeSize * arraySize]; // å¼ºåˆ¶æ•°ç»„å¤§å°
 
             for (int k = 0; k < strBytes.Length; k++)
                 bytes[k] = strBytes[k]; // copy
 
-            T[] tArray = new T[bytes.Length / typeSize]; // ×Ü×Ö½Ú ³ıÒÔ ÀàĞÍ³¤¶È = ÓĞ¶àÉÙ¸öÀàĞÍ¶ÔÏó
+            T[] tArray = new T[bytes.Length / typeSize]; // æ€»å­—èŠ‚ é™¤ä»¥ ç±»å‹é•¿åº¦ = æœ‰å¤šå°‘ä¸ªç±»å‹å¯¹è±¡
 
             int offset = 0;
             for (int i = 0; i < tArray.Length; i++)
@@ -484,15 +484,15 @@ namespace Framework
         {
             TimeSpan ts = TimeSpan.FromSeconds(seconds);
             string timeStr = string.Format("{0}{1}{2}{3}",
-                ts.Days == 0 ? "" : ts.Days + "Ìì",
-                ts.Hours == 0 ? "" : ts.Hours + "Ğ¡Ê±",
-                ts.Minutes == 0 ? "" : ts.Minutes + "·ÖÖÓ",
-                ts.Seconds < 0 ? "0Ãë" : ts.Seconds + "Ãë");
+                ts.Days == 0 ? "" : ts.Days + "å¤©",
+                ts.Hours == 0 ? "" : ts.Hours + "å°æ—¶",
+                ts.Minutes == 0 ? "" : ts.Minutes + "åˆ†é’Ÿ",
+                ts.Seconds < 0 ? "0ç§’" : ts.Seconds + "ç§’");
 
             return timeStr;
         }
 
-        // Í¬Lua, Lib:GetUtcDay
+        // åŒLua, Lib:GetUtcDay
         public static int GetUtcDay()
         {
             DateTime origin = new DateTime(1970, 1, 1, 0, 0, 0, 0);
@@ -527,10 +527,10 @@ namespace Framework
         }
 
         /// <summary>
-        /// UtcºÁÃë×ªUtcÊ±¼ä
+        /// Utcæ¯«ç§’è½¬Utcæ—¶é—´
         /// </summary>
         /// <param name="utcTime"></param>
-        /// <param name="zone">Ä¬ÈÏ0Ê±Çø</param>
+        /// <param name="zone">é»˜è®¤0æ—¶åŒº</param>
         /// <returns></returns>
         public static DateTime GetDateTimeByUtcMilliseconds(long utcTime, int zone = 0)
         {
@@ -539,10 +539,10 @@ namespace Framework
         }
 
         /// <summary>
-        /// UtcÃë×ªUtcÊ±¼ä
+        /// Utcç§’è½¬Utcæ—¶é—´
         /// </summary>
         /// <param name="unixTimeStamp"></param>
-        /// <param name="zone">Ä¬ÈÏ0Ê±Çø</param>
+        /// <param name="zone">é»˜è®¤0æ—¶åŒº</param>
         /// <returns></returns>
         public static DateTime GetDateTimeByUtcSeconds(double unixTimeStamp, int zone = 0)
         {
@@ -551,7 +551,7 @@ namespace Framework
         }
 
         /// <summary>
-        /// Unix•rég¿‚ºÁÃë”µ
+        /// Unixæ™‚é–“ç¸½æ¯«ç§’æ•¸
         /// </summary>
         /// <returns></returns>
         public static double GetUtcMilliseconds()
@@ -560,7 +560,7 @@ namespace Framework
         }
 
         /// <summary>
-        /// Unix•rég¿‚ºÁÃë”µ
+        /// Unixæ™‚é–“ç¸½æ¯«ç§’æ•¸
         /// </summary>
         /// <returns></returns>
         public static double GetUtcMilliseconds(DateTime date)
@@ -571,7 +571,7 @@ namespace Framework
         }
 
         /// <summary>
-        /// Unix•rég¿‚Ãë”µ
+        /// Unixæ™‚é–“ç¸½ç§’æ•¸
         /// </summary>
         /// <returns></returns>
         public static double GetUtcSeconds()
@@ -580,7 +580,7 @@ namespace Framework
         }
 
         /// <summary>
-        /// Unix•rég¿‚Ãë”µ
+        /// Unixæ™‚é–“ç¸½ç§’æ•¸
         /// </summary>
         /// <returns></returns>
         public static double GetUtcSeconds(DateTime date)
@@ -592,13 +592,13 @@ namespace Framework
 
         /*  Need CronTab
         /// <summary>
-        /// ²âÊÔcronÊÇ·ñ´¥·¢(¾«È·µ½·ÖÖÓ)
+        /// æµ‹è¯•cronæ˜¯å¦è§¦å‘(ç²¾ç¡®åˆ°åˆ†é’Ÿ)
         /// </summary>
         /// <returns></returns>
         public static bool TestCron(string cron)
         {
             var nCron = NCrontab.CrontabSchedule.Parse(cron);
-            var now = DateTime.Now; // ÕâÀïÉæ¼°µ½ÊÖ»ú±¾µØÊ±¼ä, ²»ÄÜÊ¹ÓÃUtcNow
+            var now = DateTime.Now; // è¿™é‡Œæ¶‰åŠåˆ°æ‰‹æœºæœ¬åœ°æ—¶é—´, ä¸èƒ½ä½¿ç”¨UtcNow
             var next = nCron.GetNextOccurrence(now, DateTime.Now.AddDays(1));
             Log.DoLog("Cron:{0}, now: {1}, next: {2}", cron, now, next);
             var span = next - now;
@@ -608,7 +608,7 @@ namespace Framework
         */
 
         /// <summary>
-        /// ÈËĞÔ»¯Êı×ÖÏÔÊ¾£¬°ÙÍò£¬Ç§Íò£¬ÒÚ
+        /// äººæ€§åŒ–æ•°å­—æ˜¾ç¤ºï¼Œç™¾ä¸‡ï¼Œåƒä¸‡ï¼Œäº¿
         /// </summary>
         /// <param name="number"></param>
         /// <returns></returns>
@@ -616,19 +616,19 @@ namespace Framework
         {
             if (number > 100000000)
             {
-                return string.Format("{0}{1}", number / 100000000, "ÒÚ");
+                return string.Format("{0}{1}", number / 100000000, "äº¿");
             }
             else if (number > 10000000)
             {
-                return string.Format("{0}{1}", number / 10000000, "Ç§Íò");
+                return string.Format("{0}{1}", number / 10000000, "åƒä¸‡");
             }
             else if (number > 1000000)
             {
-                return string.Format("{0}{1}", number / 1000000, "°ÙÍò");
+                return string.Format("{0}{1}", number / 1000000, "ç™¾ä¸‡");
             }
             else if (number > 10000)
             {
-                return string.Format("{0}{1}", number / 10000, "Íò");
+                return string.Format("{0}{1}", number / 10000, "ä¸‡");
             }
 
             return number.ToString();
@@ -652,7 +652,7 @@ namespace Framework
             return (float)lhs / (float)rhs;
         }
 
-        // ½öÓÃÓÚ²¶»ñ
+        // ä»…ç”¨äºæ•è·
         public static string[] Match(string find, string pattern)
         {
             int resultCount = 0;
@@ -675,23 +675,23 @@ namespace Framework
         }
 
         /// <summary>
-        /// Ä£°åÉú³É
+        /// æ¨¡æ¿ç”Ÿæˆ
         /// </summary>
-        /// <param name="source">Ä£°åÄÚÈİ</param>
-        /// <param name="data">Êı¾İÀ´Ô´[¶ÔÏó]</param>
+        /// <param name="source">æ¨¡æ¿å†…å®¹</param>
+        /// <param name="data">æ•°æ®æ¥æº[å¯¹è±¡]</param>
         /// <returns></returns>
         /// <summary>
-        /// Ä£°åÉú³É
+        /// æ¨¡æ¿ç”Ÿæˆ
         /// </summary>
-        /// <param name="source">Ä£°åÄÚÈİ</param>
-        /// <param name="datas">Ä£°å¼ü-Öµ¶ÔÓ¦Êı×é[key1,value1,key2,value2,...]</param>
+        /// <param name="source">æ¨¡æ¿å†…å®¹</param>
+        /// <param name="datas">æ¨¡æ¿é”®-å€¼å¯¹åº”æ•°ç»„[key1,value1,key2,value2,...]</param>
         /// <returns></returns>
         /// <summary>
-        /// »ìºÏÄ£°å
+        /// æ··åˆæ¨¡æ¿
         /// </summary>
-        /// <param name="source">Ä£°åÄÚÈİ</param>
-        /// <param name="data">Êı¾İÀ´Ô´[¶ÔÏó]</param>
-        /// <param name="args">Êı¾İÀ´Ô´[Êı×é]</param>
+        /// <param name="source">æ¨¡æ¿å†…å®¹</param>
+        /// <param name="data">æ•°æ®æ¥æº[å¯¹è±¡]</param>
+        /// <param name="args">æ•°æ®æ¥æº[æ•°ç»„]</param>
         /// <returns></returns>
         //public static string Template(string source, object data, object[] args)
         //{
@@ -703,10 +703,10 @@ namespace Framework
         }
 
         /// <summary>
-        /// Ä£°å»ñÈ¡
+        /// æ¨¡æ¿è·å–
         /// </summary>
-        /// <param name="source">Ä£°åÄÚÈİ</param>
-        /// <param name="args">Êı¾İÀ´Ô´[Êı×é]</param>
+        /// <param name="source">æ¨¡æ¿å†…å®¹</param>
+        /// <param name="args">æ•°æ®æ¥æº[æ•°ç»„]</param>
         /// <returns></returns>
         public static string FormatArgs(string source, object[] args)
         {
@@ -717,7 +717,7 @@ namespace Framework
             foreach (Match match in matches)
             {
                 var paramRex = match.Value;
-                var paramKey = paramRex.Substring(1, paramRex.Length - 2).Trim(); // ½ØÍ·½ØÎ²
+                var paramKey = paramRex.Substring(1, paramRex.Length - 2).Trim(); // æˆªå¤´æˆªå°¾
                 try
                 {
                     var index = paramKey.ToInt32();
@@ -753,7 +753,7 @@ namespace Framework
         }
 
         /// <summary>
-        /// ´«ÈëuriÑ°ÕÒÖ¸¶¨¿Ø¼ş
+        /// ä¼ å…¥uriå¯»æ‰¾æŒ‡å®šæ§ä»¶
         /// </summary>
         /// <typeparam name="T"></typeparam>
         /// <param name="findTrans"></param>
@@ -838,7 +838,7 @@ namespace Framework
                 transform.localScale = UnityEngine.Vector3.one;
         }
 
-        //»ñÈ¡´Ó¸¸½Úµãµ½×Ô¼ºµÄÍêÕûÂ·¾¶
+        //è·å–ä»çˆ¶èŠ‚ç‚¹åˆ°è‡ªå·±çš„å®Œæ•´è·¯å¾„
         public static string GetRootPathName(UnityEngine.Transform transform)
         {
             var pathName = "/" + transform.name;
@@ -850,7 +850,7 @@ namespace Framework
             return pathName;
         }
 
-        // »ñÈ¡Ö¸¶¨Á÷µÄMD5
+        // è·å–æŒ‡å®šæµçš„MD5
         public static string MD5_Stream(Stream stream)
         {
             System.Security.Cryptography.MD5CryptoServiceProvider get_md5 =
@@ -882,12 +882,12 @@ namespace Framework
 
         public static byte[] MD5_bytes(string str)
         {
-            // MD5 ÎÄ¼şÃû
+            // MD5 æ–‡ä»¶å
             var md5 = new System.Security.Cryptography.MD5CryptoServiceProvider();
             return md5.ComputeHash(System.Text.Encoding.Unicode.GetBytes(str));
         }
 
-        // ×Ö·û´®16Î» MD5
+        // å­—ç¬¦ä¸²16ä½ MD5
         public static string MD5_16bit(string str)
         {
             byte[] md5bytes = MD5_bytes(str);
@@ -902,7 +902,7 @@ namespace Framework
         }
 
 
-        // ÕûĞÎ½¥½ü£¬+1»ò-1 , kk
+        // æ•´å½¢æ¸è¿‘ï¼Œ+1æˆ–-1 , kk
         public static int IntLerp(int from, int to)
         {
             if (from > to)
@@ -913,7 +913,7 @@ namespace Framework
                 return from;
         }
 #if UNITY_5
-        // Á£×ÓÌØĞ§±ÈÀıËõ·Å
+        // ç²’å­ç‰¹æ•ˆæ¯”ä¾‹ç¼©æ”¾
         public static void ScaleParticleSystem(GameObject gameObj, float scale)
         {
             var notFind = true;
@@ -931,7 +931,7 @@ namespace Framework
             }
         }
 #endif
-        //ÉèÖÃÁ£×ÓÏµÍ³µÄRenderQueue
+        //è®¾ç½®ç²’å­ç³»ç»Ÿçš„RenderQueue
         public static void SetParticleSystemRenderQueue(Transform parent, int renderQueue = 3900)
         {
             int childCount = parent.childCount;
@@ -950,7 +950,7 @@ namespace Framework
             if (parent.GetComponent<ParticleSystem>() != null)
             {
                 var particleSystem = parent.GetComponent<ParticleSystem>();
-                //bug µ±Í¬Ò»¸ö´°¿ÚÓĞ¶à¸öÊ¹ÓÃÏàÍ¬µÄMaterialÊ±£¬ÆäËü×é¼şµÄMaterialÔÚ¹Ø±Õºó»á±»ÊÍ·Å
+                //bug å½“åŒä¸€ä¸ªçª—å£æœ‰å¤šä¸ªä½¿ç”¨ç›¸åŒçš„Materialæ—¶ï¼Œå…¶å®ƒç»„ä»¶çš„Materialåœ¨å…³é—­åä¼šè¢«é‡Šæ”¾
                 if (particleSystem.GetComponent<Renderer>().sharedMaterial != null)
                     particleSystem.GetComponent<Renderer>().sharedMaterial.renderQueue = renderQueue;
             }
@@ -963,7 +963,7 @@ namespace Framework
             targetTrans.localScale = sourceTrans.localScale;
         }
 
-        // ²âÊÔÓĞÎŞĞ´È¨ÏŞ
+        // æµ‹è¯•æœ‰æ— å†™æƒé™
         public static bool HasWriteAccessToFolder(string folderPath)
         {
             try
@@ -1004,7 +1004,7 @@ namespace Framework
             }
         }
 
-        // ±ê×¼½Ç¶È£¬½Ç¶È¸ºÊı»á×ªÕı
+        // æ ‡å‡†è§’åº¦ï¼Œè§’åº¦è´Ÿæ•°ä¼šè½¬æ­£
         public static float GetNormalizedAngle(float _anyAngle)
         {
             _anyAngle = _anyAngle % 360;
@@ -1016,7 +1016,7 @@ namespace Framework
             return _anyAngle;
         }
 
-        // µ÷Õû¶ÔÏóµÄcolliderµ½Ö¸¶¨È«¾ÖÉî¶È
+        // è°ƒæ•´å¯¹è±¡çš„collideråˆ°æŒ‡å®šå…¨å±€æ·±åº¦
         public static void AdjustCollidersCenterZ(GameObject gameObj, float z = 0)
         {
             foreach (Collider collider in gameObj.GetComponentsInChildren<Collider>())
@@ -1025,7 +1025,7 @@ namespace Framework
                 {
                     BoxCollider boxC = (BoxCollider)collider;
                     float gameObjectZ = boxC.center.z + collider.gameObject.transform.position.z - z;
-                    boxC.center = new Vector3(boxC.center.x, boxC.center.y, -gameObjectZ); // ¶ÔÏóÉî¶È-1£¬colliderÅª³É1¾ÍÆ½ºâÁË
+                    boxC.center = new Vector3(boxC.center.x, boxC.center.y, -gameObjectZ); // å¯¹è±¡æ·±åº¦-1ï¼Œcolliderå¼„æˆ1å°±å¹³è¡¡äº†
                 }
                 else if (collider is SphereCollider)
                 {
@@ -1036,13 +1036,13 @@ namespace Framework
             }
         }
 
-        // Ê××ÖÄ¸´óĞ´
+        // é¦–å­—æ¯å¤§å†™
         public static string ToTitleCase(string word)
         {
             return word.Substring(0, 1).ToUpper() + (word.Length > 1 ? word.Substring(1).ToLower() : "");
         }
 
-        // Ê××ÖÄ¸´óĞ´±äÏÂ»®Ïß
+        // é¦–å­—æ¯å¤§å†™å˜ä¸‹åˆ’çº¿
         public static string ToSentenceCase(string str)
         {
             str = char.ToLower(str[0]) + str.Substring(1);
@@ -1050,12 +1050,12 @@ namespace Framework
                 (m) => { return char.ToLower(m.Value[0]) + "_" + char.ToLower(m.Value[1]); });
         }
 
-        // ¸ÅÂÊ£¬°Ù·Ö±È, // ×¢Òâ£¬0µÄÊ±ºòµ±ÊÇ100%
+        // æ¦‚ç‡ï¼Œç™¾åˆ†æ¯”, // æ³¨æ„ï¼Œ0çš„æ—¶å€™å½“æ˜¯100%
         public static bool Probability(float chancePercent)
         {
             var chance = UnityEngine.Random.Range(0f, 100f);
 
-            if (chance <= chancePercent) // ¸ÅÂÊ
+            if (chance <= chancePercent) // æ¦‚ç‡
             {
                 return true;
             }
@@ -1067,7 +1067,7 @@ namespace Framework
         {
             int chance = UnityEngine.Random.Range(1, 101);
 
-            if (chance <= chancePercent) // ¸ÅÂÊ
+            if (chance <= chancePercent) // æ¦‚ç‡
             {
                 return true;
             }
@@ -1075,7 +1075,7 @@ namespace Framework
             return false;
         }
 
-        // ”µ½MÖµ±Èİ^
+        // æ•¸çµ„å€¼æ¯”è¼ƒ
         public static bool ArraysEqual<T>(T[] a1, T[] a2)
         {
             if (ReferenceEquals(a1, a2))
@@ -1096,45 +1096,45 @@ namespace Framework
         }
 
         /// <summary>
-        /// ³Ê»¡ĞÎ£¬´«ÈëÒ»¸ö²Î¿¼µã¸ù¾İ½Ç¶ÈºÍ°ë¾¶¼ÆËã³öÆäËüÎ»ÖÃµÄ×ø±ê
+        /// å‘ˆå¼§å½¢ï¼Œä¼ å…¥ä¸€ä¸ªå‚è€ƒç‚¹æ ¹æ®è§’åº¦å’ŒåŠå¾„è®¡ç®—å‡ºå…¶å®ƒä½ç½®çš„åæ ‡
         /// </summary>
-        /// <param name="nNum">ĞèÒªµÄÊıÁ¿</param>
-        /// <param name="pAnchorPos">Ãª¶¨µã/²Î¿¼µã</param>
-        /// <param name="fAngle">½Ç¶È</param>
-        /// <param name="nRadius">°ë¾¶</param>
+        /// <param name="nNum">éœ€è¦çš„æ•°é‡</param>
+        /// <param name="pAnchorPos">é”šå®šç‚¹/å‚è€ƒç‚¹</param>
+        /// <param name="fAngle">è§’åº¦</param>
+        /// <param name="nRadius">åŠå¾„</param>
         /// <returns></returns>
         public static Vector3[] GetSmartNpcPoints(Vector3 startDirection, int nNum, Vector3 pAnchorPos, float fAngle,
             float nRadius)
         {
-            bool bPlural = nNum % 2 == 0 ? true : false; // ÊÇ·ñ¸´ÊıÄ£Ê½
+            bool bPlural = nNum % 2 == 0 ? true : false; // æ˜¯å¦å¤æ•°æ¨¡å¼
             Vector3 vDir = startDirection;
-            int nMidNum = bPlural ? nNum / 2 : nNum / 2 + 1; // ÖĞ¼äÊı, Ñ­»·¹ıÁËÖĞ¼äÊıºó£¬ÁíÒ»¸ö·½ÏòÆğÅÅ²¼
-            Vector3 vRPos = vDir * nRadius; //// ¼ÆËãÖ±ÏßÔÚÔ²ĞÎÉÏµÄ¶¥µã °ë¾¶ÊÇ±íÏÖ¾àÀë
+            int nMidNum = bPlural ? nNum / 2 : nNum / 2 + 1; // ä¸­é—´æ•°, å¾ªç¯è¿‡äº†ä¸­é—´æ•°åï¼Œå¦ä¸€ä¸ªæ–¹å‘èµ·æ’å¸ƒ
+            Vector3 vRPos = vDir * nRadius; //// è®¡ç®—ç›´çº¿åœ¨åœ†å½¢ä¸Šçš„é¡¶ç‚¹ åŠå¾„æ˜¯è¡¨ç°è·ç¦»
             Vector3[] targetPos = new Vector3[nNum];
             for (int i = 1; i <= nNum; i++)
             {
                 float nAddAngle = 0;
 
-                if (bPlural) // ¸´ÊıÄ£Ê½
+                if (bPlural) // å¤æ•°æ¨¡å¼
                 {
                     if (i > nMidNum)
                         nAddAngle = fAngle * ((i % nMidNum) + 1) - fAngle / 2;
                     else
-                        nAddAngle = -fAngle * ((i % nMidNum) + 1) + fAngle / 2; // ³ıÒÔ2£¬ÊÇÎªÁË¶¥¶ËNPC¾ùÔÈÅÅ²¼ by KK
+                        nAddAngle = -fAngle * ((i % nMidNum) + 1) + fAngle / 2; // é™¤ä»¥2ï¼Œæ˜¯ä¸ºäº†é¡¶ç«¯NPCå‡åŒ€æ’å¸ƒ by KK
                 }
-                else // µ¥ÊıÄ£Ê½
+                else // å•æ•°æ¨¡å¼
                 {
-                    // ÅĞ¶ÏÊÇ·ñ¹ıÁËÖĞ¼äÊı
+                    // åˆ¤æ–­æ˜¯å¦è¿‡äº†ä¸­é—´æ•°
                     if (i > nMidNum)
                     {
-                        nAddAngle = fAngle * (i % nMidNum); // Ìí¼ÓNPCµÄ½Ç¶È
+                        nAddAngle = fAngle * (i % nMidNum); // æ·»åŠ NPCçš„è§’åº¦
                     }
-                    else if (i < nMidNum) // ·Ç¸´ÊıÄ£Ê½£¬ ÖĞ¼äÊıNPC ·ÅÔÚÕı·½Ïò
+                    else if (i < nMidNum) // éå¤æ•°æ¨¡å¼ï¼Œ ä¸­é—´æ•°NPC æ”¾åœ¨æ­£æ–¹å‘
                     {
-                        nAddAngle = -fAngle * (i % nMidNum); // ·´·½Ïò½Ç¶È
+                        nAddAngle = -fAngle * (i % nMidNum); // åæ–¹å‘è§’åº¦
                     }
                     else
-                        nAddAngle = 0; // Õı·½Ïò
+                        nAddAngle = 0; // æ­£æ–¹å‘
                 }
 
                 Vector3 vTargetPos = pAnchorPos + Quaternion.AngleAxis(nAddAngle, Vector3.forward) * vRPos;
@@ -1143,39 +1143,39 @@ namespace Framework
             return targetPos;
         }
 
-        /// ·µ»ØlocalPoint
+        /// è¿”å›localPoint
         public static Vector3[] GetParallelPoints(Vector3 startPos, Vector3 startDirection, int nNum, float meterInterval)
         {
-            bool bPlural = nNum % 2 == 0 ? true : false; // ÊÇ·ñ¸´ÊıÄ£Ê½
-            int nMidNum = bPlural ? nNum / 2 : nNum / 2 + 1; // ÖĞ¼äÊı, Ñ­»·¹ıÁËÖĞ¼äÊıºó£¬ÁíÒ»¸ö·½ÏòÆğÅÅ²¼
+            bool bPlural = nNum % 2 == 0 ? true : false; // æ˜¯å¦å¤æ•°æ¨¡å¼
+            int nMidNum = bPlural ? nNum / 2 : nNum / 2 + 1; // ä¸­é—´æ•°, å¾ªç¯è¿‡äº†ä¸­é—´æ•°åï¼Œå¦ä¸€ä¸ªæ–¹å‘èµ·æ’å¸ƒ
             Vector3[] targetPos = new Vector3[nNum];
             for (int i = 1; i <= nNum; i++)
             {
                 float fAddInterval = 0;
 
-                if (bPlural) // ¸´ÊıÄ£Ê½
+                if (bPlural) // å¤æ•°æ¨¡å¼
                 {
                     if (i > nMidNum)
                         fAddInterval = meterInterval * ((i % nMidNum) + 1) - meterInterval / 2;
                     else
-                        fAddInterval = -meterInterval * ((i % nMidNum) + 1) + meterInterval / 2; // ³ıÒÔ2£¬ÊÇÎªÁË¶¥¶ËNPC¾ùÔÈÅÅ²¼ by KK
+                        fAddInterval = -meterInterval * ((i % nMidNum) + 1) + meterInterval / 2; // é™¤ä»¥2ï¼Œæ˜¯ä¸ºäº†é¡¶ç«¯NPCå‡åŒ€æ’å¸ƒ by KK
                 }
-                else // µ¥ÊıÄ£Ê½
+                else // å•æ•°æ¨¡å¼
                 {
-                    // ÅĞ¶ÏÊÇ·ñ¹ıÁËÖĞ¼äÊı
+                    // åˆ¤æ–­æ˜¯å¦è¿‡äº†ä¸­é—´æ•°
                     if (i > nMidNum)
                     {
-                        fAddInterval = meterInterval * ((i % nMidNum) + 1); // Ìí¼ÓNPCµÄ½Ç¶È
+                        fAddInterval = meterInterval * ((i % nMidNum) + 1); // æ·»åŠ NPCçš„è§’åº¦
                     }
-                    else if (i < nMidNum) // ·Ç¸´ÊıÄ£Ê½£¬ ÖĞ¼äÊıNPC ·ÅÔÚÕı·½Ïò
+                    else if (i < nMidNum) // éå¤æ•°æ¨¡å¼ï¼Œ ä¸­é—´æ•°NPC æ”¾åœ¨æ­£æ–¹å‘
                     {
-                        fAddInterval = -meterInterval * ((i % nMidNum) + 1); // ·´·½Ïò½Ç¶È
+                        fAddInterval = -meterInterval * ((i % nMidNum) + 1); // åæ–¹å‘è§’åº¦
                     }
                     else
-                        fAddInterval = 0; // Õı·½Ïò
+                        fAddInterval = 0; // æ­£æ–¹å‘
                 }
 
-                // 90¶ÈĞı×ªÇó´¹Ö±
+                // 90åº¦æ—‹è½¬æ±‚å‚ç›´
                 Vector3 vTargetPos = startPos + Quaternion.AngleAxis(90, Vector3.forward) * startDirection * fAddInterval;
                 //Vector3 vTargetPos = direction*fAddInterval;
                 targetPos[i - 1] = vTargetPos;
@@ -1183,7 +1183,7 @@ namespace Framework
             return targetPos;
         }
 
-        // Á½Ïß½»µã£¨ºöÂÔ³¤¶È£©
+        // ä¸¤çº¿äº¤ç‚¹ï¼ˆå¿½ç•¥é•¿åº¦ï¼‰
         public static bool LineIntersectionPoint(out Vector2 intersectPoint, Vector2 ps1, Vector2 pe1, Vector2 ps2,
             Vector2 pe2)
         {
@@ -1213,7 +1213,7 @@ namespace Framework
         }
 
         /// <summary>
-        /// ÅĞ¶Ï×Ö·û´®ÊÇ·ñÊÇÊı×Ö
+        /// åˆ¤æ–­å­—ç¬¦ä¸²æ˜¯å¦æ˜¯æ•°å­—
         /// </summary>
         /// <param name="str"></param>
         /// <returns></returns>
@@ -1221,7 +1221,7 @@ namespace Framework
         {
             if (string.IsNullOrEmpty(str))
             {
-                Log.Warning("´«ÈëµÄÖµÎª¿Õ£¡Çë¼ì²é");
+                Log.Warning("ä¼ å…¥çš„å€¼ä¸ºç©ºï¼è¯·æ£€æŸ¥");
                 return false;
             }
             var pattern = @"^\d*$";
@@ -1230,16 +1230,16 @@ namespace Framework
 
 
         /// <summary>
-        /// »ñÈ¡ÍÖÔ²ÉÏµÄÄ³Ò»µã£¬Ïà¶Ô×ø±ê
+        /// è·å–æ¤­åœ†ä¸Šçš„æŸä¸€ç‚¹ï¼Œç›¸å¯¹åæ ‡
         /// </summary>
-        /// <param name="³¤°ëÖá¼´Ä¿±ê¾àÀë"></param>
-        /// <param name="¶Ì°ëÖá"></param>
+        /// <param name="é•¿åŠè½´å³ç›®æ ‡è·ç¦»"></param>
+        /// <param name="çŸ­åŠè½´"></param>
         /// <param name="angle"></param>
         /// <returns></returns>
-        public static Vector2 GetRelativePositionOfEllipse(float ³¤°ëÖá¼´Ä¿±ê¾àÀë, float ¶Ì°ëÖá, float angle)
+        public static Vector2 GetRelativePositionOfEllipse(float é•¿åŠè½´å³ç›®æ ‡è·ç¦», float çŸ­åŠè½´, float angle)
         {
-            var rad = angle * Mathf.Deg2Rad; // »¡¶È
-            var newPos = new Vector2(³¤°ëÖá¼´Ä¿±ê¾àÀë * Mathf.Cos(rad), ¶Ì°ëÖá * Mathf.Sin(rad));
+            var rad = angle * Mathf.Deg2Rad; // å¼§åº¦
+            var newPos = new Vector2(é•¿åŠè½´å³ç›®æ ‡è·ç¦» * Mathf.Cos(rad), çŸ­åŠè½´ * Mathf.Sin(rad));
             return newPos;
         }
 
@@ -1249,7 +1249,7 @@ namespace Framework
         }
 
         /// <summary>
-        /// °ÑÊı×Ö¸ñÊ½»¯³ÉÈıÎ» , ·Ö¸ô
+        /// æŠŠæ•°å­—æ ¼å¼åŒ–æˆä¸‰ä½ , åˆ†éš”
         /// </summary>
         public static string NumberFormatTo3(Int64 num, string sp = ",")
         {
@@ -1257,19 +1257,19 @@ namespace Framework
         }
 
         /// <summary>
-        /// È¡±¾»úÖ÷»úip
+        /// å–æœ¬æœºä¸»æœºip
         /// </summary>
         /// <returns></returns>
         public static string GetLocalIP()
         {
             try
             {
-                string HostName = Dns.GetHostName(); //µÃµ½Ö÷»úÃû
+                string HostName = Dns.GetHostName(); //å¾—åˆ°ä¸»æœºå
                 IPHostEntry IpEntry = Dns.GetHostEntry(HostName);
                 for (int i = 0; i < IpEntry.AddressList.Length; i++)
                 {
-                    //´ÓIPµØÖ·ÁĞ±íÖĞÉ¸Ñ¡³öIPv4ÀàĞÍµÄIPµØÖ·
-                    //AddressFamily.InterNetwork±íÊ¾´ËIPÎªIPv4,AddressFamily.InterNetworkV6±íÊ¾´ËµØÖ·ÎªIPv6ÀàĞÍ
+                    //ä»IPåœ°å€åˆ—è¡¨ä¸­ç­›é€‰å‡ºIPv4ç±»å‹çš„IPåœ°å€
+                    //AddressFamily.InterNetworkè¡¨ç¤ºæ­¤IPä¸ºIPv4,AddressFamily.InterNetworkV6è¡¨ç¤ºæ­¤åœ°å€ä¸ºIPv6ç±»å‹
                     if (IpEntry.AddressList[i].AddressFamily == AddressFamily.InterNetwork)
                     {
                         return IpEntry.AddressList[i].ToString();
@@ -1284,7 +1284,7 @@ namespace Framework
         }
 
         /// <summary>
-        /// Get IPAdress from IpHostEntry,  ÅäºÏGetIpAddress
+        /// Get IPAdress from IpHostEntry,  é…åˆGetIpAddress
         /// </summary>
         /// <param name="ipHostEntry"></param>
         /// <returns></returns>
@@ -1346,9 +1346,9 @@ namespace Framework
         }
 
         /// <summary>
-        /// ÎÄ¼ş´óĞ¡¸ñÊ½»¯ÏÔÊ¾³ÉKB£¬MB,GB
+        /// æ–‡ä»¶å¤§å°æ ¼å¼åŒ–æ˜¾ç¤ºæˆKBï¼ŒMB,GB
         /// </summary>
-        /// <param name="size">×Ö½Ú</param>
+        /// <param name="size">å­—èŠ‚</param>
         public static String FormatFileSize(long size)
         {
             int GB = 1024 * 1024 * 1024;
@@ -1377,7 +1377,7 @@ namespace Framework
         {
             if (Application.isEditor)
             {
-                Log.LogInfo("±à¼­Æ÷ÏÂ²»´¦ÀíÍË³öÓÎÏ·");
+                Log.LogInfo("ç¼–è¾‘å™¨ä¸‹ä¸å¤„ç†é€€å‡ºæ¸¸æˆ");
             }
             else
             {
@@ -1386,7 +1386,7 @@ namespace Framework
         }
 
         /// <summary>
-        /// ¸ù¾İÂ·¾¶»ñÈ¡ÎÄ¼şÃû
+        /// æ ¹æ®è·¯å¾„è·å–æ–‡ä»¶å
         /// </summary>
         public static string GetFileNameByPath(string path)
         {
@@ -1395,7 +1395,7 @@ namespace Framework
         }
 
         /// <summary>
-        /// Hex×ªColor
+        /// Hexè½¬Color
         /// </summary>
         public static Color HexToColor(string hex)
         {
