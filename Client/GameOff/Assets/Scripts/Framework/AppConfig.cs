@@ -3,46 +3,46 @@ using System.Collections.Generic;
 using UnityEngine;
 using Framework;
 /// <summary>
-/// Ò»Ğ©ÅäÖÃ
+/// ä¸€äº›é…ç½®
 /// </summary>
 public class AppConfig
 {
     public static string ProjectName = "ImbalanceLand";
 
     /// <summary>
-    /// ±í¸ñÊı¾İÎ»ÖÃ
+    /// è¡¨æ ¼æ•°æ®ä½ç½®
     /// </summary>
     public static string CsvDataPath = "datas";//Assets/Resources/datas
     /// <summary>
-    /// ±à¼­Æ÷ÏÂÄ¬ÈÏ²»´òÓ¡Ó²¼şÉè±¸µÄĞÅÏ¢£¬Õæ»úĞ´Èëµ½ÈÕÖ¾ÖĞ
+    /// ç¼–è¾‘å™¨ä¸‹é»˜è®¤ä¸æ‰“å°ç¡¬ä»¶è®¾å¤‡çš„ä¿¡æ¯ï¼ŒçœŸæœºå†™å…¥åˆ°æ—¥å¿—ä¸­
     /// </summary>
     public static bool IsLogDeviceInfo = false;
     /// <summary>
-    /// ÊÇ·ñ´òÓ¡ab¼ÓÔØµÄÈÕÖ¾
+    /// æ˜¯å¦æ‰“å°abåŠ è½½çš„æ—¥å¿—
     /// </summary>
     public static bool IsLogAbInfo = false;
     /// <summary>
-    /// ÊÇ·ñ´òÓ¡ab¼ÓÔØºÄÊ±
+    /// æ˜¯å¦æ‰“å°abåŠ è½½è€—æ—¶
     /// </summary>
     public static bool IsLogAbLoadCost = false;
     /// <summary>
-    /// ÊÇ·ñ´´½¨AssetDebugger
+    /// æ˜¯å¦åˆ›å»ºAssetDebugger
     /// </summary>
     public static bool UseAssetDebugger = Application.isEditor;
     /// <summary>
-    /// ÊÇ·ñ¼ÇÂ¼µ½ÎÄ¼şÖĞ£¬°üÀ¨£ºUIµÄab¼ÓÔØºÄÊ±£¬UIº¯ÊıÖ´ĞĞºÄÊ±
+    /// æ˜¯å¦è®°å½•åˆ°æ–‡ä»¶ä¸­ï¼ŒåŒ…æ‹¬ï¼šUIçš„abåŠ è½½è€—æ—¶ï¼ŒUIå‡½æ•°æ‰§è¡Œè€—æ—¶
     /// </summary>
     public static bool IsSaveCostToFile = false;
     /// <summary>
-    /// ½ö¶ÔEditorÓĞĞ§£¬EditorÏÂ¼ÓÔØ×ÊÔ´Ä¬ÈÏ´Ó´ÅÅÌµÄÏà¶ÔÄ¿Â¼¶ÁÈ¡£¬Èç¹ûĞèÒª´ÓAplication.streamingAssetsÔòÉèÖÃÎªtrue
+    /// ä»…å¯¹Editoræœ‰æ•ˆï¼ŒEditorä¸‹åŠ è½½èµ„æºé»˜è®¤ä»ç£ç›˜çš„ç›¸å¯¹ç›®å½•è¯»å–ï¼Œå¦‚æœéœ€è¦ä»Aplication.streamingAssetsåˆ™è®¾ç½®ä¸ºtrue
     /// </summary>
     public static bool ReadStreamFromEditor;
     /// <summary>
-    /// ´ò°üabÎÄ¼şµÄºó×º
+    /// æ‰“åŒ…abæ–‡ä»¶çš„åç¼€
     /// </summary>
     public const string AssetBundleExt = ".ab";
     /// <summary>
-    /// ProductÄ¿Â¼µÄÏà¶ÔÂ·¾¶
+    /// Productç›®å½•çš„ç›¸å¯¹è·¯å¾„
     /// </summary>
     public const string ProductRelPath = "Product";
 
@@ -68,7 +68,7 @@ public class AppConfig
     }
 
     /// <summary>
-    /// UIÉè¼ÆµÄ·Ö±æÂÊ
+    /// UIè®¾è®¡çš„åˆ†è¾¨ç‡
     /// </summary>
     public static Vector2 UIResolution = new Vector2(1280, 720);
 

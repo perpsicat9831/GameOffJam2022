@@ -7,32 +7,32 @@ namespace Framework
     public interface IAsyncObject
     {
         /// <summary>
-        /// ÓÃÓÚĞ­³Ì£¬Ïß³Ì£¬½á¹ûµ÷¶ÈÀà
+        /// ç”¨äºåç¨‹ï¼Œçº¿ç¨‹ï¼Œç»“æœè°ƒåº¦ç±»
         /// </summary>
         public interface IAsyncObject
         {
             /// <summary>
-            /// ×îÖÕ¼ÓÔØ½á¹ûµÄ×ÊÔ´
+            /// æœ€ç»ˆåŠ è½½ç»“æœçš„èµ„æº
             /// </summary>
             object AsyncResult { get; }
 
             /// <summary>
-            /// ÊÇ·ñÒÑ¾­Íê³É£¬ËüµÄ´æÔÚÁîLoader¿ÉÒÔÓÃÓÚĞ­³ÌStartCoroutine
+            /// æ˜¯å¦å·²ç»å®Œæˆï¼Œå®ƒçš„å­˜åœ¨ä»¤Loaderå¯ä»¥ç”¨äºåç¨‹StartCoroutine
             /// </summary>
             bool IsCompleted { get; }
 
             /// <summary>
-            /// ÀàËÆWWW, IsFinishedÔÙÅĞ¶ÏÊÇ·ñÓĞ´íÎó
+            /// ç±»ä¼¼WWW, IsFinishedå†åˆ¤æ–­æ˜¯å¦æœ‰é”™è¯¯
             /// </summary>
             bool IsError { get; }
 
             /// <summary>
-            /// ¹ı³ÌĞÅÏ¢
+            /// è¿‡ç¨‹ä¿¡æ¯
             /// </summary>
             string AsyncMessage { get; }
 
             /// <summary>
-            /// ÊÇ·ñ³É¹¦
+            /// æ˜¯å¦æˆåŠŸ
             /// </summary>
             bool IsSuccess { get; }
         }

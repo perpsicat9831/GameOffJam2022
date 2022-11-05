@@ -5,7 +5,7 @@ using UnityEngine;
 namespace Logic
 {
     /// <summary>
-    /// ·â×°¿ò¼Ü²ãµÄ¶ÔÏó³Ø
+    /// å°è£…æ¡†æ¶å±‚çš„å¯¹è±¡æ± 
     /// </summary>
     public class ObjectPool<T> : Framework.ObjectPool<T> where T : IPoolable, new()
     {

@@ -8,17 +8,17 @@ using UnityEngine;
 namespace Framework
 {
     /// <summary>
-    /// ÓÃÓÚ²¶×½±à¼­Æ÷±ä¸üÊÂ¼ş£¬²»×ö¾ßÌåÂß¼­´¦Àí£¬Ö»±©Â¶¸÷ÖÖ·â×°ÊÂ¼ş
+    /// ç”¨äºæ•æ‰ç¼–è¾‘å™¨å˜æ›´äº‹ä»¶ï¼Œä¸åšå…·ä½“é€»è¾‘å¤„ç†ï¼Œåªæš´éœ²å„ç§å°è£…äº‹ä»¶
     /// 
-    /// ×¢Òâ²»Òª¼Ó¾ßÌåÂß¼­ÔÚÕâÀï£¬namespace KAdminTools Ã»ÓĞ¾ßÌåÂß¼­ÒÀÀµ¾ßÌåÂß¼­Èûµ½KGameAdminEditorÀï
+    /// æ³¨æ„ä¸è¦åŠ å…·ä½“é€»è¾‘åœ¨è¿™é‡Œï¼Œnamespace KAdminTools æ²¡æœ‰å…·ä½“é€»è¾‘ä¾èµ–å…·ä½“é€»è¾‘å¡åˆ°KGameAdminEditoré‡Œ
     /// 
-    /// ¾ßÌåÂß¼­Ê¹ÓÃÊ±£¬×¢Òâ¼ÓÉÏ[InitializeOnLoad]
+    /// å…·ä½“é€»è¾‘ä½¿ç”¨æ—¶ï¼Œæ³¨æ„åŠ ä¸Š[InitializeOnLoad]
     /// </summary>
     [InitializeOnLoad]
     public class UnityEditorEventCatcher
     {
         /// <summary>
-        /// Editor updateÊÂ¼ş
+        /// Editor updateäº‹ä»¶
         /// </summary>
         private static System.Action _OnEditorUpdateEvent;
 
@@ -34,7 +34,7 @@ namespace Framework
         }
 
         /// <summary>
-        /// ½«Òª²¥·ÅÓÎÏ·ÊÂ¼ş
+        /// å°†è¦æ’­æ”¾æ¸¸æˆäº‹ä»¶
         /// </summary>
         private static System.Action _OnWillPlayEvent;
 
@@ -50,7 +50,7 @@ namespace Framework
         }
 
         /// <summary>
-        /// ½øÈë²¥·ÅÊ±¿ÌÊÂ¼ş
+        /// è¿›å…¥æ’­æ”¾æ—¶åˆ»äº‹ä»¶
         /// </summary>
         private static System.Action _OnBeginPlayEvent;
 
@@ -66,7 +66,7 @@ namespace Framework
         }
 
         /// <summary>
-        /// ½«ÒªÍ£Ö¹ÓÎÏ· (²»°üÀ¨ÔİÍ£Å¶)
+        /// å°†è¦åœæ­¢æ¸¸æˆ (ä¸åŒ…æ‹¬æš‚åœå“¦)
         /// </summary>
         private static System.Action _OnWillStopEvent;
 
@@ -82,7 +82,7 @@ namespace Framework
         }
 
         /// <summary>
-        /// ³ÌĞò¼¯Ëø¶¨ÊÂ¼ş£¬ÊÂ¼şÖĞ¿ÉÒÔ½øĞĞDLLµÄ×¢ÈëĞŞ¸Ä
+        /// ç¨‹åºé›†é”å®šäº‹ä»¶ï¼Œäº‹ä»¶ä¸­å¯ä»¥è¿›è¡ŒDLLçš„æ³¨å…¥ä¿®æ”¹
         /// </summary>
         private static System.Action _OnLockingAssembly;
 
@@ -99,21 +99,21 @@ namespace Framework
 
 
         /// <summary>
-        /// ±àÒëÇ°ÊÂ¼ş£¬±È½ÏÌØÊâµÄ´¦Àí£¬ÅäºÏÁËPostBuildProcessºÍPostBuildScene
-        /// ¿ÉÒÔ´¥·¢µÄÌõ¼ş£º
-        ///     build ab(Èç¹ûabÎ´·¢Éú¸Ä±äÔò²»»á´¥·¢)
+        /// ç¼–è¯‘å‰äº‹ä»¶ï¼Œæ¯”è¾ƒç‰¹æ®Šçš„å¤„ç†ï¼Œé…åˆäº†PostBuildProcesså’ŒPostBuildScene
+        /// å¯ä»¥è§¦å‘çš„æ¡ä»¶ï¼š
+        ///     build ab(å¦‚æœabæœªå‘ç”Ÿæ”¹å˜åˆ™ä¸ä¼šè§¦å‘)
         ///     build app
         /// </summary>
         public static Action OnBeforeBuildPlayerEvent;
 
         /// <summary>
-        /// before build appÊÂ¼ş£¬Ö»ÓĞÖ´ĞĞbuild app²Å»á´¥·¢
+        /// before build appäº‹ä»¶ï¼Œåªæœ‰æ‰§è¡Œbuild appæ‰ä¼šè§¦å‘
         /// </summary>
         public static Action OnBeforeBuildAppEvent;
 
 
         /// <summary>
-        /// ±àÒëÍê³ÉºóÊÂ¼ş
+        /// ç¼–è¯‘å®Œæˆåäº‹ä»¶
         /// </summary>
         private static System.Action<BuildTarget, string> _OnPostBuildPlayerEvent;
 
@@ -124,7 +124,7 @@ namespace Framework
         }
 
         /// <summary>
-        /// Save SceneÊÂ¼ş
+        /// Save Sceneäº‹ä»¶
         /// </summary>
         internal static System.Action _onSaveSceneEvent;
 
@@ -135,7 +135,7 @@ namespace Framework
         }
 
         /// <summary>
-        /// ÊÇ·ñ¾²Ì¬¹¹ÔìÍê³É
+        /// æ˜¯å¦é™æ€æ„é€ å®Œæˆ
         /// </summary>
         public static bool IsInited { get; private set; }
 
@@ -191,7 +191,7 @@ namespace Framework
         }
 
         /// <summary>
-        /// Unity±ê×¼Buildºó´¦Àíº¯Êı
+        /// Unityæ ‡å‡†Buildåå¤„ç†å‡½æ•°
         /// </summary>
         [PostProcessBuild()]
         private static void OnPostBuildPlayer(BuildTarget target, string pathToBuiltProject)
@@ -205,7 +205,7 @@ namespace Framework
         }
 
         /// <summary>
-        /// ²¥·Å×´Ì¬¸Ä±ä£¬½øĞĞÒ»Ğ©±àÒëĞÔµÄ¶«Î÷, ±ÈÈçµã»÷²¥·Å£¬±àÒëÎÄ¼ş¡¢±àÒë½Å±¾¡¢±àÒëÅäÖÃµÈ
+        /// æ’­æ”¾çŠ¶æ€æ”¹å˜ï¼Œè¿›è¡Œä¸€äº›ç¼–è¯‘æ€§çš„ä¸œè¥¿, æ¯”å¦‚ç‚¹å‡»æ’­æ”¾ï¼Œç¼–è¯‘æ–‡ä»¶ã€ç¼–è¯‘è„šæœ¬ã€ç¼–è¯‘é…ç½®ç­‰
         /// </summary>
         private static void OnPlayModeStateChanged(PlayModeStateChange change)
         {
@@ -241,7 +241,7 @@ namespace Framework
         }
 
         /// <summary>
-        /// ²¶×½±àÒë¹ı³ÌÖĞ¡¢Í¬Ê±²¥·ÅÓÎÏ·µÄ×´Ì¬£¬Ç¿ÖÆÔİÍ££¬±ÜÃâÔËĞĞ³ö´í
+        /// æ•æ‰ç¼–è¯‘è¿‡ç¨‹ä¸­ã€åŒæ—¶æ’­æ”¾æ¸¸æˆçš„çŠ¶æ€ï¼Œå¼ºåˆ¶æš‚åœï¼Œé¿å…è¿è¡Œå‡ºé”™
         /// </summary>
         /// <param name="view"></param>
         //static void OnSceneViewGUI(SceneView view)
@@ -259,10 +259,10 @@ namespace Framework
             CheckComplie();
         }
 
-        // ¼ì²é±àÒëÖĞ£¬Á¢¿ÌÔİÍ£ÓÎÏ·
+        // æ£€æŸ¥ç¼–è¯‘ä¸­ï¼Œç«‹åˆ»æš‚åœæ¸¸æˆ
         static void CheckComplie()
         {
-            //NOTE ÔÚUnity2019ÖĞÉèÖÃÎªRecompile After Finished Playing£¬ĞŞ¸Ä´úÂëºó¼ÌĞøÔËĞĞ±È½ÏÎÈ¶¨£¬ËùÒÔĞŞ¸Ä´úÂëºó²»Í£Ö¹²¥·Å 
+            //NOTE åœ¨Unity2019ä¸­è®¾ç½®ä¸ºRecompile After Finished Playingï¼Œä¿®æ”¹ä»£ç åç»§ç»­è¿è¡Œæ¯”è¾ƒç¨³å®šï¼Œæ‰€ä»¥ä¿®æ”¹ä»£ç åä¸åœæ­¢æ’­æ”¾ 
             /*if (EditorApplication.isCompiling)
             {
                 if (EditorApplication.isPlaying)
@@ -298,7 +298,7 @@ namespace Framework
         public int callbackOrder
         {
             get { return 0; }
-        } //Ô½Ğ¡ÓÅÏÈ¼¶Ô½¸ß
+        } //è¶Šå°ä¼˜å…ˆçº§è¶Šé«˜
 
         public void OnPreprocessBuild(BuildReport report)
         {
@@ -309,7 +309,7 @@ namespace Framework
 #else
     class KBuildProcessor :   IPreprocessBuild
     {
-        public int callbackOrder { get { return 0; } } //Ô½Ğ¡ÓÅÏÈ¼¶Ô½¸ß
+        public int callbackOrder { get { return 0; } } //è¶Šå°ä¼˜å…ˆçº§è¶Šé«˜
       
         public void OnPreprocessBuild(BuildTarget target, string path)
         {

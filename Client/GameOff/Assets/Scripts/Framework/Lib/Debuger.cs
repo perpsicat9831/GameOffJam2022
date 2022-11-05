@@ -8,7 +8,7 @@ namespace Framework
     public class Debuger
     {
         /// <summary>
-        /// Check if a object null£¬Ìõ¼ş²»Âú×ã´òÓ¡Error£¬²»»áÖĞ¶Ïµ±Ç°µ÷ÓÃ
+        /// Check if a object nullï¼Œæ¡ä»¶ä¸æ»¡è¶³æ‰“å°Errorï¼Œä¸ä¼šä¸­æ–­å½“å‰è°ƒç”¨
         /// </summary>
         public static bool Check(object obj, string formatStr = null, params object[] args)
         {
@@ -22,7 +22,7 @@ namespace Framework
         }
 
         /// <summary>
-        /// Ìõ¼ş²»Âú×ã´òÓ¡Error£¬²»»áÖĞ¶Ïµ±Ç°µ÷ÓÃ
+        /// æ¡ä»¶ä¸æ»¡è¶³æ‰“å°Errorï¼Œä¸ä¼šä¸­æ–­å½“å‰è°ƒç”¨
         /// </summary>
         public static bool Check(bool result, string formatStr = null, params object[] args)
         {
@@ -36,7 +36,7 @@ namespace Framework
         }
 
         /// <summary>
-        /// Ìõ¼ş²»Âú×ã»áÖĞ¶Ïµ±Ç°µ÷ÓÃ
+        /// æ¡ä»¶ä¸æ»¡è¶³ä¼šä¸­æ–­å½“å‰è°ƒç”¨
         /// </summary>
         public static void Assert(bool result)
         {
@@ -44,9 +44,9 @@ namespace Framework
         }
 
         /// <summary>
-        /// Ìõ¼ş²»Âú×ã»áÖĞ¶Ïµ±Ç°µ÷ÓÃ
+        /// æ¡ä»¶ä¸æ»¡è¶³ä¼šä¸­æ–­å½“å‰è°ƒç”¨
         /// </summary>
-        /// <param name="msg">³ö´íÊ±µÄerrorÈÕÖ¾</param>
+        /// <param name="msg">å‡ºé”™æ—¶çš„erroræ—¥å¿—</param>
         public static void Assert(bool result, string msg, params object[] args)
         {
             if (!result)
@@ -57,12 +57,12 @@ namespace Framework
 
                 Log.LogErrorWithStack(formatMsg, 2);
 
-                throw new Exception(formatMsg); // ÖĞ¶Ïµ±Ç°µ÷ÓÃ
+                throw new Exception(formatMsg); // ä¸­æ–­å½“å‰è°ƒç”¨
             }
         }
 
         /// <summary>
-        /// µ±Ç°ÖµÊÇ·ñ!=0
+        /// å½“å‰å€¼æ˜¯å¦!=0
         /// </summary>
         public static void Assert(int result)
         {
@@ -75,7 +75,7 @@ namespace Framework
         }
 
         /// <summary>
-        /// ¼ì²é²ÎÊıÊÇ·ñÎªnull£¬Ìõ¼ş²»Âú×ã»áÖĞ¶Ïµ±Ç°µ÷ÓÃ
+        /// æ£€æŸ¥å‚æ•°æ˜¯å¦ä¸ºnullï¼Œæ¡ä»¶ä¸æ»¡è¶³ä¼šä¸­æ–­å½“å‰è°ƒç”¨
         /// </summary>
         public static void Assert(object obj)
         {

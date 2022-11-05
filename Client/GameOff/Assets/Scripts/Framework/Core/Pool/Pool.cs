@@ -21,7 +21,7 @@ namespace Framework
         protected IObjectFactory<T> mFactory;
 
         /// <summary>
-        /// 存储相关数据的栈
+        /// 瀛樺偍鐩稿叧鏁版嵁鐨勬爤
         /// </summary>
         protected readonly Stack<T> mCacheStack = new Stack<T>();
 

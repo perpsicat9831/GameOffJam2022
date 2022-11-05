@@ -7,7 +7,7 @@ using UnityEngine;
 
 namespace Framework
 {
-    //´ò°ü¹¤¾ßµÄÊ±¼ä²¶×½Æ÷
+    //æ‰“åŒ…å·¥å…·çš„æ—¶é—´æ•æ‰å™¨
     [InitializeOnLoad]
     public class PackageBuilderEventCatcher
     {
@@ -20,11 +20,11 @@ namespace Framework
         }
         private static void OnBeforeBuildPlayerEvent()
         {
-            //°Ñab°ü¸´ÖÆ¹ıÀ´
+            //æŠŠabåŒ…å¤åˆ¶è¿‡æ¥
             var exportPath = Path.GetFullPath(AppConfig.AssetBundleBuildRelPath);
             var targetPath = ResourcesSymbolLinkHelper.AssetBundlesLinkPath;
             DeleteCopyBundle();
-            Log.LogInfo("½«Ä¿Â¼ " + exportPath + " ÏÂµÄÎÄ¼ş¸´ÖÆµ½Ä¿Â¼ " + targetPath);
+            Log.LogInfo("å°†ç›®å½• " + exportPath + " ä¸‹çš„æ–‡ä»¶å¤åˆ¶åˆ°ç›®å½• " + targetPath);
             BuildTool.CopyFolder(exportPath, targetPath);
         }
 
@@ -42,18 +42,18 @@ namespace Framework
             {
                 Directory.Delete(targetPath, true);
                 File.Delete(targetPath + ".meta");
-                Log.LogInfo("ÒÑÉ¾³ıÄ¿Â¼ " + targetPath);
+                Log.LogInfo("å·²åˆ é™¤ç›®å½• " + targetPath);
                 AssetDatabase.Refresh();
             }
             else
             {
-                Log.LogInfo("Î´ÕÒµ½Ä¿Â¼ " + targetPath + " ÄÚĞèÒªÉ¾³ıµÄÎÄ¼ş");
+                Log.LogInfo("æœªæ‰¾åˆ°ç›®å½• " + targetPath + " å†…éœ€è¦åˆ é™¤çš„æ–‡ä»¶");
             }
         }
     }
     public class PackageBuilder
     {
-        //using Unity.EditorCoroutines.Editor; //package:com.unity.editorcoroutines ,packageÖĞ¹´Ñ¡:Show preview packages
+        //using Unity.EditorCoroutines.Editor; //package:com.unity.editorcoroutines ,packageä¸­å‹¾é€‰:Show preview packages
 
         private static string GetProjectName()
         {
@@ -74,7 +74,7 @@ namespace Framework
         }
 
         /// <summary>
-        /// ÃüÁîĞĞ¸øunity´«²ÎÊı Ê¾Àı£º-BundleVersion=1.0.1 -AndroidKeyStoreName=KSFramework
+        /// å‘½ä»¤è¡Œç»™unityä¼ å‚æ•° ç¤ºä¾‹ï¼š-BundleVersion=1.0.1 -AndroidKeyStoreName=KSFramework
         /// Unity.exe -batchmode -projectPath %codePath%\ -nographics -executeMethod BuildTest.PerformAndroidBuild -BundleVersion=1.0.1 -AndroidKeyStoreName=KSFramework -logFile %~dp0\build.log -quit
         /// </summary>
         /// <param name="opt"></param>
@@ -150,12 +150,12 @@ namespace Framework
 #endif
             if (AppConfig.IsDownloadRes && !File.Exists(AppConfig.VersionTextPath))
             {
-                Log.LogInfo("´ò°üÊ§°Ü£¬¿ÉÏÂÔØ¸üĞÂµÄ°ü£¬ĞèÒªÏÈÉú³Évresion.txt");
+                Log.LogInfo("æ‰“åŒ…å¤±è´¥ï¼Œå¯ä¸‹è½½æ›´æ–°çš„åŒ…ï¼Œéœ€è¦å…ˆç”Ÿæˆvresion.txt");
                 return null;
             }
 
 
-            //OnBeforeBuildPlayerEvent UnityÒıÇæµÄ´ò°üÇ°ÊÂ¼ş
+            //OnBeforeBuildPlayerEvent Unityå¼•æ“çš„æ‰“åŒ…å‰äº‹ä»¶
             ParseArgs(ref opt, ref outputpath);
             string fullPath = System.IO.Path.Combine(AppConfig.ProductRelPath, outputpath);
             string fullDir = System.IO.Path.GetDirectoryName(fullPath);
@@ -165,8 +165,8 @@ namespace Framework
 
             Log.LogInfo("Start Build Client {0} to: {1}", tag, Path.GetFullPath(fullPath));
 #if xLua
-         	// NOTE xluaÔÚ±à¼­Æ÷¿ª·¢Ä£Ê½²»Éú³É´úÂë£¬ÒòÎª.NET Standard 2.0²»Ö§³Öemit£¬»áµ¼ÖÂÄ³Ğ©CSharpCallLua×¢²áÊ§°Ü£¬ApiÒª¸Ä³É.Net4.X£¬ÔÚ´ò°üÊ±Èç¹ûÓĞĞèÒªÔÙĞŞ¸Ä»Ø
-         	// ĞèÒªÏÈclear£¬ÔÙgen£¬±ÜÃâÍ¬Ò»¸öclassĞŞ¸Äºó£¬¸²¸Çgen»á±¨´í
+         	// NOTE xluaåœ¨ç¼–è¾‘å™¨å¼€å‘æ¨¡å¼ä¸ç”Ÿæˆä»£ç ï¼Œå› ä¸º.NET Standard 2.0ä¸æ”¯æŒemitï¼Œä¼šå¯¼è‡´æŸäº›CSharpCallLuaæ³¨å†Œå¤±è´¥ï¼ŒApiè¦æ”¹æˆ.Net4.Xï¼Œåœ¨æ‰“åŒ…æ—¶å¦‚æœæœ‰éœ€è¦å†ä¿®æ”¹å›
+         	// éœ€è¦å…ˆclearï¼Œå†genï¼Œé¿å…åŒä¸€ä¸ªclassä¿®æ”¹åï¼Œè¦†ç›–genä¼šæŠ¥é”™
             XLua.DelegateBridge.Gen_Flag = true;
             CSObjectWrapEditor.Generator.ClearAll();
             CSObjectWrapEditor.Generator.GenAll();
@@ -218,7 +218,7 @@ namespace Framework
 
         public static string PerformiOSBuild(string ipaName, bool isDevelopment = true)
         {
-            //ÔöÁ¿Éú³Éxcode project
+            //å¢é‡ç”Ÿæˆxcode project
             BuildOptions opt = isDevelopment
                 ? (BuildOptions.Development | BuildOptions.AllowDebugging | BuildOptions.ConnectWithProfiler | BuildOptions.AcceptExternalModificationsToPlayer)
                 : BuildOptions.AcceptExternalModificationsToPlayer;

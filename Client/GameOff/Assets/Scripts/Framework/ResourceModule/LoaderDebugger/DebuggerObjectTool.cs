@@ -5,13 +5,13 @@ using UnityEngine;
 namespace Framework
 {
     /// <summary>
-    /// 专门用于资源Debugger用到的父对象自动生成
-    /// DebuggerObject - 用于管理虚拟对象（只用于显示调试信息的对象）
+    /// 涓撻棬鐢ㄤ簬璧勬簮Debugger鐢ㄥ埌鐨勭埗瀵硅薄鑷姩鐢熸垚
+    /// DebuggerObject - 鐢ㄤ簬绠＄悊铏氭嫙瀵硅薄锛堝彧鐢ㄤ簬鏄剧ず璋冭瘯淇℃伅鐨勫璞★級
     /// </summary>
     public class DebuggerObjectTool
     {
         private static readonly Dictionary<string, Transform> Parents = new Dictionary<string, Transform>();
-        private static readonly Dictionary<string, int> Counts = new Dictionary<string, int>(); // 数量统计...
+        private static readonly Dictionary<string, int> Counts = new Dictionary<string, int>(); // 鏁伴噺缁熻...
 
         private static string GetUri(string bigType, string smallType)
         {
@@ -20,7 +20,7 @@ namespace Framework
         }
 
         /// <summary>
-        /// 设置某个物件，在指定调试组下
+        /// 璁剧疆鏌愪釜鐗╀欢锛屽湪鎸囧畾璋冭瘯缁勪笅
         /// </summary>
         /// <param name="bigType"></param>
         /// <param name="smallType"></param>
@@ -64,7 +64,7 @@ namespace Framework
         }
 
         /// <summary>
-        /// 设置Parent名字,带有数量
+        /// 璁剧疆Parent鍚嶅瓧,甯︽湁鏁伴噺
         /// </summary>
         /// <param name="obj"></param>
         /// <param name="smallType"></param>

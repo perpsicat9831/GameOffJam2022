@@ -11,13 +11,13 @@ namespace Framework
     public class WWWLoader : AbstractResourceLoader
     {
 
-        // Ç°¼¸ÏîÓÃÓÚ¼à¿ØÆ÷
-        private static IEnumerator CachedWWWLoaderMonitorCoroutine; // ×¨ÃÅ¼à¿ØWWWµÄĞ­³Ì
-        private const int MAX_WWW_COUNT = 15; // Í¬Ê±½øĞĞµÄ×î´óWww¼ÓÔØ¸öÊı£¬³¬¹ıµÄÅÅ¶ÓµÈ´ı
-        private static int WWWLoadingCount = 0; // ÓĞ¶àÉÙ¸öWWWÕıÔÚÔË×÷, ÓĞÉÏÏŞµÄ
+        // å‰å‡ é¡¹ç”¨äºç›‘æ§å™¨
+        private static IEnumerator CachedWWWLoaderMonitorCoroutine; // ä¸“é—¨ç›‘æ§WWWçš„åç¨‹
+        private const int MAX_WWW_COUNT = 15; // åŒæ—¶è¿›è¡Œçš„æœ€å¤§WwwåŠ è½½ä¸ªæ•°ï¼Œè¶…è¿‡çš„æ’é˜Ÿç­‰å¾…
+        private static int WWWLoadingCount = 0; // æœ‰å¤šå°‘ä¸ªWWWæ­£åœ¨è¿ä½œ, æœ‰ä¸Šé™çš„
 
         private static readonly Stack<WWWLoader> WWWLoadersStack = new Stack<WWWLoader>();
-        // WWWLoaderµÄ¼ÓÔØÊÇºó½øÏÈ³ö! ÓĞÒ»¸öĞ­³ÌÈ«¾Ö×ÔÎÒ¹ÜÀí. ºóÀ´Ó¿ÈëµÄÓÅÏÈ¼ÓÔØ£¡
+        // WWWLoaderçš„åŠ è½½æ˜¯åè¿›å…ˆå‡º! æœ‰ä¸€ä¸ªåç¨‹å…¨å±€è‡ªæˆ‘ç®¡ç†. åæ¥æ¶Œå…¥çš„ä¼˜å…ˆåŠ è½½ï¼
 
         public static event Action<string> WWWFinishCallback;
 
@@ -63,7 +63,7 @@ namespace Framework
         public override void Init(string url, params object[] args)
         {
             base.Init(url, args);
-            WWWLoadersStack.Push(this); // ²»Ö´ĞĞ¿ªÊ¼¼ÓÔØ£¬ÓÉwww¼à¿ØÆ÷Ğ­³Ì¿ØÖÆ
+            WWWLoadersStack.Push(this); // ä¸æ‰§è¡Œå¼€å§‹åŠ è½½ï¼Œç”±wwwç›‘æ§å™¨åç¨‹æ§åˆ¶
 
             if (CachedWWWLoaderMonitorCoroutine == null)
             {
@@ -74,13 +74,13 @@ namespace Framework
 
         protected void StartLoad()
         {
-            ResourceModule.Instance.StartCoroutine(CoLoad(Url)); //¿ªÆôĞ­³Ì¼ÓÔØAssetbundle£¬Ö´ĞĞCallback
+            ResourceModule.Instance.StartCoroutine(CoLoad(Url)); //å¼€å¯åç¨‹åŠ è½½Assetbundleï¼Œæ‰§è¡ŒCallback
         }
 
         /// <summary>
-        /// Ğ­³Ì¼ÓÔØAssetbundle£¬¼ÓÔØÍêºóÖ´ĞĞcallback
+        /// åç¨‹åŠ è½½Assetbundleï¼ŒåŠ è½½å®Œåæ‰§è¡Œcallback
         /// </summary>
-        /// <param name="url">×ÊÔ´µÄurl</param>
+        /// <param name="url">èµ„æºçš„url</param>
         /// <param name="callback"></param>
         /// <param name="callbackArgs"></param>
         /// <returns></returns>
@@ -88,15 +88,15 @@ namespace Framework
         {
             if (AppConfig.IsLogAbInfo) Log.LogInfo("[Request] WWW, {1}", url);
 
-            // Ç±¹æÔò£º²»ÓÃLoadFromCache~ËüÖ»ÄÜÓÃÔÚ.assetBundle
+            // æ½œè§„åˆ™ï¼šä¸ç”¨LoadFromCache~å®ƒåªèƒ½ç”¨åœ¨.assetBundle
 #pragma warning disable 0618
             Www = new WWW(url);
 #pragma warning restore 0618
             BeginLoadTime = Time.time;
             WWWLoadingCount++;
 
-            //ÉèÖÃAssetBundle½âÑ¹ËõÏß³ÌµÄÓÅÏÈ¼¶
-            Www.threadPriority = Application.backgroundLoadingPriority; // È¡ÓÃÈ«¾ÖµÄ¼ÓÔØÓÅÏÈËÙ¶È
+            //è®¾ç½®AssetBundleè§£å‹ç¼©çº¿ç¨‹çš„ä¼˜å…ˆçº§
+            Www.threadPriority = Application.backgroundLoadingPriority; // å–ç”¨å…¨å±€çš„åŠ è½½ä¼˜å…ˆé€Ÿåº¦
             while (!Www.isDone)
             {
                 Progress = Www.progress;
@@ -116,7 +116,7 @@ namespace Framework
             {
                 if (Application.platform == RuntimePlatform.Android)
                 {
-                    // TODO: AndroidÏÂµÄ´íÎó¿ÉÄÜÊÇÒòÎªÎÄ¼ş²»´æÔÚ!
+                    // TODO: Androidä¸‹çš„é”™è¯¯å¯èƒ½æ˜¯å› ä¸ºæ–‡ä»¶ä¸å­˜åœ¨!
                 }
 
                 if (url.StartsWith(ResourceModule.GetFileProtocol))
@@ -139,7 +139,7 @@ namespace Framework
                 OnFinish(Www);
             }
 
-            // Ô¤·ÀWWW¼ÓÔØÆ÷ÓÀ²»·´³õÊ¼»¯, Ôì³ÉÄÚ´æĞ¹Â¶~
+            // é¢„é˜²WWWåŠ è½½å™¨æ°¸ä¸ååˆå§‹åŒ–, é€ æˆå†…å­˜æ³„éœ²~
             if (Application.isEditor)
             {
                 while (ABManager.GetCount<WWWLoader>() > 0)
@@ -171,14 +171,14 @@ namespace Framework
 
 
         /// <summary>
-        /// ¼àÊÓÆ÷Ğ­³Ì
-        /// ³¬¹ı×î´óWWWLoaderÊ±£¬¹ÒÆğ~
-        /// ºóÀ´µÄĞÂloader»á±»ÓÅÏÈ¼ÓÔØ
+        /// ç›‘è§†å™¨åç¨‹
+        /// è¶…è¿‡æœ€å¤§WWWLoaderæ—¶ï¼ŒæŒ‚èµ·~
+        /// åæ¥çš„æ–°loaderä¼šè¢«ä¼˜å…ˆåŠ è½½
         /// </summary>
         /// <returns></returns>
         protected static IEnumerator WWWLoaderMonitorCoroutine()
         {
-            //yield return new WaitForEndOfFrame(); // µÚÒ»´ÎµÈ´ı±¾Ö¡½áÊø
+            //yield return new WaitForEndOfFrame(); // ç¬¬ä¸€æ¬¡ç­‰å¾…æœ¬å¸§ç»“æŸ
             yield return null;
 
             while (WWWLoadersStack.Count > 0)

@@ -7,9 +7,9 @@ using Object = UnityEngine.Object;
 namespace Framework
 {
     /// <summary>
-    /// ab¼ÓÔØÆ÷
-    /// ÓÃ·¨£º1.Load
-    ///       2.ÓÃÍêÖ®ºóÊÖ¶¯µ÷ÓÃRelase£¬µ±refCountÎª0Ê±»áUnload(true)À´ÊÍ·ÅabºÍÄÚÈİ
+    /// abåŠ è½½å™¨
+    /// ç”¨æ³•ï¼š1.Load
+    ///       2.ç”¨å®Œä¹‹åæ‰‹åŠ¨è°ƒç”¨Relaseï¼Œå½“refCountä¸º0æ—¶ä¼šUnload(true)æ¥é‡Šæ”¾abå’Œå†…å®¹
     /// </summary>
     public class AssetBundleLoader : AbstractResourceLoader
     {
@@ -27,18 +27,18 @@ namespace Framework
         private List<UnityEngine.Object> _loadedAssets;
 
         /// <summary>
-        /// AssetBundle¼ÓÔØ·½Ê½
+        /// AssetBundleåŠ è½½æ–¹å¼
         /// </summary>
         private LoaderMode _loaderMode;
 
         private float beginTime;
         private string dependFrom = string.Empty;
         /// <summary>
-        /// ¼ÓÔØab
+        /// åŠ è½½ab
         /// </summary>
-        /// <param name="url">×ÊÔ´Â·¾¶</param>
-        /// <param name="callback">¼ÓÔØÍê³ÉµÄ»Øµ÷</param>
-        /// <param name="loaderMode">AsyncÒì²½£¬syncÍ¬²½</param>
+        /// <param name="url">èµ„æºè·¯å¾„</param>
+        /// <param name="callback">åŠ è½½å®Œæˆçš„å›è°ƒ</param>
+        /// <param name="loaderMode">Asyncå¼‚æ­¥ï¼ŒsyncåŒæ­¥</param>
         /// <returns></returns>
         public static AssetBundleLoader Load(string url, CAssetBundleLoaderDelegate callback = null,
             LoaderMode loaderMode = LoaderMode.Async)
@@ -60,8 +60,8 @@ namespace Framework
         private static AssetBundle _mainAssetBundle;
         private static AssetBundleManifest _assetBundleManifest;
         /// <summary>
-        /// Unity5ÏÂ£¬Ê¹ÓÃmanifest½øĞĞAssetBundleµÄ¼ÓÔØ
-        /// bool isForce,ÔÚÈÈ¸üĞÂºó£¬¿ÉÄÜĞèÒªÇ¿ÖÆË¢ĞÂAssetBundleManifest¡£
+        /// Unity5ä¸‹ï¼Œä½¿ç”¨manifestè¿›è¡ŒAssetBundleçš„åŠ è½½
+        /// bool isForce,åœ¨çƒ­æ›´æ–°åï¼Œå¯èƒ½éœ€è¦å¼ºåˆ¶åˆ·æ–°AssetBundleManifestã€‚
         /// </summary>
         public static void PreLoadManifest(bool isForce = false)
         {
@@ -69,7 +69,7 @@ namespace Framework
                 return;
 
             _hasPreloadAssetBundleManifest = true;
-            //´Ë·½·¨²»ÄÜ¼ÓÔØµ½manifestÎÄ¼ş
+            //æ­¤æ–¹æ³•ä¸èƒ½åŠ è½½åˆ°manifestæ–‡ä»¶
             //var manifestPath = string.Format("{0}/{1}/{1}.manifest", KResourceModule.BundlesPathRelative,KResourceModule.BuildPlatformName);
             // _mainAssetBundle = AssetBundle.LoadFromFile(manifestPath);
             // _assetBundleManifest = _mainAssetBundle.LoadAsset<AssetBundleManifest>("AssetBundleManifest");
@@ -96,13 +96,13 @@ namespace Framework
         }
 
         /// <summary>
-        /// ÒÀÀµµÄAssetBundleLoader
+        /// ä¾èµ–çš„AssetBundleLoader
         /// </summary>
         private AssetBundleLoader[] _depLoaders;
 
         private IEnumerator LoadAssetBundle(string relativeUrl)
         {
-            // Unity 5 ManifestÖĞ¹ÜÀíÁËÒÀÀµ
+            // Unity 5 Manifestä¸­ç®¡ç†äº†ä¾èµ–
             var abPath = relativeUrl.ToLower();
             var deps = _assetBundleManifest.GetAllDependencies(abPath);
             _depLoaders = new AssetBundleLoader[deps.Length];
@@ -122,7 +122,7 @@ namespace Framework
                 }
             }
 
-            // Unity 5 AssetBundle×Ô¶¯×ªĞ¡Ğ´
+            // Unity 5 AssetBundleè‡ªåŠ¨è½¬å°å†™
             relativeUrl = relativeUrl.ToLower();
             if (AppConfig.IsLogAbLoadCost) beginTime = Time.realtimeSinceStartup;
 
@@ -144,7 +144,7 @@ namespace Framework
                 var request = AssetBundle.LoadFromFileAsync(_fullUrl);
                 while (!request.isDone)
                 {
-                    if (IsReadyDisposed) // ÖĞÍ¾ÊÍ·Å
+                    if (IsReadyDisposed) // ä¸­é€”é‡Šæ”¾
                     {
                         OnFinish(null);
                         yield break;
@@ -201,7 +201,7 @@ namespace Framework
             {
                 if (Url.Contains("Arial"))
                 {
-                    Log.Error("ÒªÊÍ·ÅArial×ÖÌå£¡£¡´íÀ²£¡£¡builtinextra:{0}", Url);
+                    Log.Error("è¦é‡Šæ”¾Arialå­—ä½“ï¼ï¼é”™å•¦ï¼ï¼builtinextra:{0}", Url);
                     //UnityEditor.EditorApplication.isPaused = true;
                 }
             }
@@ -209,9 +209,9 @@ namespace Framework
             base.Release();
         }
 
-        /// ÅfµÄtips~ºöÂÔ
-        /// Ô­ÒÔÎª£¬Ã¿´Î¶¼Í¨¹ıgetterÈ¡Ò»´ÎassetBundle»áÓĞĞòÁĞ»¯½âÑ¹ÎÊÌâ£¬»áÂıÒ»µã£¬ºóÓÃAddWatchµ÷ÊÔ¹ı£¬·¢ÏÖÈç¹û°Ñ.assetBundle·Åµ½DictionaryÀï»º´æ£¬²éÑ¯»á¸üÂı
-        /// ÒòÎª£¬¹À¼Æ.assetBundleÊÇÒ»¸ö´¿Getter£¬Ã»ÓĞ×öĞòÁĞ»¯ÎÊÌâ¡£  £¨²»±£Ö¤.mainAsset£©
+        /// èˆŠçš„tips~å¿½ç•¥
+        /// åŸä»¥ä¸ºï¼Œæ¯æ¬¡éƒ½é€šè¿‡getterå–ä¸€æ¬¡assetBundleä¼šæœ‰åºåˆ—åŒ–è§£å‹é—®é¢˜ï¼Œä¼šæ…¢ä¸€ç‚¹ï¼Œåç”¨AddWatchè°ƒè¯•è¿‡ï¼Œå‘ç°å¦‚æœæŠŠ.assetBundleæ”¾åˆ°Dictionaryé‡Œç¼“å­˜ï¼ŒæŸ¥è¯¢ä¼šæ›´æ…¢
+        /// å› ä¸ºï¼Œä¼°è®¡.assetBundleæ˜¯ä¸€ä¸ªçº¯Getterï¼Œæ²¡æœ‰åšåºåˆ—åŒ–é—®é¢˜ã€‚  ï¼ˆä¸ä¿è¯.mainAssetï¼‰
         public void PushLoadedAsset(Object getAsset)
         {
             if (_loadedAssets == null)

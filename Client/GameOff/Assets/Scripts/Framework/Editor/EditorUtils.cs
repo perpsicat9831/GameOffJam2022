@@ -37,12 +37,12 @@ using Debug = UnityEngine.Debug;
 namespace Framework
 {
     /// <summary>
-    /// Shell / cmd / µÈµÈ³£ÓÃEditorĞèÒªÓÃµ½µÄ¹¤¾ß¼¯
+    /// Shell / cmd / ç­‰ç­‰å¸¸ç”¨Editoréœ€è¦ç”¨åˆ°çš„å·¥å…·é›†
     /// </summary>
     public class EditorUtils
     {
         /// <summary>
-        /// ÓÃÓÚ·ÇÖ÷Ïß³ÌÀïÖ´ĞĞÖ÷Ïß³ÌµÄº¯Êı
+        /// ç”¨äºéä¸»çº¿ç¨‹é‡Œæ‰§è¡Œä¸»çº¿ç¨‹çš„å‡½æ•°
         /// </summary>
         internal static Queue<Action> _mainThreadActions = new Queue<Action>();
 
@@ -53,11 +53,11 @@ namespace Framework
         }
 
         /// <summary>
-        /// ²¶»ñUnity Editor updateÊÂ¼ş
+        /// æ•è·Unity Editor updateäº‹ä»¶
         /// </summary>
         private static void OnEditorUpdate()
         {
-            // Ö÷Ïß³ÌÎ¯ÍĞ
+            // ä¸»çº¿ç¨‹å§”æ‰˜
             while (_mainThreadActions.Count > 0)
             {
                 var action = _mainThreadActions.Dequeue();
@@ -66,7 +66,7 @@ namespace Framework
         }
 
         /// <summary>
-        /// Òì²½Ïß³Ì»Øµ½Ö÷Ïß³Ì½øĞĞ»Øµ÷
+        /// å¼‚æ­¥çº¿ç¨‹å›åˆ°ä¸»çº¿ç¨‹è¿›è¡Œå›è°ƒ
         /// </summary>
         /// <param name="action"></param>
         public static void CallMainThread(Action action)
@@ -75,7 +75,7 @@ namespace Framework
         }
 
         /// <summary>
-        /// Çå³ıConsole log
+        /// æ¸…é™¤Console log
         /// </summary>
         public static void ClearConsoleLog()
         {
@@ -85,10 +85,10 @@ namespace Framework
             method.Invoke(new object(), null);
         }
 
-        #region Åú´¦Àí³ÌĞò
+        #region æ‰¹å¤„ç†ç¨‹åº
 
         /// <summary>
-        /// Ö´ĞĞÅú´¦ÀíÃüÁî
+        /// æ‰§è¡Œæ‰¹å¤„ç†å‘½ä»¤
         /// </summary>
         /// <param name="command"></param>
         /// <param name="workingDirectory"></param>
@@ -127,7 +127,7 @@ namespace Framework
                     process.StartInfo.CreateNoWindow = true;
                     process.StartInfo.RedirectStandardOutput = true;
                     process.StartInfo.RedirectStandardError = true;
-                    process.StartInfo.StandardOutputEncoding = Encoding.UTF8; //ÉèÖÃ±ê×¼Êä³ö±àÂë
+                    process.StartInfo.StandardOutputEncoding = Encoding.UTF8; //è®¾ç½®æ ‡å‡†è¾“å‡ºç¼–ç 
                     process.StartInfo.StandardErrorEncoding = Encoding.UTF8;
                     process.OutputDataReceived += new DataReceivedEventHandler(OutputReceived);
                     process.ErrorDataReceived += new DataReceivedEventHandler(ErrorReceived);
@@ -136,7 +136,7 @@ namespace Framework
                     process.BeginOutputReadLine();
                     process.BeginErrorReadLine();
 
-                    process.WaitForExit();//NOTE CMDÖ´ĞĞÖĞ»á¿¨×¡UnityÖ÷Ïß³Ì£¬Èç¹ûÎŞÏìÓ¦ĞèÒª½áÊø½ø³Ì
+                    process.WaitForExit();//NOTE CMDæ‰§è¡Œä¸­ä¼šå¡ä½Unityä¸»çº¿ç¨‹ï¼Œå¦‚æœæ— å“åº”éœ€è¦ç»“æŸè¿›ç¨‹
                 }
             }
             finally
@@ -179,7 +179,7 @@ namespace Framework
         public delegate void EachDirectoryDelegate(string fileFullPath, string fileRelativePath);
 
         /// <summary>
-        /// µİ¹éÒ»¸öÄ¿Â¼ËùÓĞÎÄ¼ş£¬callback
+        /// é€’å½’ä¸€ä¸ªç›®å½•æ‰€æœ‰æ–‡ä»¶ï¼Œcallback
         /// </summary>
         /// <param name="dirPath"></param>
         /// <param name="eachCallback"></param>
@@ -198,7 +198,7 @@ namespace Framework
         }
 
         /// <summary>
-        /// ½«³óÂªµÄwindowsÂ·¾¶£¬Ìæ»»µô\×Ö·û
+        /// å°†ä¸‘é™‹çš„windowsè·¯å¾„ï¼Œæ›¿æ¢æ‰\å­—ç¬¦
         /// </summary>
         /// <param name="path"></param>
         /// <returns></returns>
@@ -208,7 +208,7 @@ namespace Framework
         }
 
         /// <summary>
-        /// ÔÚÖ¸¶¨Ä¿Â¼ÖĞËÑÑ°×Ö·û´®²¢·µ»ØÆ¥Åä}
+        /// åœ¨æŒ‡å®šç›®å½•ä¸­æœå¯»å­—ç¬¦ä¸²å¹¶è¿”å›åŒ¹é…}
         /// </summary>
         /// <param name="sourceFolder"></param>
         /// <param name="searchWord"></param>
@@ -263,7 +263,7 @@ namespace Framework
         }
 
         /// <summary>
-        /// ´ÓËùÓĞµÄ³ÌĞò¼¯ÊÕ¼¯Ö¸¶¨ÀàĞÍ£¬public, °üÀ¨¼Ì³ĞµÄ
+        /// ä»æ‰€æœ‰çš„ç¨‹åºé›†æ”¶é›†æŒ‡å®šç±»å‹ï¼Œpublic, åŒ…æ‹¬ç»§æ‰¿çš„
         /// </summary>
         /// <returns></returns>
         public static IList<Type> FindAllPublicTypes(Type findType)

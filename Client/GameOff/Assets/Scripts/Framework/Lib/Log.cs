@@ -9,14 +9,14 @@ using UnityEngine;
 namespace Framework
 {
     /// <summary>
-    /// ×Ô¶¨Òålog±êÇ©
+    /// è‡ªå®šä¹‰logæ ‡ç­¾
     /// </summary>
     public enum LogTag
     {
         None = 0,
     }
     /// <summary>
-    /// logÀàĞÍ
+    /// logç±»å‹
     /// </summary>
     public enum LogType
     {
@@ -25,12 +25,12 @@ namespace Framework
         Error,
     }
     /// <summary>
-    /// debug·â×°²ã
+    /// debugå°è£…å±‚
     /// </summary>
     public class Log
     {
         /// <summary>
-        /// ĞèÒªÔÚÓÎÏ·Ö÷Ñ­»·µÄFixedUpdateÀï++
+        /// éœ€è¦åœ¨æ¸¸æˆä¸»å¾ªç¯çš„FixedUpdateé‡Œ++
         /// </summary>
         public static long TotalFrame;
         private static int mainthreadid = System.Threading.Thread.CurrentThread.ManagedThreadId;
@@ -105,7 +105,7 @@ namespace Framework
         public static double GetMonoUseMemory()
         {
             var ismain = mainthreadid == System.Threading.Thread.CurrentThread.ManagedThreadId;
-            //³Ë·¨±È³ı·¨¿ì£¬ËùÒÔ/1024¸Ä³É *0.0009765625
+            //ä¹˜æ³•æ¯”é™¤æ³•å¿«ï¼Œæ‰€ä»¥/1024æ”¹æˆ *0.0009765625
             var memory = ismain ? UnityEngine.Profiling.Profiler.GetMonoUsedSizeLong() * 0.0009765625 * 0.0009765625 : 0;
             return memory;
         }

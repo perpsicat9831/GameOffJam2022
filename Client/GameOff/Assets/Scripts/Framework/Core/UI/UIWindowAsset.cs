@@ -61,12 +61,12 @@ namespace Framework
                 }
                 else
                 {
-                    Log.Error($"找不到名字为{tag}的SpriteAtlas");
+                    Log.Error($"鎵句笉鍒板悕瀛椾负{tag}鐨凷priteAtlas");
                 }
             }
             else
             {
-                Log.Error($"找不到名字为{tag}的SpriteAtlas");
+                Log.Error($"鎵句笉鍒板悕瀛椾负{tag}鐨凷priteAtlas");
             }
         }
 #endif

@@ -8,19 +8,19 @@ namespace Logic
 {
     public class Timer 
     {
-        //×ÜÊ±¼ä
+        //æ€»æ—¶é—´
         public float duration;
-        //Ê£ÓàÊ±¼ä
+        //å‰©ä½™æ—¶é—´
         public float leftTime;
-        //¼¤»î false»á±»»ØÊÕ
+        //æ¿€æ´» falseä¼šè¢«å›æ”¶
         public bool isActive;
-        //ÊÇ·ñÔİÍ£
+        //æ˜¯å¦æš‚åœ
         public bool isPause;
 
 
-        //³ÖĞøÊÂ¼ş
+        //æŒç»­äº‹ä»¶
         public Action onUpdateAct;
-        //ÍË³öÊÂ¼ş
+        //é€€å‡ºäº‹ä»¶
         public Action onEndAct;
 
 
@@ -52,7 +52,7 @@ namespace Logic
             onEndAct = callAction;
             onUpdateAct = updateAction;
         }
-        //ÖØÖÃ¼ÆÊ±Æ÷
+        //é‡ç½®è®¡æ—¶å™¨
         public void Reset()
         {
             isActive = true;
@@ -61,7 +61,7 @@ namespace Logic
         }
 
         /// <summary>
-        /// ÉèÖÃ¼ÆÊ±Æ÷ÔİÍ£
+        /// è®¾ç½®è®¡æ—¶å™¨æš‚åœ
         /// </summary>
         public void SetPause(bool pause)
         {
@@ -69,7 +69,7 @@ namespace Logic
         }
         public void Clear()
         {
-            //»ØÊÕ
+            //å›æ”¶
             isActive = false;
             onUpdateAct = null;
             onEndAct = null;

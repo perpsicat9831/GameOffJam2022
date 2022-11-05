@@ -9,7 +9,7 @@ public class GameMain : MonoBehaviour
     public enum EGameState
     {
         None,
-        FlashStart,//ÉÁÆÁ¿ªÊ¼
+        FlashStart,//é—ªå±å¼€å§‹
         Loading,
         Running,
     }

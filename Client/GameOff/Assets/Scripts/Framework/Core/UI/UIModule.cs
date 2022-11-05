@@ -11,7 +11,7 @@ namespace Framework
     {
         private int _loadingUICount = 0;
         /// <summary>
-        /// ÕıÔÚ¼ÓÔØµÄUIÍ³¼Æ
+        /// æ­£åœ¨åŠ è½½çš„UIç»Ÿè®¡
         /// </summary>
         public int LoadingUICount
         {
@@ -38,7 +38,7 @@ namespace Framework
         private GameObject goEventSystem;
 
         /// <summary>
-        /// Ã¿¸ö½çÃæ´ò¿ª¶¼»á+1£¬ĞÂ´ò¿ªµÄ½çÃæÊ¼ÖÕÔÚ×î¶¥²ã
+        /// æ¯ä¸ªç•Œé¢æ‰“å¼€éƒ½ä¼š+1ï¼Œæ–°æ‰“å¼€çš„ç•Œé¢å§‹ç»ˆåœ¨æœ€é¡¶å±‚
         /// </summary>
         public static int sortOrder = 0;
         public void CreateRoot()
@@ -108,7 +108,7 @@ namespace Framework
                 LoadWindow(id, uiConfig, args);
                 return;
             }
-            //¼ÓÔØÎ´Íê³ÉËµÃ÷»¹ÔÚµÚÒ»´Î¼ÓÔØ£¬²»´¦Àí
+            //åŠ è½½æœªå®Œæˆè¯´æ˜è¿˜åœ¨ç¬¬ä¸€æ¬¡åŠ è½½ï¼Œä¸å¤„ç†
             if (uiBase.isFinishLoad)
             {
                 uiBase.OnOpen(args);
@@ -126,7 +126,7 @@ namespace Framework
         {
             if (dictUIBase.ContainsKey(id))
             {
-                Log.Error("[LoadWindow]¶à´ÎÖØ¸´LoadWindow: {0}", id.ToString());
+                Log.Error("[LoadWindow]å¤šæ¬¡é‡å¤LoadWindow: {0}", id.ToString());
             }
             Debuger.Assert(!dictUIBase.ContainsKey(id));
 
@@ -157,9 +157,9 @@ namespace Framework
             if (uiBase.gameObject != null)
             {
                 InitUIAsset(uiBase);
-                // ¾ßÌå¼ÓÔØÂß¼­½áÊø
+                // å…·ä½“åŠ è½½é€»è¾‘ç»“æŸ
 
-                uiBase.Canvas.enabled = false;//ÉèÖÃCanvasµÄenable£¬¼õÉÙSetActiveµÄÏûºÄ
+                uiBase.Canvas.enabled = false;//è®¾ç½®Canvasçš„enableï¼Œå‡å°‘SetActiveçš„æ¶ˆè€—
                 //uiObj.name = openState.TemplateName;
                 ShowWindow(uiBase);
                 uiBase.isFinishLoad = true;
@@ -196,7 +196,7 @@ namespace Framework
                 uiBase.gameObject = GameObject.Instantiate(req.asset) as GameObject;
 
                 uiBase.OnLoaded();
-                //¹ÜÀíÍ¼¼¯
+                //ç®¡ç†å›¾é›†
                 GameObject go = req.asset as GameObject;
                 if (go)
                 {
@@ -213,7 +213,7 @@ namespace Framework
                             if (atlas != null) ABManager.SpriteAtlases[atlas_name] = atlas;
                         }
 
-                        if (sprite_count >= 2) Log.Error($"UI:{uiBase.prefabPath}°üÀ¨¶à¸öÍ¼¼¯({windowAsset.atals_arr})£¬Çë´¦Àí");
+                        if (sprite_count >= 2) Log.Error($"UI:{uiBase.prefabPath}åŒ…æ‹¬å¤šä¸ªå›¾é›†({windowAsset.atals_arr})ï¼Œè¯·å¤„ç†");
                     }
                 }
                 uiBase.UIResourceLoader = loader;

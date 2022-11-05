@@ -28,7 +28,7 @@ namespace Framework
         public static event System.Action<CacheBehaviour> StaticDestroyEvent;
         public event System.Action<CacheBehaviour> DestroyEvent;
 
-        private static bool _isApplicationQuited = false; // È«¾Ö±ê¼Ç, ³ÌĞòÊÇ·ñÍË³ö×´Ì¬
+        private static bool _isApplicationQuited = false; // å…¨å±€æ ‡è®°, ç¨‹åºæ˜¯å¦é€€å‡ºçŠ¶æ€
 
         public static bool IsApplicationQuited
         {
@@ -51,7 +51,7 @@ namespace Framework
         }
 
         /// <summary>
-        /// GameObject.Destory¶ÔÏó
+        /// GameObject.Destoryå¯¹è±¡
         /// </summary>
         public virtual void Delete(float time)
         {
@@ -59,14 +59,14 @@ namespace Framework
                 UnityEngine.Object.Destroy(gameObject, time);
         }
 
-        // Ö»É¾³ı×Ô¼ºÕâ¸öComponent
+        // åªåˆ é™¤è‡ªå·±è¿™ä¸ªComponent
         public virtual void DeleteSelf()
         {
             UnityEngine.Object.Destroy(this);
         }
 
-        // ¼Ì³ĞCBehaivour±ØĞëÍ¨¹ıDeleteÉ¾³ı
-        // ³ÌĞòÍË³öÊ±»áÇ¿ĞĞDestroyËùÓĞ£¬ÕâÀï×öÁË¸ö±ê¼Ç
+        // ç»§æ‰¿CBehaivourå¿…é¡»é€šè¿‡Deleteåˆ é™¤
+        // ç¨‹åºé€€å‡ºæ—¶ä¼šå¼ºè¡ŒDestroyæ‰€æœ‰ï¼Œè¿™é‡Œåšäº†ä¸ªæ ‡è®°
         protected virtual void OnDestroy()
         {
             IsDestroyed = true;

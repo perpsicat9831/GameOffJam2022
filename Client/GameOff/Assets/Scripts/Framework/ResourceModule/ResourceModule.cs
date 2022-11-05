@@ -16,22 +16,22 @@ namespace Framework
     public class ResourceModule : MonoBehaviour
     {
         /// <summary>
-        /// ÓÃÓÚGetResourceFullPathº¯Êı£¬·µ»ØµÄÀàĞÍÅĞ¶Ï
+        /// ç”¨äºGetResourceFullPathå‡½æ•°ï¼Œè¿”å›çš„ç±»å‹åˆ¤æ–­
         /// </summary>
         public enum GetResourceFullPathType
         {
             /// <summary>
-            /// ÎŞ×ÊÔ´
+            /// æ— èµ„æº
             /// </summary>
             Invalid,
 
             /// <summary>
-            /// °²×°°üÄÚ
+            /// å®‰è£…åŒ…å†…
             /// </summary>
             InApp,
 
             /// <summary>
-            /// ÈÈ¸üĞÂÄ¿Â¼
+            /// çƒ­æ›´æ–°ç›®å½•
             /// </summary>
             InDocument,
         }
@@ -113,15 +113,15 @@ namespace Framework
                     break;
                 case RuntimePlatform.Android:
                     {
-                        //ÎÄµµ£ºhttps://docs.unity3d.com/Manual/StreamingAssets.html
-                        //×¢Òâ£¬StramingAssetÔÚAndroidÆ½Ì¨ÊÇÔÚapkÖĞ£¬ÎŞ·¨Í¨¹ıFile¶ÁÈ¡ÇëÊ¹ÓÃLoadAssetsSync£¬Èç¹ûÒªÍ¬²½¶ÁÈ¡abÇëÊ¹ÓÃGetAbFullPath
+                        //æ–‡æ¡£ï¼šhttps://docs.unity3d.com/Manual/StreamingAssets.html
+                        //æ³¨æ„ï¼ŒStramingAssetåœ¨Androidå¹³å°æ˜¯åœ¨apkä¸­ï¼Œæ— æ³•é€šè¿‡Fileè¯»å–è¯·ä½¿ç”¨LoadAssetsSyncï¼Œå¦‚æœè¦åŒæ­¥è¯»å–abè¯·ä½¿ç”¨GetAbFullPath
                         AppBasePath = Application.dataPath + "!/assets/";
                         AppBasePathWithProtocol = fileProtocol + AppBasePath;
                     }
                     break;
                 case RuntimePlatform.IPhonePlayer:
                     {
-                        // MacOSXÏÂ£¬´ø¿Õ¸ñµÄÎÄ¼ş¼Ğ£¬¿Õ¸ñ×Ö·ûĞèÒª×ªÒå³É%20
+                        // MacOSXä¸‹ï¼Œå¸¦ç©ºæ ¼çš„æ–‡ä»¶å¤¹ï¼Œç©ºæ ¼å­—ç¬¦éœ€è¦è½¬ä¹‰æˆ%20
                         // only iPhone need to Escape the fucking Url!!! other platform works without it!!!
                         AppBasePath = System.Uri.EscapeUriString(Application.dataPath + "/Raw");
                         AppBasePathWithProtocol = fileProtocol + AppBasePath;
@@ -139,13 +139,13 @@ namespace Framework
 
         #region Path Def
 
-        /**Â·¾¶ËµÃ÷
-         * EditorÏÂÄ£ÄâÏÂÔØ×ÊÔ´£º
+        /**è·¯å¾„è¯´æ˜
+         * Editorä¸‹æ¨¡æ‹Ÿä¸‹è½½èµ„æºï¼š
          *     AppData:C:\xxx\xxx\Appdata
          *     StreamAsset:C:\KSFramrwork\Product
-         * Õæ»ú£º
+         * çœŸæœºï¼š
          *     AppData:Android\data\com.xxx.xxx\files\
-         *     StreamAsset:apkÄÚ
+         *     StreamAsset:apkå†…
          */
         private static string editorProductFullPath;
 
@@ -164,19 +164,19 @@ namespace Framework
 
 
         /// <summary>
-        /// °²×°°üÄÚµÄÂ·¾¶£¬ÒÆ¶¯Æ½Ì¨ÎªÖ»¶ÁÈ¨ÏŞ£¬Õë¶ÔApplication.streamingAssetsPath½øĞĞ¶àÆ½Ì¨´¦Àí£¬ÒÔ/½áÎ²
+        /// å®‰è£…åŒ…å†…çš„è·¯å¾„ï¼Œç§»åŠ¨å¹³å°ä¸ºåªè¯»æƒé™ï¼Œé’ˆå¯¹Application.streamingAssetsPathè¿›è¡Œå¤šå¹³å°å¤„ç†ï¼Œä»¥/ç»“å°¾
         /// </summary>
         public static string AppBasePath { get; private set; }
 
         /// <summary>
-        /// WWWµÄ¶ÁÈ¡ĞèÒªfile://Ç°×º
+        /// WWWçš„è¯»å–éœ€è¦file://å‰ç¼€
         /// </summary>
         public static string AppBasePathWithProtocol { get; private set; }
 
 
         private static string appDataPath = null;
         /// <summary>
-        /// appµÄÊı¾İÄ¿Â¼£¬ÓĞ¶ÁĞ´È¨ÏŞ£¬Êµ¼ÊÊÇApplication.persistentDataPath£¬ÒÔ/½áÎ²
+        /// appçš„æ•°æ®ç›®å½•ï¼Œæœ‰è¯»å†™æƒé™ï¼Œå®é™…æ˜¯Application.persistentDataPathï¼Œä»¥/ç»“å°¾
         /// </summary>
         public static string AppDataPath
         {
@@ -234,9 +234,9 @@ namespace Framework
         #endregion
 
         /// <summary>
-        /// »ñÈ¡abÎÄ¼şµÄÍêÕûÂ·¾¶£¬×öµÄ´¦Àí£º»á¼ÓÉÏab¸ñÊ½µÄºó×º£¬Èç¹ûÊÇÔÚapk°üÌåÄÚÔò»á¼ÓÉÏjar:file://Ç°×º
+        /// è·å–abæ–‡ä»¶çš„å®Œæ•´è·¯å¾„ï¼Œåšçš„å¤„ç†ï¼šä¼šåŠ ä¸Šabæ ¼å¼çš„åç¼€ï¼Œå¦‚æœæ˜¯åœ¨apkåŒ…ä½“å†…åˆ™ä¼šåŠ ä¸Šjar:file://å‰ç¼€
         /// </summary>
-        /// <param name="path">Ïà¶ÔÂ·¾¶</param>
+        /// <param name="path">ç›¸å¯¹è·¯å¾„</param>
         /// <returns></returns>
         public static string GetAbFullPath(string path)
         {
@@ -246,7 +246,7 @@ namespace Framework
             {
                 if (Application.platform == RuntimePlatform.Android && _fullUrl.StartsWith("/data/app"))
                 {
-                    return "jar:file://" + _fullUrl;//Èç¹ûapkÄÚÔòÌí¼ÓÇ°×º£¬¾­²âÊÔunity2019.3.7f1+android6.0¼ÓÔÚAppbaseÎŞĞ§
+                    return "jar:file://" + _fullUrl;//å¦‚æœapkå†…åˆ™æ·»åŠ å‰ç¼€ï¼Œç»æµ‹è¯•unity2019.3.7f1+android6.0åŠ åœ¨Appbaseæ— æ•ˆ
                 }
             }
 
@@ -254,10 +254,10 @@ namespace Framework
         }
 
         /// <summary>
-        /// ×ÊÔ´ÊÇ·ñ´æÔÚ
+        /// èµ„æºæ˜¯å¦å­˜åœ¨
         /// </summary>
-        /// <param name="url">Ïà¶ÔÂ·¾¶</param>
-        /// <param name="raiseError">ÎÄ¼ş²»´æÔÚ´òÓ¡Error</param>
+        /// <param name="url">ç›¸å¯¹è·¯å¾„</param>
+        /// <param name="raiseError">æ–‡ä»¶ä¸å­˜åœ¨æ‰“å°Error</param>
         /// <returns></returns>
         public static bool IsResourceExist(string url, bool raiseError = true)
         {
@@ -266,11 +266,11 @@ namespace Framework
         }
 
         /// <summary>
-        /// ÍêÕûÂ·¾¶£¬ÓÅÏÈ¼¶£ºÈÈ¸üÄ¿Â¼->°²×°°ü
-        /// ¸ùÂ·¾¶£ºProduct
+        /// å®Œæ•´è·¯å¾„ï¼Œä¼˜å…ˆçº§ï¼šçƒ­æ›´ç›®å½•->å®‰è£…åŒ…
+        /// æ ¹è·¯å¾„ï¼šProduct
         /// </summary>
         /// <param name="url"></param>
-        /// <param name="withFileProtocol">ÊÇ·ñ´øÓĞfile://Ç°×º</param>
+        /// <param name="withFileProtocol">æ˜¯å¦å¸¦æœ‰file://å‰ç¼€</param>
         /// <param name="raiseError"></param>
         /// <returns></returns>
         public static string GetResourceFullPath(string url, bool withFileProtocol = false, bool raiseError = true)
@@ -282,19 +282,19 @@ namespace Framework
         }
 
         /// <summary>
-        /// ¸ù¾İÏà¶ÔÂ·¾¶£¬»ñÈ¡µ½ÍêÕûÂ·¾¶£¬ƒÏÈ´ÓÏÂİdÙYÔ´Ä¿Â¼ÕÒ£¬Ã»ÓĞ¾Í¶Á±¾µØÙYÔ´Ä¿ä› 
-        /// ¸ùÂ·¾¶£ºProduct
+        /// æ ¹æ®ç›¸å¯¹è·¯å¾„ï¼Œè·å–åˆ°å®Œæ•´è·¯å¾„ï¼Œå„ªå…ˆä»ä¸‹è¼‰è³‡æºç›®å½•æ‰¾ï¼Œæ²¡æœ‰å°±è¯»æœ¬åœ°è³‡æºç›®éŒ„ 
+        /// æ ¹è·¯å¾„ï¼šProduct
         /// </summary>
-        /// <param name="url">Ïà¶ÔÂ·¾¶</param>
+        /// <param name="url">ç›¸å¯¹è·¯å¾„</param>
         /// <param name="withFileProtocol"></param>
-        /// <param name="fullPath">ÍêÕûÂ·¾¶</param>
-        /// <param name="raiseError">ÎÄ¼ş²»´æÔÚ´òÓ¡Error</param>
+        /// <param name="fullPath">å®Œæ•´è·¯å¾„</param>
+        /// <param name="raiseError">æ–‡ä»¶ä¸å­˜åœ¨æ‰“å°Error</param>
         /// <returns></returns>
         public static GetResourceFullPathType GetResourceFullPath(string url, bool withFileProtocol, out string fullPath, bool raiseError = true)
         {
             if (string.IsNullOrEmpty(url))
             {
-                Log.Error("³¢ÊÔ»ñÈ¡Ò»¸ö¿ÕµÄ×ÊÔ´Â·¾¶£¡");
+                Log.Error("å°è¯•è·å–ä¸€ä¸ªç©ºçš„èµ„æºè·¯å¾„ï¼");
                 fullPath = null;
                 return GetResourceFullPathType.Invalid;
             }
@@ -308,27 +308,27 @@ namespace Framework
 
             string inAppUrl;
             bool hasInAppUrl = TryGetInAppStreamingUrl(url, withFileProtocol, out inAppUrl);
-            if (!hasInAppUrl) // Á¬±¾µØ×ÊÔ´¶¼Ã»ÓĞ£¬Ö±½ÓÊ§°Ü°É £¿£¿ 
+            if (!hasInAppUrl) // è¿æœ¬åœ°èµ„æºéƒ½æ²¡æœ‰ï¼Œç›´æ¥å¤±è´¥å§ ï¼Ÿï¼Ÿ 
             {
                 if (raiseError) Log.Error($"[Not Found] StreamingAssetsPath Url Resource: {url} ,fullPath:{inAppUrl}");
                 fullPath = null;
                 return GetResourceFullPathType.Invalid;
             }
 
-            fullPath = inAppUrl; // Ö±½ÓÊ¹ÓÃ±¾µØÙYÔ´£¡
+            fullPath = inAppUrl; // ç›´æ¥ä½¿ç”¨æœ¬åœ°è³‡æºï¼
 
             return GetResourceFullPathType.InApp;
         }
 
         /// <summary>
-        /// »ñÈ¡Ò»¸ö×ÊÔ´µÄÍêÕûÂ·¾¶ÊÇÔÚapkÑ¹Ëõ°üÄÚ»¹ÊÇÔÚ¿É¶ÁĞ´Â·¾¶ÄÚ
+        /// è·å–ä¸€ä¸ªèµ„æºçš„å®Œæ•´è·¯å¾„æ˜¯åœ¨apkå‹ç¼©åŒ…å†…è¿˜æ˜¯åœ¨å¯è¯»å†™è·¯å¾„å†…
         /// </summary>
         /// <param name="fullPath"></param>
         public static GetResourceFullPathType GetResFullPathType(string fullPath)
         {
             if (string.IsNullOrEmpty(fullPath))
             {
-                Log.Error("ÎŞ·¨Ê¶±ğÒ»¸ö¿ÕµÄ×ÊÔ´Â·¾¶£¡");
+                Log.Error("æ— æ³•è¯†åˆ«ä¸€ä¸ªç©ºçš„èµ„æºè·¯å¾„ï¼");
                 return GetResourceFullPathType.Invalid;
             }
 
@@ -346,10 +346,10 @@ namespace Framework
         }
 
         /// <summary>
-        /// ¿É¶ÁĞ´µÄÄ¿Â¼
+        /// å¯è¯»å†™çš„ç›®å½•
         /// </summary>
         /// <param name="url"></param>
-        /// <param name="withFileProtocol">ÊÇ·ñ´øÓĞfile://Ç°×º</param>
+        /// <param name="withFileProtocol">æ˜¯å¦å¸¦æœ‰file://å‰ç¼€</param>
         /// <param name="newUrl"></param>
         /// <returns></returns>
         public static bool TryGetAppDataUrl(string url, bool withFileProtocol, out string newUrl)
@@ -359,10 +359,10 @@ namespace Framework
         }
 
         /// <summary>
-        /// StreamingAssetsÄ¿Â¼
+        /// StreamingAssetsç›®å½•
         /// </summary>
         /// <param name="url"></param>
-        /// <param name="withFileProtocol">ÊÇ·ñ´øÓĞfile://Ç°×º</param>
+        /// <param name="withFileProtocol">æ˜¯å¦å¸¦æœ‰file://å‰ç¼€</param>
         /// <param name="newUrl"></param>
         /// <returns></returns>
         public static bool TryGetInAppStreamingUrl(string url, bool withFileProtocol, out string newUrl)
@@ -371,20 +371,20 @@ namespace Framework
 
             if (Application.isEditor)
             {
-                // Editor½øĞĞÎÄ¼ş¼ì²é
+                // Editorè¿›è¡Œæ–‡ä»¶æ£€æŸ¥
                 if (!File.Exists(Path.GetFullPath(AppBasePath + url)))
                 {
                     return false;
                 }
             }
 
-            // Windows/EditorÆ½Ì¨ÏÂ£¬½øĞĞ´óĞ¡Ãô¸ĞÅĞ¶Ï
+            // Windows/Editorå¹³å°ä¸‹ï¼Œè¿›è¡Œå¤§å°æ•æ„Ÿåˆ¤æ–­
             if (Application.isEditor)
             {
                 var result = FileExistsWithDifferentCase(AppBasePath + url);
                 if (!result)
                 {
-                    Log.Error("[´óĞ¡Ğ´Ãô¸Ğ]·¢ÏÖÒ»¸ö×ÊÔ´ {0}£¬´óĞ¡Ğ´³öÏÖÎÊÌâ£¬ÔÚWindows¿ÉÒÔ¶ÁÈ¡£¬ÊÖ»ú²»ĞĞ£¬Çë¸Ä±íĞŞ¸Ä£¡", url);
+                    Log.Error("[å¤§å°å†™æ•æ„Ÿ]å‘ç°ä¸€ä¸ªèµ„æº {0}ï¼Œå¤§å°å†™å‡ºç°é—®é¢˜ï¼Œåœ¨Windowså¯ä»¥è¯»å–ï¼Œæ‰‹æœºä¸è¡Œï¼Œè¯·æ”¹è¡¨ä¿®æ”¹ï¼", url);
                 }
             }
 
@@ -392,7 +392,7 @@ namespace Framework
         }
 
         /// <summary>
-        /// ´óĞ¡Ğ´Ãô¸ĞµØ½øĞĞÎÄ¼şÅĞ¶Ï, Windows Only
+        /// å¤§å°å†™æ•æ„Ÿåœ°è¿›è¡Œæ–‡ä»¶åˆ¤æ–­, Windows Only
         /// </summary>
         /// <param name="filePath"></param>
         /// <returns></returns>
@@ -532,7 +532,7 @@ namespace Framework
         }
 
         /// <summary>
-        /// ÎŞÊÓËøÎÄ¼ş£¬Ö±½Ó¶Ábytes
+        /// æ— è§†é”æ–‡ä»¶ï¼Œç›´æ¥è¯»bytes
         /// </summary>
         /// <param name="resPath"></param>
         public static byte[] ReadAllBytes(string resPath)
@@ -559,7 +559,7 @@ namespace Framework
             System.GC.Collect();
         }
 
-        #region Unityº¯Êı
+        #region Unityå‡½æ•°
 
         private void Awake()
         {
@@ -568,7 +568,7 @@ namespace Framework
             SpriteAtlasManager.atlasRequested += ABManager.RequestAtlas;
             if (AppConfig.IsLogDeviceInfo)
             {
-                //Õæ»úÉÏÊä³öÕâ¼¸¸öÂ·¾¶
+                //çœŸæœºä¸Šè¾“å‡ºè¿™å‡ ä¸ªè·¯å¾„
                 Log.LogInfo("ResourceManager AppBasePath:{0} ,AppBasePathWithProtocol:{1}", AppBasePath, AppBasePathWithProtocol);
                 Log.LogInfo("ResourceManager AppDataPath:{0} ,AppDataPathWithProtocol:{1}", AppDataPath, AppDataPathWithProtocol);
             }
@@ -576,7 +576,7 @@ namespace Framework
 
         private void Update()
         {
-            //NOTE ÔÚUnity2019ÖĞÓĞ½¥½üÊ½GC£¬¶ø´Ë´¦²»»áµ÷ÓÃGC.Collect£¬½ö½ö¶ÔÒÑ¼ÓÔØµÄab½øĞĞ¼ì²éÊÇ·ñĞèÒªUnload
+            //NOTE åœ¨Unity2019ä¸­æœ‰æ¸è¿‘å¼GCï¼Œè€Œæ­¤å¤„ä¸ä¼šè°ƒç”¨GC.Collectï¼Œä»…ä»…å¯¹å·²åŠ è½½çš„abè¿›è¡Œæ£€æŸ¥æ˜¯å¦éœ€è¦Unload
             ABManager.CheckGcCollect();
         }
 

@@ -5,7 +5,7 @@ using UnityEngine;
 namespace Framework
 {
     /// <summary>
-    /// ¼ÓÔØÄ£Ê½£¬Í¬²½»òÒì²½
+    /// åŠ è½½æ¨¡å¼ï¼ŒåŒæ­¥æˆ–å¼‚æ­¥
     /// </summary>
     public enum LoaderMode
     {
@@ -13,7 +13,7 @@ namespace Framework
         Sync,
     }
     /// <summary>
-    /// ËùÓĞ×ÊÔ´Loader¼Ì³ĞÕâ¸ö
+    /// æ‰€æœ‰èµ„æºLoaderç»§æ‰¿è¿™ä¸ª
     /// </summary>
     public abstract class AbstractResourceLoader : IAsyncObject
     {
@@ -21,22 +21,22 @@ namespace Framework
         private readonly List<AbstractResourceLoader.LoaderDelgate> _afterFinishedCallbacks = new List<AbstractResourceLoader.LoaderDelgate>();
 
         /// <summary>
-        /// ×îÖÕ¼ÓÔØ½á¹ûµÄ×ÊÔ´
+        /// æœ€ç»ˆåŠ è½½ç»“æœçš„èµ„æº
         /// </summary>
         public object ResultObject { get; private set; }
 
         /// <summary>
-        /// ÊÇ·ñÒÑ¾­Íê³É£¬ËüµÄ´æÔÚÁîLoader¿ÉÒÔÓÃÓÚĞ­³ÌStartCoroutine
+        /// æ˜¯å¦å·²ç»å®Œæˆï¼Œå®ƒçš„å­˜åœ¨ä»¤Loaderå¯ä»¥ç”¨äºåç¨‹StartCoroutine
         /// </summary>
         public bool IsCompleted { get; private set; }
 
         /// <summary>
-        /// ÀàËÆWWW, IsFinishedÔÙÅĞ¶ÏÊÇ·ñÓĞ´íÎó
+        /// ç±»ä¼¼WWW, IsFinishedå†åˆ¤æ–­æ˜¯å¦æœ‰é”™è¯¯
         /// </summary>
         public virtual bool IsError { get; private set; }
 
         /// <summary>
-        /// Òì²½¹ı³Ì·µ»ØµÄĞÅÏ¢
+        /// å¼‚æ­¥è¿‡ç¨‹è¿”å›çš„ä¿¡æ¯
         /// </summary>
         public virtual string AsyncMessage
         {
@@ -44,14 +44,14 @@ namespace Framework
         }
 
         /// <summary>
-        /// Í¬ResultObject
+        /// åŒResultObject
         /// </summary>
         public object AsyncResult
         {
             get { return ResultObject; }
         }
         /// <summary>
-        /// ÊÇ·ñ¿ÉÓÃ
+        /// æ˜¯å¦å¯ç”¨
         /// </summary>
         public bool IsSuccess
         {
@@ -59,22 +59,22 @@ namespace Framework
         }
 
         /// <summary>
-        /// ÊÇ·ñ´¦ÓÚApplicationÍË³ö×´Ì¬
+        /// æ˜¯å¦å¤„äºApplicationé€€å‡ºçŠ¶æ€
         /// </summary>
         private bool _isQuitApplication = false;
 
         /// <summary>
-        /// ForceNewµÄ£¬·ÇAutoNew
+        /// ForceNewçš„ï¼ŒéAutoNew
         /// </summary>
         public bool IsForceNew;
 
         /// <summary>
-        /// RefCount Îª 0£¬½øÈëÔ¤±¸×´Ì¬
+        /// RefCount ä¸º 0ï¼Œè¿›å…¥é¢„å¤‡çŠ¶æ€
         /// </summary>
         protected bool IsReadyDisposed { get; private set; }
 
         /// <summary>
-        ///  Ïú»ÙÊÂ¼ş
+        ///  é”€æ¯äº‹ä»¶
         /// </summary>
         public event Action DisposeEvent;
 
@@ -84,7 +84,7 @@ namespace Framework
         public float FinishTiming = -1;
 
         /// <summary>
-        /// ÓÃÊ±
+        /// ç”¨æ—¶
         /// </summary>
         public float FinishUsedTime
         {
@@ -96,7 +96,7 @@ namespace Framework
         }
 
         /// <summary>
-        /// ÒıÓÃ¼ÆÊı
+        /// å¼•ç”¨è®¡æ•°
         /// </summary>
         private int refCount = 0;
 
@@ -113,7 +113,7 @@ namespace Framework
         public string Url { get; private set; }
 
         /// <summary>
-        /// ½ø¶È°Ù·Ö±È~ 0-1¸¡µã
+        /// è¿›åº¦ç™¾åˆ†æ¯”~ 0-1æµ®ç‚¹
         /// </summary>
         public virtual float Progress { get; protected set; }
 
@@ -122,7 +122,7 @@ namespace Framework
         private string _desc = "";
 
         /// <summary>
-        /// ÃèÊö, ¶îÍâÎÄ×Ö, Ò»°ãÓÃÓÚ×ÊÔ´DebuggerÓÃ
+        /// æè¿°, é¢å¤–æ–‡å­—, ä¸€èˆ¬ç”¨äºèµ„æºDebuggerç”¨
         /// </summary>
         /// <returns></returns>
         public virtual string Desc
@@ -137,7 +137,7 @@ namespace Framework
         }
 
         /// <summary>
-        /// Í³Ò»µÄ¶ÔÏó¹¤³§
+        /// ç»Ÿä¸€çš„å¯¹è±¡å·¥å‚
         /// </summary>
         /// <typeparam name="T"></typeparam>
         /// <param name="url"></param>
@@ -149,7 +149,7 @@ namespace Framework
         {
             if (string.IsNullOrEmpty(url))
             {
-                Log.Error("[{0}:AutoNew]urlÎª¿Õ", typeof(T));
+                Log.Error("[{0}:AutoNew]urlä¸ºç©º", typeof(T));
                 return null;
             }
 
@@ -180,14 +180,14 @@ namespace Framework
             {
                 if (loader.RefCount < 0)
                 {
-                    //loader.IsDisposed = false;  // ×ªËÀ»ØÉúµÄ¿ÉÄÜ
+                    //loader.IsDisposed = false;  // è½¬æ­»å›ç”Ÿçš„å¯èƒ½
                     Log.Error("Error RefCount!");
                 }
             }
 
             loader.RefCount++;
 
-            // RefCount++ÁË£¬ÖØĞÂ¼¤»î£¬ÔÚ¶ÓÁĞÖĞ×¼±¸ÇåÀíµÄLoader
+            // RefCount++äº†ï¼Œé‡æ–°æ¿€æ´»ï¼Œåœ¨é˜Ÿåˆ—ä¸­å‡†å¤‡æ¸…ç†çš„Loader
             if (ABManager.UnUsesLoaders.ContainsKey(loader))
             {
                 ABManager.UnUsesLoaders.Remove(loader);
@@ -200,11 +200,11 @@ namespace Framework
         }
 
         /// <summary>
-        /// ¸´»î
+        /// å¤æ´»
         /// </summary>
         public virtual void Revive()
         {
-            IsReadyDisposed = false; // ¸´»î£¡
+            IsReadyDisposed = false; // å¤æ´»ï¼
         }
 
         protected AbstractResourceLoader()
@@ -226,10 +226,10 @@ namespace Framework
 
         protected virtual void OnFinish(object resultObj)
         {
-            // Èç¹ûReadyDispose£¬ÎŞĞ§£¡²»ÓÃ´«Èë×îÖÕ½á¹û£¡
+            // å¦‚æœReadyDisposeï¼Œæ— æ•ˆï¼ä¸ç”¨ä¼ å…¥æœ€ç»ˆç»“æœï¼
             ResultObject = resultObj;
 
-            // Èç¹ûReadyDisposed, ÒÀÈ»»á±£´æResultObject, µ«ÔÚ»Øµ÷Ê±»áÊ§°Ü~ÎŞ»Øµ÷¶ÔÏó
+            // å¦‚æœReadyDisposed, ä¾ç„¶ä¼šä¿å­˜ResultObject, ä½†åœ¨å›è°ƒæ—¶ä¼šå¤±è´¥~æ— å›è°ƒå¯¹è±¡
             var callbackObject = !IsReadyDisposed ? ResultObject : null;
 
             FinishTiming = Time.realtimeSinceStartup;
@@ -242,12 +242,12 @@ namespace Framework
             if (IsReadyDisposed)
             {
                 //Dispose();
-                Log.LogInfo("[AbstractResourceLoader:OnFinish]Ê±£¬×¼±¸Disposed {0}", Url);
+                Log.LogInfo("[AbstractResourceLoader:OnFinish]æ—¶ï¼Œå‡†å¤‡Disposed {0}", Url);
             }
         }
 
         /// <summary>
-        /// ÔÚIsFinisehdºó»áÖ´ĞĞµÄ»Øµ÷
+        /// åœ¨IsFinisehdåä¼šæ‰§è¡Œçš„å›è°ƒ
         /// </summary>
         /// <param name="callback"></param>
         public void AddCallback(LoaderDelgate callback)
@@ -275,9 +275,9 @@ namespace Framework
         }
 
         /// <summary>
-        /// Ö´ĞĞRelease£¬²¢Á¢¿Ì´¥·¢²ĞÓàÇåÀí
+        /// æ‰§è¡ŒReleaseï¼Œå¹¶ç«‹åˆ»è§¦å‘æ®‹ä½™æ¸…ç†
         /// </summary>
-        /// <param name="gcNow">ÊÇ·ñÁ¢¿Ì´¥·¢À¬»ø»ØÊÕ£¬Ä¬ÈÏÀ¬»ø»ØÊÕÊÇ¸ô¼¸Ãë½øĞĞµÄ</param>
+        /// <param name="gcNow">æ˜¯å¦ç«‹åˆ»è§¦å‘åƒåœ¾å›æ”¶ï¼Œé»˜è®¤åƒåœ¾å›æ”¶æ˜¯éš”å‡ ç§’è¿›è¡Œçš„</param>
         public virtual void Release(bool gcNow)
         {
             //            if (gcNow)
@@ -290,7 +290,7 @@ namespace Framework
         }
 
         /// <summary>
-        /// ÊÍ·Å×ÊÔ´£¬¼õÉÙÒıÓÃ¼ÆÊı
+        /// é‡Šæ”¾èµ„æºï¼Œå‡å°‘å¼•ç”¨è®¡æ•°
         /// </summary>
         public virtual void Release()
         {
@@ -317,7 +317,7 @@ namespace Framework
                     }
                 }
 
-                // ¼ÓÈë¶ÓÁĞ£¬×¼±¸Dispose
+                // åŠ å…¥é˜Ÿåˆ—ï¼Œå‡†å¤‡Dispose
                 ABManager.UnUsesLoaders[this] = Time.time;
 
                 IsReadyDisposed = true;
@@ -326,14 +326,14 @@ namespace Framework
         }
 
         /// <summary>
-        /// ÒıÓÃÎª0Ê±£¬½øÈë×¼±¸Disposed×´Ì¬Ê±´¥·¢
+        /// å¼•ç”¨ä¸º0æ—¶ï¼Œè¿›å…¥å‡†å¤‡DisposedçŠ¶æ€æ—¶è§¦å‘
         /// </summary>
         protected virtual void OnReadyDisposed()
         {
         }
 
         /// <summary>
-        /// DisposeÊÇÓĞÒıÓÃ¼ì²éµÄ£¬ DoDisposeÒ»°ãÓÃÓÚ¼Ì³ĞÖØĞ´
+        /// Disposeæ˜¯æœ‰å¼•ç”¨æ£€æŸ¥çš„ï¼Œ DoDisposeä¸€èˆ¬ç”¨äºç»§æ‰¿é‡å†™
         /// </summary>
         public void Dispose()
         {
@@ -344,7 +344,7 @@ namespace Framework
             {
                 var type = GetType();
                 var typeDict = ABManager.GetTypeDict(type);
-                //if (Url != null) // TODO: ÒÔºóÈ¥µô
+                //if (Url != null) // TODO: ä»¥åå»æ‰
                 {
                     var bRemove = typeDict.Remove(Url);
                     if (!bRemove)
@@ -356,7 +356,7 @@ namespace Framework
 
             if (IsCompleted)
                 DoDispose();
-            // Î´Íê³É£¬ÔÚOnFinishÊ±»áÖ´ĞĞDoDispose
+            // æœªå®Œæˆï¼Œåœ¨OnFinishæ—¶ä¼šæ‰§è¡ŒDoDispose
         }
 
         protected virtual void DoDispose()
@@ -365,7 +365,7 @@ namespace Framework
 
 
         /// <summary>
-        /// Ç¿ÖÆ½øĞĞDispose£¬ÎŞÊÓRefÒıÓÃÊı£¬½¨ÒéÓÃÔÚRefCountÎª1µÄLoaderÉÏ
+        /// å¼ºåˆ¶è¿›è¡ŒDisposeï¼Œæ— è§†Refå¼•ç”¨æ•°ï¼Œå»ºè®®ç”¨åœ¨RefCountä¸º1çš„Loaderä¸Š
         /// </summary>
         public virtual void ForceDispose()
         {
@@ -387,6 +387,6 @@ namespace Framework
         }
     }
 
-    // UnityÇ±¹æÔò: µÈ´ıÖ¡×îºóÔÙÖ´ĞĞ£¬±ÜÃâÒ»Ğ©(DestroyImmediatly)ÔÚPhycisº¯ÊıÄÚ
+    // Unityæ½œè§„åˆ™: ç­‰å¾…å¸§æœ€åå†æ‰§è¡Œï¼Œé¿å…ä¸€äº›(DestroyImmediatly)åœ¨Phyciså‡½æ•°å†…
 
 }

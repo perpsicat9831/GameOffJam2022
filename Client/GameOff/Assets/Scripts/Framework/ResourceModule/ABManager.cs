@@ -15,21 +15,21 @@ namespace Framework
         /// </summary>
         private static readonly Dictionary<Type, Dictionary<string, AbstractResourceLoader>> _loadersPool = new Dictionary<Type, Dictionary<string, AbstractResourceLoader>>();
         /// <summary>
-        /// todo µÈ´ı¼ÓÔØÖĞµÄab
+        /// todo ç­‰å¾…åŠ è½½ä¸­çš„ab
         /// </summary>
         private static readonly Dictionary<Type, Dictionary<string, AbstractResourceLoader>> waiting = new Dictionary<Type, Dictionary<string, AbstractResourceLoader>>();
         public static int MAX_LOAD_NUM = 10;
 
 
-        #region À¬»ø»ØÊÕ Garbage Collect
+        #region åƒåœ¾å›æ”¶ Garbage Collect
 
         /// <summary>
-        /// LoaderÑÓ³ÙDispose
+        /// Loaderå»¶è¿ŸDispose
         /// </summary>
         private const float LoaderDisposeTime = 0;
 
         /// <summary>
-        /// ¼ä¸ô¶àÉÙÃë×öÒ»´ÎGC(ÔÚAutoNewÊ±)
+        /// é—´éš”å¤šå°‘ç§’åšä¸€æ¬¡GC(åœ¨AutoNewæ—¶)
         /// </summary>
         public static float GcIntervalTime
         {
@@ -45,17 +45,17 @@ namespace Framework
         }
 
         /// <summary>
-        /// ÉÏ´Î×öGCµÄÊ±¼ä
+        /// ä¸Šæ¬¡åšGCçš„æ—¶é—´
         /// </summary>
         private static float _lastGcTime = -1;
 
         /// <summary>
-        /// »º´æÆğÀ´ÒªÉ¾µôµÄ£¬¹©DoGarbageCollectº¯ÊıÓÃ, ±ÜÃâÖØ¸´µÄnew List
+        /// ç¼“å­˜èµ·æ¥è¦åˆ æ‰çš„ï¼Œä¾›DoGarbageCollectå‡½æ•°ç”¨, é¿å…é‡å¤çš„new List
         /// </summary>
         private static readonly List<AbstractResourceLoader> CacheLoaderToRemoveFromUnUsed = new List<AbstractResourceLoader>();
 
         /// <summary>
-        /// ½øĞĞÀ¬»ø»ØÊÕ
+        /// è¿›è¡Œåƒåœ¾å›æ”¶
         /// </summary>
         internal static readonly Dictionary<AbstractResourceLoader, float> UnUsesLoaders = new Dictionary<AbstractResourceLoader, float>();
 
@@ -90,7 +90,7 @@ namespace Framework
         }
 
         /// <summary>
-        /// ÊÇ·ñ½øĞĞÀ¬»øÊÕ¼¯
+        /// æ˜¯å¦è¿›è¡Œåƒåœ¾æ”¶é›†
         /// </summary>
         public static void CheckGcCollect()
         {
@@ -102,7 +102,7 @@ namespace Framework
         }
 
         /// <summary>
-        /// ½øĞĞÀ¬»ø»ØÊÕ
+        /// è¿›è¡Œåƒåœ¾å›æ”¶
         /// </summary>
         internal static void DoGarbageCollect()
         {
@@ -137,10 +137,10 @@ namespace Framework
             }
         }
 
-        #region ¶ÔÍâ½Ó¿Ú
+        #region å¯¹å¤–æ¥å£
         public static bool UseAssetBundle()
         {
-            //Ä¬ÈÏÊ¹ÓÃ
+            //é»˜è®¤ä½¿ç”¨
 #if UNITY_EDITOR
             if(!EditorPrefs.GetBool(AppConfig.UseABPrefsKey, true))
             {

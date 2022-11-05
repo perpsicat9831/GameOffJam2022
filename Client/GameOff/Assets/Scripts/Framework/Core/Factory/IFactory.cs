@@ -7,7 +7,7 @@ namespace Framework
     public interface IObjectFactory<T>
     {
         /// <summary>
-        /// 创建对象
+        /// 鍒涘缓瀵硅薄
         /// </summary>
         /// <returns></returns>
         T Create();

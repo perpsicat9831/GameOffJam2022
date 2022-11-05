@@ -99,7 +99,7 @@ namespace Framework
         }
 
         /// <summary>
-        ///     ±à¼­Æ÷Ä£Ê½ÏÂ£¬³¡¾°¼ÓÔØÍê±Ï£¬Ë¢ĞÂËùÓĞmaterialµÄshaderÈ·±£ÏÔÊ¾ÕıÈ·£¬ unity b.u.g
+        ///     ç¼–è¾‘å™¨æ¨¡å¼ä¸‹ï¼Œåœºæ™¯åŠ è½½å®Œæ¯•ï¼Œåˆ·æ–°æ‰€æœ‰materialçš„shaderç¡®ä¿æ˜¾ç¤ºæ­£ç¡®ï¼Œ unity b.u.g
         /// </summary>
         /// <param name="op"></param>
         /// <returns></returns>
@@ -117,7 +117,7 @@ namespace Framework
         }
 
         /// <summary>
-        /// ±à¼­Æ÷Ä£Ê½ÏÂ£¬¶ÔÈ«²¿GameObjectË¢ĞÂÒ»ÏÂMaterial
+        /// ç¼–è¾‘å™¨æ¨¡å¼ä¸‹ï¼Œå¯¹å…¨éƒ¨GameObjectåˆ·æ–°ä¸€ä¸‹Material
         /// </summary>
         private static void RefreshAllMaterialsShaders()
         {

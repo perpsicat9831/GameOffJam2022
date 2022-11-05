@@ -51,16 +51,16 @@ namespace Framework
             var outputPath = GetExportPath();
             //KProfiler.BeginWatch("BuildAB");
             Log.LogInfo("AsseBundle start build to: {0}", outputPath);
-            //Ñ¹ËõËã·¨²»½¨ÒéÓÃLzma£¬ÒªÓÃLZ4 . Lzma¶ÁÈ«²¿µÄbuffer Lz4Ò»¸öÒ»¸öblock¶ÁÈ¡£¬Ö»¶ÁÈ¡4×Ö½Ú
+            //å‹ç¼©ç®—æ³•ä¸å»ºè®®ç”¨Lzmaï¼Œè¦ç”¨LZ4 . Lzmaè¯»å…¨éƒ¨çš„buffer Lz4ä¸€ä¸ªä¸€ä¸ªblockè¯»å–ï¼Œåªè¯»å–4å­—èŠ‚
             var opt = BuildAssetBundleOptions.DeterministicAssetBundle | BuildAssetBundleOptions.ChunkBasedCompression;//BuildAssetBundleOptions.AppendHashToAssetBundleName;
             BuildPipeline.BuildAssetBundles(outputPath, opt, EditorUserBuildSettings.activeBuildTarget);
             //KProfiler.EndWatch("BuildAB", "AsseBundle build Finish");
         }
 
         /// <summary>
-        /// Unity 5ĞÂAssetBundleÏµÍ³£¬ĞèÒªÎª´ò°üµÄAssetBundleÅäÖÃÃû³Æ
+        /// Unity 5æ–°AssetBundleç³»ç»Ÿï¼Œéœ€è¦ä¸ºæ‰“åŒ…çš„AssetBundleé…ç½®åç§°
         /// 
-        /// Ö±½Ó½«KEngineÅäÖÃµÄBundleResourcesÄ¿Â¼Õû¸ö×Ô¶¯ÅäÖÃÃû³Æ£¬ÒòÎªÕâ¸öÄ¿Â¼±¾À´¾ÍÊÇÕû¸öµ¼³ö
+        /// ç›´æ¥å°†KEngineé…ç½®çš„BundleResourcesç›®å½•æ•´ä¸ªè‡ªåŠ¨é…ç½®åç§°ï¼Œå› ä¸ºè¿™ä¸ªç›®å½•æœ¬æ¥å°±æ˜¯æ•´ä¸ªå¯¼å‡º
         /// </summary>
         [MenuItem("Framework/AssetBundle/Make Names from [BundleResources]")]
         public static void MakeAssetBundleNames()
@@ -81,7 +81,7 @@ namespace Framework
                 }
                 var bundleName = filepath.Substring(dirLength, filepath.Length - dirLength);
                 var file = new FileInfo(filepath);
-                bundleName = bundleName.Replace(file.Extension, "");//È¥µôºó×º£¬Ô­Òò£ºabBrowserÖĞÎŞ·¨Ê¶±ğabName´øÓĞ¶à¸ö.
+                bundleName = bundleName.Replace(file.Extension, "");//å»æ‰åç¼€ï¼ŒåŸå› ï¼šabBrowserä¸­æ— æ³•è¯†åˆ«abNameå¸¦æœ‰å¤šä¸ª.
                 importer.assetBundleName = bundleName + AppConfig.AssetBundleExt;
             }
             Log.LogInfo("Make all asset name successs!");
@@ -104,8 +104,8 @@ namespace Framework
             string basePath = Path.GetFullPath(AppConfig.AssetBundleBuildRelPath);
             if (File.Exists(basePath))
             {
-                ShowDialog("Â·¾¶ÅäÖÃ´íÎó: " + basePath);
-                throw new System.Exception("Â·¾¶ÅäÖÃ´íÎó");
+                ShowDialog("è·¯å¾„é…ç½®é”™è¯¯: " + basePath);
+                throw new System.Exception("è·¯å¾„é…ç½®é”™è¯¯");
             }
             if (!Directory.Exists(basePath))
             {
@@ -124,7 +124,7 @@ namespace Framework
             }
             return path;
         }
-        public static bool ShowDialog(string msg, string title = "ÌáÊ¾", string button = "È·¶¨")
+        public static bool ShowDialog(string msg, string title = "æç¤º", string button = "ç¡®å®š")
         {
             return EditorUtility.DisplayDialog(title, msg, button);
         }

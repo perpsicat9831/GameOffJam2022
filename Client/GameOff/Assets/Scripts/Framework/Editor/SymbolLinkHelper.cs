@@ -5,12 +5,12 @@ using UnityEngine;
 namespace Framework
 {
     /// <summary>
-    /// Ó²Á´½ÓÄ¿Â¼¹¤¾ß¡£¡£¡£Ö§³Öwin+mac, ĞèÒªwin 7ÒÔÉÏ²ÅÓĞmklinkÃüÁî
+    /// ç¡¬é“¾æ¥ç›®å½•å·¥å…·ã€‚ã€‚ã€‚æ”¯æŒwin+mac, éœ€è¦win 7ä»¥ä¸Šæ‰æœ‰mklinkå‘½ä»¤
     /// </summary>
     public class SymbolLinkHelper
     {
         /// <summary>
-        /// É¾³ıÓ²Á´½ÓÄ¿Â¼
+        /// åˆ é™¤ç¡¬é“¾æ¥ç›®å½•
         /// </summary>
         /// <param name="linkPath"></param>
         public static void DeleteLink(string linkPath)
@@ -54,7 +54,7 @@ namespace Framework
         }
 
         /// <summary>
-        /// É¾³ıÖ¸¶¨Ä¿Â¼ËùÓĞÓ²Á´½Ó
+        /// åˆ é™¤æŒ‡å®šç›®å½•æ‰€æœ‰ç¡¬é“¾æ¥
         /// </summary>
         /// <param name="assetBundlesLinkPath"></param>
         public static void DeleteAllLinks(string assetBundlesLinkPath)

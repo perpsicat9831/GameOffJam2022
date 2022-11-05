@@ -7,13 +7,13 @@ namespace Framework
     public interface IPool<T>
     {
         /// <summary>
-        /// ·ÖÅä¶ÔÏó
+        /// åˆ†é…å¯¹è±¡
         /// </summary>
         /// <returns></returns>
         T Allocate();
 
         /// <summary>
-        /// »ØÊÕ¶ÔÏó
+        /// å›æ”¶å¯¹è±¡
         /// </summary>
         /// <param name="obj"></param>
         /// <returns></returns>
@@ -22,22 +22,22 @@ namespace Framework
     public interface IPoolable
     {
         /// <summary>
-        /// »ØÊÕ(³É¹¦±»»ØÊÕµ½¶ÔÏó³ØÊ±µ÷ÓÃ)
+        /// å›æ”¶(æˆåŠŸè¢«å›æ”¶åˆ°å¯¹è±¡æ± æ—¶è°ƒç”¨)
         /// </summary>
         void OnRecycled();
         /// <summary>
-        /// ÒÑ¾­±»»ØÊÕ
+        /// å·²ç»è¢«å›æ”¶
         /// </summary>
         bool IsRecycled { get; set; }
         /// <summary>
-        /// Ïú»Ù (»ØÊÕÊ§°Ü£¬¶ÔÏó³ØclearµÄÊ±ºò»áµ÷ÓÃ)
+        /// é”€æ¯ (å›æ”¶å¤±è´¥ï¼Œå¯¹è±¡æ± clearçš„æ—¶å€™ä¼šè°ƒç”¨)
         /// </summary>
         void OnDestroy();
     }
     public interface IPoolType
     {
         /// <summary>
-        /// »ØÊÕ¶ÔÏó
+        /// å›æ”¶å¯¹è±¡
         /// </summary>
         void Recycle2Cache();
     }

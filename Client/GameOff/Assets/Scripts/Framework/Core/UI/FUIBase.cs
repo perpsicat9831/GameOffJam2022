@@ -5,14 +5,14 @@ using UnityEngine;
 namespace Framework
 {
     /// <summary>
-    /// 框架层的UIBase
+    /// 妗嗘灦灞傜殑UIBase
     /// </summary>
     public class FUIBase
     {
         public int UIID;
         public string prefabPath;
         public PanelType PanelType = PanelType.NormalUI;
-        /// <summary> 是否加载完成 </summary>
+        /// <summary> 鏄惁鍔犺浇瀹屾垚 </summary>
         public bool isFinishLoad;
 
         public GameObject gameObject;
@@ -30,7 +30,7 @@ namespace Framework
         }
         private Canvas _canvas;
         /// <summary>
-        /// 除HUD外，每个界面都有一个Canvas
+        /// 闄UD澶栵紝姣忎釜鐣岄潰閮芥湁涓�涓狢anvas
         /// </summary>
         public Canvas Canvas
         {
@@ -44,7 +44,7 @@ namespace Framework
             }
         }
 
-        public AbstractResourceLoader UIResourceLoader; // 加载器，用于手动释放资源
+        public AbstractResourceLoader UIResourceLoader; // 鍔犺浇鍣紝鐢ㄤ簬鎵嬪姩閲婃斁璧勬簮
 
 
 

@@ -9,7 +9,7 @@ namespace Framework
     {
         public static int randomSeed = 0;
         /// <summary>
-        /// ÄÜ¹»°üº¬×î´óÖµ(ÕæËæ»ú)
+        /// èƒ½å¤ŸåŒ…å«æœ€å¤§å€¼(çœŸéšæœº)
         /// </summary>
         public static int GetRandom(int min, int max)
         {
@@ -17,7 +17,7 @@ namespace Framework
             return r.Next(min, max + 1);
         }
         /// <summary>
-        /// ÄÜ¹»°üº¬×î´óÖµ(ÕæËæ»ú)
+        /// èƒ½å¤ŸåŒ…å«æœ€å¤§å€¼(çœŸéšæœº)
         /// </summary>
         public static int GetRandom(int max)
         {
@@ -26,7 +26,7 @@ namespace Framework
         }
 
         /// <summary>
-        /// È¨ÖØ¼ÆËãÆ÷ keyListÈ¡ÖµÁĞ±í wListÈ¨ÖØÁĞ±í
+        /// æƒé‡è®¡ç®—å™¨ keyListå–å€¼åˆ—è¡¨ wListæƒé‡åˆ—è¡¨
         /// </summary>
         public static int GetWeight(List<int> keyList, List<int> wList)
         {
@@ -50,13 +50,13 @@ namespace Framework
             }
             else
             {
-                Log.Error("È¨ÖØ¼ÆËã³ö´í£¬È¡ÖµÁĞ±í ºÍ È¨ÖØÁĞ±í ³¤¶È²»ÏàµÈ");
+                Log.Error("æƒé‡è®¡ç®—å‡ºé”™ï¼Œå–å€¼åˆ—è¡¨ å’Œ æƒé‡åˆ—è¡¨ é•¿åº¦ä¸ç›¸ç­‰");
             }
             return 0;
         }
 
         /// <summary>
-        /// Ëæ»ú»ñÈ¡ÁĞ±íÖĞµÄÒ»¸öÖµ
+        /// éšæœºè·å–åˆ—è¡¨ä¸­çš„ä¸€ä¸ªå€¼
         /// </summary>
         public static int GetRadomListValue(List<int> keyList)
         {

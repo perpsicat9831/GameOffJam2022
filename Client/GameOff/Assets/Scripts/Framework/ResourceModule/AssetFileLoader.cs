@@ -7,8 +7,8 @@ using Object = UnityEngine.Object;
 namespace Framework
 {
     /// <summary>
-    /// ¸ù“ş²»Í¬Ä£Ê½£¬ÄAssetBundleÖĞ«@È¡Asset»òÄResourcesÖĞ«@È¡,Á½ÖÖ¼ÓÔØ·½Ê½Í¬Ê±ÊµÏÖµÄÇÅ½ÓÀà
-    /// ¶ÁÈ¡Ò»¸öÎÄ¼şµÄ¶ÔÏó£¬²»×ö¿½±´ºÍÒıÓÃ
+    /// æ ¹æ“šä¸åŒæ¨¡å¼ï¼Œå¾AssetBundleä¸­ç²å–Assetæˆ–å¾Resourcesä¸­ç²å–,ä¸¤ç§åŠ è½½æ–¹å¼åŒæ—¶å®ç°çš„æ¡¥æ¥ç±»
+    /// è¯»å–ä¸€ä¸ªæ–‡ä»¶çš„å¯¹è±¡ï¼Œä¸åšæ‹·è´å’Œå¼•ç”¨
     /// </summary>
     public class AssetFileLoader : AbstractResourceLoader
     {
@@ -33,7 +33,7 @@ namespace Framework
 
         public static AssetFileLoader Load(string path, AssetFileBridgeDelegate assetFileLoadedCallback = null, LoaderMode loaderMode = LoaderMode.Async)
         {
-            // Ìí¼ÓÀ©Õ¹Ãû
+            // æ·»åŠ æ‰©å±•å
             if (!ResourceModule.IsEditorLoadAsset)
                 path = path + AppConfig.AssetBundleExt;
 
@@ -115,7 +115,7 @@ namespace Framework
 
                 while (!_bundleLoader.IsCompleted)
                 {
-                    if (IsReadyDisposed) // ÖĞÍ¾ÊÍ·Å
+                    if (IsReadyDisposed) // ä¸­é€”é‡Šæ”¾
                     {
                         _bundleLoader.Release();
                         OnFinish(null);
@@ -135,7 +135,7 @@ namespace Framework
                 var assetBundle = _bundleLoader.Bundle;
 
                 DateTime beginTime = DateTime.Now;
-                // Unity 5 ÏÂ£¬²»ÄÜÓÃmainAsset, ÒªÈ¡¶ÔÏóÃû
+                // Unity 5 ä¸‹ï¼Œä¸èƒ½ç”¨mainAsset, è¦å–å¯¹è±¡å
                 var abAssetName = Path.GetFileNameWithoutExtension(Url).ToLower();
                 if (!assetBundle.isStreamedSceneAssetBundle)
                 {
@@ -177,7 +177,7 @@ namespace Framework
                 if (getAsset != null)
                     ResoourceLoadedAssetDebugger.Create(getAsset.GetType().Name, Url, getAsset as Object);
 
-                // ±à¼­Æ÷»·¾³ÏÂ£¬Èç¹ûÓöµ½GameObject£¬¶ÔShader½øĞĞFix
+                // ç¼–è¾‘å™¨ç¯å¢ƒä¸‹ï¼Œå¦‚æœé‡åˆ°GameObjectï¼Œå¯¹Shaderè¿›è¡ŒFix
                 if (getAsset is GameObject)
                 {
                     var go = getAsset as GameObject;
@@ -190,14 +190,14 @@ namespace Framework
 
             if (getAsset != null)
             {
-                // ¸üÃû~ ×¢Ã÷À´Ô´asset bundle ´øÓĞÀàĞÍ
+                // æ›´å~ æ³¨æ˜æ¥æºasset bundle å¸¦æœ‰ç±»å‹
                 getAsset.name = String.Format("{0}~{1}", getAsset, Url);
             }
             OnFinish(getAsset);
         }
 
         /// <summary>
-        /// ±à¼­Æ÷Ä£Ê½ÏÂ£¬¶ÔÖ¸¶¨GameObjectË¢ĞÂÒ»ÏÂMaterial
+        /// ç¼–è¾‘å™¨æ¨¡å¼ä¸‹ï¼Œå¯¹æŒ‡å®šGameObjectåˆ·æ–°ä¸€ä¸‹Material
         /// </summary>
         public static void RefreshMaterialsShaders(Renderer renderer)
         {
@@ -218,7 +218,7 @@ namespace Framework
             base.DoDispose();
 
             if (_bundleLoader != null)
-                _bundleLoader.Release(); // ÊÍ·ÅBundle(WebStream)
+                _bundleLoader.Release(); // é‡Šæ”¾Bundle(WebStream)
 
             //if (IsFinished)
             {
@@ -237,13 +237,13 @@ namespace Framework
                 //var bRemove = Caches.Remove(Url);
                 //if (!bRemove)
                 //{
-                //    Log.Warning("[DisposeTheCache]Remove Fail(¿ÉÄÜÓĞÁ½¸öÎ´Íê³ÉµÄ£¬Í¬Ê±À´µ½Õâ) : {0}", Url);
+                //    Log.Warning("[DisposeTheCache]Remove Fail(å¯èƒ½æœ‰ä¸¤ä¸ªæœªå®Œæˆçš„ï¼ŒåŒæ—¶æ¥åˆ°è¿™) : {0}", Url);
                 //}
             }
             //else
             //{
-            //    // ½»¸ø¼ÓÔØºó£¬½øĞĞ¼ì²é²¢Ğ¶ÔØ×ÊÔ´
-            //    // ¿ÉÄÜÇé¿öTIPS£ºÁ½¸öÎ´Íê³ÉµÄ£¡»á´¥·¢ÉÏÃæÁ½´Î£¡
+            //    // äº¤ç»™åŠ è½½åï¼Œè¿›è¡Œæ£€æŸ¥å¹¶å¸è½½èµ„æº
+            //    // å¯èƒ½æƒ…å†µTIPSï¼šä¸¤ä¸ªæœªå®Œæˆçš„ï¼ä¼šè§¦å‘ä¸Šé¢ä¸¤æ¬¡ï¼
             //}
         }
 

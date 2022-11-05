@@ -5,14 +5,14 @@ using UnityEngine;
 namespace Framework
 {
     /// <summary>
-    /// ֻ�ڱ༭���³��֣��ֱ��Ӧһ��Loader~����һ��GameObject����Ϊ�˷�����ԣ�
+    /// 只在编辑器下出现，分别对应一个Loader~生成一个GameObject对象，为了方便调试！
     /// </summary>
     public class ResourceLoaderDebugger : MonoBehaviour
     {
 
         public AbstractResourceLoader TheLoader;
         public int RefCount;
-        public float FinishUsedTime; // �ο����������ʱ��
+        public float FinishUsedTime; // 参考，完成所需时间
         public static bool IsApplicationQuit = false;
 
         public static ResourceLoaderDebugger Create(string type, string url, AbstractResourceLoader loader)

@@ -123,7 +123,7 @@ namespace Framework
 
 
         /// <summary>
-        /// Çå¿Õ¶ÔÏó³Ø
+        /// æ¸…ç©ºå¯¹è±¡æ± 
         /// </summary>
         public void Clear()
         {

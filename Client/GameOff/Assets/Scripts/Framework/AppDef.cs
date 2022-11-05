@@ -7,15 +7,15 @@ namespace Framework
 
     public class AppDef
     {
-        // ÃÀÊõ¿âÓÃµ½
+        // ç¾æœ¯åº“ç”¨åˆ°
         public const string ResourcesBuildDir = "ResourseAB";
 
         /// <summary>
-        /// ±à¼­×´Ì¬µÄ×ÊÔ´Ä¿Â¼´æ·Å, Unity 5ÖĞ²ÉÓÃ×Ô¶¯¶ÔBundleResourcesÕûÌå´ò°ü£¬°Ñ±à¼­Æ÷²¿·ÖÒÆ³ö
+        /// ç¼–è¾‘çŠ¶æ€çš„èµ„æºç›®å½•å­˜æ”¾, Unity 5ä¸­é‡‡ç”¨è‡ªåŠ¨å¯¹BundleResourcesæ•´ä½“æ‰“åŒ…ï¼ŒæŠŠç¼–è¾‘å™¨éƒ¨åˆ†ç§»å‡º
         /// </summary>
         public const string ResourcesEditDir = "ResourseEditing";
 
-        // ´ò°ü»º´æ£¬Ò»Ğ©²»Í¬²½µÄ×ÊÔ´£¬ÔÚ´ò°üÊ±¿½µ½Õâ¸öÄ¿Â¼£¬²¢½øĞĞ´ò°ü
+        // æ‰“åŒ…ç¼“å­˜ï¼Œä¸€äº›ä¸åŒæ­¥çš„èµ„æºï¼Œåœ¨æ‰“åŒ…æ—¶æ‹·åˆ°è¿™ä¸ªç›®å½•ï¼Œå¹¶è¿›è¡Œæ‰“åŒ…
         public const string ResourcesBuildCacheDir = "_ResourcesCache_";
 
         public const string ResourcesBuildInfosDir = "ResourcesBuildInfos";

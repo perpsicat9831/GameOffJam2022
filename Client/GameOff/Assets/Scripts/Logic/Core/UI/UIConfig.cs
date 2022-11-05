@@ -8,7 +8,7 @@ namespace Logic
     public enum EUIID
     {
         None,
-        GameMain = 1,   //Ö÷½çÃæ
+        GameMain = 1,   //ä¸»ç•Œé¢
     }
 
     public static class UIConfig
@@ -19,7 +19,7 @@ namespace Logic
             {
                 return data;
             }
-            Log.Error("Î´ÕÒµ½idÎª " + id.ToString() + " µÄUIConfig");
+            Log.Error("æœªæ‰¾åˆ°idä¸º " + id.ToString() + " çš„UIConfig");
             return null;
         }
         public static UIConfigData GetConfigData(EUIID id)

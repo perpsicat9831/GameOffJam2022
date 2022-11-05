@@ -11,6 +11,6 @@ public enum UnityLayerDef
     Water = 4,
     UI = 5,
 
-    //以下为自定义
+    //浠ヤ笅涓鸿嚜瀹氫箟
     Hidden = 8,
 }

@@ -5,7 +5,7 @@ using UnityEngine;
 namespace Framework
 {
     /// <summary>
-    /// 读取字节，调用WWW, 会自动识别Product/Bundles/Platform目录和StreamingAssets路径
+    /// 璇诲彇瀛楄妭锛岃皟鐢╓WW, 浼氳嚜鍔ㄨ瘑鍒玃roduct/Bundles/Platform鐩綍鍜孲treamingAssets璺緞
     /// </summary>
     public class BytesLoader : AbstractResourceLoader
     {
@@ -13,7 +13,7 @@ namespace Framework
         public byte[] Bytes { get; private set; }
 
         /// <summary>
-        /// 异步模式中使用了WWWLoader
+        /// 寮傛妯″紡涓娇鐢ㄤ簡WWWLoader
         /// </summary>
         private WWWLoader _wwwLoader;
 
@@ -62,7 +62,7 @@ namespace Framework
                     OnFinish(null);
                     yield break;
                 }
-                //TODO 换成WebRequst
+                //TODO 鎹㈡垚WebRequst
                 //Bytes = _wwwLoader.Www.downloadHandler.data;
                 Bytes = _wwwLoader.Www.bytes;
             }

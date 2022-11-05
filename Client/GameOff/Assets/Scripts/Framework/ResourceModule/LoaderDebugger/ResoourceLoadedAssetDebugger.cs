@@ -5,7 +5,7 @@ using UnityEngine;
 namespace Framework
 {
     /// <summary>
-    /// ¶ÔXXXLoaderµÄ½á¹ûAsset½øĞĞDebugÏÔÊ¾
+    /// å¯¹XXXLoaderçš„ç»“æœAssetè¿›è¡ŒDebugæ˜¾ç¤º
     /// </summary>
     public class ResoourceLoadedAssetDebugger : MonoBehaviour
     {
@@ -38,7 +38,7 @@ namespace Framework
             }
         }
 
-        // ¿É¹©µ÷ÊÔÉ¾×ÊÔ´
+        // å¯ä¾›è°ƒè¯•åˆ èµ„æº
         private void OnDestroy()
         {
             if (!IsRemoveFromParent)

@@ -279,10 +279,10 @@ namespace Framework
         }
     }
 
-    // C# 扩展, 扩充C#类的功能
+    // C# 鎵╁睍, 鎵╁厖C#绫荤殑鍔熻兘
     public static class KEngineToolExtensions
     {
-        // 扩展List/  
+        // 鎵╁睍List/  
         public static void Shuffle<T>(this IList<T> list)
         {
             System.Random rng = new System.Random();
@@ -394,7 +394,7 @@ namespace Framework
         /// <returns></returns>
         public static List<T> KLast<T>(this IEnumerable<T> source, int num)
         {
-            // 开始读取的位置
+            // 寮�濮嬭鍙栫殑浣嶇疆
             var startIndex = Math.Max(0, source.KToList().Count - num);
             var index = 0;
             var items = new List<T>();
@@ -511,12 +511,12 @@ namespace Framework
             return false;
         }
 
-        // by KK, 获取自动判断JSONObject的str，n
+        // by KK, 鑾峰彇鑷姩鍒ゆ柇JSONObject鐨剆tr锛宯
         //public static object Value(this JSONObject jsonObj)
         //{
         //    switch (jsonObj.type)
         //    {
-        //        case JSONObject.Type.NUMBER:  // 暂时返回整形！不管浮点了, lua目前少用浮点
+        //        case JSONObject.Type.NUMBER:  // 鏆傛椂杩斿洖鏁村舰锛佷笉绠℃诞鐐逛簡, lua鐩墠灏戠敤娴偣
         //            return (int)jsonObj.n;
         //        case JSONObject.Type.STRING:
         //            return jsonObj.str;
