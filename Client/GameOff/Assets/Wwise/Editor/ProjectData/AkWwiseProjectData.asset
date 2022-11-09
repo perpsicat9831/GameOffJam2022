@@ -24,7 +24,7 @@ MonoBehaviour:
     ParentPath: Virtual Acoustics\Default Work Unit
     guid: 33abdcf58137ce40b7eb446187c6fdcb
     GuidInternal: 
-    m_lastTime: -8585344063655507671
+    m_lastTime: -8585342961756836943
     List: []
   AuxBusWwu:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
@@ -38,7 +38,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: fd6a1b885bc1d7459a905260f7d4e557
     GuidInternal: 
-    m_lastTime: -8585343853989908376
+    m_lastTime: -8585342961756886814
     List:
     - name: Amb
       guid: e3226772b05ce34396d5b56cfeea695a
@@ -209,7 +209,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 081c80301739f54fb5562f33bfa0f0d6
     GuidInternal: 
-    m_lastTime: -8585343854575714724
+    m_lastTime: -8585342961756846911
     List:
     - name: Ambience
       guid: 8e6bf2d438f6a74f977f2c01ccccd741
@@ -293,7 +293,7 @@ MonoBehaviour:
     ParentPath: Events\Ambience
     guid: dcb74008d3ee9a459e3fb74d80a11274
     GuidInternal: 
-    m_lastTime: -8585343855202577408
+    m_lastTime: -8585342961759868843
     List: []
   - PhysicalPath: Events\Default Work Unit.wwu
     PathAndIcons:
@@ -306,7 +306,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 5ac087d2afb3a64e8983c9ccac58c48f
     GuidInternal: 
-    m_lastTime: -8585343854943884857
+    m_lastTime: -8585342961759858873
     List: []
   - PhysicalPath: Events\Interface.wwu
     PathAndIcons:
@@ -319,7 +319,7 @@ MonoBehaviour:
     ParentPath: Events\Interface
     guid: 1fbcdad6b5879f4d956f5aae2fdc5202
     GuidInternal: 
-    m_lastTime: -8585343855265785122
+    m_lastTime: -8585342961759858873
     List: []
   - PhysicalPath: Events\Music.wwu
     PathAndIcons:
@@ -332,7 +332,7 @@ MonoBehaviour:
     ParentPath: Events\Music
     guid: 95f48089720f8642aeccba4b14f185e2
     GuidInternal: 
-    m_lastTime: -8585343852822482517
+    m_lastTime: -8585342961759858873
     List:
     - name: test_music
       guid: 2669daf7d70ffd4e81a0cc318aab88c3
@@ -362,7 +362,7 @@ MonoBehaviour:
     ParentPath: Events\NPC
     guid: 80431ce63b5b1b49a6b68ec8f3a76d87
     GuidInternal: 
-    m_lastTime: -8585343855126342800
+    m_lastTime: -8585342961759858873
     List: []
   - PhysicalPath: Events\Player.wwu
     PathAndIcons:
@@ -375,7 +375,7 @@ MonoBehaviour:
     ParentPath: Events\Player
     guid: c72524b77b0b7d4a8e03f2574a7e1afa
     GuidInternal: 
-    m_lastTime: -8585343852822602220
+    m_lastTime: -8585342961759858873
     List: []
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
@@ -389,7 +389,7 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: 5b60ca76b2218742930c74282c21b47a
     GuidInternal: 
-    m_lastTime: -8585344063654412713
+    m_lastTime: -8585342961759848888
     List: []
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
@@ -403,7 +403,7 @@ MonoBehaviour:
     ParentPath: States\Default Work Unit
     guid: b768e8c006b3df4bb6507824fcfc4107
     GuidInternal: 
-    m_lastTime: -8585344063653653473
+    m_lastTime: -8585342961756846911
     List: []
   SwitchWwu:
   - PhysicalPath: Switches\Default Work Unit.wwu
@@ -417,7 +417,7 @@ MonoBehaviour:
     ParentPath: Switches\Default Work Unit
     guid: 9fb0ec05e1de064b86b766dc3dff1b35
     GuidInternal: 
-    m_lastTime: -8585344063654093967
+    m_lastTime: -8585342961756836943
     List: []
   TriggerWwu:
   - PhysicalPath: Triggers\Default Work Unit.wwu
@@ -431,7 +431,7 @@ MonoBehaviour:
     ParentPath: Triggers\Default Work Unit
     guid: d93ec54ad49c4343bd068b054b96a8bd
     GuidInternal: 
-    m_lastTime: -8585344063652919192
+    m_lastTime: -8585342961756836943
     List: []
   ExpandedFileSystemItemIds: 0200000004000000
   ExpandedWaapiItemIds: 
