@@ -25,11 +25,14 @@ namespace Logic
         }
         public override void OnShow()
         {
+
         }
 
         private void OnBtnStartClick()
         {
-            Debug.Log("OnBtnStartClick");
+            //Debug.Log("OnBtnStartClick");
+            SceneManager.LoadScene("Scenes/FightDemo");
+            this.CloseSelf();
         }
     }
 }
