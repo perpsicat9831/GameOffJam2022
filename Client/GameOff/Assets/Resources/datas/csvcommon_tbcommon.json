@@ -1,0 +1,9 @@
+[
+  {
+    "id": 1,
+    "game_time": 240,
+    "delivery_init": 30,
+    "delivery_durality": 20,
+    "delivery_refresh": 30
+  }
+]

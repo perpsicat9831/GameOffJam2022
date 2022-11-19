@@ -1,0 +1,71 @@
+[
+  {
+    "id": 101,
+    "stage_name": "普通",
+    "fishing_time": 1,
+    "item_type": [
+      1,
+      2
+    ],
+    "item_weight": [
+      900,
+      100
+    ],
+    "fish_rarity": [
+      1,
+      2,
+      3
+    ],
+    "rarity_weight": [
+      800,
+      200,
+      100
+    ]
+  },
+  {
+    "id": 102,
+    "stage_name": "稀有",
+    "fishing_time": 2,
+    "item_type": [
+      1,
+      2
+    ],
+    "item_weight": [
+      800,
+      200
+    ],
+    "fish_rarity": [
+      1,
+      2,
+      3
+    ],
+    "rarity_weight": [
+      500,
+      500,
+      100
+    ]
+  },
+  {
+    "id": 103,
+    "stage_name": "非常稀有",
+    "fishing_time": 6,
+    "item_type": [
+      1,
+      2
+    ],
+    "item_weight": [
+      800,
+      200
+    ],
+    "fish_rarity": [
+      1,
+      2,
+      3
+    ],
+    "rarity_weight": [
+      300,
+      600,
+      200
+    ]
+  }
+]

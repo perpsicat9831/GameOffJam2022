@@ -1,0 +1,11 @@
+[
+  {
+    "id": 1,
+    "player_speed_mul": 1,
+    "dash_cd": 1,
+    "reborn_time": 2,
+    "reborn_protect": 1,
+    "player_vol_mul": 1,
+    "player_hitback_mul": 1
+  }
+]
