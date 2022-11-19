@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1001,
+    "item_name": "Sheild",
+    "item_name_cn": "护盾",
+    "item_type": 1,
+    "item_content": "20",
+    "item_weight": 10
+  },
+  {
+    "id": 1002,
+    "item_name": "Golden Finger",
+    "item_name_cn": "金钓竿",
+    "item_type": 2,
+    "item_content": "20|3",
+    "item_weight": 10
+  }
+]

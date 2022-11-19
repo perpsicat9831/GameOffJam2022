@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1001,
+    "fish_name": "Clownfish",
+    "fish_name_cn": "黄色小丑鱼",
+    "fish_rarity": 1,
+    "fish_point": 100,
+    "fish_weight": 10,
+    "fish_size_mul": 1
+  },
+  {
+    "id": 1002,
+    "fish_name": "Clownfish",
+    "fish_name_cn": "红色小丑鱼",
+    "fish_rarity": 1,
+    "fish_point": 200,
+    "fish_weight": 10,
+    "fish_size_mul": 1
+  },
+  {
+    "id": 2001,
+    "fish_name": "Carp",
+    "fish_name_cn": "鲤鱼",
+    "fish_rarity": 2,
+    "fish_point": 1000,
+    "fish_weight": 10,
+    "fish_size_mul": 1
+  },
+  {
+    "id": 2002,
+    "fish_name": "Mola mola",
+    "fish_name_cn": "翻车鱼",
+    "fish_rarity": 2,
+    "fish_point": 2000,
+    "fish_weight": 10,
+    "fish_size_mul": 1
+  },
+  {
+    "id": 3001,
+    "fish_name": "Shark",
+    "fish_name_cn": "大鲨鱼",
+    "fish_rarity": 3,
+    "fish_point": 3000,
+    "fish_weight": 10,
+    "fish_size_mul": 1
+  },
+  {
+    "id": 3002,
+    "fish_name": "Arowana",
+    "fish_name_cn": "金龙鱼",
+    "fish_rarity": 3,
+    "fish_point": 5000,
+    "fish_weight": 10,
+    "fish_size_mul": 1
+  }
+]

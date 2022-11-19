@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "delivery_name": "Fish Pack",
+    "delivery_name_cn": "大量收获",
+    "delivery_type": 1,
+    "delivery_content": "1|2|3",
+    "delivery_weight": 10
+  },
+  {
+    "id": 2,
+    "delivery_name": "Sheild",
+    "delivery_name_cn": "护盾",
+    "delivery_type": 2,
+    "delivery_content": "1001",
+    "delivery_weight": 30
+  },
+  {
+    "id": 3,
+    "delivery_name": "Stealing Master",
+    "delivery_name_cn": "偷窃大师",
+    "delivery_type": 3,
+    "delivery_content": "20|1.5",
+    "delivery_weight": 20
+  }
+]
