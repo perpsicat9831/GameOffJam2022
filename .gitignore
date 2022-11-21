@@ -64,6 +64,9 @@ Client/GameOff/UserSettings/Layouts/default-2021.dwlt
 
 # Unity---------------------------------------------------------------------------
 
+#Excel
+~$*
+
 # Wwise files
 *.validationcache
 *.akd

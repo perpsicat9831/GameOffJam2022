@@ -76,7 +76,16 @@ namespace Logic
             var stageData = CSVManager.CSVData.TbFishingStage.GetOrDefault(stageId);
             if (stageData != null)
             {
+                var type = MathTool.GetWeight(stageData.ItemType, stageData.ItemWeight);
+                if (type == 1)
+                {
+                    return MathTool.GetWeight(stageData.FishRarity, stageData.RarityWeight);
+                }
+                else if (type == 2)
+                {
+                    //道具
 
+                }
             }
             return 0;
         }
