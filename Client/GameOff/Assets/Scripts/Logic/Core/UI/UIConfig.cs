@@ -9,6 +9,7 @@ namespace Logic
     {
         None,
         GameMain = 1,   //主界面
+        BaseBG = 2,     //凑数的界面
     }
 
     public static class UIConfig
@@ -33,6 +34,11 @@ namespace Logic
                 new UIConfigData(
                     typeof(UI_GameMain),
                     "UIPrefab/GameMain/UI_GameMain")
+            },
+            {(int)EUIID.BaseBG,
+                new UIConfigData(
+                    typeof(UI_BaseBG),
+                    "UIPrefab/UI_BaseBG")
             },
         };
     }
