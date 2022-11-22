@@ -1,18 +1,74 @@
 [
   {
-    "id": 1001,
+    "id": 11001,
     "item_name": "Sheild",
-    "item_name_cn": "护盾",
     "item_type": 1,
+    "item_name_cn": "护盾",
+    "item_effect": 1,
     "item_content": "20",
     "item_weight": 10
   },
   {
-    "id": 1002,
+    "id": 11002,
     "item_name": "Golden Finger",
+    "item_type": 1,
     "item_name_cn": "金钓竿",
-    "item_type": 2,
+    "item_effect": 2,
     "item_content": "20|3",
     "item_weight": 10
+  },
+  {
+    "id": 21001,
+    "item_name": "Clownfish",
+    "item_type": 2,
+    "item_name_cn": "黄色小丑鱼",
+    "item_effect": 0,
+    "item_content": "",
+    "item_weight": 0
+  },
+  {
+    "id": 21002,
+    "item_name": "Clownfish",
+    "item_type": 2,
+    "item_name_cn": "红色小丑鱼",
+    "item_effect": 0,
+    "item_content": "",
+    "item_weight": 0
+  },
+  {
+    "id": 22001,
+    "item_name": "Carp",
+    "item_type": 2,
+    "item_name_cn": "鲤鱼",
+    "item_effect": 0,
+    "item_content": "",
+    "item_weight": 0
+  },
+  {
+    "id": 22002,
+    "item_name": "Mola mola",
+    "item_type": 2,
+    "item_name_cn": "翻车鱼",
+    "item_effect": 0,
+    "item_content": "",
+    "item_weight": 0
+  },
+  {
+    "id": 23001,
+    "item_name": "Shark",
+    "item_type": 2,
+    "item_name_cn": "大鲨鱼",
+    "item_effect": 0,
+    "item_content": "",
+    "item_weight": 0
+  },
+  {
+    "id": 23002,
+    "item_name": "Arowana",
+    "item_type": 2,
+    "item_name_cn": "金龙鱼",
+    "item_effect": 0,
+    "item_content": "",
+    "item_weight": 0
   }
 ]

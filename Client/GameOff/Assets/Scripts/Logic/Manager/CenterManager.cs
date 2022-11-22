@@ -18,7 +18,7 @@ namespace Logic
             RegisterManager(TimeManager.Instance);
             RegisterManager(FishingManager.Instance);
             RegisterManager(PlayerManager.Instance);
-
+            RegisterManager(ItemManager.Instance);
 
 
             InitAllManager();
