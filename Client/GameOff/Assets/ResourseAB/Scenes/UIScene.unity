@@ -460,6 +460,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 112019270068991329, guid: 6fd89911c63bb814283b3fd8ff1ad3ed, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 112019270068991329, guid: 6fd89911c63bb814283b3fd8ff1ad3ed, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 112019270068991329, guid: 6fd89911c63bb814283b3fd8ff1ad3ed, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4664378921900384562, guid: 6fd89911c63bb814283b3fd8ff1ad3ed, type: 3}
       propertyPath: m_Name
       value: RoomCanvas
@@ -555,6 +567,14 @@ PrefabInstance:
     - target: {fileID: 4664378922559651012, guid: 6fd89911c63bb814283b3fd8ff1ad3ed, type: 3}
       propertyPath: m_HorizontalScrollbar
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6322254669231821057, guid: 6fd89911c63bb814283b3fd8ff1ad3ed, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6322254669231821057, guid: 6fd89911c63bb814283b3fd8ff1ad3ed, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6fd89911c63bb814283b3fd8ff1ad3ed, type: 3}
