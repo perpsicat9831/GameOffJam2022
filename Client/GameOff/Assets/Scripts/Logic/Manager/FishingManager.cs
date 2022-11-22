@@ -16,6 +16,10 @@ namespace Logic
         /// 钓鱼按住阶段时长列表
         /// </summary>
         private List<int> listStageTime = new List<int>();
+        /// <summary>
+        /// 鱼权重 key 稀有度 value [鱼id列表][权重值列表]
+        /// </summary>
+        private Dictionary<int, List<List<int>>> dicFishWeight = new Dictionary<int, List<List<int>>>();
 
         public enum EEvents
         {
@@ -51,6 +55,23 @@ namespace Logic
                 listStageId.Add(curData.Id);
                 listStageTime.Add(curData.FishingTime);
             }
+            var listFishData = CSVManager.CSVData.TbFish.DataList;
+            for (int i = 0; i < listFishData.Count; i++)
+            {
+                var curFish = listFishData[i];
+                if (dicFishWeight.TryGetValue(curFish.FishRarity, out List<List<int>> idWeightList))
+                {
+                    idWeightList[0].Add(curFish.Id);
+                    idWeightList[1].Add(curFish.FishWeight);
+                }
+                else
+                {
+                    var newIdWeightList = new List<List<int>>();
+                    newIdWeightList[0].Add(curFish.Id);
+                    newIdWeightList[1].Add(curFish.FishWeight);
+                    dicFishWeight.Add(curFish.FishRarity, newIdWeightList);
+                }
+            }
         }
 
         /// <summary>
@@ -79,13 +100,25 @@ namespace Logic
                 var type = MathTool.GetWeight(stageData.ItemType, stageData.ItemWeight);
                 if (type == 1)
                 {
-                    return MathTool.GetWeight(stageData.FishRarity, stageData.RarityWeight);
+                    var rarity = MathTool.GetWeight(stageData.FishRarity, stageData.RarityWeight);
+                    return GetFishIdByRarity(rarity);
                 }
                 else if (type == 2)
                 {
                     //道具
-
+                    return ItemManager.Instance.GetRandomItemIdByWeight();
                 }
+            }
+            return 0;
+        }
+        /// <summary>
+        /// 根据鱼稀有度随鱼id
+        /// </summary>
+        private int GetFishIdByRarity(int fishRarity)
+        {
+            if (dicFishWeight.TryGetValue(fishRarity, out List<List<int>> idWeightList))
+            {
+                return MathTool.GetWeight(idWeightList[0], idWeightList[1]);
             }
             return 0;
         }

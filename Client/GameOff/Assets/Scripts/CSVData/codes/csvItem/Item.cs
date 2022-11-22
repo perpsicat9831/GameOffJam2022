@@ -21,18 +21,20 @@ public sealed class Item :  Bright.Config.BeanBase
     {
         { if(!_json["id"].IsNumber) { throw new SerializationException(); }  Id = _json["id"]; }
         { if(!_json["item_name"].IsString) { throw new SerializationException(); }  ItemName = _json["item_name"]; }
-        { if(!_json["item_name_cn"].IsString) { throw new SerializationException(); }  ItemNameCn = _json["item_name_cn"]; }
         { if(!_json["item_type"].IsNumber) { throw new SerializationException(); }  ItemType = _json["item_type"]; }
+        { if(!_json["item_name_cn"].IsString) { throw new SerializationException(); }  ItemNameCn = _json["item_name_cn"]; }
+        { if(!_json["item_effect"].IsNumber) { throw new SerializationException(); }  ItemEffect = _json["item_effect"]; }
         { if(!_json["item_content"].IsString) { throw new SerializationException(); }  ItemContent = _json["item_content"]; }
         { if(!_json["item_weight"].IsNumber) { throw new SerializationException(); }  ItemWeight = _json["item_weight"]; }
     }
 
-    public Item(int id, string item_name, string item_name_cn, int item_type, string item_content, int item_weight ) 
+    public Item(int id, string item_name, int item_type, string item_name_cn, int item_effect, string item_content, int item_weight ) 
     {
         this.Id = id;
         this.ItemName = item_name;
-        this.ItemNameCn = item_name_cn;
         this.ItemType = item_type;
+        this.ItemNameCn = item_name_cn;
+        this.ItemEffect = item_effect;
         this.ItemContent = item_content;
         this.ItemWeight = item_weight;
     }
@@ -51,13 +53,17 @@ public sealed class Item :  Bright.Config.BeanBase
     /// </summary>
     public string ItemName { get; private set; }
     /// <summary>
+    /// 1= 道具<br/>2= 鱼类
+    /// </summary>
+    public int ItemType { get; private set; }
+    /// <summary>
     /// 名称注释（中文）
     /// </summary>
     public string ItemNameCn { get; private set; }
     /// <summary>
     /// 效果类型<br/>1= A时间内霸体<br/>2= A时间内钓鱼直接进入B阶段
     /// </summary>
-    public int ItemType { get; private set; }
+    public int ItemEffect { get; private set; }
     /// <summary>
     /// 类型配置<br/>1= A（秒）<br/>2= A（秒）|B（1= 一阶段；2=二阶段；3=三阶段）
     /// </summary>
@@ -83,8 +89,9 @@ public sealed class Item :  Bright.Config.BeanBase
         return "{ "
         + "Id:" + Id + ","
         + "ItemName:" + ItemName + ","
-        + "ItemNameCn:" + ItemNameCn + ","
         + "ItemType:" + ItemType + ","
+        + "ItemNameCn:" + ItemNameCn + ","
+        + "ItemEffect:" + ItemEffect + ","
         + "ItemContent:" + ItemContent + ","
         + "ItemWeight:" + ItemWeight + ","
         + "}";
