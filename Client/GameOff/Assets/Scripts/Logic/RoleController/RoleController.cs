@@ -78,6 +78,7 @@ namespace Logic
                 if (Input.GetKeyUp(KeyCode.E))
                 {
                     Debug.Log("Hold E Time " + HoldTime);
+                    FishingManager.Instance.Fishing(HoldTime);
                     HoldTime = 0;
                 }
             }

@@ -8,7 +8,10 @@ namespace Logic
 {
     public class PlayerManager : BaseManager<PlayerManager>
     {
-
+        /// <summary>
+        /// 鱼生成点
+        /// </summary>
+        public Transform RoleSpawn;
         public enum EEvents
         {
             onEventTrigger,
@@ -103,6 +106,14 @@ namespace Logic
                 return data.PlayerHitbackMul;
             }
             return 1;
+        }
+
+        /// <summary>
+        /// 绑定鱼生成位置
+        /// </summary>
+        public void RegisterRoleSpawn(Transform trans)
+        {
+            RoleSpawn = trans;
         }
         #endregion
 

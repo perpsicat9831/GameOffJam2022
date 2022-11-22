@@ -17,6 +17,7 @@ public class GameMain : MonoBehaviour
     CenterManager centerManager = new CenterManager();
     private void Start()
     {
+        DontDestroyOnLoad(this);
         eGameState = EGameState.FlashStart;
     }
     private void Update()
@@ -40,7 +41,6 @@ public class GameMain : MonoBehaviour
                     UIManager.Init();
                     CSVManager.InitTable();
                     centerManager.RegisterAllManager();
-                    UIManager.OpenUI(EUIID.GameMain);
                     eGameState = EGameState.Running;
                 }
                 break;

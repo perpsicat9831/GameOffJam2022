@@ -9,6 +9,10 @@ namespace Logic
     public class FishingManager : BaseManager<FishingManager>
     {
         /// <summary>
+        /// 鱼生成点
+        /// </summary>
+        public Transform FishSpawn;
+        /// <summary>
         /// 钓鱼阶段ID列表
         /// </summary>
         private List<int> listStageId = new List<int>();
@@ -32,6 +36,7 @@ namespace Logic
         public override void OnInit()
         {
             InitData();
+            ObjectPool<Fish>.Instance.Init(100, 0);
         }
         public override void OnDestroy()
         {
@@ -66,7 +71,7 @@ namespace Logic
                 }
                 else
                 {
-                    var newIdWeightList = new List<List<int>>();
+                    var newIdWeightList = new List<List<int>>() { new List<int>(), new List<int>() };
                     newIdWeightList[0].Add(curFish.Id);
                     newIdWeightList[1].Add(curFish.FishWeight);
                     dicFishWeight.Add(curFish.FishRarity, newIdWeightList);
@@ -121,6 +126,41 @@ namespace Logic
                 return MathTool.GetWeight(idWeightList[0], idWeightList[1]);
             }
             return 0;
+        }
+        /// <summary>
+        /// 绑定鱼生成位置
+        /// </summary>
+        public void RegisterFishSpawn(Transform trans)
+        {
+            FishSpawn = trans;
+        }
+        /// <summary>
+        /// 钓鱼
+        /// </summary>
+        public void Fishing(float time)
+        {
+            var itemID = GetFishingRewardItemId(time);
+            var itemData = CSVManager.CSVData.TbItem.GetOrDefault(itemID);
+            if (itemData != null)
+            {
+                Log.LogInfo("钓上来了 " + itemData.ItemNameCn);
+                if(itemData.ItemType == 2)
+                {
+                    if (FishSpawn)
+                    {
+                        var fish = ObjectPool<Fish>.Instance.Allocate();
+                        fish.OnCreate(FishSpawn);
+                    }
+                    else
+                    {
+                        Log.Error("找不到fishSpawn");
+                    }
+                }
+            }
+            else
+            {
+                Log.LogInfo("钓了个寂寞" + itemID);
+            }
         }
         #endregion
 

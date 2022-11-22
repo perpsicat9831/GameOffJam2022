@@ -181,9 +181,10 @@ namespace Unity.BossRoom.Gameplay.GameState
         IEnumerator WaitToEndLobby()
         {
             yield return new WaitForSeconds(3);
-            SceneLoaderWrapper.Instance.LoadScene("BossRoom", useNetworkSceneManager: true);
+            //SceneLoaderWrapper.Instance.LoadScene("BossRoom", useNetworkSceneManager: true);
+            SceneLoaderWrapper.Instance.LoadScene("BattleScene", useNetworkSceneManager: true);
         }
-
+            
         public void OnNetworkDespawn()
         {
             if (NetworkManager.Singleton)

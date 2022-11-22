@@ -53,20 +53,20 @@ namespace Framework
             PopupUIRoot.transform.SetParent(UIRoot.transform, true);
             HeadInfoUIRoot.transform.SetParent(UIRoot.transform, true);
 
-            goEventSystem = new GameObject("EventSystem");
-            EventSystem = goEventSystem.AddComponent<EventSystem>();
-            goEventSystem.AddComponent<StandaloneInputModule>();
+            //goEventSystem = new GameObject("EventSystem");
+            //EventSystem = goEventSystem.AddComponent<EventSystem>();
+            //goEventSystem.AddComponent<StandaloneInputModule>();
 
             //create camera
-            UICamera = new GameObject("UICamera").AddComponent<Camera>();
-            UICamera.transform.SetParent(UIRoot.transform, true);
-            UICamera.cullingMask = (1 << (int)UnityLayerDef.UI);
-            UICamera.clearFlags = CameraClearFlags.Depth;
-            UICamera.nearClipPlane = UIDefs.Camera_Near;
-            UICamera.farClipPlane = UIDefs.Camera_Far;
-            UICamera.orthographic = true;
-            UICamera.orthographicSize = UIDefs.Camera_Size;
-            UICamera.depth = UIDefs.Camera_Depth;
+            //UICamera = new GameObject("UICamera").AddComponent<Camera>();
+            //UICamera.transform.SetParent(UIRoot.transform, true);
+            //UICamera.cullingMask = (1 << (int)UnityLayerDef.UI);
+            //UICamera.clearFlags = CameraClearFlags.Depth;
+            //UICamera.nearClipPlane = UIDefs.Camera_Near;
+            //UICamera.farClipPlane = UIDefs.Camera_Far;
+            //UICamera.orthographic = true;
+            //UICamera.orthographicSize = UIDefs.Camera_Size;
+            //UICamera.depth = UIDefs.Camera_Depth;
             GameObject.DontDestroyOnLoad(UIRoot);
         }
 
