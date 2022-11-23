@@ -14,8 +14,8 @@ namespace Logic
         /// 表现层对象
         /// </summary>
         protected GameObject goCell;
-        protected string abPath = "Prefab/Fish/FishPrefab";
-        protected string abPrefabName = "FishPrefab";
+        protected string abPath = "Prefab/Fish/Fish";
+        protected string abPrefabName = "Fish";
 
         public bool IsRecycled { get; set; }
 

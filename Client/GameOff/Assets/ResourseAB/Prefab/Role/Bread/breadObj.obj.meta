@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: b4425d786da470d4ba57fdde7a542338
+guid: 200520f363d7ee94ba491b0b5906b842
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
@@ -32,7 +32,7 @@ ModelImporter:
     extraExposedTransformPaths: []
     extraUserProperties: []
     clipAnimations: []
-    isReadable: 1
+    isReadable: 0
   meshes:
     lODScreenPercentages: []
     globalScale: 1
@@ -102,5 +102,5 @@ ModelImporter:
   remapMaterialsIfMaterialImportModeIsNone: 0
   additionalBone: 0
   userData: 
-  assetBundleName: prefab/fish/fish.ab
+  assetBundleName: prefab/role/bread/breadobj.ab
   assetBundleVariant: 
