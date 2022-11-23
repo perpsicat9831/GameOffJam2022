@@ -1,9 +1,0 @@
-Event	ID	Name			Wwise Object Path	Notes
-	379521629	test_music			\Player\test_music	
-
-In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	463486002	DECISIVE BATTLE	F:\GitHubProjects\GameOffJam2022\Client\GameOff\GameOff_WwiseProject\.cache\Windows\SFX\Music\test\DECISIVE BATTLE_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\mus_test\DECISIVE BATTLE\DECISIVE BATTLE		17704
-
-Streamed Audio	ID	Name	Audio source file	Generated audio file	Wwise Object Path	Notes
-	463486002	DECISIVE BATTLE	F:\GitHubProjects\GameOffJam2022\Client\GameOff\GameOff_WwiseProject\.cache\Windows\SFX\Music\test\DECISIVE BATTLE_D79FB2B7.wem	463486002.wem	\Interactive Music Hierarchy\Default Work Unit\mus_test\DECISIVE BATTLE\DECISIVE BATTLE	
-

@@ -10,9 +10,6 @@ namespace Unity.BossRoom.Gameplay.UI
     public class UISettingsCanvas : MonoBehaviour
     {
         [SerializeField]
-        private GameObject m_SettingsPanelRoot;
-
-        [SerializeField]
         private GameObject m_QuitPanelRoot;
 
         void Awake()
@@ -23,7 +20,6 @@ namespace Unity.BossRoom.Gameplay.UI
 
         void DisablePanels()
         {
-            m_SettingsPanelRoot.SetActive(false);
             m_QuitPanelRoot.SetActive(false);
         }
 
@@ -32,7 +28,6 @@ namespace Unity.BossRoom.Gameplay.UI
         /// </summary>
         public void OnClickSettingsButton()
         {
-            m_SettingsPanelRoot.SetActive(!m_SettingsPanelRoot.activeSelf);
             m_QuitPanelRoot.SetActive(false);
         }
 
@@ -42,7 +37,6 @@ namespace Unity.BossRoom.Gameplay.UI
         public void OnClickQuitButton()
         {
             m_QuitPanelRoot.SetActive(!m_QuitPanelRoot.activeSelf);
-            m_SettingsPanelRoot.SetActive(false);
         }
 
     }

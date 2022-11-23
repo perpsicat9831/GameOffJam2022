@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f337f9dd23e0eaf4aa5f0e275745ac53, type: 3}
+  m_Name: DD06C1D1-893D-4D47-9D2A-E9E75F1E407E
+  m_EditorClassIdentifier: 
+  objectName: UI_Button_Leave
+  id: 4078704050
+  guid: DD06C1D1-893D-4D47-9D2A-E9E75F1E407E

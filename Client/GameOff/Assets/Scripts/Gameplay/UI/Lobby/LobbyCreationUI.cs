@@ -2,16 +2,16 @@ using System;
 using UnityEngine;
 using UnityEngine.UI;
 using VContainer;
+using TMPro;
 
 namespace Unity.BossRoom.Gameplay.UI
 {
     public class LobbyCreationUI : MonoBehaviour
     {
-        [SerializeField] InputField m_LobbyNameInputField;
+        [SerializeField] TMP_InputField m_LobbyNameInputField;
         [SerializeField] GameObject m_LoadingIndicatorObject;
-        [SerializeField] Toggle m_IsPrivate;
         [SerializeField] CanvasGroup m_CanvasGroup;
-        [Inject] LobbyUIMediator m_LobbyUIMediator;
+        [SerializeField] LobbyUIMediator m_LobbyUIMediator;
 
         void Awake()
         {
@@ -25,7 +25,7 @@ namespace Unity.BossRoom.Gameplay.UI
 
         public void OnCreateClick()
         {
-            m_LobbyUIMediator.CreateLobbyRequest(m_LobbyNameInputField.text, m_IsPrivate.isOn);
+            m_LobbyUIMediator.CreateLobbyRequest(m_LobbyNameInputField.text,false);
         }
 
         public void Show()

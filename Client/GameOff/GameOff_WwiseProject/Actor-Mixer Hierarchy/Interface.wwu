@@ -12,6 +12,173 @@
 							<ObjectRef Name="UI" ID="{EDA45B1C-629C-46C0-ABE2-4B8041AE5CE5}" WorkUnitID="{881B6AFD-C15B-45D7-9A90-5260F7D4E557}"/>
 						</Reference>
 					</ReferenceList>
+					<ChildrenList>
+						<Folder Name="General" ID="{3C32D243-9EBF-4980-9FBA-5D15B75CD613}" ShortID="194904908">
+							<ChildrenList>
+								<Sound Name="UI_Click" ID="{58A4CD86-0983-49CC-B98B-FA90B42D636A}" ShortID="165847891">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E1BE0BEA-3F5B-4A86-8597-3688E3CF6288}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="UI" ID="{EDA45B1C-629C-46C0-ABE2-4B8041AE5CE5}" WorkUnitID="{881B6AFD-C15B-45D7-9A90-5260F7D4E557}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="UI_Click" ID="{67E56A03-335D-404B-A60D-1937F4B2A56D}">
+											<Language>SFX</Language>
+											<AudioFile>Interface\UI_Click.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="348585539"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="UI_Click" ID="{67E56A03-335D-404B-A60D-1937F4B2A56D}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="UI_Button_Enable" ID="{7823E623-8B43-498E-A7E8-3CDF5D5E1598}" ShortID="415753950">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E1BE0BEA-3F5B-4A86-8597-3688E3CF6288}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{881B6AFD-C15B-45D7-9A90-5260F7D4E557}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="UI_Button_Enable" ID="{BDBDE7BA-5A96-4493-8805-E91D4B05CF25}">
+											<Language>SFX</Language>
+											<AudioFile>Interface\UI_Button_Enable.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="376977459"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="UI_Button_Enable" ID="{BDBDE7BA-5A96-4493-8805-E91D4B05CF25}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="UI_Button_Leave" ID="{039B2BFF-9E9F-4640-81F6-57E7EBC1F638}" ShortID="206575735">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E1BE0BEA-3F5B-4A86-8597-3688E3CF6288}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{881B6AFD-C15B-45D7-9A90-5260F7D4E557}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="UI_Button_Leave" ID="{360E1EFE-4523-4A2C-8176-D0E8B7D2463C}">
+											<Language>SFX</Language>
+											<AudioFile>Interface\UI_Button_Leave.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="811812712"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="UI_Button_Leave" ID="{360E1EFE-4523-4A2C-8176-D0E8B7D2463C}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="UI_Button_Ready" ID="{0969F824-1FD6-4D85-A07C-AA63754D8E51}" ShortID="310982592">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E1BE0BEA-3F5B-4A86-8597-3688E3CF6288}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{881B6AFD-C15B-45D7-9A90-5260F7D4E557}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="UI_Button_Ready" ID="{9163862C-4095-4329-AEF7-E0441DF2AB29}">
+											<Language>SFX</Language>
+											<AudioFile>Interface\UI_Button_Ready.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="98799830"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="UI_Button_Ready" ID="{9163862C-4095-4329-AEF7-E0441DF2AB29}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="UI_Button_Start" ID="{98DD3F90-0F40-48E1-85BB-875E3F3BFC47}" ShortID="1027615890">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E1BE0BEA-3F5B-4A86-8597-3688E3CF6288}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{881B6AFD-C15B-45D7-9A90-5260F7D4E557}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="UI_Button_Start" ID="{D24EFE2C-4297-45DB-9629-8935F303A69C}">
+											<Language>SFX</Language>
+											<AudioFile>Interface\UI_Button_Start.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="1057248792"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="UI_Button_Start" ID="{D24EFE2C-4297-45DB-9629-8935F303A69C}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="UI_Button_Click_Neg" ID="{D6E9333C-CBA3-4876-BCEB-1A03FA17BE4E}" ShortID="359520129">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E1BE0BEA-3F5B-4A86-8597-3688E3CF6288}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{881B6AFD-C15B-45D7-9A90-5260F7D4E557}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="UI_Button_Click_Neg" ID="{335806AA-DE3B-4656-9957-5BE8D78096C9}">
+											<Language>SFX</Language>
+											<AudioFile>Interface\UI_Button_Click_Neg.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="809364097"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="UI_Button_Click_Neg" ID="{335806AA-DE3B-4656-9957-5BE8D78096C9}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="UI_Button_Click_Pos" ID="{554F0AB4-D0AE-42B0-87AE-F130196D9D6F}" ShortID="465492989">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E1BE0BEA-3F5B-4A86-8597-3688E3CF6288}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{881B6AFD-C15B-45D7-9A90-5260F7D4E557}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="UI_Button_Click_Pos" ID="{56DFD5FC-11F9-4A84-A363-106C3F4B8E29}">
+											<Language>SFX</Language>
+											<AudioFile>Interface\UI_Button_Click_Pos.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="913990448"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="UI_Button_Click_Pos" ID="{56DFD5FC-11F9-4A84-A363-106C3F4B8E29}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</Folder>
+					</ChildrenList>
 					<ObjectLists/>
 				</ActorMixer>
 			</ChildrenList>

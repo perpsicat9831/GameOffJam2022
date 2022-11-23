@@ -13,13 +13,10 @@ namespace Unity.BossRoom.Gameplay.UI
 {
     public class LobbyUIMediator : MonoBehaviour
     {
+        [SerializeField] CanvasGroup m_LobbyUI;
         [SerializeField] CanvasGroup m_CanvasGroup;
         [SerializeField] LobbyJoiningUI m_LobbyJoiningUI;
         [SerializeField] LobbyCreationUI m_LobbyCreationUI;
-        [SerializeField] UITinter m_JoinToggleHighlight;
-        [SerializeField] UITinter m_JoinToggleTabBlocker;
-        [SerializeField] UITinter m_CreateToggleHighlight;
-        [SerializeField] UITinter m_CreateToggleTabBlocker;
         [SerializeField] TextMeshProUGUI m_PlayerNameLabel;
         [SerializeField] GameObject m_LoadingSpinner;
 
@@ -133,6 +130,11 @@ namespace Unity.BossRoom.Gameplay.UI
             }
         }
 
+        public void OnAuthSign()
+        {
+            UnblockUIAfterLoadingIsComplete();
+        }
+
         public async void JoinLobbyWithCodeRequest(string lobbyCode)
         {
             BlockUIWhileLoadingIsInProgress();
@@ -231,22 +233,23 @@ namespace Unity.BossRoom.Gameplay.UI
 
         public void ToggleJoinLobbyUI()
         {
+            m_LobbyUI.alpha = 0;
             m_LobbyJoiningUI.Show();
             m_LobbyCreationUI.Hide();
-            m_JoinToggleHighlight.SetToColor(1);
-            m_JoinToggleTabBlocker.SetToColor(1);
-            m_CreateToggleHighlight.SetToColor(0);
-            m_CreateToggleTabBlocker.SetToColor(0);
         }
 
         public void ToggleCreateLobbyUI()
         {
+            m_LobbyUI.alpha = 0;
+            m_LobbyUI.blocksRaycasts = false;
             m_LobbyJoiningUI.Hide();
             m_LobbyCreationUI.Show();
-            m_JoinToggleHighlight.SetToColor(0);
-            m_JoinToggleTabBlocker.SetToColor(0);
-            m_CreateToggleHighlight.SetToColor(1);
-            m_CreateToggleTabBlocker.SetToColor(1);
+        }
+
+        public void BackLobbyUI()
+        {
+            m_LobbyUI.alpha = 1;
+            m_LobbyUI.blocksRaycasts = true;
         }
 
         public void RegenerateName()
