@@ -11,8 +11,6 @@ namespace Unity.BossRoom.Gameplay.UI
     {
         [SerializeField]
         TextMeshProUGUI m_RoomNameText;
-        [SerializeField]
-        Button m_CopyToClipboardButton;
 
         LocalLobby m_LocalLobby;
         string m_LobbyCode;
@@ -40,15 +38,9 @@ namespace Unity.BossRoom.Gameplay.UI
             if (!string.IsNullOrEmpty(localLobby.LobbyCode))
             {
                 m_LobbyCode = localLobby.LobbyCode;
-                m_RoomNameText.text = $"Lobby Code: {m_LobbyCode}";
+                m_RoomNameText.text = $"{m_LobbyCode}";
                 gameObject.SetActive(true);
-                m_CopyToClipboardButton.gameObject.SetActive(true);
             }
-        }
-
-        public void CopyToClipboard()
-        {
-            GUIUtility.systemCopyBuffer = m_LobbyCode;
         }
     }
 }

@@ -8,15 +8,8 @@ namespace Unity.BossRoom.Gameplay.GameState
     /// <summary>
     /// Common data and RPCs for the CharSelect stage.
     /// </summary>
-    public class NetworkCharSelection : NetworkBehaviour
+    public class NetworkRoomPlayerHandle : NetworkBehaviour
     {
-        public enum SeatState : byte
-        {
-            Inactive,
-            Active,
-            LockedIn,
-        }
-
         /// <summary>
         /// Describes one of the players in the lobby, and their current character-select status.
         /// </summary>
@@ -25,23 +18,22 @@ namespace Unity.BossRoom.Gameplay.GameState
             public ulong ClientId;
 
             private FixedPlayerName m_PlayerName; // I'm sad there's no 256Bytes fixed list :(
-
             public int PlayerNumber; // this player's assigned "P#". (0=P1, 1=P2, etc.)
             public int SeatIdx; // the latest seat they were in. -1 means none
             public float LastChangeTime;
+            public bool IsHost;
+            public bool IsReady;
 
-            public SeatState SeatState;
 
-
-            public LobbyPlayerState(ulong clientId, string name, int playerNumber, SeatState state, int seatIdx = -1, float lastChangeTime = 0)
+            public LobbyPlayerState(ulong clientId, string name, int playerNumber, bool isReady=false , int seatIdx = -1, float lastChangeTime = 0,bool isHost=false)
             {
                 ClientId = clientId;
                 PlayerNumber = playerNumber;
-                SeatState = state;
+                IsReady = isReady;
                 SeatIdx = seatIdx;
                 LastChangeTime = lastChangeTime;
                 m_PlayerName = new FixedPlayerName();
-
+                this.IsHost = isHost;
                 PlayerName = name;
             }
 
@@ -51,14 +43,21 @@ namespace Unity.BossRoom.Gameplay.GameState
                 private set => m_PlayerName = value;
             }
 
+            public void SetIsReady(bool isReady)
+            {
+                IsReady = isReady;
+            }
+
+
             public void NetworkSerialize<T>(BufferSerializer<T> serializer) where T : IReaderWriter
             {
                 serializer.SerializeValue(ref ClientId);
                 serializer.SerializeValue(ref m_PlayerName);
                 serializer.SerializeValue(ref PlayerNumber);
-                serializer.SerializeValue(ref SeatState);
                 serializer.SerializeValue(ref SeatIdx);
                 serializer.SerializeValue(ref LastChangeTime);
+                serializer.SerializeValue(ref IsHost);
+                serializer.SerializeValue(ref IsReady);
             }
 
             public bool Equals(LobbyPlayerState other)
@@ -67,8 +66,7 @@ namespace Unity.BossRoom.Gameplay.GameState
                        m_PlayerName.Equals(other.m_PlayerName) &&
                        PlayerNumber == other.PlayerNumber &&
                        SeatIdx == other.SeatIdx &&
-                       LastChangeTime.Equals(other.LastChangeTime) &&
-                       SeatState == other.SeatState;
+                       LastChangeTime.Equals(other.LastChangeTime);
             }
         }
 
@@ -91,18 +89,22 @@ namespace Unity.BossRoom.Gameplay.GameState
         /// </summary>
         public NetworkVariable<bool> IsLobbyClosed { get; } = new NetworkVariable<bool>(false);
 
-        /// <summary>
-        /// Server notification when a client requests a different lobby-seat, or locks in their seat choice
-        /// </summary>
-        public event Action<ulong, int, bool> OnClientChangedSeat;
 
+        public event Action<ulong,bool> OnSetReady;
         /// <summary>
-        /// RPC to notify the server that a client has chosen a seat.
+        /// RPC to notify the server that a client Seat ready
         /// </summary>
         [ServerRpc(RequireOwnership = false)]
-        public void ChangeSeatServerRpc(ulong clientId, int seatIdx, bool lockedIn)
+        public void SetReadyServerRpc(ulong clientID,bool isReady)
         {
-            OnClientChangedSeat?.Invoke(clientId, seatIdx, lockedIn);
+            OnSetReady?.Invoke(clientID,isReady);
+        }
+
+        public event Action OnStart;
+        [ServerRpc(RequireOwnership = false)]
+        public void StartGameServerRpc()
+        {
+            OnStart?.Invoke();
         }
     }
 }
