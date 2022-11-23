@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: AudioInitSettings
   m_EditorClassIdentifier: 
   DisableWwise: 0
-  DebugLogLevel: 2
+  DebugLogLevel: 3
   PackageMode: 0
   AddListenerToMainCamera: 1
   AlternativeListenersCount: 0

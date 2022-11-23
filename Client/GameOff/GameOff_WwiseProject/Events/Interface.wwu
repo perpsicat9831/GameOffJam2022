@@ -1,6 +1,90 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{D6DABC1F-87B5-4D9F-956F-5AAE2FDC5202}" SchemaVersion="103">
 	<Events>
-		<WorkUnit Name="Interface" ID="{D6DABC1F-87B5-4D9F-956F-5AAE2FDC5202}" PersistMode="Standalone"/>
+		<WorkUnit Name="Interface" ID="{D6DABC1F-87B5-4D9F-956F-5AAE2FDC5202}" PersistMode="Standalone">
+			<ChildrenList>
+				<Folder Name="General" ID="{7629D9DB-BA4A-47D3-9D5B-DA6AF3ADBDF6}" ShortID="613784789">
+					<ChildrenList>
+						<Event Name="UI_Button_Enable" ID="{881FC8DD-53F5-4928-AC3A-3F99CCB0D84A}">
+							<ChildrenList>
+								<Action Name="" ID="{560B2151-EAFA-4A76-A514-43BCE24CED36}" ShortID="204003734">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="UI_Button_Enable" ID="{7823E623-8B43-498E-A7E8-3CDF5D5E1598}" WorkUnitID="{B1CABE8B-7D41-4667-A55F-48094AAB5C30}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="UI_Click" ID="{1A8C3787-1F6A-4996-B82D-A4A9F002327F}">
+							<ChildrenList>
+								<Action Name="" ID="{C589075D-1A14-42CC-8AC0-3F7D3DC41E47}" ShortID="530117811">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="UI_Click" ID="{58A4CD86-0983-49CC-B98B-FA90B42D636A}" WorkUnitID="{B1CABE8B-7D41-4667-A55F-48094AAB5C30}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="UI_Button_Leave" ID="{DD06C1D1-893D-4D47-9D2A-E9E75F1E407E}">
+							<ChildrenList>
+								<Action Name="" ID="{E7971634-D0E7-49ED-BBC0-18340A560151}" ShortID="861203670">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="UI_Button_Leave" ID="{039B2BFF-9E9F-4640-81F6-57E7EBC1F638}" WorkUnitID="{B1CABE8B-7D41-4667-A55F-48094AAB5C30}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="UI_Button_Ready" ID="{C6A65F9A-554A-4F2A-A9BA-EA575BEC3153}">
+							<ChildrenList>
+								<Action Name="" ID="{4E94AF86-41FD-4181-85E8-6B9B05A79B70}" ShortID="309735882">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="UI_Button_Ready" ID="{0969F824-1FD6-4D85-A07C-AA63754D8E51}" WorkUnitID="{B1CABE8B-7D41-4667-A55F-48094AAB5C30}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="UI_Button_Start" ID="{D064D136-8E57-4E8E-A33F-37711C00CBC1}">
+							<ChildrenList>
+								<Action Name="" ID="{43CAA537-AB09-4FB2-BFCF-131BFFA0B6D7}" ShortID="437157656">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="UI_Button_Start" ID="{98DD3F90-0F40-48E1-85BB-875E3F3BFC47}" WorkUnitID="{B1CABE8B-7D41-4667-A55F-48094AAB5C30}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="UI_Button_Click_Pos" ID="{1BDB08FF-D898-4AB7-93AF-92001F8E9B7B}">
+							<ChildrenList>
+								<Action Name="" ID="{20FA0BB1-509B-4844-897C-FBF4E4469ECE}" ShortID="1065200427">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="UI_Button_Click_Pos" ID="{554F0AB4-D0AE-42B0-87AE-F130196D9D6F}" WorkUnitID="{B1CABE8B-7D41-4667-A55F-48094AAB5C30}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="UI_Button_Click_Neg" ID="{71359A11-83B7-46BE-BA95-17438EAF15D0}">
+							<ChildrenList>
+								<Action Name="" ID="{9FA67217-F458-4336-8CE5-8994F5D6EC9D}" ShortID="549542939">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="UI_Button_Click_Neg" ID="{D6E9333C-CBA3-4876-BCEB-1A03FA17BE4E}" WorkUnitID="{B1CABE8B-7D41-4667-A55F-48094AAB5C30}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+			</ChildrenList>
+		</WorkUnit>
 	</Events>
 </WwiseDocument>

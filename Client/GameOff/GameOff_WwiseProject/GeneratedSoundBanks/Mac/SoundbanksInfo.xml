@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="12" SoundbankVersion="140">
 	<RootPaths>
-		<ProjectRoot>F:\GitHubProjects\GameOffJam2022\Client\GameOff\GameOff_WwiseProject\</ProjectRoot>
-		<SourceFilesRoot>F:\GitHubProjects\GameOffJam2022\Client\GameOff\GameOff_WwiseProject\.cache\Mac\</SourceFilesRoot>
-		<SoundBanksRoot>F:\GitHubProjects\GameOffJam2022\Client\GameOff\GameOff_WwiseProject\GeneratedSoundBanks\Mac\</SoundBanksRoot>
+		<ProjectRoot>E:\UnityProjects\Newbies2022\GameOffJam2022\Client\GameOff\GameOff_WwiseProject\</ProjectRoot>
+		<SourceFilesRoot>E:\UnityProjects\Newbies2022\GameOffJam2022\Client\GameOff\GameOff_WwiseProject\.cache\Mac\</SourceFilesRoot>
+		<SoundBanksRoot>E:\UnityProjects\Newbies2022\GameOffJam2022\Client\GameOff\GameOff_WwiseProject\GeneratedSoundBanks\Mac\</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>F:\GitHubProjects\GameOffJam2022\Client\GameOff\GameOff_WwiseProject\GeneratedSoundBanks\Mac</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>E:\UnityProjects\Newbies2022\GameOffJam2022\Client\GameOff\GameOff_WwiseProject\GeneratedSoundBanks\Mac</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<StreamedFiles>
@@ -16,12 +16,95 @@
 	</StreamedFiles>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="1069431850" Language="SFX" Hash="1228924781">
+		<SoundBank Id="85412153" Language="SFX" Hash="2564553725">
+			<ObjectPath>\SoundBanks\Default Work Unit\Ambience</ObjectPath>
+			<ShortName>Ambience</ShortName>
+			<Path>Ambience.bnk</Path>
+		</SoundBank>
+		<SoundBank Id="662417162" Language="SFX" Hash="1155370330">
+			<ObjectPath>\SoundBanks\Default Work Unit\NPC</ObjectPath>
+			<ShortName>NPC</ShortName>
+			<Path>NPC.bnk</Path>
+		</SoundBank>
+		<SoundBank Id="1069431850" Language="SFX" Hash="2983729342">
 			<ObjectPath>\SoundBanks\Default Work Unit\Player</ObjectPath>
 			<ShortName>Player</ShortName>
 			<Path>Player.bnk</Path>
+		</SoundBank>
+		<SoundBank Id="1088520938" Language="SFX" Hash="2820578254">
+			<ObjectPath>\SoundBanks\Default Work Unit\Interface</ObjectPath>
+			<ShortName>Interface</ShortName>
+			<Path>Interface.bnk</Path>
 			<IncludedEvents>
-				<Event Id="379521629" Name="test_music" ObjectPath="\Events\Player\test_music" DurationType="Infinite">
+				<Event Id="1020395736" Name="UI_Button_Click_Neg" ObjectPath="\Events\Interface\General\UI_Button_Click_Neg" DurationType="OneShot" DurationMin="1." DurationMax="1.">
+					<IncludedMemoryFiles>
+						<File Id="809364097" Language="SFX">
+							<ShortName>Interface\UI_Button_Click_Neg.wav</ShortName>
+							<Path>SFX\Interface\UI_Button_Click_Neg_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1729881340" Name="UI_Button_Click_Pos" ObjectPath="\Events\Interface\General\UI_Button_Click_Pos" DurationType="OneShot" DurationMin="1." DurationMax="1.">
+					<IncludedMemoryFiles>
+						<File Id="913990448" Language="SFX">
+							<ShortName>Interface\UI_Button_Click_Pos.wav</ShortName>
+							<Path>SFX\Interface\UI_Button_Click_Pos_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="4004560084" Name="UI_Button_Enable" ObjectPath="\Events\Interface\General\UI_Button_Enable" DurationType="OneShot" DurationMin="1." DurationMax="1.">
+					<IncludedMemoryFiles>
+						<File Id="376977459" Language="SFX">
+							<ShortName>Interface\UI_Button_Enable.wav</ShortName>
+							<Path>SFX\Interface\UI_Button_Enable_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="4078704050" Name="UI_Button_Leave" ObjectPath="\Events\Interface\General\UI_Button_Leave" DurationType="OneShot" DurationMin="1." DurationMax="1.">
+					<IncludedMemoryFiles>
+						<File Id="811812712" Language="SFX">
+							<ShortName>Interface\UI_Button_Leave.wav</ShortName>
+							<Path>SFX\Interface\UI_Button_Leave_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="186347966" Name="UI_Button_Ready" ObjectPath="\Events\Interface\General\UI_Button_Ready" DurationType="OneShot" DurationMin="1." DurationMax="1.">
+					<IncludedMemoryFiles>
+						<File Id="98799830" Language="SFX">
+							<ShortName>Interface\UI_Button_Ready.wav</ShortName>
+							<Path>SFX\Interface\UI_Button_Ready_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1937610011" Name="UI_Button_Start" ObjectPath="\Events\Interface\General\UI_Button_Start" DurationType="OneShot" DurationMin="1." DurationMax="1.">
+					<IncludedMemoryFiles>
+						<File Id="1057248792" Language="SFX">
+							<ShortName>Interface\UI_Button_Start.wav</ShortName>
+							<Path>SFX\Interface\UI_Button_Start_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2249769530" Name="UI_Click" ObjectPath="\Events\Interface\General\UI_Click" DurationType="OneShot" DurationMin="1." DurationMax="1.">
+					<IncludedMemoryFiles>
+						<File Id="348585539" Language="SFX">
+							<ShortName>Interface\UI_Click.wav</ShortName>
+							<Path>SFX\Interface\UI_Click_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+			</IncludedEvents>
+		</SoundBank>
+		<SoundBank Id="1355168291" Language="SFX" Hash="2947050402">
+			<ObjectPath>Init</ObjectPath>
+			<ShortName>Init</ShortName>
+			<Path>Init.bnk</Path>
+		</SoundBank>
+		<SoundBank Id="3991942870" Language="SFX" Hash="295295674">
+			<ObjectPath>\SoundBanks\Default Work Unit\Music</ObjectPath>
+			<ShortName>Music</ShortName>
+			<Path>Music.bnk</Path>
+			<IncludedEvents>
+				<Event Id="379521629" Name="test_music" ObjectPath="\Events\Music\test_music" DurationType="Infinite">
 					<ReferencedStreamedFiles>
 						<File Id="463486002" Language="SFX">
 							<ShortName>Music\test\DECISIVE BATTLE.wav</ShortName>
@@ -37,11 +120,6 @@
 					</IncludedMemoryFiles>
 				</Event>
 			</IncludedEvents>
-		</SoundBank>
-		<SoundBank Id="1355168291" Language="SFX" Hash="2754342975">
-			<ObjectPath>Init</ObjectPath>
-			<ShortName>Init</ShortName>
-			<Path>Init.bnk</Path>
 		</SoundBank>
 	</SoundBanks>
 </SoundBanksInfo>
