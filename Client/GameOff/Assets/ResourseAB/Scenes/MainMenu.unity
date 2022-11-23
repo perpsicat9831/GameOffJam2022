@@ -202,7 +202,6 @@ GameObject:
   - component: {fileID: 775006349}
   - component: {fileID: 775006348}
   - component: {fileID: 775006351}
-  - component: {fileID: 775006353}
   - component: {fileID: 775006352}
   m_Layer: 0
   m_Name: Main Camera
@@ -311,33 +310,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 775006346}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a21cb05aa810276468c96603a0bd2ea6, type: 3}
+  m_Script: {fileID: 11500000, guid: 0842be84ccfb6194a9b9532d35bd5e24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isDefaultListener: 1
-  listenerId: 0
---- !u!114 &775006353
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 775006346}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 370cbb433f3418f41b4946d3cd8a9157, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_listeners:
-    initialListenerList: []
-    useDefaultListeners: 1
-  isEnvironmentAware: 0
-  isStaticObject: 0
-  m_positionOffsetData:
-    KeepMe: 0
-    positionOffset: {x: 0, y: 0, z: 0}
-  m_posOffsetData: {fileID: 0}
-  listenerMask: 1
+  Index: 0
+  FollowCamera: 1
+  LockYaw: 0
+  LockRoll: 0
+  LockPitch: 0
+  PositionOffset: {x: 0, y: 0, z: 0}
+  UseSpatialAudio: 0
 --- !u!1 &1428455896
 GameObject:
   m_ObjectHideFlags: 0
@@ -676,6 +658,10 @@ PrefabInstance:
     - target: {fileID: 1671107383395961993, guid: 2ecb76f53a4cb994eb9a7c9d30aa68ec, type: 3}
       propertyPath: m_Name
       value: UI Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 1671107383395961993, guid: 2ecb76f53a4cb994eb9a7c9d30aa68ec, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2031635493797416652, guid: 2ecb76f53a4cb994eb9a7c9d30aa68ec, type: 3}
       propertyPath: m_AnchorMax.y
@@ -1111,6 +1097,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2ecb76f53a4cb994eb9a7c9d30aa68ec, type: 3}
+--- !u!114 &5331930138966017711 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8615122525413298684, guid: 2ecb76f53a4cb994eb9a7c9d30aa68ec, type: 3}
+  m_PrefabInstance: {fileID: 5331930138966017710}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: baa903a3eece41eab81a9432f523ae3e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5331930138966017712 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 405572418760506228, guid: 2ecb76f53a4cb994eb9a7c9d30aa68ec, type: 3}
@@ -1390,7 +1387,7 @@ PrefabInstance:
     - target: {fileID: 8576152884213668000, guid: 30b6e45e8e2b596449e225cafe2a05a2, type: 3}
       propertyPath: m_LobbyUIMediator
       value: 
-      objectReference: {fileID: 6831438890484250293}
+      objectReference: {fileID: 5331930138966017711}
     - target: {fileID: 8576152884213668000, guid: 30b6e45e8e2b596449e225cafe2a05a2, type: 3}
       propertyPath: m_MainMenuButtons
       value: 

@@ -6,6 +6,7 @@ using Unity.BossRoom.UnityServices.Lobbies;
 using UnityEngine;
 using UnityEngine.UI;
 using VContainer;
+using TMPro;
 
 namespace Unity.BossRoom.Gameplay.UI
 {
@@ -17,15 +18,16 @@ namespace Unity.BossRoom.Gameplay.UI
         [SerializeField]
         LobbyListItemUI m_LobbyListItemPrototype;
         [SerializeField]
-        InputField m_JoinCodeField;
+        TMP_InputField m_JoinCodeField;
         [SerializeField]
         CanvasGroup m_CanvasGroup;
         [SerializeField]
-        Graphic m_EmptyLobbyListLabel;
+        GameObject m_EmptyLobbyListLabel;
         [SerializeField]
         Button m_JoinLobbyButton;
 
         IObjectResolver m_Container;
+        [SerializeField]
         LobbyUIMediator m_LobbyUIMediator;
         UpdateRunner m_UpdateRunner;
         ISubscriber<LobbyListFetchedMessage> m_LocalLobbiesRefreshedSub;
@@ -58,7 +60,6 @@ namespace Unity.BossRoom.Gameplay.UI
             ISubscriber<LobbyListFetchedMessage> localLobbiesRefreshedSub)
         {
             m_Container = container;
-            m_LobbyUIMediator = lobbyUIMediator;
             m_UpdateRunner = updateRunner;
             m_LocalLobbiesRefreshedSub = localLobbiesRefreshedSub;
             m_LocalLobbiesRefreshedSub.Subscribe(UpdateUI);
@@ -106,11 +107,11 @@ namespace Unity.BossRoom.Gameplay.UI
 
             if (message.LocalLobbies.Count == 0)
             {
-                m_EmptyLobbyListLabel.enabled = true;
+                m_EmptyLobbyListLabel.SetActive(true);
             }
             else
             {
-                m_EmptyLobbyListLabel.enabled = false;
+                m_EmptyLobbyListLabel.SetActive(false);
             }
         }
 
@@ -150,14 +151,16 @@ namespace Unity.BossRoom.Gameplay.UI
             m_CanvasGroup.alpha = 1f;
             m_CanvasGroup.blocksRaycasts = true;
             m_JoinCodeField.text = "";
-            m_UpdateRunner.Subscribe(PeriodicRefresh, 10f);
+            if(m_UpdateRunner)
+                m_UpdateRunner.Subscribe(PeriodicRefresh, 10f);
         }
 
         public void Hide()
         {
             m_CanvasGroup.alpha = 0f;
             m_CanvasGroup.blocksRaycasts = false;
-            m_UpdateRunner.Unsubscribe(PeriodicRefresh);
+            if (m_UpdateRunner)
+                m_UpdateRunner.Unsubscribe(PeriodicRefresh);
         }
     }
 }

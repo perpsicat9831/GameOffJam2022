@@ -81,7 +81,8 @@ namespace Unity.BossRoom.Gameplay.GameState
             m_LocalUser.ID = AuthenticationService.Instance.PlayerId;
             // The local LobbyUser object will be hooked into UI before the LocalLobby is populated during lobby join, so the LocalLobby must know about it already when that happens.
             m_LocalLobby.AddUser(m_LocalUser);
-            m_LobbyUIMediator.ToggleJoinLobbyUI();
+            m_LobbyUIMediator.OnAuthSign();
+            //m_LobbyUIMediator.ToggleJoinLobbyUI();
         }
 
         private void OnSignInFailed()
