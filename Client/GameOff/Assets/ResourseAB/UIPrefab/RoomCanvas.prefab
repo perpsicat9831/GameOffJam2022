@@ -217,6 +217,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: RoomPanel
       objectReference: {fileID: 0}
+    - target: {fileID: 2326090448515643157, guid: 145f464f2f5bdaf4a82de3f00deafd17, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4283298181106154833, guid: 145f464f2f5bdaf4a82de3f00deafd17, type: 3}
       propertyPath: m_VerticalScrollbar
       value: 
@@ -411,6 +415,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: QuitRoomEnsurePanel
       objectReference: {fileID: 0}
+    - target: {fileID: 4648678002054681255, guid: f491b126bf544294880df504a5c3eccc, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f491b126bf544294880df504a5c3eccc, type: 3}
 --- !u!224 &8486945576354243942 stripped
@@ -425,6 +433,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4664378921900384566}
     m_Modifications:
+    - target: {fileID: 4237252831835434624, guid: bbb19513585dc264fabf41cfcee16cb8, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4237252832198508914, guid: bbb19513585dc264fabf41cfcee16cb8, type: 3}
       propertyPath: m_VerticalScrollbar
       value: 
@@ -436,6 +448,10 @@ PrefabInstance:
     - target: {fileID: 4237252832446348669, guid: bbb19513585dc264fabf41cfcee16cb8, type: 3}
       propertyPath: m_Name
       value: JoinPartyPanel
+      objectReference: {fileID: 0}
+    - target: {fileID: 4237252832446348669, guid: bbb19513585dc264fabf41cfcee16cb8, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4237252832446348670, guid: bbb19513585dc264fabf41cfcee16cb8, type: 3}
       propertyPath: m_Pivot.x
