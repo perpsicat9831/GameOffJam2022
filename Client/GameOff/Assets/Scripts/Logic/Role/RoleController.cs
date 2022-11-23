@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -17,6 +18,7 @@ namespace Logic
         private Vector2 lastSpeedDir = Vector2.one;//上一个不为0的速度方向
         private ERoleMoveState moveState = ERoleMoveState.Move;
 
+        private float baseSpeed = 5f;
         private float Speed = 5f;
         private float RushCD = 1f;
         private bool isRushCD = false;
@@ -25,10 +27,19 @@ namespace Logic
 
         private float HoldTime = 0f;
         //private Vector2 moveDirection;
+
+        private Action actRoleDead;
+
         private void Awake()
         {
             selfTrans = transform;
             rig = selfTrans.GetComponent<Rigidbody>();
+        }
+        private void Start()
+        {
+            Speed = baseSpeed * PlayerManager.Instance.GetPlayerSpeedRate();
+            RushCD = PlayerManager.Instance.GetPlayerDashCD();
+
         }
         private void Update()
         {
@@ -50,7 +61,7 @@ namespace Logic
                 float dirX = 0;
                 float dirZ = 0;
                 if (Input.GetKey(KeyCode.A))
-                {
+                { 
                     dirX = -1;
                 }
                 else if (Input.GetKey(KeyCode.D))
@@ -95,6 +106,14 @@ namespace Logic
                     break;
             }
         }
+        private void OnTriggerEnter(Collider other)
+        {
+            if(other.name == "DeadPlane")
+            {
+                //死亡逻辑
+                actRoleDead?.Invoke();
+            }
+        }
         private void Rush()
         {
             if (Mathf.Abs(RushTarget.x - selfTrans.localPosition.x) + Mathf.Abs(RushTarget.y - selfTrans.localPosition.z) < 0.5f)
@@ -111,6 +130,18 @@ namespace Logic
             float nextX = selfTrans.localPosition.x + speedDir.x * Speed * Time.deltaTime;
             float nextZ = selfTrans.localPosition.z + speedDir.y * Speed * Time.deltaTime;
             selfTrans.localPosition = new Vector3(nextX, selfTrans.localPosition.y, nextZ);
+            //方向
+
+            float angleY = Vector3.Angle(new Vector3(0, 0, 1), new Vector3(lastSpeedDir.x, 0, lastSpeedDir.y)) * (lastSpeedDir.x > 0 ? 1 : -1);
+            selfTrans.localEulerAngles = new Vector3(0, angleY, 0);
+        }
+
+        /// <summary>
+        /// 注册角色死亡事件
+        /// </summary>
+        public void RegisterRoleDeadEvent(Action act)
+        {
+            actRoleDead = act;
         }
     }
 }
