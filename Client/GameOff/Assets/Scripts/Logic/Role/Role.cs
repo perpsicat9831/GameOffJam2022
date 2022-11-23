@@ -23,8 +23,8 @@ namespace Logic
 
         private AssetBundleLoader abRoleLoader;
         private GameObject goRole;
-        private string abRolePath = "Prefab/Role/Apple/apple";
-        private string abRolePrefabName = "apple";
+        private string abRolePath = "Prefab/Role/Cat/Cat"; 
+        private string abRolePrefabName = "Cat";
 
         private Action<Transform> actBindCameraFollowTarget;
         private Action actRoleDead;

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: fc8b842d8a62db641a5af08d136af220
+guid: 2263abdfab6c1bc42bb25f1dc0f64fa5
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
@@ -102,5 +102,5 @@ ModelImporter:
   remapMaterialsIfMaterialImportModeIsNone: 0
   additionalBone: 0
   userData: 
-  assetBundleName: prefab/role/cat/cat_new.ab
+  assetBundleName: prefab/role/cat/catobj.ab
   assetBundleVariant: 
