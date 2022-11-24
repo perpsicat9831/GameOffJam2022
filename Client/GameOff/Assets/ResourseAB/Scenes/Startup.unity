@@ -615,7 +615,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: AudioInit
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -5750581547961550630, guid: 5bffb44431151e74b997f0cfa2a21d44, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 5bffb44431151e74b997f0cfa2a21d44, type: 3}
 --- !u!1001 &1965079830
 PrefabInstance:
