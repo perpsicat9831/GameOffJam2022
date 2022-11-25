@@ -16,6 +16,11 @@ namespace Logic
         protected GameObject goCell;
         protected string abPath = "Prefab/Fish/Fish";
         protected string abPrefabName = "Fish";
+        private FishMono fishMono;
+        /// <summary>
+        /// 被抓住了
+        /// </summary>
+        public bool IsCatched;
 
         public bool IsRecycled { get; set; }
 
@@ -40,11 +45,14 @@ namespace Logic
 
         public virtual void Recycle2Cache()
         {
+            IsCatched = false;
             if (goCell != null)
             {
+                goCell.transform.SetParent(FishingManager.Instance.UnUseFishParent);
                 goCell.transform.localPosition = new Vector3(999, 999, 999);
-                //goCell.SetActive(false);
             }
+            fishMono.UseGravity(false);
+            ObjectPool<Fish>.Instance.Recycle(this);
         }
 
 
@@ -52,7 +60,7 @@ namespace Logic
         /// <summary>
         /// 创建时调用
         /// </summary>
-        public void OnCreate(Transform parent)
+        public void OnCreate(Transform pos)
         {
             if (goCell == null)
             {
@@ -62,25 +70,64 @@ namespace Logic
                     {
                         var request = ab.LoadAsset<GameObject>(abPrefabName);
                         goCell = GameObject.Instantiate(request);
-
-                        SetPlatformPos(parent);
+                        fishMono = goCell.GetComponent<FishMono>();
+                        fishMono.owner = this;
+                        fishMono.RegisterFishDeadEvent(OnFishDead);
+                        SetPlatformPos(pos);
                     }
                 });
             }
             else
             {
-                SetPlatformPos(parent);
+                SetPlatformPos(pos);
             }
         }
 
-        private void SetPlatformPos(Transform parent)
+        private void SetPlatformPos(Transform pos)
         {
             if (goCell != null)
             {
                 //goCell.SetActive(true);
-                goCell.transform.SetParent(parent);
-                goCell.transform.localPosition = parent.localPosition;
+                goCell.transform.SetParent(FishingManager.Instance.FishParent);
+                goCell.transform.position = pos.position;
             }
+            fishMono.ResetRigCollider();
+        }
+        /// <summary>
+        /// 被抓住
+        /// </summary>
+        public void BeCatched(Transform catchTarget)
+        {
+            IsCatched = true;
+            fishMono.OnCatched();
+            if (goCell != null)
+            {
+                goCell.transform.SetParent(catchTarget);
+                goCell.transform.localPosition = Vector3.zero;
+            }
+
+        }
+
+        /// <summary>
+        /// 被放下
+        /// </summary>
+        public void BeLayDown(Transform layDownTarget)
+        {
+            if (goCell != null)
+            {
+                goCell.transform.SetParent(FishingManager.Instance.FishParent);
+                goCell.transform.position = layDownTarget.position;
+            }
+            fishMono.OnLayDown();
+            IsCatched = false;
+        }
+
+        /// <summary>
+        /// 鱼死了(掉出世界)
+        /// </summary>
+        private void OnFishDead()
+        {
+            this.Recycle2Cache();
         }
     }
 }

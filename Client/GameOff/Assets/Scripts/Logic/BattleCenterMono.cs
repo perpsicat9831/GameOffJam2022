@@ -10,6 +10,7 @@ namespace Logic
         public List<Transform> listFishSpawn;
         public List<Transform> listRoleSpawn;
         public Transform RoleParent;
+        public Transform FishesParent;
 
         public List<Role> listRole = new List<Role>();
         public Transform TransVirtualCamera;
@@ -25,8 +26,8 @@ namespace Logic
         }
         void Start()
         {
-
-            BindSpawn();
+            FishingManager.Instance.FishParent = FishesParent;
+            FishingManager.Instance.UnUseFishParent = PoolParent;
             CreateRole();
         }
 
@@ -35,24 +36,24 @@ namespace Logic
 
         }
 
-
-        private void BindSpawn()
-        {
-            FishingManager.Instance.RegisterFishSpawn(listFishSpawn[0]);
-            PlayerManager.Instance.RegisterRoleSpawn(listRoleSpawn[0]);
-        }
-
         private void CreateRole()
         {
             var role = new Role();
             bool isClient = true;
             role.isClient = isClient;
-            role.CreateRole(RoleParent);
+            role.FishSpawn = listFishSpawn[0];
+            role.CreateRole(RoleParent, listRoleSpawn[0]);
             if (isClient)
             {
                 role.RegisterCameraFollowTarget(SetVCameraFollowTarget);
             }
             listRole.Add(role);
+
+            //ºŸ»À
+            var role2 = new Role();
+            role2.FishSpawn = listFishSpawn[1];
+            role2.CreateRole(RoleParent, listRoleSpawn[1]);
+            listRole.Add(role2);
         }
 
         private void SetVCameraFollowTarget(Transform target)

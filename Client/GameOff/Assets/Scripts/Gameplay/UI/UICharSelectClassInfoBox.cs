@@ -4,6 +4,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using Action = Unity.BossRoom.Gameplay.Actions.Action;
+using Unity.Multiplayer.Samples.Utilities;
 
 namespace Unity.BossRoom.Gameplay.UI
 {
@@ -46,6 +47,12 @@ namespace Unity.BossRoom.Gameplay.UI
 
         private bool m_IsLockedIn = false;
 
+        private Button btnStart;
+        private void Start()
+        {
+            btnStart = transform.Find("StartBtn").GetComponent<Button>();
+            btnStart.onClick.AddListener(OnBtnStartClick);
+        }
         public void OnSetPlayerNumber(int playerNumber)
         {
             m_WelcomeBanner.text = string.Format(m_WelcomeMsg, (playerNumber + 1));
@@ -94,6 +101,10 @@ namespace Unity.BossRoom.Gameplay.UI
                     tooltipDetector.SetText(string.Format(m_TooltipFormat, action.Config.DisplayedName, action.Config.Description));
                 }
             }
+        }
+        public void OnBtnStartClick()
+        {
+            SceneLoaderWrapper.Instance.LoadScene("BattleScene", useNetworkSceneManager: true);
         }
     }
 }

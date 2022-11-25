@@ -13,6 +13,14 @@ namespace Logic
         /// </summary>
         public Transform FishSpawn;
         /// <summary>
+        /// 鱼的父节点
+        /// </summary>
+        public Transform FishParent;
+        /// <summary>
+        /// 回收进对象池的鱼的父节点
+        /// </summary>
+        public Transform UnUseFishParent;
+        /// <summary>
         /// 钓鱼阶段ID列表
         /// </summary>
         private List<int> listStageId = new List<int>();
@@ -126,13 +134,6 @@ namespace Logic
                 return MathTool.GetWeight(idWeightList[0], idWeightList[1]);
             }
             return 0;
-        }
-        /// <summary>
-        /// 绑定鱼生成位置
-        /// </summary>
-        public void RegisterFishSpawn(Transform trans)
-        {
-            FishSpawn = trans;
         }
         /// <summary>
         /// 钓鱼
