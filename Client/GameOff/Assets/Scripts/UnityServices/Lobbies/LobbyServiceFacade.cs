@@ -264,6 +264,33 @@ namespace Unity.BossRoom.UnityServices.Lobbies
             }
         }
 
+
+        /// <summary>
+        /// Used for getting the list of all active lobbies, without needing full info for each.
+        /// </summary>
+        public async Task RetrieveAndPublishFilterLobbyListAsync(string name)
+        {
+            if (!m_RateLimitQuery.CanCall)
+            {
+                Debug.LogWarning("Retrieve Lobby list hit the rate limit. Will try again soon...");
+                return;
+            }
+
+            try
+            {
+                var response = await m_LobbyApiInterface.QueryFilterNameLobbies(name);
+                m_LobbyListFetchedPub.Publish(new LobbyListFetchedMessage(LocalLobby.CreateLocalLobbies(response)));
+            }
+            catch (LobbyServiceException e)
+            {
+                if (e.Reason == LobbyExceptionReason.RateLimited)
+                {
+                    m_RateLimitQuery.PutOnCooldown();
+                }
+            }
+        }
+
+
         public async Task<Lobby> ReconnectToLobbyAsync(string lobbyId)
         {
             return await m_LobbyApiInterface.ReconnectToLobby(lobbyId);

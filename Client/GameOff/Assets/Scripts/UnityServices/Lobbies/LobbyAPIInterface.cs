@@ -131,6 +131,7 @@ namespace Unity.BossRoom.UnityServices.Lobbies
 
         public async Task<QueryResponse> QueryAllLobbies()
         {
+            m_Filters.Clear();
             QueryLobbiesOptions queryOptions = new QueryLobbiesOptions
             {
                 Count = k_MaxLobbiesToShow,
@@ -140,6 +141,21 @@ namespace Unity.BossRoom.UnityServices.Lobbies
 
             return await ExceptionHandling(LobbyService.Instance.QueryLobbiesAsync(queryOptions));
         }
+
+        public async Task<QueryResponse> QueryFilterNameLobbies(string nameFilter)
+        {
+            m_Filters.Add(new QueryFilter(QueryFilter.FieldOptions.Name, nameFilter, QueryFilter.OpOptions.CONTAINS));
+            QueryLobbiesOptions queryOptions = new QueryLobbiesOptions
+            {
+                Count = k_MaxLobbiesToShow,
+                Filters = m_Filters,
+                Order = m_Order,
+
+            };
+
+            return await ExceptionHandling(LobbyService.Instance.QueryLobbiesAsync(queryOptions));
+        }
+
 
         public async Task<Lobby> GetLobby(string lobbyId)
         {
