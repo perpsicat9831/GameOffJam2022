@@ -17,7 +17,7 @@ namespace Logic
         private Cinemachine.CinemachineVirtualCamera vCamera;
 
         /// <summary>
-        /// »ØÊÕºó³Ø¶ÔÏóµÄ¸¸½Úµã
+        /// ï¿½ï¿½ï¿½Õºï¿½Ø¶ï¿½ï¿½ï¿½Ä¸ï¿½ï¿½Úµï¿½
         /// </summary>
         public Transform PoolParent;
         private void Awake()
@@ -49,7 +49,7 @@ namespace Logic
             }
             listRole.Add(role);
 
-            //¼ÙÈË
+            //ï¿½ï¿½ï¿½ï¿½
             var role2 = new Role();
             role2.FishSpawn = listFishSpawn[1];
             role2.CreateRole(RoleParent, listRoleSpawn[1]);

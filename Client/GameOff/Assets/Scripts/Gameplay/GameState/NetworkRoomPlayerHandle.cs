@@ -72,11 +72,13 @@ namespace Unity.BossRoom.Gameplay.GameState
 
         private NetworkList<LobbyPlayerState> m_LobbyPlayers;
 
+
         public Avatar[] AvatarConfiguration;
 
         private void Awake()
         {
             m_LobbyPlayers = new NetworkList<LobbyPlayerState>();
+            ReadyRefresh = new NetworkVariable<bool>();
         }
 
         /// <summary>
@@ -84,11 +86,14 @@ namespace Unity.BossRoom.Gameplay.GameState
         /// </summary>
         public NetworkList<LobbyPlayerState> LobbyPlayers => m_LobbyPlayers;
 
+
         /// <summary>
         /// When this becomes true, the lobby is closed and in process of terminating (switching to gameplay).
         /// </summary>
         public NetworkVariable<bool> IsLobbyClosed { get; } = new NetworkVariable<bool>(false);
 
+
+        public NetworkVariable<bool> ReadyRefresh;
 
         public event Action<ulong,bool> OnSetReady;
         /// <summary>

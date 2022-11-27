@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.12731749, g: 0.13414757, b: 0.1210787, a: 1}
+  m_IndirectSpecularColor: {r: 0.12731713, g: 0.13414738, b: 0.121078536, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -942,6 +942,10 @@ PrefabInstance:
       propertyPath: m_NetworkManager
       value: 
       objectReference: {fileID: 5436007408130527607}
+    - target: {fileID: 1984353324962460586, guid: c16e5c84955e2124b819f83a4e5078db, type: 3}
+      propertyPath: MaxConnectedPlayers
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 5062837533140207349, guid: c16e5c84955e2124b819f83a4e5078db, type: 3}
       propertyPath: m_Name
       value: ConnectionManager

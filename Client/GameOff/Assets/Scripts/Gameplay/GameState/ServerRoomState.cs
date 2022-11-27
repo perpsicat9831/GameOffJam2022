@@ -84,6 +84,7 @@ namespace Unity.BossRoom.Gameplay.GameState
                     break;
                 }
             }
+            networkRoomPlayerHandle.ReadyRefresh.Value = !networkRoomPlayerHandle.ReadyRefresh.Value;
         }
 
         private void StartGame()
