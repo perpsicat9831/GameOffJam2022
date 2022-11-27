@@ -304,5 +304,10 @@ namespace Unity.BossRoom.Gameplay.UI
                 m_LoadingSpinner.SetActive(false);
             }
         }
+
+        public void OnClickQuit()
+        {
+            Application.Quit();
+        }
     }
 }

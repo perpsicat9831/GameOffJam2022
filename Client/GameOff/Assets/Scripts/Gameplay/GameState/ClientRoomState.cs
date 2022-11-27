@@ -85,6 +85,7 @@ namespace Unity.BossRoom.Gameplay.GameState
             {
                 m_NetworkCharSelection.IsLobbyClosed.OnValueChanged -= OnLobbyClosedChanged;
                 m_NetworkCharSelection.LobbyPlayers.OnListChanged -= OnLobbyPlayerStateChanged;
+                m_NetworkCharSelection.ReadyRefresh.OnValueChanged -= OnReadyChange;
             }
         }
 
@@ -98,6 +99,8 @@ namespace Unity.BossRoom.Gameplay.GameState
             {
                 m_NetworkCharSelection.IsLobbyClosed.OnValueChanged += OnLobbyClosedChanged;
                 m_NetworkCharSelection.LobbyPlayers.OnListChanged += OnLobbyPlayerStateChanged;
+
+                m_NetworkCharSelection.ReadyRefresh.OnValueChanged += OnReadyChange;
             }
         }
 
@@ -173,6 +176,12 @@ namespace Unity.BossRoom.Gameplay.GameState
         /// Called by the server when any of the seats in the lobby have changed. (Including ours!)
         /// </summary>
         void OnLobbyPlayerStateChanged(NetworkListEvent<NetworkRoomPlayerHandle.LobbyPlayerState> changeEvent)
+        {
+            UpdateSeats();
+            UpdateMain();
+        }
+
+        public void OnReadyChange(bool old,bool newState)
         {
             UpdateSeats();
             UpdateMain();

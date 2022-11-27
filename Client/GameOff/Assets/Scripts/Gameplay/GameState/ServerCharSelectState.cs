@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using Unity.BossRoom.ConnectionManagement;
 using Unity.BossRoom.Gameplay.GameplayObjects;
 using Unity.BossRoom.Infrastructure;
@@ -14,14 +15,17 @@ namespace Unity.BossRoom.Gameplay.GameState
     /// <summary>
     /// Server specialization of Character Select game state.
     /// </summary>
-    [RequireComponent(typeof(NetcodeHooks), typeof(NetworkCharSelection))]
-    public class ServerCharSelectState : GameStateBehaviour
+    [RequireComponent(typeof(NetcodeHooks), typeof(NetworkRoomPlayerHandle))]
+    public class ServerRoomState : GameStateBehaviour
     {
         [SerializeField]
         NetcodeHooks m_NetcodeHooks;
 
+        [SerializeField]
+        public int seatCount = 3;
+
         public override GameState ActiveState => GameState.CharSelect;
-        public NetworkCharSelection networkCharSelection { get; private set; }
+        public NetworkRoomPlayerHandle networkRoomPlayerHandle { get; private set; }
 
         Coroutine m_WaitToEndLobbyCoroutine;
 
@@ -31,7 +35,7 @@ namespace Unity.BossRoom.Gameplay.GameState
         protected override void Awake()
         {
             base.Awake();
-            networkCharSelection = GetComponent<NetworkCharSelection>();
+            networkRoomPlayerHandle = GetComponent<NetworkRoomPlayerHandle>();
 
             m_NetcodeHooks.OnNetworkSpawnHook += OnNetworkSpawn;
             m_NetcodeHooks.OnNetworkDespawnHook += OnNetworkDespawn;
@@ -48,100 +52,48 @@ namespace Unity.BossRoom.Gameplay.GameState
             }
         }
 
-        void OnClientChangedSeat(ulong clientId, int newSeatIdx, bool lockedIn)
-        {
-            int idx = FindLobbyPlayerIdx(clientId);
-            if (idx == -1)
-            {
-                throw new Exception($"OnClientChangedSeat: client ID {clientId} is not a lobby player and cannot change seats! Shouldn't be here!");
-            }
-
-            if (networkCharSelection.IsLobbyClosed.Value)
-            {
-                // The user tried to change their class after everything was locked in... too late! Discard this choice
-                return;
-            }
-
-            if (newSeatIdx == -1)
-            {
-                // we can't lock in with no seat
-                lockedIn = false;
-            }
-            else
-            {
-                // see if someone has already locked-in that seat! If so, too late... discard this choice
-                foreach (NetworkCharSelection.LobbyPlayerState playerInfo in networkCharSelection.LobbyPlayers)
-                {
-                    if (playerInfo.ClientId != clientId && playerInfo.SeatIdx == newSeatIdx && playerInfo.SeatState == NetworkCharSelection.SeatState.LockedIn)
-                    {
-                        // somebody already locked this choice in. Stop!
-                        // Instead of granting lock request, change this player to Inactive state.
-                        networkCharSelection.LobbyPlayers[idx] = new NetworkCharSelection.LobbyPlayerState(clientId,
-                            networkCharSelection.LobbyPlayers[idx].PlayerName,
-                            networkCharSelection.LobbyPlayers[idx].PlayerNumber,
-                            NetworkCharSelection.SeatState.Inactive);
-
-                        // then early out
-                        return;
-                    }
-                }
-            }
-
-            networkCharSelection.LobbyPlayers[idx] = new NetworkCharSelection.LobbyPlayerState(clientId,
-                networkCharSelection.LobbyPlayers[idx].PlayerName,
-                networkCharSelection.LobbyPlayers[idx].PlayerNumber,
-                lockedIn ? NetworkCharSelection.SeatState.LockedIn : NetworkCharSelection.SeatState.Active,
-                newSeatIdx,
-                Time.time);
-
-            if (lockedIn)
-            {
-                // to help the clients visually keep track of who's in what seat, we'll "kick out" any other players
-                // who were also in that seat. (Those players didn't click "Ready!" fast enough, somebody else took their seat!)
-                for (int i = 0; i < networkCharSelection.LobbyPlayers.Count; ++i)
-                {
-                    if (networkCharSelection.LobbyPlayers[i].SeatIdx == newSeatIdx && i != idx)
-                    {
-                        // change this player to Inactive state.
-                        networkCharSelection.LobbyPlayers[i] = new NetworkCharSelection.LobbyPlayerState(
-                            networkCharSelection.LobbyPlayers[i].ClientId,
-                            networkCharSelection.LobbyPlayers[i].PlayerName,
-                            networkCharSelection.LobbyPlayers[i].PlayerNumber,
-                            NetworkCharSelection.SeatState.Inactive);
-                    }
-                }
-            }
-
-            CloseLobbyIfReady();
-        }
-
         /// <summary>
-        /// Returns the index of a client in the master LobbyPlayer list, or -1 if not found
+        /// 获取当前空位置
         /// </summary>
-        int FindLobbyPlayerIdx(ulong clientId)
+        /// <returns></returns>
+        private int GetEmptySeatID()
         {
-            for (int i = 0; i < networkCharSelection.LobbyPlayers.Count; ++i)
+
+            List<int> otherSeatIdx = new List<int>();
+            foreach (NetworkRoomPlayerHandle.LobbyPlayerState playerInfo in networkRoomPlayerHandle.LobbyPlayers)
             {
-                if (networkCharSelection.LobbyPlayers[i].ClientId == clientId)
+                otherSeatIdx.Add(playerInfo.SeatIdx);
+            }
+            for (int i = 0; i < seatCount; i++)
+            {
+                if (!otherSeatIdx.Contains(i))
+                {
                     return i;
+                }
             }
             return -1;
         }
 
-        /// <summary>
-        /// Looks through all our connections and sees if everyone has locked in their choice;
-        /// if so, we lock in the whole lobby, save state, and begin the transition to gameplay
-        /// </summary>
-        void CloseLobbyIfReady()
+        private void SetReady(ulong clientID, bool isReady)
         {
-            foreach (NetworkCharSelection.LobbyPlayerState playerInfo in networkCharSelection.LobbyPlayers)
+            foreach (var item in networkRoomPlayerHandle.LobbyPlayers)
             {
-                if (playerInfo.SeatState != NetworkCharSelection.SeatState.LockedIn)
-                    return; // nope, at least one player isn't locked in yet!
+                if (item.ClientId == clientID)
+                {
+                    item.SetIsReady(isReady);
+                    break;
+                }
             }
+            networkRoomPlayerHandle.ReadyRefresh.Value = !networkRoomPlayerHandle.ReadyRefresh.Value;
+        }
+
+        private void StartGame()
+        {
+            if (networkRoomPlayerHandle.LobbyPlayers.Count < 3)
+                return;
 
             // everybody's ready at the same time! Lock it down!
-            networkCharSelection.IsLobbyClosed.Value = true;
+            networkRoomPlayerHandle.IsLobbyClosed.Value = true;
 
             // remember our choices so the next scene can use the info
             SaveLobbyResults();
@@ -159,12 +111,12 @@ namespace Unity.BossRoom.Gameplay.GameState
             {
                 StopCoroutine(m_WaitToEndLobbyCoroutine);
             }
-            networkCharSelection.IsLobbyClosed.Value = false;
+            networkRoomPlayerHandle.IsLobbyClosed.Value = false;
         }
 
         void SaveLobbyResults()
         {
-            foreach (NetworkCharSelection.LobbyPlayerState playerInfo in networkCharSelection.LobbyPlayers)
+            foreach (NetworkRoomPlayerHandle.LobbyPlayerState playerInfo in networkRoomPlayerHandle.LobbyPlayers)
             {
                 var playerNetworkObject = NetworkManager.Singleton.SpawnManager.GetPlayerNetworkObject(playerInfo.ClientId);
 
@@ -173,7 +125,7 @@ namespace Unity.BossRoom.Gameplay.GameState
                     // pass avatar GUID to PersistentPlayer
                     // it'd be great to simplify this with something like a NetworkScriptableObjects :(
                     persistentPlayer.NetworkAvatarGuidState.AvatarGuid.Value =
-                        networkCharSelection.AvatarConfiguration[playerInfo.SeatIdx].Guid.ToNetworkGuid();
+                        networkRoomPlayerHandle.AvatarConfiguration[playerInfo.SeatIdx].Guid.ToNetworkGuid();
                 }
             }
         }
@@ -192,9 +144,10 @@ namespace Unity.BossRoom.Gameplay.GameState
                 NetworkManager.Singleton.OnClientDisconnectCallback -= OnClientDisconnectCallback;
                 NetworkManager.Singleton.SceneManager.OnSceneEvent -= OnSceneEvent;
             }
-            if (networkCharSelection)
+            if (networkRoomPlayerHandle)
             {
-                networkCharSelection.OnClientChangedSeat -= OnClientChangedSeat;
+                networkRoomPlayerHandle.OnSetReady -= SetReady;
+                networkRoomPlayerHandle.OnStart -= StartGame;
             }
         }
 
@@ -207,8 +160,8 @@ namespace Unity.BossRoom.Gameplay.GameState
             else
             {
                 NetworkManager.Singleton.OnClientDisconnectCallback += OnClientDisconnectCallback;
-                networkCharSelection.OnClientChangedSeat += OnClientChangedSeat;
-
+                networkRoomPlayerHandle.OnSetReady += SetReady;
+                networkRoomPlayerHandle.OnStart += StartGame;
                 NetworkManager.Singleton.SceneManager.OnSceneEvent += OnSceneEvent;
             }
         }
@@ -237,7 +190,7 @@ namespace Unity.BossRoom.Gameplay.GameState
         bool IsPlayerNumberAvailable(int playerNumber)
         {
             bool found = false;
-            foreach (NetworkCharSelection.LobbyPlayerState playerState in networkCharSelection.LobbyPlayers)
+            foreach (NetworkRoomPlayerHandle.LobbyPlayerState playerState in networkRoomPlayerHandle.LobbyPlayers)
             {
                 if (playerState.PlayerNumber == playerNumber)
                 {
@@ -252,11 +205,10 @@ namespace Unity.BossRoom.Gameplay.GameState
         void SeatNewPlayer(ulong clientId)
         {
             // If lobby is closing and waiting to start the game, cancel to allow that new player to select a character
-            if (networkCharSelection.IsLobbyClosed.Value)
+            if (networkRoomPlayerHandle.IsLobbyClosed.Value)
             {
                 CancelCloseLobby();
             }
-
             SessionPlayerData? sessionPlayerData = SessionManager<SessionPlayerData>.Instance.GetPlayerData(clientId);
             if (sessionPlayerData.HasValue)
             {
@@ -272,27 +224,27 @@ namespace Unity.BossRoom.Gameplay.GameState
                     throw new Exception($"we shouldn't be here, connection approval should have refused this connection already for client ID {clientId} and player num {playerData.PlayerNumber}");
                 }
 
-                networkCharSelection.LobbyPlayers.Add(new NetworkCharSelection.LobbyPlayerState(clientId, playerData.PlayerName, playerData.PlayerNumber, NetworkCharSelection.SeatState.Inactive));
-                SessionManager<SessionPlayerData>.Instance.SetPlayerData(clientId, playerData);
+                int emptyID = GetEmptySeatID();
+                if (emptyID != -1)
+                {
+                    bool isHost = networkRoomPlayerHandle.LobbyPlayers.Count == 0;
+                    bool isReady = isHost;
+                    networkRoomPlayerHandle.LobbyPlayers.Add(new NetworkRoomPlayerHandle.LobbyPlayerState(clientId, playerData.PlayerName, playerData.PlayerNumber, isReady, emptyID,0, isHost));
+                    SessionManager<SessionPlayerData>.Instance.SetPlayerData(clientId, playerData);
+                }
             }
         }
 
         void OnClientDisconnectCallback(ulong clientId)
         {
             // clear this client's PlayerNumber and any associated visuals (so other players know they're gone).
-            for (int i = 0; i < networkCharSelection.LobbyPlayers.Count; ++i)
+            for (int i = 0; i < networkRoomPlayerHandle.LobbyPlayers.Count; ++i)
             {
-                if (networkCharSelection.LobbyPlayers[i].ClientId == clientId)
+                if (networkRoomPlayerHandle.LobbyPlayers[i].ClientId == clientId)
                 {
-                    networkCharSelection.LobbyPlayers.RemoveAt(i);
+                    networkRoomPlayerHandle.LobbyPlayers.RemoveAt(i);
                     break;
                 }
-            }
-
-            if (!networkCharSelection.IsLobbyClosed.Value)
-            {
-                // If the lobby is not already closing, close if the remaining players are all ready
-                CloseLobbyIfReady();
             }
         }
     }
