@@ -89,12 +89,12 @@ namespace Unity.BossRoom.Gameplay.UI
         void PeriodicRefresh(float _)
         {
             //this is a soft refresh without needing to lock the UI and such
-            m_LobbyUIMediator.QueryLobbiesRequest(false);
+            m_LobbyUIMediator.QueryFilterNameLobbiesRequest(false, m_LobbyNameField.text);
         }
 
         public void OnRefresh()
         {
-            m_LobbyUIMediator.QueryLobbiesRequest(true);
+            m_LobbyUIMediator.QueryFilterNameLobbiesRequest(true, m_LobbyNameField.text);
         }
 
         public void OnClickSearch()
@@ -158,7 +158,8 @@ namespace Unity.BossRoom.Gameplay.UI
             m_CanvasGroup.alpha = 1f;
             m_CanvasGroup.blocksRaycasts = true;
             m_JoinCodeField.text = "";
-            if(m_UpdateRunner)
+
+            if (m_UpdateRunner)
                 m_UpdateRunner.Subscribe(PeriodicRefresh, 10f);
         }
 

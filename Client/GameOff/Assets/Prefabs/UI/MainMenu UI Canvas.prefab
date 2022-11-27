@@ -119,6 +119,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4237252831721398530, guid: bbb19513585dc264fabf41cfcee16cb8, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4237252831743177991, guid: bbb19513585dc264fabf41cfcee16cb8, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 2
@@ -332,7 +336,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_LobbyListItemPrototype: {fileID: 3374531206586796904}
   m_JoinCodeField: {fileID: 4526559732064598841}
-  m_LobbyNameField: {fileID: 0}
+  m_LobbyNameField: {fileID: 4526559732064598841}
   m_CanvasGroup: {fileID: 5744901002102245670}
   m_EmptyLobbyListLabel: {fileID: 4526559731296523706}
   m_JoinLobbyButton: {fileID: 0}

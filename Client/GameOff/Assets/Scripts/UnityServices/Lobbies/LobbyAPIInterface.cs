@@ -144,6 +144,7 @@ namespace Unity.BossRoom.UnityServices.Lobbies
 
         public async Task<QueryResponse> QueryFilterNameLobbies(string nameFilter)
         {
+            m_Filters.Clear();
             m_Filters.Add(new QueryFilter(QueryFilter.FieldOptions.Name, nameFilter, QueryFilter.OpOptions.CONTAINS));
             QueryLobbiesOptions queryOptions = new QueryLobbiesOptions
             {
