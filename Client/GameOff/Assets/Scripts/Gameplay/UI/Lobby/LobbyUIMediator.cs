@@ -130,6 +130,36 @@ namespace Unity.BossRoom.Gameplay.UI
             }
         }
 
+
+        public async void QueryFilterNameLobbiesRequest(bool blockUI,string name)
+        {
+            if (Unity.Services.Core.UnityServices.State != ServicesInitializationState.Initialized)
+            {
+                return;
+            }
+
+            if (blockUI)
+            {
+                BlockUIWhileLoadingIsInProgress();
+            }
+
+            bool playerIsAuthorized = await m_AuthenticationServiceFacade.EnsurePlayerIsAuthorized();
+
+            if (blockUI && !playerIsAuthorized)
+            {
+                UnblockUIAfterLoadingIsComplete();
+                return;
+            }
+
+            await m_LobbyServiceFacade.RetrieveAndPublishFilterLobbyListAsync(name);
+
+            if (blockUI)
+            {
+                UnblockUIAfterLoadingIsComplete();
+            }
+        }
+
+
         public void OnAuthSign()
         {
             UnblockUIAfterLoadingIsComplete();

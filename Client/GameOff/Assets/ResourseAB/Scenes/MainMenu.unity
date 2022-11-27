@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.17726853, g: 0.22192088, b: 0.30416295, a: 1}
+  m_IndirectSpecularColor: {r: 0.17726815, g: 0.22192046, b: 0.30416226, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -667,6 +667,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1920320156684512026, guid: 2ecb76f53a4cb994eb9a7c9d30aa68ec, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2031635493797416652, guid: 2ecb76f53a4cb994eb9a7c9d30aa68ec, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -823,6 +827,42 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4526559730707366711, guid: 2ecb76f53a4cb994eb9a7c9d30aa68ec, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4526559730707366711, guid: 2ecb76f53a4cb994eb9a7c9d30aa68ec, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4526559730707366711, guid: 2ecb76f53a4cb994eb9a7c9d30aa68ec, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 5331930138966017713}
+    - target: {fileID: 4526559730707366711, guid: 2ecb76f53a4cb994eb9a7c9d30aa68ec, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4526559730707366711, guid: 2ecb76f53a4cb994eb9a7c9d30aa68ec, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnClickSearch
+      objectReference: {fileID: 0}
+    - target: {fileID: 4526559730707366711, guid: 2ecb76f53a4cb994eb9a7c9d30aa68ec, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Unity.BossRoom.Gameplay.UI.LobbyJoiningUI, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4526559730707366711, guid: 2ecb76f53a4cb994eb9a7c9d30aa68ec, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 4526559732245738680, guid: 2ecb76f53a4cb994eb9a7c9d30aa68ec, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4891541490231687906, guid: 2ecb76f53a4cb994eb9a7c9d30aa68ec, type: 3}
+      propertyPath: m_Alpha
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4957181660403194055, guid: 2ecb76f53a4cb994eb9a7c9d30aa68ec, type: 3}
       propertyPath: m_AdditionalShaderChannelsFlag
       value: -1
@@ -897,6 +937,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5603249645742956311, guid: 2ecb76f53a4cb994eb9a7c9d30aa68ec, type: 3}
       propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5744901002102245670, guid: 2ecb76f53a4cb994eb9a7c9d30aa68ec, type: 3}
+      propertyPath: m_Alpha
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5759219648536721835, guid: 2ecb76f53a4cb994eb9a7c9d30aa68ec, type: 3}
@@ -1116,27 +1160,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: baa903a3eece41eab81a9432f523ae3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &5331930138966017712 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 405572418760506228, guid: 2ecb76f53a4cb994eb9a7c9d30aa68ec, type: 3}
-  m_PrefabInstance: {fileID: 5331930138966017710}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &6831438889016461863 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1671107383395961993, guid: 2ecb76f53a4cb994eb9a7c9d30aa68ec, type: 3}
-  m_PrefabInstance: {fileID: 5331930138966017710}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &6831438890484250293 stripped
+--- !u!114 &5331930138966017713 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 60747598427842883, guid: 2ecb76f53a4cb994eb9a7c9d30aa68ec, type: 3}
+  m_CorrespondingSourceObject: {fileID: 5730125246801054250, guid: 2ecb76f53a4cb994eb9a7c9d30aa68ec, type: 3}
   m_PrefabInstance: {fileID: 5331930138966017710}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: baa903a3eece41eab81a9432f523ae3e, type: 3}
+  m_Script: {fileID: 11500000, guid: 5badc8e4e5a84afeae84746e5199ebaf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &6831438889016461863 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1671107383395961993, guid: 2ecb76f53a4cb994eb9a7c9d30aa68ec, type: 3}
+  m_PrefabInstance: {fileID: 5331930138966017710}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8576152885701457726
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1403,7 +1442,7 @@ PrefabInstance:
     - target: {fileID: 8576152884213668000, guid: 30b6e45e8e2b596449e225cafe2a05a2, type: 3}
       propertyPath: m_lobbyUIMediator
       value: 
-      objectReference: {fileID: 6831438890484250293}
+      objectReference: {fileID: 0}
     - target: {fileID: 8576152884213668000, guid: 30b6e45e8e2b596449e225cafe2a05a2, type: 3}
       propertyPath: m_mainMenuButtons
       value: 
@@ -1439,7 +1478,7 @@ PrefabInstance:
     - target: {fileID: 8576152884213668000, guid: 30b6e45e8e2b596449e225cafe2a05a2, type: 3}
       propertyPath: autoInjectGameObjects.Array.data[2]
       value: 
-      objectReference: {fileID: 5331930138966017712}
+      objectReference: {fileID: 0}
     - target: {fileID: 8576152884213668000, guid: 30b6e45e8e2b596449e225cafe2a05a2, type: 3}
       propertyPath: autoInjectGameObjects.Array.data[3]
       value: 

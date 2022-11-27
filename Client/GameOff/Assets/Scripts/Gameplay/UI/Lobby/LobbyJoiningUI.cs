@@ -20,6 +20,8 @@ namespace Unity.BossRoom.Gameplay.UI
         [SerializeField]
         TMP_InputField m_JoinCodeField;
         [SerializeField]
+        TMP_InputField m_LobbyNameField;
+        [SerializeField]
         CanvasGroup m_CanvasGroup;
         [SerializeField]
         GameObject m_EmptyLobbyListLabel;
@@ -93,6 +95,11 @@ namespace Unity.BossRoom.Gameplay.UI
         public void OnRefresh()
         {
             m_LobbyUIMediator.QueryLobbiesRequest(true);
+        }
+
+        public void OnClickSearch()
+        {
+            m_LobbyUIMediator.QueryFilterNameLobbiesRequest(true, m_LobbyNameField.text);
         }
 
         void UpdateUI(LobbyListFetchedMessage message)
