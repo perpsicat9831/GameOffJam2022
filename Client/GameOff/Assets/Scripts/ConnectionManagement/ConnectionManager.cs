@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using Unity.BossRoom.Utils;
 using Unity.Collections;
+using Unity.Multiplayer.Samples.Utilities;
 using Unity.Netcode;
 using UnityEngine;
 using UUnity.BossRoom.ConnectionManagement;
@@ -70,7 +71,7 @@ namespace Unity.BossRoom.ConnectionManagement
         [Inject]
         IObjectResolver m_Resolver;
 
-        public int MaxConnectedPlayers = 8;
+        public int MaxConnectedPlayers = 100;
 
         internal readonly OfflineState m_Offline = new OfflineState();
         internal readonly ClientConnectingState m_ClientConnecting = new ClientConnectingState();
@@ -209,6 +210,13 @@ namespace Unity.BossRoom.ConnectionManagement
             var writer = new FastBufferWriter(sizeof(ConnectStatus), Allocator.Temp);
             writer.WriteValueSafe(status);
             NetworkManager.CustomMessagingManager.SendNamedMessage(nameof(ReceiveServerToClientSetDisconnectReason_CustomMessage), clientID, writer);
+        }
+
+        public void LeaveRoom()
+        {
+            RequestShutdown();
+            //NetworkManager.Shutdown();
+            //SceneLoaderWrapper.Instance.LoadScene("MainMenu", useNetworkSceneManager: false);
         }
     }
 }
