@@ -76,15 +76,22 @@ namespace Unity.BossRoom.Gameplay.GameState
 
         private void SetReady(ulong clientID, bool isReady)
         {
-            foreach (var item in networkRoomPlayerHandle.LobbyPlayers)
+            NetworkRoomPlayerHandle.LobbyPlayerState temp = new NetworkRoomPlayerHandle.LobbyPlayerState() ;
+            int index = 0;
+
+            for (int i = 0; i < networkRoomPlayerHandle.LobbyPlayers.Count; i++)
             {
-                if (item.ClientId == clientID)
+                if (networkRoomPlayerHandle.LobbyPlayers[i].ClientId == clientID)
                 {
-                    item.SetIsReady(isReady);
+                    temp = networkRoomPlayerHandle.LobbyPlayers[i];
+                    index = i;
                     break;
                 }
             }
-            networkRoomPlayerHandle.ReadyRefresh.Value = !networkRoomPlayerHandle.ReadyRefresh.Value;
+            temp.SetIsReady(isReady);
+            networkRoomPlayerHandle.LobbyPlayers.RemoveAt(index);
+            networkRoomPlayerHandle.LobbyPlayers.Add(temp);
+            //networkRoomPlayerHandle.ReadyRefresh.Value = !networkRoomPlayerHandle.ReadyRefresh.Value;
         }
 
         private void StartGame()
