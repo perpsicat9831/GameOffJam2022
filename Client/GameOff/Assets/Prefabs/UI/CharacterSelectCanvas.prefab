@@ -145,6 +145,34 @@ PrefabInstance:
       propertyPath: m_Name
       value: RoomPanel
       objectReference: {fileID: 0}
+    - target: {fileID: 2936627512909195636, guid: 145f464f2f5bdaf4a82de3f00deafd17, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2936627512909195636, guid: 145f464f2f5bdaf4a82de3f00deafd17, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2936627512909195636, guid: 145f464f2f5bdaf4a82de3f00deafd17, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2936627512909195636, guid: 145f464f2f5bdaf4a82de3f00deafd17, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2936627512909195636, guid: 145f464f2f5bdaf4a82de3f00deafd17, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnClickStartGame
+      objectReference: {fileID: 0}
+    - target: {fileID: 2936627512909195636, guid: 145f464f2f5bdaf4a82de3f00deafd17, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Unity.BossRoom.Gameplay.UI.UILobbyMainBox, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2936627512909195636, guid: 145f464f2f5bdaf4a82de3f00deafd17, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 3155879107676046161, guid: 145f464f2f5bdaf4a82de3f00deafd17, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -269,11 +297,69 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &503502181653970454 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5058952910164988486, guid: 145f464f2f5bdaf4a82de3f00deafd17, type: 3}
+  m_PrefabInstance: {fileID: 4668489328531237968}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &3314124417084523054
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 503502181653970454}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0c166773a2b26f429072d9a661a8cfe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ClickEvents:
+  - idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: a6ce39c91671b944e9dae60760fa9e34, type: 2}
+  PointerEnterEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: ad6e8cb74bca16142a008ee8f8360584, type: 2}
+  PointerExitEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
 --- !u!224 &545833411621843828 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5141702127433555748, guid: 145f464f2f5bdaf4a82de3f00deafd17, type: 3}
   m_PrefabInstance: {fileID: 4668489328531237968}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1082368336698599690 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5750135801484838234, guid: 145f464f2f5bdaf4a82de3f00deafd17, type: 3}
+  m_PrefabInstance: {fileID: 4668489328531237968}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7539527671905199527
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1082368336698599690}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0c166773a2b26f429072d9a661a8cfe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ClickEvents:
+  - idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: e658e7638b9cb3247baf1fe86b1545cb, type: 2}
+  PointerEnterEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: ad6e8cb74bca16142a008ee8f8360584, type: 2}
+  PointerExitEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
 --- !u!114 &1805825205716828015 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6468957127334220607, guid: 145f464f2f5bdaf4a82de3f00deafd17, type: 3}
@@ -419,6 +505,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &5146075012091199220 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 550364643151565476, guid: 145f464f2f5bdaf4a82de3f00deafd17, type: 3}
+  m_PrefabInstance: {fileID: 4668489328531237968}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7368587127497705846
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5146075012091199220}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0c166773a2b26f429072d9a661a8cfe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ClickEvents:
+  - idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: abe84045833873f4ea1b5ea3e86d5cc4, type: 2}
+  PointerEnterEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: ad6e8cb74bca16142a008ee8f8360584, type: 2}
+  PointerExitEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
 --- !u!1 &5826824898772086961 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1158766580955897057, guid: 145f464f2f5bdaf4a82de3f00deafd17, type: 3}
@@ -670,8 +785,66 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_QuitMode: 0
+--- !u!1 &3566426217083668418 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6590879575370546285, guid: f491b126bf544294880df504a5c3eccc, type: 3}
+  m_PrefabInstance: {fileID: 7640919384621267887}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &5507281043936231661
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3566426217083668418}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0c166773a2b26f429072d9a661a8cfe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ClickEvents:
+  - idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: fc86b033182952e4599a28083371b71a, type: 2}
+  PointerEnterEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: ad6e8cb74bca16142a008ee8f8360584, type: 2}
+  PointerExitEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
 --- !u!224 &5634010781895102857 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2610391541808310822, guid: f491b126bf544294880df504a5c3eccc, type: 3}
   m_PrefabInstance: {fileID: 7640919384621267887}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &5989974669596584963 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4118917392503625644, guid: f491b126bf544294880df504a5c3eccc, type: 3}
+  m_PrefabInstance: {fileID: 7640919384621267887}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1178641993153095747
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5989974669596584963}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0c166773a2b26f429072d9a661a8cfe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ClickEvents:
+  - idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 9f004bfb54fe9e842ab7c43ef74b7849, type: 2}
+  PointerEnterEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: ad6e8cb74bca16142a008ee8f8360584, type: 2}
+  PointerExitEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}

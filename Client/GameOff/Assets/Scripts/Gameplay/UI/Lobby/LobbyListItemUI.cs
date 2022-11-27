@@ -12,7 +12,6 @@ namespace Unity.BossRoom.Gameplay.UI
     public class LobbyListItemUI : MonoBehaviour
     {
         [SerializeField] TextMeshProUGUI m_lobbyNameText;
-        [SerializeField] TextMeshProUGUI m_lobbyCountText;
 
         [Inject] LobbyUIMediator m_LobbyUIMediator;
 
@@ -23,7 +22,6 @@ namespace Unity.BossRoom.Gameplay.UI
         {
             m_Data = data;
             m_lobbyNameText.SetText(data.LobbyName);
-            m_lobbyCountText.SetText($"{data.PlayerCount}/{data.MaxPlayerCount}");
         }
 
         public void OnClick()

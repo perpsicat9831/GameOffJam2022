@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Root>
+  <Scene AssetPath="Assets/ResourseAB/Scenes/Startup.unity">
+    <Component Type="AudioListener3D" GameObject="Main Camera">
+      <Settings Index="0" UseSpatialAudio="false" PositionOffset="0.000, 0.000, 0.000" FollowCamera="true" LockYaw="false" LockPitch="false" LockRoll="false" />
+    </Component>
+  </Scene>
+  <Scene AssetPath="Assets/ResourseAB/Scenes/MainMenu.unity">
+    <Component Type="AudioListener3D" GameObject="Main Camera">
+      <Settings Index="0" UseSpatialAudio="false" PositionOffset="0.000, 0.000, 0.000" FollowCamera="true" LockYaw="false" LockPitch="false" LockRoll="false" />
+    </Component>
+  </Scene>
+  <Scene AssetPath="Assets/ResourseAB/Scenes/BattleScene.unity">
+    <Component Type="AudioListener3D" GameObject="Cameras/Main Camera">
+      <Settings Index="0" UseSpatialAudio="false" PositionOffset="0.000, 0.000, 0.000" FollowCamera="true" LockYaw="false" LockPitch="false" LockRoll="false" />
+    </Component>
+  </Scene>
+</Root>

@@ -854,10 +854,9 @@ GameObject:
   m_Component:
   - component: {fileID: 2063210842}
   - component: {fileID: 2063210841}
-  - component: {fileID: 2063210844}
-  - component: {fileID: 2063210843}
   - component: {fileID: 2063210845}
   - component: {fileID: 2063210846}
+  - component: {fileID: 2063210847}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -923,42 +922,6 @@ Transform:
   m_Father: {fileID: 1917142872}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2063210843
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2063210839}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a21cb05aa810276468c96603a0bd2ea6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isDefaultListener: 1
-  listenerId: 0
---- !u!114 &2063210844
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2063210839}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 370cbb433f3418f41b4946d3cd8a9157, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_listeners:
-    initialListenerList: []
-    useDefaultListeners: 1
-  isEnvironmentAware: 0
-  isStaticObject: 0
-  m_positionOffsetData:
-    KeepMe: 0
-    positionOffset: {x: 0, y: 0, z: 0}
-  m_posOffsetData: {fileID: 0}
-  listenerMask: 1
 --- !u!114 &2063210845
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1026,6 +989,25 @@ MonoBehaviour:
   m_CameraActivatedEvent:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &2063210847
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2063210839}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0842be84ccfb6194a9b9532d35bd5e24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Index: 0
+  FollowCamera: 1
+  LockYaw: 0
+  LockRoll: 0
+  LockPitch: 0
+  PositionOffset: {x: 0, y: 0, z: 0}
+  UseSpatialAudio: 0
 --- !u!1001 &478710117160261445
 PrefabInstance:
   m_ObjectHideFlags: 0
