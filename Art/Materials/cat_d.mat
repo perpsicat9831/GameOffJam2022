@@ -84,7 +84,7 @@ Material:
     - _ArmRotateSpeed: 1.39
     - _Blend: 0
     - _BodyRotateRange: 0.1
-    - _BodyRotateSpeed: 1.3
+    - _BodyRotateSpeed: 2
     - _BumpScale: 1
     - _ClearCoatMask: 0
     - _ClearCoatSmoothness: 0
