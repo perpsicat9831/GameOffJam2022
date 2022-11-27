@@ -659,6 +659,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: -8.93811
       objectReference: {fileID: 0}
+    - target: {fileID: 1513660509973249373, guid: 2ecb76f53a4cb994eb9a7c9d30aa68ec, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 4c2cf98cf98856346a66efe0ab9aaa72, type: 3}
     - target: {fileID: 1671107383395961993, guid: 2ecb76f53a4cb994eb9a7c9d30aa68ec, type: 3}
       propertyPath: m_Name
       value: UI Canvas
@@ -1160,17 +1164,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: baa903a3eece41eab81a9432f523ae3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &5331930138966017712 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8061664814403042959, guid: 2ecb76f53a4cb994eb9a7c9d30aa68ec, type: 3}
+  m_PrefabInstance: {fileID: 5331930138966017710}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &5331930138966017713 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5730125246801054250, guid: 2ecb76f53a4cb994eb9a7c9d30aa68ec, type: 3}
   m_PrefabInstance: {fileID: 5331930138966017710}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 5331930138966017714}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5badc8e4e5a84afeae84746e5199ebaf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &5331930138966017714 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4526559730573961029, guid: 2ecb76f53a4cb994eb9a7c9d30aa68ec, type: 3}
+  m_PrefabInstance: {fileID: 5331930138966017710}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &6831438889016461863 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1671107383395961993, guid: 2ecb76f53a4cb994eb9a7c9d30aa68ec, type: 3}
@@ -1474,11 +1488,11 @@ PrefabInstance:
     - target: {fileID: 8576152884213668000, guid: 30b6e45e8e2b596449e225cafe2a05a2, type: 3}
       propertyPath: autoInjectGameObjects.Array.data[1]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 5331930138966017712}
     - target: {fileID: 8576152884213668000, guid: 30b6e45e8e2b596449e225cafe2a05a2, type: 3}
       propertyPath: autoInjectGameObjects.Array.data[2]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 5331930138966017714}
     - target: {fileID: 8576152884213668000, guid: 30b6e45e8e2b596449e225cafe2a05a2, type: 3}
       propertyPath: autoInjectGameObjects.Array.data[3]
       value: 

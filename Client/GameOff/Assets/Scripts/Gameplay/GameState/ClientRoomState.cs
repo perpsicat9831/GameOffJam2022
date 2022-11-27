@@ -130,6 +130,7 @@ namespace Unity.BossRoom.Gameplay.GameState
         {
             bool isSelfHost = false;
             bool isReady = false;
+            bool canStart = true;
             foreach (var playerState in m_NetworkCharSelection.LobbyPlayers)
             {
                 if (playerState.ClientId == NetworkManager.Singleton.LocalClientId)
@@ -138,8 +139,20 @@ namespace Unity.BossRoom.Gameplay.GameState
                     isReady = playerState.IsReady;
                     break;
                 }
+
+                if (!playerState.IsReady)
+                    canStart = false;
             }
-            m_MainBox.Refresh(isSelfHost, isReady);
+
+            if (canStart)
+            {
+                if (m_NetworkCharSelection.LobbyPlayers.Count != 3)
+                {
+                    canStart = false;
+                }
+            }
+
+            m_MainBox.Refresh(isSelfHost, isReady, canStart);
         }
 
         /// <summary>

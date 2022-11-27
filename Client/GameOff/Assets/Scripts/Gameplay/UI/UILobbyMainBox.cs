@@ -27,7 +27,7 @@ namespace Unity.BossRoom.Gameplay.UI
         [SerializeField]
         private Sprite m_UnReadyImg;
 
-        public void Refresh(bool isHost,bool isReady)
+        public void Refresh(bool isHost,bool isReady,bool canStart)
         {
             m_StartBtn.gameObject.SetActive(isHost);
             m_ReadyBtn.gameObject.SetActive(!isHost);
@@ -36,6 +36,15 @@ namespace Unity.BossRoom.Gameplay.UI
             {
                 m_ReadyBtn.image.sprite = isReady ? m_ReadyImg : m_UnReadyImg;
             }
+            else
+            {
+                m_StartBtn.interactable = canStart;
+            }
+        }
+
+        private void Awake()
+        {
+            m_StartBtn.interactable = false;
         }
 
         public void OnClickReady()
