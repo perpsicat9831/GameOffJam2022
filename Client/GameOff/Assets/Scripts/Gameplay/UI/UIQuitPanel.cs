@@ -2,6 +2,7 @@ using System;
 using Unity.BossRoom.ApplicationLifecycle.Messages;
 using Unity.BossRoom.ConnectionManagement;
 using Unity.BossRoom.Infrastructure;
+using Unity.Multiplayer.Samples.Utilities;
 using UnityEngine;
 using VContainer;
 
@@ -29,7 +30,8 @@ namespace Unity.BossRoom.Gameplay.UI
             switch (m_QuitMode)
             {
                 case QuitMode.ReturnToMenu:
-                    m_ConnectionManager.RequestShutdown();
+                    
+                    m_ConnectionManager.LeaveRoom();
                     break;
                 case QuitMode.QuitApplication:
                     m_QuitApplicationPub.Publish(new QuitApplicationMessage());
