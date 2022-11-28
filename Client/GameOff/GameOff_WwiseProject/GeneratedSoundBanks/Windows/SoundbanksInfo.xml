@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="12" SoundbankVersion="140">
 	<RootPaths>
-		<ProjectRoot>E:\UnityProjects\Newbies2022\GameOffJam2022\Client\GameOff\GameOff_WwiseProject\</ProjectRoot>
-		<SourceFilesRoot>E:\UnityProjects\Newbies2022\GameOffJam2022\Client\GameOff\GameOff_WwiseProject\.cache\Windows\</SourceFilesRoot>
-		<SoundBanksRoot>E:\UnityProjects\Newbies2022\GameOffJam2022\Client\GameOff\GameOff_WwiseProject\GeneratedSoundBanks\Windows\</SoundBanksRoot>
+		<ProjectRoot>F:\GitHubProjects\GameOffJam2022\Client\GameOff\GameOff_WwiseProject\</ProjectRoot>
+		<SourceFilesRoot>F:\GitHubProjects\GameOffJam2022\Client\GameOff\GameOff_WwiseProject\.cache\Windows\</SourceFilesRoot>
+		<SoundBanksRoot>F:\GitHubProjects\GameOffJam2022\Client\GameOff\GameOff_WwiseProject\GeneratedSoundBanks\Windows\</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>E:\UnityProjects\Newbies2022\GameOffJam2022\Client\GameOff\GameOff_WwiseProject\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>F:\GitHubProjects\GameOffJam2022\Client\GameOff\GameOff_WwiseProject\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<StreamedFiles>
@@ -31,12 +31,12 @@
 			<ShortName>Player</ShortName>
 			<Path>Player.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="1088520938" Language="SFX" Hash="2820578254">
+		<SoundBank Id="1088520938" Language="SFX" Hash="3018933297">
 			<ObjectPath>\SoundBanks\Default Work Unit\Interface</ObjectPath>
 			<ShortName>Interface</ShortName>
 			<Path>Interface.bnk</Path>
 			<IncludedEvents>
-				<Event Id="1020395736" Name="UI_Button_Click_Neg" ObjectPath="\Events\Interface\General\UI_Button_Click_Neg" DurationType="OneShot" DurationMin="1." DurationMax="1.">
+				<Event Id="1020395736" Name="UI_Button_Click_Neg" ObjectPath="\Events\Interface\General\UI_Button_Click_Neg" DurationType="OneShot" DurationMin="0.452417" DurationMax="0.452417">
 					<IncludedMemoryFiles>
 						<File Id="809364097" Language="SFX">
 							<ShortName>Interface\UI_Button_Click_Neg.wav</ShortName>
@@ -44,7 +44,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="1729881340" Name="UI_Button_Click_Pos" ObjectPath="\Events\Interface\General\UI_Button_Click_Pos" DurationType="OneShot" DurationMin="1." DurationMax="1.">
+				<Event Id="1729881340" Name="UI_Button_Click_Pos" ObjectPath="\Events\Interface\General\UI_Button_Click_Pos" DurationType="OneShot" DurationMin="0.379667" DurationMax="0.379667">
 					<IncludedMemoryFiles>
 						<File Id="913990448" Language="SFX">
 							<ShortName>Interface\UI_Button_Click_Pos.wav</ShortName>
@@ -52,7 +52,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="4004560084" Name="UI_Button_Enable" ObjectPath="\Events\Interface\General\UI_Button_Enable" DurationType="OneShot" DurationMin="1." DurationMax="1.">
+				<Event Id="4004560084" Name="UI_Button_Enable" ObjectPath="\Events\Interface\General\UI_Button_Enable" DurationType="OneShot" DurationMin="0.145854" DurationMax="0.145854">
 					<IncludedMemoryFiles>
 						<File Id="376977459" Language="SFX">
 							<ShortName>Interface\UI_Button_Enable.wav</ShortName>
@@ -60,7 +60,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="4078704050" Name="UI_Button_Leave" ObjectPath="\Events\Interface\General\UI_Button_Leave" DurationType="OneShot" DurationMin="1." DurationMax="1.">
+				<Event Id="4078704050" Name="UI_Button_Leave" ObjectPath="\Events\Interface\General\UI_Button_Leave" DurationType="OneShot" DurationMin="0.641042" DurationMax="0.641042">
 					<IncludedMemoryFiles>
 						<File Id="811812712" Language="SFX">
 							<ShortName>Interface\UI_Button_Leave.wav</ShortName>
@@ -68,7 +68,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="186347966" Name="UI_Button_Ready" ObjectPath="\Events\Interface\General\UI_Button_Ready" DurationType="OneShot" DurationMin="1." DurationMax="1.">
+				<Event Id="186347966" Name="UI_Button_Ready" ObjectPath="\Events\Interface\General\UI_Button_Ready" DurationType="OneShot" DurationMin="0.586375" DurationMax="0.586375">
 					<IncludedMemoryFiles>
 						<File Id="98799830" Language="SFX">
 							<ShortName>Interface\UI_Button_Ready.wav</ShortName>
@@ -76,7 +76,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="1937610011" Name="UI_Button_Start" ObjectPath="\Events\Interface\General\UI_Button_Start" DurationType="OneShot" DurationMin="1." DurationMax="1.">
+				<Event Id="1937610011" Name="UI_Button_Start" ObjectPath="\Events\Interface\General\UI_Button_Start" DurationType="OneShot" DurationMin="1.031125" DurationMax="1.031125">
 					<IncludedMemoryFiles>
 						<File Id="1057248792" Language="SFX">
 							<ShortName>Interface\UI_Button_Start.wav</ShortName>
@@ -84,7 +84,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="2249769530" Name="UI_Click" ObjectPath="\Events\Interface\General\UI_Click" DurationType="OneShot" DurationMin="1." DurationMax="1.">
+				<Event Id="2249769530" Name="UI_Click" ObjectPath="\Events\Interface\General\UI_Click" DurationType="OneShot" DurationMin="0.377167" DurationMax="0.377167">
 					<IncludedMemoryFiles>
 						<File Id="348585539" Language="SFX">
 							<ShortName>Interface\UI_Click.wav</ShortName>
@@ -94,12 +94,19 @@
 				</Event>
 			</IncludedEvents>
 		</SoundBank>
-		<SoundBank Id="1355168291" Language="SFX" Hash="3166800600">
+		<SoundBank Id="1355168291" Language="SFX" Hash="3283196606">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
+			<GameParameters>
+				<GameParameter Id="3673881719" Name="Volume_SFX" ObjectPath="\Game Parameters\Default Work Unit\Volume\Volume_SFX"/>
+				<GameParameter Id="3695994288" Name="Volume_Master" ObjectPath="\Game Parameters\Default Work Unit\Volume\Volume_Master"/>
+				<GameParameter Id="3891337659" Name="Volume_Music" ObjectPath="\Game Parameters\Default Work Unit\Volume\Volume_Music"/>
+				<GameParameter Id="4030497411" Name="Volume_Sound" ObjectPath="\Game Parameters\Default Work Unit\Volume\Volume_Sound"/>
+				<GameParameter Id="4212040332" Name="Volume_UI" ObjectPath="\Game Parameters\Default Work Unit\Volume\Volume_UI"/>
+			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="3991942870" Language="SFX" Hash="295295674">
+		<SoundBank Id="3991942870" Language="SFX" Hash="1595664893">
 			<ObjectPath>\SoundBanks\Default Work Unit\Music</ObjectPath>
 			<ShortName>Music</ShortName>
 			<Path>Music.bnk</Path>

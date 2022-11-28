@@ -8,6 +8,13 @@ State	ID	Name	State Group			Notes
 	2607556080	Menu	BGM			
 	2716678721	Victory	BGM			
 
+Game Parameter	ID	Name			Wwise Object Path	Notes
+	3673881719	Volume_SFX			\Default Work Unit\Volume\Volume_SFX	
+	3695994288	Volume_Master			\Default Work Unit\Volume\Volume_Master	
+	3891337659	Volume_Music			\Default Work Unit\Volume\Volume_Music	
+	4030497411	Volume_Sound			\Default Work Unit\Volume\Volume_Sound	
+	4212040332	Volume_UI			\Default Work Unit\Volume\Volume_UI	
+
 Audio Bus	ID	Name			Wwise Object Path	Notes
 	393239870	SFX			\Default Work Unit\Master Audio Bus\Sound\SFX	
 	623086306	Sound			\Default Work Unit\Master Audio Bus\Sound	
