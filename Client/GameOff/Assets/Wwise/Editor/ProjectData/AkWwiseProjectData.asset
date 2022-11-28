@@ -24,7 +24,7 @@ MonoBehaviour:
     ParentPath: Virtual Acoustics\Default Work Unit
     guid: 33abdcf58137ce40b7eb446187c6fdcb
     GuidInternal: 
-    m_lastTime: -8585342961756836943
+    m_lastTime: -8585344063655507671
     List: []
   AuxBusWwu:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
@@ -38,7 +38,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: fd6a1b885bc1d7459a905260f7d4e557
     GuidInternal: 
-    m_lastTime: -8585342961756886814
+    m_lastTime: -8585323504376217264
     List:
     - name: Amb
       guid: e3226772b05ce34396d5b56cfeea695a
@@ -209,7 +209,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 081c80301739f54fb5562f33bfa0f0d6
     GuidInternal: 
-    m_lastTime: -8585342961756846911
+    m_lastTime: -8585343854575714724
     List:
     - name: Ambience
       guid: 8e6bf2d438f6a74f977f2c01ccccd741
@@ -293,7 +293,7 @@ MonoBehaviour:
     ParentPath: Events\Ambience
     guid: dcb74008d3ee9a459e3fb74d80a11274
     GuidInternal: 
-    m_lastTime: -8585342961759868843
+    m_lastTime: -8585343855202577408
     List: []
   - PhysicalPath: Events\Default Work Unit.wwu
     PathAndIcons:
@@ -306,7 +306,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 5ac087d2afb3a64e8983c9ccac58c48f
     GuidInternal: 
-    m_lastTime: -8585342961759858873
+    m_lastTime: -8585343854943884857
     List: []
   - PhysicalPath: Events\Interface.wwu
     PathAndIcons:
@@ -319,8 +319,165 @@ MonoBehaviour:
     ParentPath: Events\Interface
     guid: 1fbcdad6b5879f4d956f5aae2fdc5202
     GuidInternal: 
-    m_lastTime: -8585342961759858873
-    List: []
+    m_lastTime: -8585323504376500516
+    List:
+    - name: General
+      guid: dbd929764abad3479d5bda6af3adbdf6
+      id: 133642231
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Interface
+        ObjectType: 12
+        guid: 1fbcdad6b5879f4d956f5aae2fdc5202
+      - ElementName: General
+        ObjectType: 4
+        guid: dbd929764abad3479d5bda6af3adbdf6
+      Path: Events\Interface\General
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: UI_Button_Click_Neg
+      guid: 119a3571b783be46ba9517438eaf15d0
+      id: 1020395736
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Interface
+        ObjectType: 12
+        guid: 1fbcdad6b5879f4d956f5aae2fdc5202
+      - ElementName: General
+        ObjectType: 4
+        guid: dbd929764abad3479d5bda6af3adbdf6
+      - ElementName: UI_Button_Click_Neg
+        ObjectType: 3
+        guid: 119a3571b783be46ba9517438eaf15d0
+      Path: Events\Interface\General\UI_Button_Click_Neg
+      maxAttenuation: 0
+      maxDuration: 0.452417
+      minDuration: 0.452417
+    - name: UI_Button_Click_Pos
+      guid: ff08db1b98d8b74a93af92001f8e9b7b
+      id: 1729881340
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Interface
+        ObjectType: 12
+        guid: 1fbcdad6b5879f4d956f5aae2fdc5202
+      - ElementName: General
+        ObjectType: 4
+        guid: dbd929764abad3479d5bda6af3adbdf6
+      - ElementName: UI_Button_Click_Pos
+        ObjectType: 3
+        guid: ff08db1b98d8b74a93af92001f8e9b7b
+      Path: Events\Interface\General\UI_Button_Click_Pos
+      maxAttenuation: 0
+      maxDuration: 0.379667
+      minDuration: 0.379667
+    - name: UI_Button_Enable
+      guid: ddc81f88f5532849ac3a3f99ccb0d84a
+      id: 4004560084
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Interface
+        ObjectType: 12
+        guid: 1fbcdad6b5879f4d956f5aae2fdc5202
+      - ElementName: General
+        ObjectType: 4
+        guid: dbd929764abad3479d5bda6af3adbdf6
+      - ElementName: UI_Button_Enable
+        ObjectType: 3
+        guid: ddc81f88f5532849ac3a3f99ccb0d84a
+      Path: Events\Interface\General\UI_Button_Enable
+      maxAttenuation: 0
+      maxDuration: 0.145854
+      minDuration: 0.145854
+    - name: UI_Button_Leave
+      guid: d1c106dd3d89474d9d2ae9e75f1e407e
+      id: 4078704050
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Interface
+        ObjectType: 12
+        guid: 1fbcdad6b5879f4d956f5aae2fdc5202
+      - ElementName: General
+        ObjectType: 4
+        guid: dbd929764abad3479d5bda6af3adbdf6
+      - ElementName: UI_Button_Leave
+        ObjectType: 3
+        guid: d1c106dd3d89474d9d2ae9e75f1e407e
+      Path: Events\Interface\General\UI_Button_Leave
+      maxAttenuation: 0
+      maxDuration: 0.641042
+      minDuration: 0.641042
+    - name: UI_Button_Ready
+      guid: 9a5fa6c64a552a4fa9baea575bec3153
+      id: 186347966
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Interface
+        ObjectType: 12
+        guid: 1fbcdad6b5879f4d956f5aae2fdc5202
+      - ElementName: General
+        ObjectType: 4
+        guid: dbd929764abad3479d5bda6af3adbdf6
+      - ElementName: UI_Button_Ready
+        ObjectType: 3
+        guid: 9a5fa6c64a552a4fa9baea575bec3153
+      Path: Events\Interface\General\UI_Button_Ready
+      maxAttenuation: 0
+      maxDuration: 0.586375
+      minDuration: 0.586375
+    - name: UI_Button_Start
+      guid: 36d164d0578e8e4ea33f37711c00cbc1
+      id: 1937610011
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Interface
+        ObjectType: 12
+        guid: 1fbcdad6b5879f4d956f5aae2fdc5202
+      - ElementName: General
+        ObjectType: 4
+        guid: dbd929764abad3479d5bda6af3adbdf6
+      - ElementName: UI_Button_Start
+        ObjectType: 3
+        guid: 36d164d0578e8e4ea33f37711c00cbc1
+      Path: Events\Interface\General\UI_Button_Start
+      maxAttenuation: 0
+      maxDuration: 1.031125
+      minDuration: 1.031125
+    - name: UI_Click
+      guid: 87378c1a6a1f9649b82da4a9f002327f
+      id: 2249769530
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Interface
+        ObjectType: 12
+        guid: 1fbcdad6b5879f4d956f5aae2fdc5202
+      - ElementName: General
+        ObjectType: 4
+        guid: dbd929764abad3479d5bda6af3adbdf6
+      - ElementName: UI_Click
+        ObjectType: 3
+        guid: 87378c1a6a1f9649b82da4a9f002327f
+      Path: Events\Interface\General\UI_Click
+      maxAttenuation: 0
+      maxDuration: 0.377167
+      minDuration: 0.377167
   - PhysicalPath: Events\Music.wwu
     PathAndIcons:
     - ElementName: Events
@@ -332,7 +489,7 @@ MonoBehaviour:
     ParentPath: Events\Music
     guid: 95f48089720f8642aeccba4b14f185e2
     GuidInternal: 
-    m_lastTime: -8585342961759858873
+    m_lastTime: -8585343852822482517
     List:
     - name: test_music
       guid: 2669daf7d70ffd4e81a0cc318aab88c3
@@ -362,7 +519,7 @@ MonoBehaviour:
     ParentPath: Events\NPC
     guid: 80431ce63b5b1b49a6b68ec8f3a76d87
     GuidInternal: 
-    m_lastTime: -8585342961759858873
+    m_lastTime: -8585343855126342800
     List: []
   - PhysicalPath: Events\Player.wwu
     PathAndIcons:
@@ -375,7 +532,7 @@ MonoBehaviour:
     ParentPath: Events\Player
     guid: c72524b77b0b7d4a8e03f2574a7e1afa
     GuidInternal: 
-    m_lastTime: -8585342961759858873
+    m_lastTime: -8585343852822602220
     List: []
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
@@ -389,8 +546,107 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: 5b60ca76b2218742930c74282c21b47a
     GuidInternal: 
-    m_lastTime: -8585342961759848888
-    List: []
+    m_lastTime: -8585323504376480569
+    List:
+    - name: Volume
+      guid: a0f38bc4cbf8de4ead48cebed624ebd1
+      id: 2415836739
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5b60ca76b2218742930c74282c21b47a
+      - ElementName: Volume
+        ObjectType: 4
+        guid: a0f38bc4cbf8de4ead48cebed624ebd1
+      Path: Game Parameters\Default Work Unit\Volume
+    - name: Volume_Master
+      guid: 38c7851203ad41418bc4ea818eccf4fe
+      id: 3695994288
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5b60ca76b2218742930c74282c21b47a
+      - ElementName: Volume
+        ObjectType: 4
+        guid: a0f38bc4cbf8de4ead48cebed624ebd1
+      - ElementName: Volume_Master
+        ObjectType: 13
+        guid: 38c7851203ad41418bc4ea818eccf4fe
+      Path: Game Parameters\Default Work Unit\Volume\Volume_Master
+    - name: Volume_Music
+      guid: 5869f839533b3d43aa7c90e2c2e09abe
+      id: 3891337659
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5b60ca76b2218742930c74282c21b47a
+      - ElementName: Volume
+        ObjectType: 4
+        guid: a0f38bc4cbf8de4ead48cebed624ebd1
+      - ElementName: Volume_Music
+        ObjectType: 13
+        guid: 5869f839533b3d43aa7c90e2c2e09abe
+      Path: Game Parameters\Default Work Unit\Volume\Volume_Music
+    - name: Volume_SFX
+      guid: 21ea69b30e3f044285114694f0830135
+      id: 3673881719
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5b60ca76b2218742930c74282c21b47a
+      - ElementName: Volume
+        ObjectType: 4
+        guid: a0f38bc4cbf8de4ead48cebed624ebd1
+      - ElementName: Volume_SFX
+        ObjectType: 13
+        guid: 21ea69b30e3f044285114694f0830135
+      Path: Game Parameters\Default Work Unit\Volume\Volume_SFX
+    - name: Volume_Sound
+      guid: b9ff726ef84af5438e90aaf2b5b8a5d6
+      id: 4030497411
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5b60ca76b2218742930c74282c21b47a
+      - ElementName: Volume
+        ObjectType: 4
+        guid: a0f38bc4cbf8de4ead48cebed624ebd1
+      - ElementName: Volume_Sound
+        ObjectType: 13
+        guid: b9ff726ef84af5438e90aaf2b5b8a5d6
+      Path: Game Parameters\Default Work Unit\Volume\Volume_Sound
+    - name: Volume_UI
+      guid: 1f93d7e36f719446a25f89b6214e1592
+      id: 4212040332
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 5b60ca76b2218742930c74282c21b47a
+      - ElementName: Volume
+        ObjectType: 4
+        guid: a0f38bc4cbf8de4ead48cebed624ebd1
+      - ElementName: Volume_UI
+        ObjectType: 13
+        guid: 1f93d7e36f719446a25f89b6214e1592
+      Path: Game Parameters\Default Work Unit\Volume\Volume_UI
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
     PathAndIcons:
@@ -403,8 +659,106 @@ MonoBehaviour:
     ParentPath: States\Default Work Unit
     guid: b768e8c006b3df4bb6507824fcfc4107
     GuidInternal: 
-    m_lastTime: -8585342961756846911
-    List: []
+    m_lastTime: -8585323504376153900
+    List:
+    - name: BGM
+      guid: 9709ffecc2a66c4bb67a5713a05098a2
+      id: 412724365
+      PathAndIcons:
+      - ElementName: States
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: b768e8c006b3df4bb6507824fcfc4107
+      - ElementName: BGM
+        ObjectType: 9
+        guid: 9709ffecc2a66c4bb67a5713a05098a2
+      Path: States\Default Work Unit\BGM
+      values:
+      - name: Gameplay
+        guid: 6130544384cae241ad9078cbec64250d
+        id: 89505537
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: b768e8c006b3df4bb6507824fcfc4107
+        - ElementName: BGM
+          ObjectType: 9
+          guid: 9709ffecc2a66c4bb67a5713a05098a2
+        - ElementName: Gameplay
+          ObjectType: 8
+          guid: 6130544384cae241ad9078cbec64250d
+      - name: Lose
+        guid: 58552c6c9917184fa4236b0926753339
+        id: 221232726
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: b768e8c006b3df4bb6507824fcfc4107
+        - ElementName: BGM
+          ObjectType: 9
+          guid: 9709ffecc2a66c4bb67a5713a05098a2
+        - ElementName: Lose
+          ObjectType: 8
+          guid: 58552c6c9917184fa4236b0926753339
+      - name: Menu
+        guid: 414dc326cbf405408ba14ffeb166fdaa
+        id: 2607556080
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: b768e8c006b3df4bb6507824fcfc4107
+        - ElementName: BGM
+          ObjectType: 9
+          guid: 9709ffecc2a66c4bb67a5713a05098a2
+        - ElementName: Menu
+          ObjectType: 8
+          guid: 414dc326cbf405408ba14ffeb166fdaa
+      - name: None
+        guid: 7c324a76be51f4419d7046ad7665e424
+        id: 748895195
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: b768e8c006b3df4bb6507824fcfc4107
+        - ElementName: BGM
+          ObjectType: 9
+          guid: 9709ffecc2a66c4bb67a5713a05098a2
+        - ElementName: None
+          ObjectType: 8
+          guid: 7c324a76be51f4419d7046ad7665e424
+      - name: Victory
+        guid: b73fda9bdf423e40aaf521238924023f
+        id: 2716678721
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: b768e8c006b3df4bb6507824fcfc4107
+        - ElementName: BGM
+          ObjectType: 9
+          guid: 9709ffecc2a66c4bb67a5713a05098a2
+        - ElementName: Victory
+          ObjectType: 8
+          guid: b73fda9bdf423e40aaf521238924023f
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
   SwitchWwu:
   - PhysicalPath: Switches\Default Work Unit.wwu
     PathAndIcons:
@@ -417,7 +771,7 @@ MonoBehaviour:
     ParentPath: Switches\Default Work Unit
     guid: 9fb0ec05e1de064b86b766dc3dff1b35
     GuidInternal: 
-    m_lastTime: -8585342961756836943
+    m_lastTime: -8585344063654093967
     List: []
   TriggerWwu:
   - PhysicalPath: Triggers\Default Work Unit.wwu
@@ -431,11 +785,11 @@ MonoBehaviour:
     ParentPath: Triggers\Default Work Unit
     guid: d93ec54ad49c4343bd068b054b96a8bd
     GuidInternal: 
-    m_lastTime: -8585342961756836943
+    m_lastTime: -8585344063652919192
     List: []
-  ExpandedFileSystemItemIds: 0200000004000000
+  ExpandedFileSystemItemIds: 
   ExpandedWaapiItemIds: 
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
-  currentDataSource: 1
+  currentDataSource: 0
   CurrentPluginConfig: 

@@ -30,9 +30,9 @@
 	<ValidationCacheItem File="F:\GitHubProjects\GameOffJam2022\Client\GameOff\GameOff_WwiseProject\Virtual Acoustics\Default Work Unit.wwu" DateLow="1667200519" DateHigh="0"/>
 	<ValidationCacheItem File="F:\GitHubProjects\GameOffJam2022\Client\GameOff\GameOff_WwiseProject\Triggers\Default Work Unit.wwu" DateLow="1667200520" DateHigh="0"/>
 	<ValidationCacheItem File="F:\GitHubProjects\GameOffJam2022\Client\GameOff\GameOff_WwiseProject\Switches\Default Work Unit.wwu" DateLow="1667200520" DateHigh="0"/>
-	<ValidationCacheItem File="F:\GitHubProjects\GameOffJam2022\Client\GameOff\GameOff_WwiseProject\States\Default Work Unit.wwu" DateLow="1667200520" DateHigh="0"/>
+	<ValidationCacheItem File="F:\GitHubProjects\GameOffJam2022\Client\GameOff\GameOff_WwiseProject\States\Default Work Unit.wwu" DateLow="1669256447" DateHigh="0"/>
 	<ValidationCacheItem File="F:\GitHubProjects\GameOffJam2022\Client\GameOff\GameOff_WwiseProject\Soundcaster Sessions\Default Work Unit.wwu" DateLow="1667200520" DateHigh="0"/>
-	<ValidationCacheItem File="F:\GitHubProjects\GameOffJam2022\Client\GameOff\GameOff_WwiseProject\SoundBanks\Default Work Unit.wwu" DateLow="1667201870" DateHigh="0"/>
+	<ValidationCacheItem File="F:\GitHubProjects\GameOffJam2022\Client\GameOff\GameOff_WwiseProject\SoundBanks\Default Work Unit.wwu" DateLow="1667221427" DateHigh="0"/>
 	<ValidationCacheItem File="F:\GitHubProjects\GameOffJam2022\Client\GameOff\GameOff_WwiseProject\Queries\Factory Queries.wwu" DateLow="1667199469" DateHigh="0"/>
 	<ValidationCacheItem File="F:\GitHubProjects\GameOffJam2022\Client\GameOff\GameOff_WwiseProject\Queries\Default Work Unit.wwu" DateLow="1667200520" DateHigh="0"/>
 	<ValidationCacheItem File="F:\GitHubProjects\GameOffJam2022\Client\GameOff\GameOff_WwiseProject\Presets\Factory Spatial Audio.wwu" DateLow="1667199469" DateHigh="0"/>
@@ -40,12 +40,18 @@
 	<ValidationCacheItem File="F:\GitHubProjects\GameOffJam2022\Client\GameOff\GameOff_WwiseProject\Modulators\Default Work Unit.wwu" DateLow="1667200519" DateHigh="0"/>
 	<ValidationCacheItem File="F:\GitHubProjects\GameOffJam2022\Client\GameOff\GameOff_WwiseProject\Mixing Sessions\Default Work Unit.wwu" DateLow="1667200520" DateHigh="0"/>
 	<ValidationCacheItem File="F:\GitHubProjects\GameOffJam2022\Client\GameOff\GameOff_WwiseProject\Metadata\Default Work Unit.wwu" DateLow="1667200519" DateHigh="0"/>
-	<ValidationCacheItem File="F:\GitHubProjects\GameOffJam2022\Client\GameOff\GameOff_WwiseProject\Master-Mixer Hierarchy\Default Work Unit.wwu" DateLow="1667200520" DateHigh="0"/>
-	<ValidationCacheItem File="F:\GitHubProjects\GameOffJam2022\Client\GameOff\GameOff_WwiseProject\Interactive Music Hierarchy\Default Work Unit.wwu" DateLow="1667200520" DateHigh="0"/>
-	<ValidationCacheItem File="F:\GitHubProjects\GameOffJam2022\Client\GameOff\GameOff_WwiseProject\GameOff_WwiseProject.wproj" DateLow="1667200623" DateHigh="0"/>
-	<ValidationCacheItem File="F:\GitHubProjects\GameOffJam2022\Client\GameOff\GameOff_WwiseProject\GameOff_WwiseProject.lijiacheng01.wsettings" DateLow="1667201879" DateHigh="0"/>
-	<ValidationCacheItem File="F:\GitHubProjects\GameOffJam2022\Client\GameOff\GameOff_WwiseProject\Game Parameters\Default Work Unit.wwu" DateLow="1667200520" DateHigh="0"/>
-	<ValidationCacheItem File="F:\GitHubProjects\GameOffJam2022\Client\GameOff\GameOff_WwiseProject\Events\Default Work Unit.wwu" DateLow="1667200520" DateHigh="0"/>
+	<ValidationCacheItem File="F:\GitHubProjects\GameOffJam2022\Client\GameOff\GameOff_WwiseProject\Master-Mixer Hierarchy\Default Work Unit.wwu" DateLow="1669256447" DateHigh="0"/>
+	<ValidationCacheItem File="F:\GitHubProjects\GameOffJam2022\Client\GameOff\GameOff_WwiseProject\Interactive Music Hierarchy\Music_Main.wwu" DateLow="1667221582" DateHigh="0"/>
+	<ValidationCacheItem File="F:\GitHubProjects\GameOffJam2022\Client\GameOff\GameOff_WwiseProject\Interactive Music Hierarchy\Default Work Unit.wwu" DateLow="1667221563" DateHigh="0"/>
+	<ValidationCacheItem File="F:\GitHubProjects\GameOffJam2022\Client\GameOff\GameOff_WwiseProject\GameOff_WwiseProject.wproj" DateLow="1669256447" DateHigh="0"/>
+	<ValidationCacheItem File="F:\GitHubProjects\GameOffJam2022\Client\GameOff\GameOff_WwiseProject\GameOff_WwiseProject.lijiacheng01.wsettings" DateLow="1669619071" DateHigh="0"/>
+	<ValidationCacheItem File="F:\GitHubProjects\GameOffJam2022\Client\GameOff\GameOff_WwiseProject\Game Parameters\Default Work Unit.wwu" DateLow="1669256447" DateHigh="0"/>
+	<ValidationCacheItem File="F:\GitHubProjects\GameOffJam2022\Client\GameOff\GameOff_WwiseProject\Events\Player.wwu" DateLow="1667221603" DateHigh="0"/>
+	<ValidationCacheItem File="F:\GitHubProjects\GameOffJam2022\Client\GameOff\GameOff_WwiseProject\Events\NPC.wwu" DateLow="1667221372" DateHigh="0"/>
+	<ValidationCacheItem File="F:\GitHubProjects\GameOffJam2022\Client\GameOff\GameOff_WwiseProject\Events\Music.wwu" DateLow="1667221603" DateHigh="0"/>
+	<ValidationCacheItem File="F:\GitHubProjects\GameOffJam2022\Client\GameOff\GameOff_WwiseProject\Events\Interface.wwu" DateLow="1669256447" DateHigh="0"/>
+	<ValidationCacheItem File="F:\GitHubProjects\GameOffJam2022\Client\GameOff\GameOff_WwiseProject\Events\Default Work Unit.wwu" DateLow="1667221391" DateHigh="0"/>
+	<ValidationCacheItem File="F:\GitHubProjects\GameOffJam2022\Client\GameOff\GameOff_WwiseProject\Events\Ambience.wwu" DateLow="1667221365" DateHigh="0"/>
 	<ValidationCacheItem File="F:\GitHubProjects\GameOffJam2022\Client\GameOff\GameOff_WwiseProject\Effects\Factory Effects.wwu" DateLow="1667199469" DateHigh="0"/>
 	<ValidationCacheItem File="F:\GitHubProjects\GameOffJam2022\Client\GameOff\GameOff_WwiseProject\Effects\Default Work Unit.wwu" DateLow="1667200520" DateHigh="0"/>
 	<ValidationCacheItem File="F:\GitHubProjects\GameOffJam2022\Client\GameOff\GameOff_WwiseProject\Dynamic Dialogue\Default Work Unit.wwu" DateLow="1667200520" DateHigh="0"/>
@@ -53,6 +59,10 @@
 	<ValidationCacheItem File="F:\GitHubProjects\GameOffJam2022\Client\GameOff\GameOff_WwiseProject\Conversion Settings\Default Work Unit.wwu" DateLow="1667200519" DateHigh="0"/>
 	<ValidationCacheItem File="F:\GitHubProjects\GameOffJam2022\Client\GameOff\GameOff_WwiseProject\Control Surface Sessions\Default Work Unit.wwu" DateLow="1667201853" DateHigh="0"/>
 	<ValidationCacheItem File="F:\GitHubProjects\GameOffJam2022\Client\GameOff\GameOff_WwiseProject\Audio Devices\Default Work Unit.wwu" DateLow="1667200520" DateHigh="0"/>
-	<ValidationCacheItem File="F:\GitHubProjects\GameOffJam2022\Client\GameOff\GameOff_WwiseProject\Attenuations\Default Work Unit.wwu" DateLow="1667200520" DateHigh="0"/>
+	<ValidationCacheItem File="F:\GitHubProjects\GameOffJam2022\Client\GameOff\GameOff_WwiseProject\Attenuations\Default Work Unit.wwu" DateLow="1669256447" DateHigh="0"/>
+	<ValidationCacheItem File="F:\GitHubProjects\GameOffJam2022\Client\GameOff\GameOff_WwiseProject\Actor-Mixer Hierarchy\Player.wwu" DateLow="1667221524" DateHigh="0"/>
+	<ValidationCacheItem File="F:\GitHubProjects\GameOffJam2022\Client\GameOff\GameOff_WwiseProject\Actor-Mixer Hierarchy\NPC.wwu" DateLow="1667221504" DateHigh="0"/>
+	<ValidationCacheItem File="F:\GitHubProjects\GameOffJam2022\Client\GameOff\GameOff_WwiseProject\Actor-Mixer Hierarchy\Interface.wwu" DateLow="1669256447" DateHigh="0"/>
 	<ValidationCacheItem File="F:\GitHubProjects\GameOffJam2022\Client\GameOff\GameOff_WwiseProject\Actor-Mixer Hierarchy\Default Work Unit.wwu" DateLow="1667200520" DateHigh="0"/>
+	<ValidationCacheItem File="F:\GitHubProjects\GameOffJam2022\Client\GameOff\GameOff_WwiseProject\Actor-Mixer Hierarchy\Ambience.wwu" DateLow="1667221510" DateHigh="0"/>
 </ValidationCache>
