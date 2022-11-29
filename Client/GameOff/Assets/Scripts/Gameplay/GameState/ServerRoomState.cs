@@ -123,18 +123,18 @@ namespace Unity.BossRoom.Gameplay.GameState
 
         void SaveLobbyResults()
         {
-            foreach (NetworkRoomPlayerHandle.LobbyPlayerState playerInfo in networkRoomPlayerHandle.LobbyPlayers)
-            {
-                var playerNetworkObject = NetworkManager.Singleton.SpawnManager.GetPlayerNetworkObject(playerInfo.ClientId);
+            //foreach (NetworkRoomPlayerHandle.LobbyPlayerState playerInfo in networkRoomPlayerHandle.LobbyPlayers)
+            //{
+            //    var playerNetworkObject = NetworkManager.Singleton.SpawnManager.GetPlayerNetworkObject(playerInfo.ClientId);
 
-                if (playerNetworkObject && playerNetworkObject.TryGetComponent(out PersistentPlayer persistentPlayer))
-                {
-                    // pass avatar GUID to PersistentPlayer
-                    // it'd be great to simplify this with something like a NetworkScriptableObjects :(
-                    persistentPlayer.NetworkAvatarGuidState.AvatarGuid.Value =
-                        networkRoomPlayerHandle.AvatarConfiguration[playerInfo.SeatIdx].Guid.ToNetworkGuid();
-                }
-            }
+            //    if (playerNetworkObject && playerNetworkObject.TryGetComponent(out PersistentPlayer persistentPlayer))
+            //    {
+            //        // pass avatar GUID to PersistentPlayer
+            //        // it'd be great to simplify this with something like a NetworkScriptableObjects :(
+            //        persistentPlayer.NetworkAvatarGuidState.AvatarGuid.Value =
+            //            networkRoomPlayerHandle.AvatarConfiguration[playerInfo.SeatIdx].Guid.ToNetworkGuid();
+            //    }
+            //}
         }
 
         IEnumerator WaitToEndLobby()
