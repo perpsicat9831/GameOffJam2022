@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: cat_d 2
+  m_Name: cat_d
   m_Shader: {fileID: -6465566751694194690, guid: f02f2862a2558054bbbe0d386b6ff499, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
@@ -21,7 +21,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _BaseMap:
-        m_Texture: {fileID: 2800000, guid: d553e372993ea7a46a9791efd44eda5a, type: 3}
+        m_Texture: {fileID: 2800000, guid: 73f1427b001e538479eb2f05df9a0a25, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BumpMap:
@@ -45,7 +45,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: d553e372993ea7a46a9791efd44eda5a, type: 3}
+        m_Texture: {fileID: 2800000, guid: 3e22fd409fc02804d9feeb97ccf3a879, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
@@ -79,11 +79,11 @@ Material:
     m_Ints: []
     m_Floats:
     - _AlphaClip: 0
-    - _ArmRotateRange: 0.5
-    - _ArmRotateSpeed: 1.3
+    - _ArmRotateRange: 0.05
+    - _ArmRotateSpeed: 1.39
     - _Blend: 0
     - _BodyRotateRange: 0.1
-    - _BodyRotateSpeed: 1
+    - _BodyRotateSpeed: 2
     - _BumpScale: 1
     - _ClearCoatMask: 0
     - _ClearCoatSmoothness: 0
@@ -93,8 +93,8 @@ Material:
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
     - _EnvironmentReflections: 1
-    - _FeetRotateRange: 1
-    - _FeetRotateSpeed: 1
+    - _FeetRotateRange: 0.35
+    - _FeetRotateSpeed: 2.09
     - _GlossMapScale: 0
     - _Glossiness: 0
     - _GlossyReflections: 0
@@ -107,8 +107,9 @@ Material:
     - _Smoothness: 0.5
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
+    - _Speed: 1.5
     - _SrcBlend: 1
-    - _State: 1
+    - _State: 0
     - _Surface: 0
     - _ToonThreshold: 0
     - _WorkflowMode: 1
@@ -117,11 +118,12 @@ Material:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _IdlePivot: {r: 0, g: -0.5, b: 0, a: 0}
-    - _RunPivot: {r: 0, g: -0.5, b: 0, a: 0}
+    - _IdlePivot: {r: 0, g: 0, b: 0, a: 0}
+    - _Pivot: {r: 0, g: -0.5, b: 0, a: 0}
+    - _RunPivot: {r: 0, g: -0.0029, b: 0, a: 0}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
   m_BuildTextureStacks: []
---- !u!114 &2579236851594475312
+--- !u!114 &8921211147821708807
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}

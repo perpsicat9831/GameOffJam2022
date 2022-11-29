@@ -2,12 +2,16 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Framework;
+
 namespace Logic
 {
 
     public class FishMono : MonoBehaviour
     {
         public Fish owner;
+
+        public List<Material> listMat;
 
         private Rigidbody rig;
         private MeshCollider meshCollider;
@@ -65,6 +69,19 @@ namespace Logic
         public void RegisterFishDeadEvent(Action act)
         {
             actDead = act;
+        }
+
+        /// <summary>
+        /// Ë¢ÐÂÓã²ÄÖÊ
+        /// </summary>
+        /// <param name="id"></param>
+        public void UpdateMatrial(int fishId)
+        {
+            var fishData = CSVManager.CSVData.TbFish.GetOrDefault(fishId);
+            if (fishData != null && fishData.FishRarity <= listMat.Count)
+            {
+                gameObject.GetComponent<Renderer>().material = listMat[fishData.FishRarity - 1];
+            }
         }
     }
 }

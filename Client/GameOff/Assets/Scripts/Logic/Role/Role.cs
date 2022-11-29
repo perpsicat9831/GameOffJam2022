@@ -25,8 +25,8 @@ namespace Logic
 
         private AssetBundleLoader abRoleLoader;
         private GameObject goRole;
-        private string abRolePath = "Prefab/Role/Cat/Cat"; 
-        private string abRolePrefabName = "Cat";
+        private string abRolePath = "Prefab/Role/Cat/Cat2"; 
+        private string abRolePrefabName = "Cat2";
 
         private Action<Transform> actBindCameraFollowTarget;
         private Action actRoleDead;
@@ -135,7 +135,7 @@ namespace Logic
                     if (FishSpawn)
                     {
                         var fish = ObjectPool<Fish>.Instance.Allocate();
-                        fish.OnCreate(FishSpawn);
+                        fish.OnCreate(itemID, FishSpawn);
                     }
                     else
                     {

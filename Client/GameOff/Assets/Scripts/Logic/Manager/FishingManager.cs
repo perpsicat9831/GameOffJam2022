@@ -150,7 +150,7 @@ namespace Logic
                     if (FishSpawn)
                     {
                         var fish = ObjectPool<Fish>.Instance.Allocate();
-                        fish.OnCreate(FishSpawn);
+                        fish.OnCreate(itemID, FishSpawn);
                     }
                     else
                     {
