@@ -3,12 +3,33 @@
 	<Events>
 		<WorkUnit Name="Music" ID="{8980F495-0F72-4286-AECC-BA4B14F185E2}" PersistMode="Standalone">
 			<ChildrenList>
-				<Event Name="test_music" ID="{F7DA6926-0FD7-4EFD-81A0-CC318AAB88C3}">
+				<Event Name="Music_Play" ID="{001482D1-ACAA-48D7-A036-4D1529862B69}">
 					<ChildrenList>
-						<Action Name="" ID="{66FB2353-14F4-4330-8628-7791F94C6E84}" ShortID="840584050">
+						<Action Name="" ID="{1FBF1A0C-1962-4002-8AE8-665569351BA0}" ShortID="7414039">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="22"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="mus_test" ID="{7A791E96-C6F4-4CEA-8026-08A1FC0C2A80}" WorkUnitID="{EB1C20CB-8F68-4BAC-B43C-E5726DB48E3C}"/>
+									<ObjectRef Name="Menu" ID="{26C34D41-F4CB-4005-8BA1-4FFEB166FDAA}" WorkUnitID="{C0E868B7-B306-4BDF-B650-7824FCFC4107}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{120698FD-4195-4EB7-9D48-FC5A45FF760F}" ShortID="688591878">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Music" ID="{E92BF4E2-B28F-46BA-9668-0FDC6549061E}" WorkUnitID="{88AA5FC4-8EE0-44DD-810C-0218BEC8AD7E}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{3EFCFE4E-4544-4F8A-B62C-FF313BE22ED4}" ShortID="259073677">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Music" ID="{E92BF4E2-B28F-46BA-9668-0FDC6549061E}" WorkUnitID="{88AA5FC4-8EE0-44DD-810C-0218BEC8AD7E}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

@@ -13,7 +13,7 @@ namespace AK
 {
     namespace EVENTS
     {
-        static const AkUniqueID TEST_MUSIC = 379521629U;
+        static const AkUniqueID MUSIC_PLAY = 202194903U;
         static const AkUniqueID UI_BUTTON_CLICK_NEG = 1020395736U;
         static const AkUniqueID UI_BUTTON_CLICK_POS = 1729881340U;
         static const AkUniqueID UI_BUTTON_ENABLE = 4004560084U;

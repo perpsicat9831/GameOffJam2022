@@ -9,9 +9,33 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<StreamedFiles>
-		<File Id="463486002" Language="SFX">
-			<ShortName>Music\test\DECISIVE BATTLE.wav</ShortName>
-			<Path>SFX\Music\test\DECISIVE BATTLE_D79FB2B7.wem</Path>
+		<File Id="444634103" Language="SFX">
+			<ShortName>Music\BGM_Menu_02.wav</ShortName>
+			<Path>SFX\Music\BGM_Menu_02_D79FB2B7.wem</Path>
+		</File>
+		<File Id="499520568" Language="SFX">
+			<ShortName>Music\BGM_Gameplay_02.wav</ShortName>
+			<Path>SFX\Music\BGM_Gameplay_02_D79FB2B7.wem</Path>
+		</File>
+		<File Id="606681542" Language="SFX">
+			<ShortName>Music\BGM_Gameplay_04.wav</ShortName>
+			<Path>SFX\Music\BGM_Gameplay_04_D79FB2B7.wem</Path>
+		</File>
+		<File Id="638560246" Language="SFX">
+			<ShortName>Music\BGM_Menu_01.wav</ShortName>
+			<Path>SFX\Music\BGM_Menu_01_D79FB2B7.wem</Path>
+		</File>
+		<File Id="651506634" Language="SFX">
+			<ShortName>Music\BGM_Menu_03.wav</ShortName>
+			<Path>SFX\Music\BGM_Menu_03_D79FB2B7.wem</Path>
+		</File>
+		<File Id="871653248" Language="SFX">
+			<ShortName>Music\BGM_Gameplay_03.wav</ShortName>
+			<Path>SFX\Music\BGM_Gameplay_03_D79FB2B7.wem</Path>
+		</File>
+		<File Id="938326768" Language="SFX">
+			<ShortName>Music\BGM_Gameplay_01.wav</ShortName>
+			<Path>SFX\Music\BGM_Gameplay_01_D79FB2B7.wem</Path>
 		</File>
 	</StreamedFiles>
 	<MediaFilesNotInAnyBank/>
@@ -52,7 +76,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="4004560084" Name="UI_Button_Enable" ObjectPath="\Events\Interface\General\UI_Button_Enable" DurationType="OneShot" DurationMin="0.145854" DurationMax="0.145854">
+				<Event Id="4004560084" Name="UI_Button_Enable" ObjectPath="\Events\Interface\General\UI_Button_Enable" DurationType="OneShot" DurationMin="0.069312" DurationMax="0.069312">
 					<IncludedMemoryFiles>
 						<File Id="376977459" Language="SFX">
 							<ShortName>Interface\UI_Button_Enable.wav</ShortName>
@@ -106,27 +130,115 @@
 				<GameParameter Id="4212040332" Name="Volume_UI" ObjectPath="\Game Parameters\Default Work Unit\Volume\Volume_UI"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="3991942870" Language="SFX" Hash="1595664893">
+		<SoundBank Id="3991942870" Language="SFX" Hash="3982087789">
 			<ObjectPath>\SoundBanks\Default Work Unit\Music</ObjectPath>
 			<ShortName>Music</ShortName>
 			<Path>Music.bnk</Path>
 			<IncludedEvents>
-				<Event Id="379521629" Name="test_music" ObjectPath="\Events\Music\test_music" DurationType="Infinite">
+				<Event Id="202194903" Name="Music_Play" ObjectPath="\Events\Music\Music_Play" DurationType="Infinite">
 					<ReferencedStreamedFiles>
-						<File Id="463486002" Language="SFX">
-							<ShortName>Music\test\DECISIVE BATTLE.wav</ShortName>
-							<Path>SFX\Music\test\DECISIVE BATTLE_D79FB2B7.wem</Path>
+						<File Id="444634103" Language="SFX">
+							<ShortName>Music\BGM_Menu_02.wav</ShortName>
+							<Path>SFX\Music\BGM_Menu_02_D79FB2B7.wem</Path>
+						</File>
+						<File Id="499520568" Language="SFX">
+							<ShortName>Music\BGM_Gameplay_02.wav</ShortName>
+							<Path>SFX\Music\BGM_Gameplay_02_D79FB2B7.wem</Path>
+						</File>
+						<File Id="606681542" Language="SFX">
+							<ShortName>Music\BGM_Gameplay_04.wav</ShortName>
+							<Path>SFX\Music\BGM_Gameplay_04_D79FB2B7.wem</Path>
+						</File>
+						<File Id="638560246" Language="SFX">
+							<ShortName>Music\BGM_Menu_01.wav</ShortName>
+							<Path>SFX\Music\BGM_Menu_01_D79FB2B7.wem</Path>
+						</File>
+						<File Id="651506634" Language="SFX">
+							<ShortName>Music\BGM_Menu_03.wav</ShortName>
+							<Path>SFX\Music\BGM_Menu_03_D79FB2B7.wem</Path>
+						</File>
+						<File Id="871653248" Language="SFX">
+							<ShortName>Music\BGM_Gameplay_03.wav</ShortName>
+							<Path>SFX\Music\BGM_Gameplay_03_D79FB2B7.wem</Path>
+						</File>
+						<File Id="938326768" Language="SFX">
+							<ShortName>Music\BGM_Gameplay_01.wav</ShortName>
+							<Path>SFX\Music\BGM_Gameplay_01_D79FB2B7.wem</Path>
 						</File>
 					</ReferencedStreamedFiles>
 					<IncludedMemoryFiles>
-						<File Id="463486002" Language="SFX">
-							<ShortName>Music\test\DECISIVE BATTLE.wav</ShortName>
-							<Path>SFX\Music\test\DECISIVE BATTLE_D79FB2B7.wem</Path>
-							<PrefetchSize>17704</PrefetchSize>
+						<File Id="444634103" Language="SFX">
+							<ShortName>Music\BGM_Menu_02.wav</ShortName>
+							<Path>SFX\Music\BGM_Menu_02_D79FB2B7.wem</Path>
+							<PrefetchSize>19264</PrefetchSize>
+						</File>
+						<File Id="499520568" Language="SFX">
+							<ShortName>Music\BGM_Gameplay_02.wav</ShortName>
+							<Path>SFX\Music\BGM_Gameplay_02_D79FB2B7.wem</Path>
+							<PrefetchSize>19264</PrefetchSize>
+						</File>
+						<File Id="606681542" Language="SFX">
+							<ShortName>Music\BGM_Gameplay_04.wav</ShortName>
+							<Path>SFX\Music\BGM_Gameplay_04_D79FB2B7.wem</Path>
+							<PrefetchSize>19264</PrefetchSize>
+						</File>
+						<File Id="638560246" Language="SFX">
+							<ShortName>Music\BGM_Menu_01.wav</ShortName>
+							<Path>SFX\Music\BGM_Menu_01_D79FB2B7.wem</Path>
+							<PrefetchSize>19264</PrefetchSize>
+						</File>
+						<File Id="651506634" Language="SFX">
+							<ShortName>Music\BGM_Menu_03.wav</ShortName>
+							<Path>SFX\Music\BGM_Menu_03_D79FB2B7.wem</Path>
+							<PrefetchSize>19264</PrefetchSize>
+						</File>
+						<File Id="871653248" Language="SFX">
+							<ShortName>Music\BGM_Gameplay_03.wav</ShortName>
+							<Path>SFX\Music\BGM_Gameplay_03_D79FB2B7.wem</Path>
+							<PrefetchSize>19264</PrefetchSize>
+						</File>
+						<File Id="938326768" Language="SFX">
+							<ShortName>Music\BGM_Gameplay_01.wav</ShortName>
+							<Path>SFX\Music\BGM_Gameplay_01_D79FB2B7.wem</Path>
+							<PrefetchSize>19264</PrefetchSize>
 						</File>
 					</IncludedMemoryFiles>
+					<SwitchContainers>
+						<SwitchContainer SwitchValue="{43543061-CA84-41E2-AD90-78CBEC64250D}">
+							<Media>
+								<File Id="499520568"/>
+								<File Id="606681542"/>
+								<File Id="871653248"/>
+								<File Id="938326768"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{26C34D41-F4CB-4005-8BA1-4FFEB166FDAA}">
+							<Media>
+								<File Id="444634103"/>
+								<File Id="638560246"/>
+								<File Id="651506634"/>
+							</Media>
+						</SwitchContainer>
+					</SwitchContainers>
+					<ActionSetState>
+						<ActionSetStateEntry Id="2607556080" Name="Menu" ObjectPath="\States\Default Work Unit\BGM\Menu"/>
+					</ActionSetState>
 				</Event>
 			</IncludedEvents>
+			<StateGroups>
+				<StateGroup Id="412724365" Name="BGM" ObjectPath="\States\Default Work Unit\BGM" GUID="{ECFF0997-A6C2-4B6C-B67A-5713A05098A2}">
+					<States>
+						<State Id="748895195" Name="None" ObjectPath="\States\Default Work Unit\BGM\None" GUID="{764A327C-51BE-41F4-9D70-46AD7665E424}"/>
+						<State Id="2607556080" Name="Menu" ObjectPath="\States\Default Work Unit\BGM\Menu" GUID="{26C34D41-F4CB-4005-8BA1-4FFEB166FDAA}"/>
+						<State Id="89505537" Name="Gameplay" ObjectPath="\States\Default Work Unit\BGM\Gameplay" GUID="{43543061-CA84-41E2-AD90-78CBEC64250D}"/>
+						<State Id="2716678721" Name="Victory" ObjectPath="\States\Default Work Unit\BGM\Victory" GUID="{9BDA3FB7-42DF-403E-AAF5-21238924023F}"/>
+						<State Id="221232726" Name="Lose" ObjectPath="\States\Default Work Unit\BGM\Lose" GUID="{6C2C5558-1799-4F18-A423-6B0926753339}"/>
+					</States>
+				</StateGroup>
+				<StateGroup Id="2607556080" Name="Menu" ObjectPath="\States\Default Work Unit\BGM\Menu" GUID="{26C34D41-F4CB-4005-8BA1-4FFEB166FDAA}">
+					<States/>
+				</StateGroup>
+			</StateGroups>
 		</SoundBank>
 	</SoundBanks>
 </SoundBanksInfo>

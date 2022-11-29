@@ -31,7 +31,15 @@ MonoBehaviour:
   - idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: 02cbac032afe80945b75b9b03c61bb0b, type: 2}
-  PostEvents: 0
-  AudioEvents: []
-  SetStates: 0
-  States: []
+  PostEvents: 1
+  AudioEvents:
+  - idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 397e85ac948268e4281881d539c7999a, type: 2}
+  SetStates: 1
+  States:
+  - idInternal: 0
+    valueGuidInternal: 
+    groupIdInternal: 0
+    groupGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 78ed0bc35be804a48854d885ac9f802f, type: 2}
