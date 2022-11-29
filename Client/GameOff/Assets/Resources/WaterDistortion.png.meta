@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 3e22fd409fc02804d9feeb97ccf3a879
+guid: db12e6e0c954d1443a6a412b7756247d
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -69,8 +69,8 @@ TextureImporter:
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
+    textureFormat: 4
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -119,5 +119,5 @@ TextureImporter:
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
   userData: 
-  assetBundleName: prefab/role/cat/cat_d.ab
+  assetBundleName: 
   assetBundleVariant: 
