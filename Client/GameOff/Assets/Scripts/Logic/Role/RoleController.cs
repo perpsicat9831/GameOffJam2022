@@ -57,7 +57,9 @@ namespace Logic
         }
         private void Update()
         {
-            if (IsClient && role.clientID.Value == NetworkManager.Singleton.LocalClientId)
+            if (!role.isInit)
+                return;
+            if (IsClient && role.IsOwner )
             {
                 if (moveState == ERoleMoveState.Move)
                 {

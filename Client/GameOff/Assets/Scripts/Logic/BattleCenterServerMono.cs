@@ -52,8 +52,11 @@ namespace Logic
             networkObject.transform.rotation = listRoleSpawn[index].rotation;
             var roleNet = goBaseRole.GetComponent<RoleNetwork>();
             listRole.Add(roleNet);
-            networkObject.Spawn();
             roleNet.SetClientID(clientID);
+            networkObject.Spawn();
+            networkObject.ChangeOwnership(clientID);
+
+
         }
         public Transform PoolParent;
         void Start()

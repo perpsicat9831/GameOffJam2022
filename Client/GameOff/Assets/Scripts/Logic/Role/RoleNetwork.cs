@@ -9,7 +9,9 @@ namespace Logic
     public class RoleNetwork : NetworkBehaviour
     {
         public NetworkVariable<ulong> clientID;
-       
+
+        public ulong ID;
+
         private Fish CatchedFish;
 
         private RoleController roleControlMono;
@@ -27,11 +29,13 @@ namespace Logic
 
         public GameObject modelPrefab;
 
-        
+        public bool isInit;
 
         private void Awake()
         {
             clientID = new NetworkVariable<ulong>();
+            //clientID.OnValueChanged += SycClientID;
+            isInit = false;
         }
 
         public void SetClientID(ulong clientID)
@@ -48,22 +52,64 @@ namespace Logic
             roleControlMono.RegisterRoleDeadEvent(OnRoleDead);
             roleControlMono.RegisterHoldFishing(OnHoldFishing);
             roleControlMono.RegisterCatchFishEvent(OnFishCatch);
-            if (IsClient)
-            {
-                if (clientID.Value == NetworkManager.Singleton.LocalClientId)
-                {
-                    OnRoleCreatedClient();
-                    OnGainedOwnership();
-                    CreateRolePrefab();
-                }
-            }
+            //if (IsClient && IsOwner)
+            //{
+            //    Debug.Log("isSelf");
+            //    OnRoleCreatedClient();
+            //    OnGainedOwnership();
+            //    CreateRolePrefab();
+            //}
             //if(IsServer)
             //    CreateRolePrefab();
         }
 
+        private void Update()
+        {
+            if (!isInit)
+            {
+                if (IsOwner)
+                {
+                    Debug.Log("isSelf");
+                    OnRoleCreatedClient();
+                    OnGainedOwnership();
+                    CreateRolePrefab();
+                    isInit = true;
+                }
+            }
+        }
+        //[ServerRpc]
+        //public void SycClientID_ServerRpc(ulong clientID)
+        //{
+        //    if (this.clientID.Value == clientID)
+        //    {
+        //        SycClientID_ClientRpc(clientID);
+        //    }
+        //}
+
+        //[ClientRpc]
+        //public void SycClientID_ClientRpc(ulong clientID)
+        //{
+        //    if (NetworkManager.Singleton.LocalClientId == clientID)
+        //    {
+        //        ID = clientID;
+        //    }
+        //}
+        //public void SycClientID(ulong old, ulong newValue)
+        //{
+        //    if (IsClient)
+        //    {
+        //        if (clientID.Value == NetworkManager.Singleton.LocalClientId)
+        //        {
+        //            Debug.Log("isSelf");
+        //            OnRoleCreatedClient();
+        //            OnGainedOwnership();
+        //            CreateRolePrefab();
+        //        }
+        //    }
+        //}
+
         private void OnRoleCreatedClient()
         {
-            Transform followTarget = goBaseRole.transform.Find("FollowPoint");
             BattleCenterServerMono.Instance.vCamera.Follow = followTarget;
         }
 
