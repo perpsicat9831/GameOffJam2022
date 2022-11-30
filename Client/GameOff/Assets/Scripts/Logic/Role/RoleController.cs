@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Netcode;
 using UnityEngine;
 
 namespace Logic
@@ -13,24 +14,24 @@ namespace Logic
     public class RoleController : MonoBehaviour
     {
         public bool IsClient;
-        public Role role;
+        public RoleNetwork role;
 
         private Transform selfTrans;
         private Rigidbody rig;
-        private Vector2 speedDir = Vector2.one;//ËÙ¶È·½Ïò
-        private Vector2 lastSpeedDir = Vector2.one;//ÉÏÒ»¸ö²»Îª0µÄËÙ¶È·½Ïò
+        private Vector2 speedDir = Vector2.one;//ï¿½Ù¶È·ï¿½ï¿½ï¿½
+        private Vector2 lastSpeedDir = Vector2.one;//ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½Îª0ï¿½ï¿½ï¿½Ù¶È·ï¿½ï¿½ï¿½
         private ERoleMoveState moveState = ERoleMoveState.Move;
 
         private float baseSpeed = 5f;
         private float Speed = 5f;
         private float RushCD = 1f;
         private bool isRushCD = false;
-        private float RushDic = 4.5f;//³å´Ì¾àÀë
+        private float RushDic = 4.5f;//ï¿½ï¿½Ì¾ï¿½ï¿½ï¿½
         private Vector2 RushTarget;
 
         private float HoldTime = 0f;
         /// <summary>
-        /// °´×¡×î¶ÌÊ±³¤£¬Ð¡ÓÚÕâ¸öÊ±³¤²»Ëãhold
+        /// ï¿½ï¿½×¡ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½Ð¡ï¿½ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½hold
         /// </summary>
         private float HoldMinTime = 0.3f;
         //private Vector2 moveDirection;
@@ -49,19 +50,26 @@ namespace Logic
             RushCD = PlayerManager.Instance.GetPlayerDashCD();
 
         }
+
+        public bool HasFish()
+        {
+            return true;
+        }
         private void Update()
         {
-            if (IsClient)
+            if (!role.isInit)
+                return;
+            if (IsClient && role.IsOwner )
             {
                 if (moveState == ERoleMoveState.Move)
                 {
                     if (Input.GetKey(KeyCode.Space))
                     {
-                        if (!isRushCD && !role.HasFish())
+                        if (!isRushCD && !HasFish())
                         {
                             isRushCD = true;
                             TimeManager.Instance.RegisterTimer(RushCD, () => { isRushCD = false; });
-                            //³å´ÌÂß¼­
+                            //ï¿½ï¿½ï¿½ï¿½ß¼ï¿½
                             RushTarget = new Vector2(selfTrans.localPosition.x + RushDic * lastSpeedDir.x, selfTrans.localPosition.z + RushDic * lastSpeedDir.y);
                             moveState = ERoleMoveState.Rushing;
                         }
@@ -127,7 +135,7 @@ namespace Logic
         {
             if(other.name == "DeadPlane")
             {
-                //ËÀÍöÂß¼­
+                //ï¿½ï¿½ï¿½ï¿½ï¿½ß¼ï¿½
                 actRoleDead?.Invoke();
             }
         }
@@ -152,7 +160,7 @@ namespace Logic
                 float nextX = selfTrans.localPosition.x + speedDir.x * Speed * Time.deltaTime;
                 float nextZ = selfTrans.localPosition.z + speedDir.y * Speed * Time.deltaTime;
                 selfTrans.localPosition = new Vector3(nextX, selfTrans.localPosition.y, nextZ);
-                //·½Ïò
+                //ï¿½ï¿½ï¿½ï¿½
 
                 float angleY = Vector3.Angle(new Vector3(0, 0, 1), new Vector3(lastSpeedDir.x, 0, lastSpeedDir.y)) * (lastSpeedDir.x > 0 ? 1 : -1);
                 selfTrans.localEulerAngles = new Vector3(0, angleY, 0);
@@ -160,21 +168,21 @@ namespace Logic
         }
 
         /// <summary>
-        /// ×¢²á½ÇÉ«ËÀÍöÊÂ¼þ
+        /// ×¢ï¿½ï¿½ï¿½É«ï¿½ï¿½ï¿½ï¿½ï¿½Â¼ï¿½
         /// </summary>
         public void RegisterRoleDeadEvent(Action act)
         {
             actRoleDead = act;
         }
         /// <summary>
-        /// ×¢²áµöÓãÊÂ¼þ
+        /// ×¢ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â¼ï¿½
         /// </summary>
         public void RegisterHoldFishing(Action<float> act)
         {
             actHoldFishing = act;
         }
         /// <summary>
-        /// ×¢²á×¥ÓãÊÂ¼þ
+        /// ×¢ï¿½ï¿½×¥ï¿½ï¿½ï¿½Â¼ï¿½
         /// </summary>
         public void RegisterCatchFishEvent(Action act)
         {

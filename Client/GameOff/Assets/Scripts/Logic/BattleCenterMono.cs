@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Netcode;
 using UnityEngine;
 
 namespace Logic
@@ -14,52 +15,52 @@ namespace Logic
 
         public List<Role> listRole = new List<Role>();
         public Transform TransVirtualCamera;
-        private Cinemachine.CinemachineVirtualCamera vCamera;
 
-        /// <summary>
-        /// ���պ�ض���ĸ��ڵ�
-        /// </summary>
-        public Transform PoolParent;
-        private void Awake()
-        {
-            vCamera = TransVirtualCamera.GetComponent<Cinemachine.CinemachineVirtualCamera>();
-        }
-        void Start()
-        {
-            FishingManager.Instance.FishParent = FishesParent;
-            FishingManager.Instance.UnUseFishParent = PoolParent;
-            CreateRole();
-        }
-
-        void Update()
-        {
-
-        }
-
-        private void CreateRole()
-        {
-            var role = new Role();
-            bool isClient = true;
-            role.isClient = isClient;
-            role.FishSpawn = listFishSpawn[0];
-            role.CreateRole(RoleParent, listRoleSpawn[0]);
-            if (isClient)
-            {
-                role.RegisterCameraFollowTarget(SetVCameraFollowTarget);
-            }
-            listRole.Add(role);
-
-            //����
-            var role2 = new Role();
-            role2.FishSpawn = listFishSpawn[1];
-            role2.CreateRole(RoleParent, listRoleSpawn[1]);
-            listRole.Add(role2);
-        }
-
-        private void SetVCameraFollowTarget(Transform target)
-        {
-            vCamera.Follow = target;
-        }
     }
+    //    /// <summary>
+    //    /// ���պ�ض���ĸ��ڵ�
+    //    /// </summary>
+    //    public Transform PoolParent;
+    //    private void Awake()
+    //    {
+    //        vCamera = TransVirtualCamera.GetComponent<Cinemachine.CinemachineVirtualCamera>();
+    //    }
+    //    void Start()
+    //    {
+    //        FishingManager.Instance.FishParent = FishesParent;
+    //        FishingManager.Instance.UnUseFishParent = PoolParent;
+    //        CreateRole();
+    //    }
+
+    //    void Update()
+    //    {
+
+    //    }
+
+    //    private void CreateRole()
+    //    {
+    //        var role = new Role();
+    //        bool isClient = true;
+    //        role.isClient = isClient;
+    //        role.FishSpawn = listFishSpawn[0];
+    //        role.CreateRole(RoleParent, listRoleSpawn[0]);
+    //        if (isClient)
+    //        {
+    //            role.RegisterCameraFollowTarget(SetVCameraFollowTarget);
+    //        }
+    //        listRole.Add(role);
+
+    //        //����
+    //        var role2 = new Role();
+    //        role2.FishSpawn = listFishSpawn[1];
+    //        role2.CreateRole(RoleParent, listRoleSpawn[1]);
+    //        listRole.Add(role2);
+    //    }
+
+    //    private void SetVCameraFollowTarget(Transform target)
+    //    {
+    //        vCamera.Follow = target;
+    //    }
+    //}
 }
 
