@@ -38,7 +38,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: fd6a1b885bc1d7459a905260f7d4e557
     GuidInternal: 
-    m_lastTime: -8585323504376217264
+    m_lastTime: -8585318108952723193
     List:
     - name: Amb
       guid: e3226772b05ce34396d5b56cfeea695a
@@ -356,8 +356,8 @@ MonoBehaviour:
         guid: 119a3571b783be46ba9517438eaf15d0
       Path: Events\Interface\General\UI_Button_Click_Neg
       maxAttenuation: 0
-      maxDuration: 0.452417
-      minDuration: 0.452417
+      maxDuration: -1
+      minDuration: -1
     - name: UI_Button_Click_Pos
       guid: ff08db1b98d8b74a93af92001f8e9b7b
       id: 1729881340
@@ -376,8 +376,8 @@ MonoBehaviour:
         guid: ff08db1b98d8b74a93af92001f8e9b7b
       Path: Events\Interface\General\UI_Button_Click_Pos
       maxAttenuation: 0
-      maxDuration: 0.379667
-      minDuration: 0.379667
+      maxDuration: -1
+      minDuration: -1
     - name: UI_Button_Enable
       guid: ddc81f88f5532849ac3a3f99ccb0d84a
       id: 4004560084
@@ -396,8 +396,8 @@ MonoBehaviour:
         guid: ddc81f88f5532849ac3a3f99ccb0d84a
       Path: Events\Interface\General\UI_Button_Enable
       maxAttenuation: 0
-      maxDuration: 0.069312
-      minDuration: 0.069312
+      maxDuration: -1
+      minDuration: -1
     - name: UI_Button_Leave
       guid: d1c106dd3d89474d9d2ae9e75f1e407e
       id: 4078704050
@@ -416,8 +416,8 @@ MonoBehaviour:
         guid: d1c106dd3d89474d9d2ae9e75f1e407e
       Path: Events\Interface\General\UI_Button_Leave
       maxAttenuation: 0
-      maxDuration: 0.641042
-      minDuration: 0.641042
+      maxDuration: -1
+      minDuration: -1
     - name: UI_Button_Ready
       guid: 9a5fa6c64a552a4fa9baea575bec3153
       id: 186347966
@@ -436,8 +436,8 @@ MonoBehaviour:
         guid: 9a5fa6c64a552a4fa9baea575bec3153
       Path: Events\Interface\General\UI_Button_Ready
       maxAttenuation: 0
-      maxDuration: 0.586375
-      minDuration: 0.586375
+      maxDuration: -1
+      minDuration: -1
     - name: UI_Button_Start
       guid: 36d164d0578e8e4ea33f37711c00cbc1
       id: 1937610011
@@ -456,8 +456,8 @@ MonoBehaviour:
         guid: 36d164d0578e8e4ea33f37711c00cbc1
       Path: Events\Interface\General\UI_Button_Start
       maxAttenuation: 0
-      maxDuration: 1.031125
-      minDuration: 1.031125
+      maxDuration: -1
+      minDuration: -1
     - name: UI_Click
       guid: 87378c1a6a1f9649b82da4a9f002327f
       id: 2249769530
@@ -476,8 +476,8 @@ MonoBehaviour:
         guid: 87378c1a6a1f9649b82da4a9f002327f
       Path: Events\Interface\General\UI_Click
       maxAttenuation: 0
-      maxDuration: 0.377167
-      minDuration: 0.377167
+      maxDuration: -1
+      minDuration: -1
   - PhysicalPath: Events\Music.wwu
     PathAndIcons:
     - ElementName: Events
@@ -787,9 +787,9 @@ MonoBehaviour:
     GuidInternal: 
     m_lastTime: -8585344063652919192
     List: []
-  ExpandedFileSystemItemIds: 020000000e000000140000001500000016000000
+  ExpandedFileSystemItemIds: 
   ExpandedWaapiItemIds: 
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
-  currentDataSource: 1
+  currentDataSource: 0
   CurrentPluginConfig: 
