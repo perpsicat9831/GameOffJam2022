@@ -2332,7 +2332,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0de6a3c9c1510054c80dd4e0ae063916, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  thisSlider: {fileID: 0}
+  thisSlider: {fileID: 5520423735466313959}
   masterVolume: 0
   soundVolume: 0
   musicVolume: 0

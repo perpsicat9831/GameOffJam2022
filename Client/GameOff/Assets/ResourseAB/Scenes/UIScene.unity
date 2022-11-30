@@ -839,10 +839,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 211784226113979319, guid: 7cab3a4aaeb5c1e42a50e2a38da231b0, type: 3}
-      propertyPath: thisSlider
-      value: 
-      objectReference: {fileID: 5769644753517190110}
     - target: {fileID: 862396126480262665, guid: 7cab3a4aaeb5c1e42a50e2a38da231b0, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -1110,17 +1106,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0de6a3c9c1510054c80dd4e0ae063916, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &5769644753517190110 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3134514448529765268, guid: 7cab3a4aaeb5c1e42a50e2a38da231b0, type: 3}
-  m_PrefabInstance: {fileID: 5769644753517190108}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &5769644753517190111 stripped
