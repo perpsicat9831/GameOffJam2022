@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7468949790766296460}
   - component: {fileID: 3197757095009472445}
+  - component: {fileID: 8799213685252760621}
   m_Layer: 5
   m_Name: EffectSlider
   m_TagString: Untagged
@@ -91,6 +92,22 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &8799213685252760621
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 373680551388632983}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0de6a3c9c1510054c80dd4e0ae063916, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thisSlider: {fileID: 3197757095009472445}
+  masterVolume: 0
+  soundVolume: 0
+  musicVolume: 0
 --- !u!1 &594726335344039756
 GameObject:
   m_ObjectHideFlags: 0
@@ -335,6 +352,7 @@ GameObject:
   m_Component:
   - component: {fileID: 960638051055820680}
   - component: {fileID: 689160393312124198}
+  - component: {fileID: 5278889614409693352}
   m_Layer: 5
   m_Name: EffectSlider
   m_TagString: Untagged
@@ -416,6 +434,22 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &5278889614409693352
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1106713778610171809}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0de6a3c9c1510054c80dd4e0ae063916, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thisSlider: {fileID: 689160393312124198}
+  masterVolume: 0
+  soundVolume: 0
+  musicVolume: 0
 --- !u!1 &1269940936819428652
 GameObject:
   m_ObjectHideFlags: 0
@@ -2204,6 +2238,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6329776612032296795}
   - component: {fileID: 5520423735466313959}
+  - component: {fileID: 7344276749119060164}
   m_Layer: 5
   m_Name: OverallSlider
   m_TagString: Untagged
@@ -2285,6 +2320,22 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &7344276749119060164
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6703220836215876399}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0de6a3c9c1510054c80dd4e0ae063916, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thisSlider: {fileID: 0}
+  masterVolume: 0
+  soundVolume: 0
+  musicVolume: 0
 --- !u!1 &7059873309961516810
 GameObject:
   m_ObjectHideFlags: 0
