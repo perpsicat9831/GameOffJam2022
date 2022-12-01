@@ -12,7 +12,7 @@ namespace Logic
 
         public ulong ID;
 
-        private Fish CatchedFish;
+        private FishNetwork CatchedFish;
 
         private RoleController roleControlMono;
         public Transform FishCatcher;
@@ -132,7 +132,7 @@ namespace Logic
                     //手里的鱼回收
                     if (CatchedFish != null)
                     {
-                        CatchedFish.Recycle2Cache();
+                        CatchedFish.Recycle2Pool();
                         CatchedFish = null;
                     }
                     //goBaseRole.transform.position = RoleSpawn.position;
@@ -177,11 +177,11 @@ namespace Logic
                 {
                     for (int i = 0; i < colliderArr.Length; i++)
                     {
-                        if (colliderArr[i].gameObject.name == "Fish" || colliderArr[i].gameObject.name == "Fish(Clone)")
+                        if (colliderArr[i].gameObject.name == "fish2" || colliderArr[i].gameObject.name == "fish2(Clone)")
                         {
                             var fish = colliderArr[i].gameObject;
-                            var curFish = fish.GetComponent<FishMono>().owner;
-                            if (!curFish.IsCatched)
+                            var curFish = fish.GetComponent<FishNetwork>();
+                            if (!curFish.IsCatched.Value)
                             {
                                 CatchedFish = curFish;
                                 CatchedFish.BeCatched(FishCatcher);

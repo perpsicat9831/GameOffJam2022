@@ -4,16 +4,19 @@ using System.Collections.Generic;
 using Unity.Multiplayer.Samples.Utilities;
 using Unity.Netcode;
 using UnityEngine;
+using Unity.BossRoom.Infrastructure;
 
 namespace Logic
 {
     public class BattleCenterServerMono : NetworkBehaviour
     {
         public List<Transform> listRoleSpawn;
+        public List<Transform> listFishSpawn;
         public Transform RoleParent;
         public Transform FishesParent;
 
         public GameObject rolePrefab;
+        public GameObject fishPrefab;
 
         public List<RoleNetwork> listRole = new List<RoleNetwork>();
         private AssetBundleLoader abBaseLoader;
@@ -70,6 +73,11 @@ namespace Logic
         public void SpawnFishServerRpc()
         {
             //用network的pool
+            Transform fishSpawn = null;
+            int fishId = 0;
+            var fish = NetworkObjectPool.Singleton.GetNetworkObject(fishPrefab);
+            var fishNetwork = fish.GetComponent<FishNetwork>();
+            fishNetwork.OnCreate(fishId, fishSpawn);
         }
     }
 }
