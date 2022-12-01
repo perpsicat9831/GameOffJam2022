@@ -155,29 +155,59 @@ namespace Logic
 
         private void OnHoldFishing(float time)
         {
-            //var itemID = FishingManager.Instance.GetFishingRewardItemId(time);
-            //var itemData = CSVManager.CSVData.TbItem.GetOrDefault(itemID);
-            //if (itemData != null)
-            //{
-            //    Log.LogInfo("钓上来了 " + itemData.ItemNameCn);
-            //    if (itemData.ItemType == 2)
-            //    {
-            //        if (FishSpawn)
-            //        {
-            //            var fish = ObjectPool<Fish>.Instance.Allocate();
-            //            fish.OnCreate(FishSpawn);
-            //        }
-            //        else
-            //        {
-            //            Log.Error("找不到fishSpawn");
-            //        }
-            //    }
-            //}
-            //else
-            //{
-            //    Log.LogInfo("钓了个寂寞" + itemID);
-            //}
-            //FishingManager.Instance.Fishing(time);
+            if (IsOwner)
+            {
+                HoldFishPerform();
+                SycHoldFishing_ServerRpc(time, clientID.Value);
+            }
+        }
+
+        [ServerRpc]
+        public void SycHoldFishing_ServerRpc(float time, ulong clientID)
+        {
+
+            var itemID = FishingManager.Instance.GetFishingRewardItemId(time);
+            var itemData = CSVManager.CSVData.TbItem.GetOrDefault(itemID);
+            if (itemData != null)
+            {
+                Log.LogInfo("钓上来了 " + itemData.ItemNameCn);
+                if (itemData.ItemType == 2)
+                {
+                    //if (FishSpawn)
+                    //{
+                    //    var fish = ObjectPool<Fish>.Instance.Allocate();
+                    //    fish.OnCreate(FishSpawn);
+                    //}
+                    //else
+                    //{
+                    //    Log.Error("找不到fishSpawn");
+                    //}
+                }
+            }
+            else
+            {
+                Log.LogInfo("钓了个寂寞" + itemID);
+            }
+            FishingManager.Instance.Fishing(time);
+
+
+            //同步回客户端
+            SycHoldFishing_ClientRpc(time);
+        }
+
+        [ClientRpc]
+        public void SycHoldFishing_ClientRpc(float time)
+        {
+            if (!IsOwner)
+            {
+                //同步表现 类似UI之类的,owner不用同步是因为，本来就是它发出去的
+                HoldFishPerform();
+            }
+        }
+
+        private void HoldFishPerform()
+        {
+
         }
 
         private void OnFishCatch()
