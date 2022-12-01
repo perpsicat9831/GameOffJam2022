@@ -13,7 +13,7 @@ namespace Logic
         public NetworkVariable<int> FishId;
 
         /// <summary>
-        /// ±»×¥×¡ÁË
+        /// ï¿½ï¿½×¥×¡ï¿½ï¿½
         /// </summary>
         public NetworkVariable<bool> IsCatched;
 
@@ -31,7 +31,7 @@ namespace Logic
         {
             if (other.name == "DeadPlane")
             {
-                //ËÀÍöÂß¼­ »ØÊÕ¶ÔÏó
+                //ï¿½ï¿½ï¿½ï¿½ï¿½ß¼ï¿½ ï¿½ï¿½ï¿½Õ¶ï¿½ï¿½ï¿½
                 Recycle2Pool();
             }
         }
@@ -59,14 +59,14 @@ namespace Logic
             rig.useGravity = false;
             rig.isKinematic = true;
             meshCollider.isTrigger = true;
-            //ÖØÐÂÉèÖÃ×ø±ê
+            //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
             transform.SetParent(catchTarget);
             transform.localPosition = Vector3.zero;
             transform.localEulerAngles = new Vector3(0, 90, 0);
         }
 
         /// <summary>
-        /// ±»·ÅÏÂ
+        /// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
         /// </summary>
         public void BeLayDown(Transform layDownTarget)
         {
@@ -79,7 +79,7 @@ namespace Logic
         }
 
         /// <summary>
-        /// Ë¢ÐÂÓã²ÄÖÊ
+        /// Ë¢ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
         /// </summary>
         /// <param name="id"></param>
         public void UpdateMatrial(int fishId)

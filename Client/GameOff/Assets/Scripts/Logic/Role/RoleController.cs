@@ -22,11 +22,11 @@ namespace Logic
         private Vector2 lastSpeedDir = Vector2.zero;//��һ����Ϊ0���ٶȷ���
         private ERoleMoveState moveState = ERoleMoveState.Move;
 
-        private float baseSpeed = 5f;
-        private float Speed = 5f;
+        private float baseSpeed = 0.5f;
+        private float Speed = 0.5f;
         private float RushCD = 1f;
         private bool isRushCD = false;
-        private float RushDic = 4.5f;//��̾���
+        private float RushDic = 0.45f;//��̾���
         private Vector2 RushTarget;
 
         private float HoldTime = 0f;
