@@ -298,7 +298,7 @@
 				<GameParameter Id="4212040332" Name="Volume_UI" ObjectPath="\Game Parameters\Default Work Unit\Volume\Volume_UI"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="3991942870" Language="SFX" Hash="1656264036">
+		<SoundBank Id="3991942870" Language="SFX" Hash="869661100">
 			<ObjectPath>\SoundBanks\Default Work Unit\Music</ObjectPath>
 			<ShortName>Music</ShortName>
 			<Path>Music.bnk</Path>
@@ -391,6 +391,75 @@
 					<ActionSetState>
 						<ActionSetStateEntry Id="2607556080" Name="Menu" ObjectPath="\States\Default Work Unit\BGM\Menu"/>
 					</ActionSetState>
+				</Event>
+				<Event Id="677214064" Name="Music_RePlay" ObjectPath="\Events\Music\Music_RePlay" DurationType="Infinite">
+					<ReferencedStreamedFiles>
+						<File Id="444634103" Language="SFX">
+							<ShortName>Music\BGM_Menu_02.wav</ShortName>
+							<Path>SFX\Music\BGM_Menu_02_D79FB2B7.wem</Path>
+						</File>
+						<File Id="499520568" Language="SFX">
+							<ShortName>Music\BGM_Gameplay_02.wav</ShortName>
+							<Path>SFX\Music\BGM_Gameplay_02_D79FB2B7.wem</Path>
+						</File>
+						<File Id="606681542" Language="SFX">
+							<ShortName>Music\BGM_Gameplay_04.wav</ShortName>
+							<Path>SFX\Music\BGM_Gameplay_04_D79FB2B7.wem</Path>
+						</File>
+						<File Id="638560246" Language="SFX">
+							<ShortName>Music\BGM_Menu_01.wav</ShortName>
+							<Path>SFX\Music\BGM_Menu_01_D79FB2B7.wem</Path>
+						</File>
+						<File Id="651506634" Language="SFX">
+							<ShortName>Music\BGM_Menu_03.wav</ShortName>
+							<Path>SFX\Music\BGM_Menu_03_D79FB2B7.wem</Path>
+						</File>
+						<File Id="871653248" Language="SFX">
+							<ShortName>Music\BGM_Gameplay_03.wav</ShortName>
+							<Path>SFX\Music\BGM_Gameplay_03_D79FB2B7.wem</Path>
+						</File>
+						<File Id="938326768" Language="SFX">
+							<ShortName>Music\BGM_Gameplay_01.wav</ShortName>
+							<Path>SFX\Music\BGM_Gameplay_01_D79FB2B7.wem</Path>
+						</File>
+					</ReferencedStreamedFiles>
+					<IncludedMemoryFiles>
+						<File Id="444634103" Language="SFX">
+							<ShortName>Music\BGM_Menu_02.wav</ShortName>
+							<Path>SFX\Music\BGM_Menu_02_D79FB2B7.wem</Path>
+							<PrefetchSize>19264</PrefetchSize>
+						</File>
+						<File Id="499520568" Language="SFX">
+							<ShortName>Music\BGM_Gameplay_02.wav</ShortName>
+							<Path>SFX\Music\BGM_Gameplay_02_D79FB2B7.wem</Path>
+							<PrefetchSize>19264</PrefetchSize>
+						</File>
+						<File Id="606681542" Language="SFX">
+							<ShortName>Music\BGM_Gameplay_04.wav</ShortName>
+							<Path>SFX\Music\BGM_Gameplay_04_D79FB2B7.wem</Path>
+							<PrefetchSize>19264</PrefetchSize>
+						</File>
+						<File Id="638560246" Language="SFX">
+							<ShortName>Music\BGM_Menu_01.wav</ShortName>
+							<Path>SFX\Music\BGM_Menu_01_D79FB2B7.wem</Path>
+							<PrefetchSize>19264</PrefetchSize>
+						</File>
+						<File Id="651506634" Language="SFX">
+							<ShortName>Music\BGM_Menu_03.wav</ShortName>
+							<Path>SFX\Music\BGM_Menu_03_D79FB2B7.wem</Path>
+							<PrefetchSize>19264</PrefetchSize>
+						</File>
+						<File Id="871653248" Language="SFX">
+							<ShortName>Music\BGM_Gameplay_03.wav</ShortName>
+							<Path>SFX\Music\BGM_Gameplay_03_D79FB2B7.wem</Path>
+							<PrefetchSize>19264</PrefetchSize>
+						</File>
+						<File Id="938326768" Language="SFX">
+							<ShortName>Music\BGM_Gameplay_01.wav</ShortName>
+							<Path>SFX\Music\BGM_Gameplay_01_D79FB2B7.wem</Path>
+							<PrefetchSize>19264</PrefetchSize>
+						</File>
+					</IncludedMemoryFiles>
 				</Event>
 			</IncludedEvents>
 			<StateGroups>

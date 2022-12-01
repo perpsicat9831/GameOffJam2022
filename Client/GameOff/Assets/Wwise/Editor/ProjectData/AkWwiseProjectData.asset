@@ -403,7 +403,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 5ac087d2afb3a64e8983c9ccac58c48f
     GuidInternal: 
-    m_lastTime: -8585317123859605777
+    m_lastTime: -8585317112929737467
     List: []
   - PhysicalPath: Events\Interface.wwu
     PathAndIcons:
@@ -763,7 +763,7 @@ MonoBehaviour:
     ParentPath: Events\Music
     guid: 95f48089720f8642aeccba4b14f185e2
     GuidInternal: 
-    m_lastTime: -8585317742168514218
+    m_lastTime: -8585316918326898712
     List:
     - name: Music_Play
       guid: d1821400aaacd748a0364d1529862b69
@@ -779,6 +779,23 @@ MonoBehaviour:
         ObjectType: 3
         guid: d1821400aaacd748a0364d1529862b69
       Path: Events\Music\Music_Play
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Music_RePlay
+      guid: 26a5bda2f884654eb0708b97a294a763
+      id: 677214064
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Music
+        ObjectType: 12
+        guid: 95f48089720f8642aeccba4b14f185e2
+      - ElementName: Music_RePlay
+        ObjectType: 3
+        guid: 26a5bda2f884654eb0708b97a294a763
+      Path: Events\Music\Music_RePlay
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -806,8 +823,42 @@ MonoBehaviour:
     ParentPath: Events\Player
     guid: c72524b77b0b7d4a8e03f2574a7e1afa
     GuidInternal: 
-    m_lastTime: -8585342961117783426
-    List: []
+    m_lastTime: -8585317112929587334
+    List:
+    - name: Player_Ram
+      guid: 3a215a0b087010418e5a878789ce7281
+      id: 1337349819
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Player
+        ObjectType: 12
+        guid: c72524b77b0b7d4a8e03f2574a7e1afa
+      - ElementName: Player_Ram
+        ObjectType: 3
+        guid: 3a215a0b087010418e5a878789ce7281
+      Path: Events\Player\Player_Ram
+      maxAttenuation: 0
+      maxDuration: 2.006208
+      minDuration: 1.777521
+    - name: Player_Ram_Imp
+      guid: 0c9a1d64016c1a44af41fa29137e8861
+      id: 2062180764
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Player
+        ObjectType: 12
+        guid: c72524b77b0b7d4a8e03f2574a7e1afa
+      - ElementName: Player_Ram_Imp
+        ObjectType: 3
+        guid: 0c9a1d64016c1a44af41fa29137e8861
+      Path: Events\Player\Player_Ram_Imp
+      maxAttenuation: 0
+      maxDuration: 0.716062
+      minDuration: 0.625083
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     PathAndIcons:

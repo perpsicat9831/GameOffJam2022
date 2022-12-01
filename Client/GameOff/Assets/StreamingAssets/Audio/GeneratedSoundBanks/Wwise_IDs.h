@@ -18,6 +18,7 @@ namespace AK
         static const AkUniqueID AMBIENCE_LAKE_FISHDROP = 1326028445U;
         static const AkUniqueID AMBIENCE_LAKE_PLAYERFALL = 686852632U;
         static const AkUniqueID MUSIC_PLAY = 202194903U;
+        static const AkUniqueID MUSIC_REPLAY = 677214064U;
         static const AkUniqueID PLAYER_RAM = 1337349819U;
         static const AkUniqueID PLAYER_RAM_IMP = 2062180764U;
         static const AkUniqueID UI_BUTTON_CLICK_NEG = 1020395736U;

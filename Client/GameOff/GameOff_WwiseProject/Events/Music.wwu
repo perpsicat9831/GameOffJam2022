@@ -35,6 +35,28 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Music_RePlay" ID="{A2BDA526-84F8-4E65-B070-8B97A294A763}">
+					<ChildrenList>
+						<Action Name="" ID="{933AEA4A-A3EA-4DFC-926D-02CB94968852}" ShortID="895122307">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Music" ID="{E92BF4E2-B28F-46BA-9668-0FDC6549061E}" WorkUnitID="{88AA5FC4-8EE0-44DD-810C-0218BEC8AD7E}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{77195281-6472-4EC9-A515-CC6C443DA5CB}" ShortID="364235704">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Music" ID="{E92BF4E2-B28F-46BA-9668-0FDC6549061E}" WorkUnitID="{88AA5FC4-8EE0-44DD-810C-0218BEC8AD7E}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
