@@ -39,6 +39,7 @@ namespace Logic
         private Action actRoleDead;
         private Action<float> actHoldFishing;
         private Action actCatchFish;
+
         private void Awake()
         {
             selfTrans = transform;

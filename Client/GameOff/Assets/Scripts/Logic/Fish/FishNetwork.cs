@@ -36,11 +36,11 @@ namespace Logic
             }
         }
 
-        public void OnCreate(int id, Transform pos)
+        public void OnCreate(int id)
         {
             FishId.Value = id;
-            transform.SetParent(FishingManager.Instance.FishParent);
-            transform.position = pos.position;
+            //transform.SetParent(FishingManager.Instance.FishParent);
+            //transform.position = pos.position;
             meshCollider.isTrigger = false;
             rig.isKinematic = false;
             rig.useGravity = true;

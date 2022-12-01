@@ -48,9 +48,10 @@ namespace Logic
             var roleNet = goBaseRole.GetComponent<RoleNetwork>();
             listRole.Add(roleNet);
             roleNet.SetClientID(clientID);
+            roleNet.fishSpawn = listFishSpawn[index];
+            roleNet.goFishPrefab = fishPrefab;
             networkObject.Spawn();
             networkObject.ChangeOwnership(clientID);
-
 
 
         }
@@ -72,12 +73,10 @@ namespace Logic
         [ServerRpc]
         public void SpawnFishServerRpc()
         {
-            //用network的pool
-            Transform fishSpawn = null;
             int fishId = 0;
             var fish = NetworkObjectPool.Singleton.GetNetworkObject(fishPrefab);
             var fishNetwork = fish.GetComponent<FishNetwork>();
-            fishNetwork.OnCreate(fishId, fishSpawn);
+            fishNetwork.OnCreate(fishId);
         }
     }
 }

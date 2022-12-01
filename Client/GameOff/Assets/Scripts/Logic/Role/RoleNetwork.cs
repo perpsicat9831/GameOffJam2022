@@ -1,6 +1,7 @@
 ﻿using Framework;
 using System;
 using System.Collections;
+using Unity.BossRoom.Infrastructure;
 using Unity.Netcode;
 using UnityEngine;
 
@@ -33,6 +34,9 @@ namespace Logic
 
         public bool isInit;
         public bool hasSetCam;
+
+        public Transform fishSpawn;
+        public GameObject goFishPrefab;
 
         private void Awake()
         {
@@ -173,24 +177,20 @@ namespace Logic
                 Log.LogInfo("钓上来了 " + itemData.ItemNameCn);
                 if (itemData.ItemType == 2)
                 {
-                    //if (FishSpawn)
-                    //{
-                    //    var fish = ObjectPool<Fish>.Instance.Allocate();
-                    //    fish.OnCreate(FishSpawn);
-                    //}
-                    //else
-                    //{
-                    //    Log.Error("找不到fishSpawn");
-                    //}
+                    var fish = NetworkObjectPool.Singleton.GetNetworkObject(goFishPrefab);
+                    var networkObject = fish.GetComponent<NetworkObject>();
+                    networkObject.transform.SetParent(FishingManager.Instance.FishParent);
+                    networkObject.transform.position = fishSpawn.position;
+                    networkObject.transform.rotation = fishSpawn.rotation;
+                    networkObject.Spawn();
+                    var fishNetwork = fish.GetComponent<FishNetwork>();
+                    fishNetwork.OnCreate(itemID);
                 }
             }
             else
             {
                 Log.LogInfo("钓了个寂寞" + itemID);
             }
-            FishingManager.Instance.Fishing(time);
-
-
             //同步回客户端
             SycHoldFishing_ClientRpc(time);
         }
