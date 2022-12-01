@@ -666,9 +666,11 @@ MonoBehaviour:
   - {fileID: 893161144}
   - {fileID: 405009786}
   - {fileID: 219909000}
+  listFishSpawn: []
   RoleParent: {fileID: 1991731422}
   FishesParent: {fileID: 1111308897}
   rolePrefab: {fileID: 9174451158159178831, guid: d6fc5af086ed78245ace15a26fb807bf, type: 3}
+  fishPrefab: {fileID: 0}
   listRole: []
   vCamera: {fileID: 19534462}
   PoolParent: {fileID: 0}

@@ -18,8 +18,8 @@ namespace Logic
 
         private Transform selfTrans;
         private Rigidbody rig;
-        private Vector2 speedDir = Vector2.one;//�ٶȷ���
-        private Vector2 lastSpeedDir = Vector2.one;//��һ����Ϊ0���ٶȷ���
+        private Vector2 speedDir = Vector2.zero;//�ٶȷ���
+        private Vector2 lastSpeedDir = Vector2.zero;//��һ����Ϊ0���ٶȷ���
         private ERoleMoveState moveState = ERoleMoveState.Move;
 
         private float baseSpeed = 5f;
@@ -59,7 +59,7 @@ namespace Logic
         {
             if (!role.isInit)
                 return;
-            if (IsClient && role.IsOwner )
+            if (role.IsOwner)
             {
                 if (moveState == ERoleMoveState.Move)
                 {

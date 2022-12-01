@@ -75,7 +75,7 @@ namespace Unity.BossRoom.Utils
             // Since only a single instance of the Editor can be open for a specific
             // dataPath, uniqueness is ensured.
             var hashedBytes = new MD5CryptoServiceProvider()
-                .ComputeHash(Encoding.UTF8.GetBytes(Application.dataPath+DateTime.Now.ToString()));
+                .ComputeHash(Encoding.UTF8.GetBytes(Application.dataPath+DateTime.Now.Millisecond.ToString()));
             Array.Resize(ref hashedBytes, 16);
             return new Guid(hashedBytes).ToString("N");
 #else

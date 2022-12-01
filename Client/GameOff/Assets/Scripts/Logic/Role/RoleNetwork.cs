@@ -32,6 +32,7 @@ namespace Logic
         public GameObject modelPrefab;
 
         public bool isInit;
+        public bool hasSetCam;
 
         private void Awake()
         {
@@ -54,73 +55,85 @@ namespace Logic
             roleControlMono.RegisterRoleDeadEvent(OnRoleDead);
             roleControlMono.RegisterHoldFishing(OnHoldFishing);
             roleControlMono.RegisterCatchFishEvent(OnFishCatch);
-            //if (IsClient && IsOwner)
-            //{
-            //    Debug.Log("isSelf");
-            //    OnRoleCreatedClient();
-            //    OnGainedOwnership();
-            //    CreateRolePrefab();
-            //}
-            //if(IsServer)
-            //    CreateRolePrefab();
+            if (!isInit && IsServer)
+            {
+                Debug.Log("isSelf  " + clientID);
+                
+                isInit = true;
+            }
         }
 
         private void Update()
         {
-            if (!isInit)
+            if (isInit)
             {
                 if (IsOwner)
                 {
-                    Debug.Log("isSelf");
-                    OnRoleCreatedClient();
-                    OnGainedOwnership();
-                    CreateRolePrefab();
-                    isInit = true;
+                    SycTransformPos_ServerRpc(transform.position,clientID.Value);
+                    TrySetCamera();
                 }
             }
+
+            
         }
+
+
+        public override void OnGainedOwnership()
+        {
+            Debug.Log("GainOwner");
+            if (!isInit && IsOwner&&!IsServer)
+            {
+                isInit = true;
+            }
+            base.OnGainedOwnership();
+        }
+
+        public void TrySetCamera()
+        {
+            if (!isInit)
+                return;
+            if (hasSetCam)
+                return;
+            var camera = Camera.main.GetComponent<Cinemachine.CinemachineBrain>();
+            if (camera == null)
+                return;
+            if (camera.ActiveVirtualCamera == null)
+                return;
+            camera.ActiveVirtualCamera.Follow = followTarget;
+            hasSetCam = true;
+
+        }
+
+
         //[ServerRpc]
-        //public void SycClientID_ServerRpc(ulong clientID)
+        //public void SycCam_ServerRpc(ulong clientID)
         //{
-        //    if (this.clientID.Value == clientID)
-        //    {
-        //        SycClientID_ClientRpc(clientID);
-        //    }
+        //    SycTransformPos_ClientRpc(pos, clientID);
         //}
 
         //[ClientRpc]
-        //public void SycClientID_ClientRpc(ulong clientID)
+        //public void SycCam_ClientRpc(Vector3 pos, ulong clientID)
         //{
-        //    if (NetworkManager.Singleton.LocalClientId == clientID)
+        //    if (!IsOwner && clientID == this.clientID.Value)
         //    {
-        //        ID = clientID;
-        //    }
-        //}
-        //public void SycClientID(ulong old, ulong newValue)
-        //{
-        //    if (IsClient)
-        //    {
-        //        if (clientID.Value == NetworkManager.Singleton.LocalClientId)
-        //        {
-        //            Debug.Log("isSelf");
-        //            OnRoleCreatedClient();
-        //            OnGainedOwnership();
-        //            CreateRolePrefab();
-        //        }
+        //        transform.position = pos;
         //    }
         //}
 
-        private void OnRoleCreatedClient()
+
+        [ServerRpc]
+        public void SycTransformPos_ServerRpc(Vector3 pos,ulong clientID)
         {
-            BattleCenterServerMono.Instance.vCamera.Follow = followTarget;
+            SycTransformPos_ClientRpc(pos, clientID);
         }
 
-        private void CreateRolePrefab()
+        [ClientRpc]
+        public void SycTransformPos_ClientRpc(Vector3 pos,ulong clientID)
         {
-            //goRole = GameObject.Instantiate(modelPrefab);
-            //var networkObject = goRole.GetComponent<NetworkObject>();
-            //networkObject.Spawn();
-            //networkObject.TrySetParent(transform);
+            if (!IsOwner&& clientID==this.clientID.Value)
+            {
+                transform.position = pos;
+            }
         }
 
         private void OnRoleDead()

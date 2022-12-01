@@ -25,14 +25,6 @@ namespace Logic
         private string abBasePrefabName = "Role";
         private RoleController roleControlMono;
 
-        public static BattleCenterServerMono Instance;
-
-        [SerializeField]
-        public Cinemachine.CinemachineVirtualCamera vCamera;
-        private void Awake()
-        {
-            Instance = this;
-        }
 
         public void SpawnRoles()
         {
@@ -60,13 +52,21 @@ namespace Logic
             networkObject.ChangeOwnership(clientID);
 
 
+
         }
         public Transform PoolParent;
         void Start()
         {
+            
+            
+        }
+
+        public override void OnNetworkSpawn()
+        {
             FishingManager.Instance.FishParent = FishesParent;
             FishingManager.Instance.UnUseFishParent = PoolParent;
             SpawnRoles();
+            base.OnNetworkSpawn();
         }
 
         [ServerRpc]

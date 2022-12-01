@@ -141,7 +141,7 @@ namespace Unity.BossRoom.Gameplay.GameState
         {
             yield return new WaitForSeconds(3);
             //SceneLoaderWrapper.Instance.LoadScene("BossRoom", useNetworkSceneManager: true);
-            SceneLoaderWrapper.Instance.LoadScene("BattleScene", useNetworkSceneManager: true);
+            SceneLoaderWrapper.Instance.LoadScene("BattleScene_Temp", useNetworkSceneManager: true);
         }
             
         public void OnNetworkDespawn()

@@ -1023,8 +1023,12 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 5436007408952557924, guid: 8f5ddd70561bc0b42bbbe5a8a155bb7b, type: 3}
+      propertyPath: NetworkConfig.PlayerPrefab
+      value: 
+      objectReference: {fileID: 8681268019616186390, guid: 7214b18d231590f4998ee7acf8cb39a1, type: 3}
+    - target: {fileID: 5436007408952557924, guid: 8f5ddd70561bc0b42bbbe5a8a155bb7b, type: 3}
       propertyPath: NetworkConfig.NetworkPrefabs.Array.size
-      value: 2
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5436007408952557924, guid: 8f5ddd70561bc0b42bbbe5a8a155bb7b, type: 3}
       propertyPath: NetworkConfig.NetworkPrefabs.Array.data[0].Prefab
@@ -1037,15 +1041,15 @@ PrefabInstance:
     - target: {fileID: 5436007408952557924, guid: 8f5ddd70561bc0b42bbbe5a8a155bb7b, type: 3}
       propertyPath: NetworkConfig.NetworkPrefabs.Array.data[2].Prefab
       value: 
-      objectReference: {fileID: 3855973432530229560, guid: 37e67ffcb7f5c3f4285485dfa3c9873a, type: 3}
+      objectReference: {fileID: 6527377674031677865, guid: 85a3fca00c2d9da44b1f404496e8f98b, type: 3}
     - target: {fileID: 5436007408952557924, guid: 8f5ddd70561bc0b42bbbe5a8a155bb7b, type: 3}
       propertyPath: NetworkConfig.NetworkPrefabs.Array.data[3].Prefab
       value: 
-      objectReference: {fileID: 3855973432530229560, guid: 37e67ffcb7f5c3f4285485dfa3c9873a, type: 3}
+      objectReference: {fileID: 498681743168295298, guid: 3939146ea39748c4db091409d111223e, type: 3}
     - target: {fileID: 5436007408952557924, guid: 8f5ddd70561bc0b42bbbe5a8a155bb7b, type: 3}
       propertyPath: NetworkConfig.NetworkPrefabs.Array.data[4].Prefab
       value: 
-      objectReference: {fileID: 3855973432530229560, guid: 37e67ffcb7f5c3f4285485dfa3c9873a, type: 3}
+      objectReference: {fileID: 8681268019616186390, guid: 7214b18d231590f4998ee7acf8cb39a1, type: 3}
     - target: {fileID: 5436007408952557924, guid: 8f5ddd70561bc0b42bbbe5a8a155bb7b, type: 3}
       propertyPath: NetworkConfig.NetworkPrefabs.Array.data[5].Prefab
       value: 
