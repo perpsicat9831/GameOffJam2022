@@ -1,0 +1,12 @@
+Event	ID	Name			Wwise Object Path	Notes
+	1337349819	Player_Ram			\Player\Player_Ram	
+	2062180764	Player_Ram_Imp			\Player\Player_Ram_Imp	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	250378078	Player_Ram_02	E:\UnityProjects\Newbies2022\GameOffJam2022\Client\GameOff\GameOff_WwiseProject\.cache\Mac\SFX\Player\Player_Ram_02_10C4C929.wem		\Actor-Mixer Hierarchy\Player\Player\Player_Ram\Player_Ram_02		170706
+	328318004	Player_Ram_Imp_03	E:\UnityProjects\Newbies2022\GameOffJam2022\Client\GameOff\GameOff_WwiseProject\.cache\Mac\SFX\Player\Player_Ram_Imp_03_10C4C929.wem		\Actor-Mixer Hierarchy\Player\Player\Player_Ram_Imp\Player_Ram_Imp_03		60072
+	612198336	Player_Ram_01	E:\UnityProjects\Newbies2022\GameOffJam2022\Client\GameOff\GameOff_WwiseProject\.cache\Mac\SFX\Player\Player_Ram_01_10C4C929.wem		\Actor-Mixer Hierarchy\Player\Player\Player_Ram\Player_Ram_01		192660
+	625835563	Player_Ram_Imp_01	E:\UnityProjects\Newbies2022\GameOffJam2022\Client\GameOff\GameOff_WwiseProject\.cache\Mac\SFX\Player\Player_Ram_Imp_01_10C4C929.wem		\Actor-Mixer Hierarchy\Player\Player\Player_Ram_Imp\Player_Ram_Imp_01		68806
+	682669627	Player_Ram_03	E:\UnityProjects\Newbies2022\GameOffJam2022\Client\GameOff\GameOff_WwiseProject\.cache\Mac\SFX\Player\Player_Ram_03_10C4C929.wem		\Actor-Mixer Hierarchy\Player\Player\Player_Ram\Player_Ram_03		184102
+	951302679	Player_Ram_Imp_02	E:\UnityProjects\Newbies2022\GameOffJam2022\Client\GameOff\GameOff_WwiseProject\.cache\Mac\SFX\Player\Player_Ram_Imp_02_10C4C929.wem		\Actor-Mixer Hierarchy\Player\Player\Player_Ram_Imp\Player_Ram_Imp_02		68158
+

@@ -1,14 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="12" SoundbankVersion="140">
 	<RootPaths>
-		<ProjectRoot>F:\GitHubProjects\GameOffJam2022\Client\GameOff\GameOff_WwiseProject\</ProjectRoot>
-		<SourceFilesRoot>F:\GitHubProjects\GameOffJam2022\Client\GameOff\GameOff_WwiseProject\.cache\Windows\</SourceFilesRoot>
-		<SoundBanksRoot>F:\GitHubProjects\GameOffJam2022\Client\GameOff\GameOff_WwiseProject\GeneratedSoundBanks\Windows\</SoundBanksRoot>
+		<ProjectRoot>E:\UnityProjects\Newbies2022\GameOffJam2022\Client\GameOff\GameOff_WwiseProject\</ProjectRoot>
+		<SourceFilesRoot>E:\UnityProjects\Newbies2022\GameOffJam2022\Client\GameOff\GameOff_WwiseProject\.cache\Windows\</SourceFilesRoot>
+		<SoundBanksRoot>E:\UnityProjects\Newbies2022\GameOffJam2022\Client\GameOff\GameOff_WwiseProject\GeneratedSoundBanks\Windows\</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>F:\GitHubProjects\GameOffJam2022\Client\GameOff\GameOff_WwiseProject\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>E:\UnityProjects\Newbies2022\GameOffJam2022\Client\GameOff\GameOff_WwiseProject\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<StreamedFiles>
+		<File Id="278185751" Language="SFX">
+			<ShortName>Ambience\Ambience_Lake.wav</ShortName>
+			<Path>SFX\Ambience\Ambience_Lake_D79FB2B7.wem</Path>
+		</File>
 		<File Id="444634103" Language="SFX">
 			<ShortName>Music\BGM_Menu_02.wav</ShortName>
 			<Path>SFX\Music\BGM_Menu_02_D79FB2B7.wem</Path>
@@ -40,22 +44,114 @@
 	</StreamedFiles>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="85412153" Language="SFX" Hash="2564553725">
+		<SoundBank Id="85412153" Language="SFX" Hash="2020468228">
 			<ObjectPath>\SoundBanks\Default Work Unit\Ambience</ObjectPath>
 			<ShortName>Ambience</ShortName>
 			<Path>Ambience.bnk</Path>
+			<IncludedEvents>
+				<Event Id="2480631109" Name="Ambience_Ground_Fishdrop" ObjectPath="\Events\Ambience\Amb_3D\Ambience_Ground_Fishdrop" DurationType="OneShot" DurationMin="0.455458" DurationMax="0.795625">
+					<IncludedMemoryFiles>
+						<File Id="622413733" Language="SFX">
+							<ShortName>Ambience\Ambience_Ground_Fishdrop_01.wav</ShortName>
+							<Path>SFX\Ambience\Ambience_Ground_Fishdrop_01_10C4C929.wem</Path>
+						</File>
+						<File Id="685187306" Language="SFX">
+							<ShortName>Ambience\Ambience_Ground_Fishdrop_02.wav</ShortName>
+							<Path>SFX\Ambience\Ambience_Ground_Fishdrop_02_10C4C929.wem</Path>
+						</File>
+						<File Id="832665061" Language="SFX">
+							<ShortName>Ambience\Ambience_Ground_Fishdrop_03.wav</ShortName>
+							<Path>SFX\Ambience\Ambience_Ground_Fishdrop_03_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2314053613" Name="Ambience_Lake" ObjectPath="\Events\Ambience\Amb_3D\Ambience_Lake" DurationType="Infinite">
+					<ReferencedStreamedFiles>
+						<File Id="278185751" Language="SFX">
+							<ShortName>Ambience\Ambience_Lake.wav</ShortName>
+							<Path>SFX\Ambience\Ambience_Lake_D79FB2B7.wem</Path>
+						</File>
+					</ReferencedStreamedFiles>
+				</Event>
+				<Event Id="1326028445" Name="Ambience_Lake_Fishdrop" ObjectPath="\Events\Ambience\Amb_3D\Ambience_Lake_Fishdrop" DurationType="OneShot" DurationMin="1.875854" DurationMax="2.037208">
+					<IncludedMemoryFiles>
+						<File Id="729976483" Language="SFX">
+							<ShortName>Ambience\Ambience_Lake_Fishdrop_03.wav</ShortName>
+							<Path>SFX\Ambience\Ambience_Lake_Fishdrop_03_10C4C929.wem</Path>
+						</File>
+						<File Id="746461817" Language="SFX">
+							<ShortName>Ambience\Ambience_Lake_Fishdrop_02.wav</ShortName>
+							<Path>SFX\Ambience\Ambience_Lake_Fishdrop_02_10C4C929.wem</Path>
+						</File>
+						<File Id="773415116" Language="SFX">
+							<ShortName>Ambience\Ambience_Lake_Fishdrop_01.wav</ShortName>
+							<Path>SFX\Ambience\Ambience_Lake_Fishdrop_01_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="686852632" Name="Ambience_Lake_Playerfall" ObjectPath="\Events\Ambience\Amb_3D\Ambience_Lake_Playerfall" DurationType="OneShot" DurationMin="2.275271" DurationMax="3.333333">
+					<IncludedMemoryFiles>
+						<File Id="346385774" Language="SFX">
+							<ShortName>Ambience\Ambience_Lake_Playerfall_01.wav</ShortName>
+							<Path>SFX\Ambience\Ambience_Lake_Playerfall_01_10C4C929.wem</Path>
+						</File>
+						<File Id="453920644" Language="SFX">
+							<ShortName>Ambience\Ambience_Lake_Playerfall_02.wav</ShortName>
+							<Path>SFX\Ambience\Ambience_Lake_Playerfall_02_10C4C929.wem</Path>
+						</File>
+						<File Id="459922195" Language="SFX">
+							<ShortName>Ambience\Ambience_Lake_Playerfall_03.wav</ShortName>
+							<Path>SFX\Ambience\Ambience_Lake_Playerfall_03_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+			</IncludedEvents>
 		</SoundBank>
 		<SoundBank Id="662417162" Language="SFX" Hash="1155370330">
 			<ObjectPath>\SoundBanks\Default Work Unit\NPC</ObjectPath>
 			<ShortName>NPC</ShortName>
 			<Path>NPC.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="1069431850" Language="SFX" Hash="2983729342">
+		<SoundBank Id="1069431850" Language="SFX" Hash="2733999881">
 			<ObjectPath>\SoundBanks\Default Work Unit\Player</ObjectPath>
 			<ShortName>Player</ShortName>
 			<Path>Player.bnk</Path>
+			<IncludedEvents>
+				<Event Id="1337349819" Name="Player_Ram" ObjectPath="\Events\Player\Player_Ram" DurationType="OneShot" DurationMin="1.777521" DurationMax="2.006208">
+					<IncludedMemoryFiles>
+						<File Id="250378078" Language="SFX">
+							<ShortName>Player\Player_Ram_02.wav</ShortName>
+							<Path>SFX\Player\Player_Ram_02_10C4C929.wem</Path>
+						</File>
+						<File Id="612198336" Language="SFX">
+							<ShortName>Player\Player_Ram_01.wav</ShortName>
+							<Path>SFX\Player\Player_Ram_01_10C4C929.wem</Path>
+						</File>
+						<File Id="682669627" Language="SFX">
+							<ShortName>Player\Player_Ram_03.wav</ShortName>
+							<Path>SFX\Player\Player_Ram_03_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2062180764" Name="Player_Ram_Imp" ObjectPath="\Events\Player\Player_Ram_Imp" DurationType="OneShot" DurationMin="0.625083" DurationMax="0.716062">
+					<IncludedMemoryFiles>
+						<File Id="328318004" Language="SFX">
+							<ShortName>Player\Player_Ram_Imp_03.wav</ShortName>
+							<Path>SFX\Player\Player_Ram_Imp_03_10C4C929.wem</Path>
+						</File>
+						<File Id="625835563" Language="SFX">
+							<ShortName>Player\Player_Ram_Imp_01.wav</ShortName>
+							<Path>SFX\Player\Player_Ram_Imp_01_10C4C929.wem</Path>
+						</File>
+						<File Id="951302679" Language="SFX">
+							<ShortName>Player\Player_Ram_Imp_02.wav</ShortName>
+							<Path>SFX\Player\Player_Ram_Imp_02_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+			</IncludedEvents>
 		</SoundBank>
-		<SoundBank Id="1088520938" Language="SFX" Hash="3018933297">
+		<SoundBank Id="1088520938" Language="SFX" Hash="576396716">
 			<ObjectPath>\SoundBanks\Default Work Unit\Interface</ObjectPath>
 			<ShortName>Interface</ShortName>
 			<Path>Interface.bnk</Path>
@@ -116,6 +212,78 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
+				<Event Id="3315380374" Name="UI_Fishing_End" ObjectPath="\Events\Interface\Ingame\UI_Fishing_End" DurationType="OneShot" DurationMin="0.943042" DurationMax="0.943042">
+					<IncludedMemoryFiles>
+						<File Id="900285519" Language="SFX">
+							<ShortName>Interface\UI_Fishing_End.wav</ShortName>
+							<Path>SFX\Interface\UI_Fishing_End_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2557893665" Name="UI_Fishing_Loop" ObjectPath="\Events\Interface\Ingame\UI_Fishing_Loop" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="380411335" Language="SFX">
+							<ShortName>Interface\UI_Fishing_Loop.wav</ShortName>
+							<Path>SFX\Interface\UI_Fishing_Loop_D79FB2B7.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3769850483" Name="UI_Fishing_N" ObjectPath="\Events\Interface\Ingame\UI_Fishing_N" DurationType="OneShot" DurationMin="1.31825" DurationMax="1.31825">
+					<IncludedMemoryFiles>
+						<File Id="61417929" Language="SFX">
+							<ShortName>Interface\UI_Fishing_N.wav</ShortName>
+							<Path>SFX\Interface\UI_Fishing_N_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3984763919" Name="UI_Fishing_PhB" ObjectPath="\Events\Interface\Ingame\UI_Fishing_PhB" DurationType="OneShot" DurationMin="1.989542" DurationMax="1.989542">
+					<IncludedMemoryFiles>
+						<File Id="133052411" Language="SFX">
+							<ShortName>Interface\UI_Fishing_PhB.wav</ShortName>
+							<Path>SFX\Interface\UI_Fishing_PhB_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3984763918" Name="UI_Fishing_PhC" ObjectPath="\Events\Interface\Ingame\UI_Fishing_PhC" DurationType="OneShot" DurationMin="2.120854" DurationMax="2.120854">
+					<IncludedMemoryFiles>
+						<File Id="554549089" Language="SFX">
+							<ShortName>Interface\UI_Fishing_PhC.wav</ShortName>
+							<Path>SFX\Interface\UI_Fishing_PhC_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3769850479" Name="UI_Fishing_R" ObjectPath="\Events\Interface\Ingame\UI_Fishing_R" DurationType="OneShot" DurationMin="1.580542" DurationMax="1.580542">
+					<IncludedMemoryFiles>
+						<File Id="1036593607" Language="SFX">
+							<ShortName>Interface\UI_Fishing_R.wav</ShortName>
+							<Path>SFX\Interface\UI_Fishing_R_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3769850478" Name="UI_Fishing_S" ObjectPath="\Events\Interface\Ingame\UI_Fishing_S" DurationType="OneShot" DurationMin="1.578208" DurationMax="1.578208">
+					<IncludedMemoryFiles>
+						<File Id="259399527" Language="SFX">
+							<ShortName>Interface\UI_Fishing_S.wav</ShortName>
+							<Path>SFX\Interface\UI_Fishing_S_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="402900349" Name="UI_Fishing_Start" ObjectPath="\Events\Interface\Ingame\UI_Fishing_Start" DurationType="OneShot" DurationMin="1.143188" DurationMax="2.">
+					<IncludedMemoryFiles>
+						<File Id="63628660" Language="SFX">
+							<ShortName>Interface\UI_Fishing_Start_03.wav</ShortName>
+							<Path>SFX\Interface\UI_Fishing_Start_03_10C4C929.wem</Path>
+						</File>
+						<File Id="333364801" Language="SFX">
+							<ShortName>Interface\UI_Fishing_Start_02.wav</ShortName>
+							<Path>SFX\Interface\UI_Fishing_Start_02_10C4C929.wem</Path>
+						</File>
+						<File Id="724777296" Language="SFX">
+							<ShortName>Interface\UI_Fishing_Start_01.wav</ShortName>
+							<Path>SFX\Interface\UI_Fishing_Start_01_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 			</IncludedEvents>
 		</SoundBank>
 		<SoundBank Id="1355168291" Language="SFX" Hash="3283196606">
@@ -130,7 +298,7 @@
 				<GameParameter Id="4212040332" Name="Volume_UI" ObjectPath="\Game Parameters\Default Work Unit\Volume\Volume_UI"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="3991942870" Language="SFX" Hash="4216832025">
+		<SoundBank Id="3991942870" Language="SFX" Hash="1656264036">
 			<ObjectPath>\SoundBanks\Default Work Unit\Music</ObjectPath>
 			<ShortName>Music</ShortName>
 			<Path>Music.bnk</Path>

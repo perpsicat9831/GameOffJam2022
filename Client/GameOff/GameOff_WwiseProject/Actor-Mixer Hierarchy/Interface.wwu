@@ -178,6 +178,282 @@
 								</Sound>
 							</ChildrenList>
 						</Folder>
+						<Folder Name="Ingame" ID="{39BA6078-5638-4C8B-982B-D5608A67AF62}" ShortID="113814652">
+							<ChildrenList>
+								<Sound Name="UI_Fishing_End" ID="{E75A8E7E-582B-4875-B8FF-3AF82FA7E3EC}" ShortID="783972215">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E1BE0BEA-3F5B-4A86-8597-3688E3CF6288}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{881B6AFD-C15B-45D7-9A90-5260F7D4E557}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="UI_Fishing_End" ID="{41BF0C11-5FAE-43C2-8DE6-F4FD2E1455C3}">
+											<Language>SFX</Language>
+											<AudioFile>Interface\UI_Fishing_End.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="900285519"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="UI_Fishing_End" ID="{41BF0C11-5FAE-43C2-8DE6-F4FD2E1455C3}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="UI_Fishing_Loop" ID="{93C66922-9E95-49B5-A978-6900EE55C66A}" ShortID="684915399">
+									<PropertyList>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-6</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E1BE0BEA-3F5B-4A86-8597-3688E3CF6288}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{881B6AFD-C15B-45D7-9A90-5260F7D4E557}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="UI_Fishing_Loop" ID="{3F3EA339-EF4C-4D4B-9545-A9224871EF4D}">
+											<Language>SFX</Language>
+											<AudioFile>Interface\UI_Fishing_Loop.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="380411335"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="UI_Fishing_Loop" ID="{3F3EA339-EF4C-4D4B-9545-A9224871EF4D}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="UI_Fishing_N" ID="{AAD61066-5399-4F60-A0C0-3533AA0F1334}" ShortID="810247032">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-3</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E1BE0BEA-3F5B-4A86-8597-3688E3CF6288}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{881B6AFD-C15B-45D7-9A90-5260F7D4E557}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="UI_Fishing_N" ID="{DC71389A-1717-4F53-950A-ABBB5AE19589}">
+											<Language>SFX</Language>
+											<AudioFile>Interface\UI_Fishing_N.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="61417929"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="UI_Fishing_N" ID="{DC71389A-1717-4F53-950A-ABBB5AE19589}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="UI_Fishing_PhB" ID="{B887A808-0645-4CF2-BBBC-614E96F4500C}" ShortID="872831907">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E1BE0BEA-3F5B-4A86-8597-3688E3CF6288}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{881B6AFD-C15B-45D7-9A90-5260F7D4E557}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="UI_Fishing_PhB" ID="{DC814E02-CA0F-4551-9938-5ED0BBCDDCAE}">
+											<Language>SFX</Language>
+											<AudioFile>Interface\UI_Fishing_PhB.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="133052411"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="UI_Fishing_PhB" ID="{DC814E02-CA0F-4551-9938-5ED0BBCDDCAE}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="UI_Fishing_PhC" ID="{113E7E1F-8FC6-423D-8018-BC73B445D3B9}" ShortID="876060139">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E1BE0BEA-3F5B-4A86-8597-3688E3CF6288}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{881B6AFD-C15B-45D7-9A90-5260F7D4E557}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="UI_Fishing_PhC" ID="{4B54EC19-F296-464F-A460-A78341EE8481}">
+											<Language>SFX</Language>
+											<AudioFile>Interface\UI_Fishing_PhC.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="554549089"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="UI_Fishing_PhC" ID="{4B54EC19-F296-464F-A460-A78341EE8481}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="UI_Fishing_R" ID="{AC15AFA4-9225-433F-8530-1722F979AFA9}" ShortID="669373554">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-3</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E1BE0BEA-3F5B-4A86-8597-3688E3CF6288}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{881B6AFD-C15B-45D7-9A90-5260F7D4E557}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="UI_Fishing_R" ID="{C10789F5-21F2-4160-910D-3738472E5922}">
+											<Language>SFX</Language>
+											<AudioFile>Interface\UI_Fishing_R.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="1036593607"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="UI_Fishing_R" ID="{C10789F5-21F2-4160-910D-3738472E5922}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="UI_Fishing_S" ID="{398D99B1-9C00-4C15-A338-0D8536D80A73}" ShortID="1043626407">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-2</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E1BE0BEA-3F5B-4A86-8597-3688E3CF6288}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{881B6AFD-C15B-45D7-9A90-5260F7D4E557}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="UI_Fishing_S" ID="{3E15FA14-5F5F-49C1-B530-969351125AAC}">
+											<Language>SFX</Language>
+											<AudioFile>Interface\UI_Fishing_S.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="259399527"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="UI_Fishing_S" ID="{3E15FA14-5F5F-49C1-B530-969351125AAC}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<RandomSequenceContainer Name="UI_Fishing_Start" ID="{E5D7A935-5F1B-4A3E-AE35-4DD5913845C9}" ShortID="993994271">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E1BE0BEA-3F5B-4A86-8597-3688E3CF6288}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{881B6AFD-C15B-45D7-9A90-5260F7D4E557}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="UI_Fishing_Start_01" ID="{4DDD60A4-7498-408F-93F3-10C0E5966440}" ShortID="736323058">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E1BE0BEA-3F5B-4A86-8597-3688E3CF6288}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="UI" ID="{EDA45B1C-629C-46C0-ABE2-4B8041AE5CE5}" WorkUnitID="{881B6AFD-C15B-45D7-9A90-5260F7D4E557}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="UI_Fishing_Start_01" ID="{6C9C7929-6D49-43F8-ACF7-40EEA91A6B84}">
+													<Language>SFX</Language>
+													<AudioFile>Interface\UI_Fishing_Start_01.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="724777296"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists/>
+											<ActiveSourceList>
+												<ActiveSource Name="UI_Fishing_Start_01" ID="{6C9C7929-6D49-43F8-ACF7-40EEA91A6B84}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="UI_Fishing_Start_02" ID="{210DD38D-DC7E-4FD4-8AB7-8B2953F20BC5}" ShortID="154879281">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E1BE0BEA-3F5B-4A86-8597-3688E3CF6288}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="UI" ID="{EDA45B1C-629C-46C0-ABE2-4B8041AE5CE5}" WorkUnitID="{881B6AFD-C15B-45D7-9A90-5260F7D4E557}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="UI_Fishing_Start_02" ID="{E4F9C6F3-36EF-493B-929D-64DF004E5F55}">
+													<Language>SFX</Language>
+													<AudioFile>Interface\UI_Fishing_Start_02.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="333364801"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists/>
+											<ActiveSourceList>
+												<ActiveSource Name="UI_Fishing_Start_02" ID="{E4F9C6F3-36EF-493B-929D-64DF004E5F55}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="UI_Fishing_Start_03" ID="{075D0E9D-4915-47B4-B316-20C17554EFB7}" ShortID="785428898">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E1BE0BEA-3F5B-4A86-8597-3688E3CF6288}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="UI" ID="{EDA45B1C-629C-46C0-ABE2-4B8041AE5CE5}" WorkUnitID="{881B6AFD-C15B-45D7-9A90-5260F7D4E557}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="UI_Fishing_Start_03" ID="{22F130AC-E925-4915-B0D3-069B6489B659}">
+													<Language>SFX</Language>
+													<AudioFile>Interface\UI_Fishing_Start_03.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="63628660"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists/>
+											<ActiveSourceList>
+												<ActiveSource Name="UI_Fishing_Start_03" ID="{22F130AC-E925-4915-B0D3-069B6489B659}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+									<ObjectLists/>
+								</RandomSequenceContainer>
+							</ChildrenList>
+						</Folder>
 					</ChildrenList>
 					<ObjectLists/>
 				</ActorMixer>

@@ -24,7 +24,7 @@ MonoBehaviour:
     ParentPath: Virtual Acoustics\Default Work Unit
     guid: 33abdcf58137ce40b7eb446187c6fdcb
     GuidInternal: 
-    m_lastTime: -8585342961756836943
+    m_lastTime: -8585342961115325058
     List: []
   AuxBusWwu:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
@@ -38,7 +38,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: fd6a1b885bc1d7459a905260f7d4e557
     GuidInternal: 
-    m_lastTime: -8585318108952723193
+    m_lastTime: -8585318547210583969
     List:
     - name: Amb
       guid: e3226772b05ce34396d5b56cfeea695a
@@ -209,7 +209,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 081c80301739f54fb5562f33bfa0f0d6
     GuidInternal: 
-    m_lastTime: -8585342961756846911
+    m_lastTime: -8585342961115345077
     List:
     - name: Ambience
       guid: 8e6bf2d438f6a74f977f2c01ccccd741
@@ -293,8 +293,105 @@ MonoBehaviour:
     ParentPath: Events\Ambience
     guid: dcb74008d3ee9a459e3fb74d80a11274
     GuidInternal: 
-    m_lastTime: -8585342961759868843
-    List: []
+    m_lastTime: -8585317123859675838
+    List:
+    - name: Amb_3D
+      guid: 5e059ba0d81b7e4c8f36991f3b55e564
+      id: 2182414867
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Ambience
+        ObjectType: 12
+        guid: dcb74008d3ee9a459e3fb74d80a11274
+      - ElementName: Amb_3D
+        ObjectType: 4
+        guid: 5e059ba0d81b7e4c8f36991f3b55e564
+      Path: Events\Ambience\Amb_3D
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Ambience_Ground_Fishdrop
+      guid: a331f2c7f6c2f646b49e367ad7e1a3ad
+      id: 2480631109
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Ambience
+        ObjectType: 12
+        guid: dcb74008d3ee9a459e3fb74d80a11274
+      - ElementName: Amb_3D
+        ObjectType: 4
+        guid: 5e059ba0d81b7e4c8f36991f3b55e564
+      - ElementName: Ambience_Ground_Fishdrop
+        ObjectType: 3
+        guid: a331f2c7f6c2f646b49e367ad7e1a3ad
+      Path: Events\Ambience\Amb_3D\Ambience_Ground_Fishdrop
+      maxAttenuation: 0
+      maxDuration: 0.795625
+      minDuration: 0.455458
+    - name: Ambience_Lake
+      guid: b0ecdd8a9cb10c4f915d4032696549db
+      id: 2314053613
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Ambience
+        ObjectType: 12
+        guid: dcb74008d3ee9a459e3fb74d80a11274
+      - ElementName: Amb_3D
+        ObjectType: 4
+        guid: 5e059ba0d81b7e4c8f36991f3b55e564
+      - ElementName: Ambience_Lake
+        ObjectType: 3
+        guid: b0ecdd8a9cb10c4f915d4032696549db
+      Path: Events\Ambience\Amb_3D\Ambience_Lake
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Ambience_Lake_Fishdrop
+      guid: a41466b0ee6435459315b26f9430941d
+      id: 1326028445
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Ambience
+        ObjectType: 12
+        guid: dcb74008d3ee9a459e3fb74d80a11274
+      - ElementName: Amb_3D
+        ObjectType: 4
+        guid: 5e059ba0d81b7e4c8f36991f3b55e564
+      - ElementName: Ambience_Lake_Fishdrop
+        ObjectType: 3
+        guid: a41466b0ee6435459315b26f9430941d
+      Path: Events\Ambience\Amb_3D\Ambience_Lake_Fishdrop
+      maxAttenuation: 0
+      maxDuration: 2.037208
+      minDuration: 1.875854
+    - name: Ambience_Lake_Playerfall
+      guid: 709646a2d69da2418c4d2f200cdef3f0
+      id: 686852632
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Ambience
+        ObjectType: 12
+        guid: dcb74008d3ee9a459e3fb74d80a11274
+      - ElementName: Amb_3D
+        ObjectType: 4
+        guid: 5e059ba0d81b7e4c8f36991f3b55e564
+      - ElementName: Ambience_Lake_Playerfall
+        ObjectType: 3
+        guid: 709646a2d69da2418c4d2f200cdef3f0
+      Path: Events\Ambience\Amb_3D\Ambience_Lake_Playerfall
+      maxAttenuation: 0
+      maxDuration: 3.333333
+      minDuration: 2.275271
   - PhysicalPath: Events\Default Work Unit.wwu
     PathAndIcons:
     - ElementName: Events
@@ -306,7 +403,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 5ac087d2afb3a64e8983c9ccac58c48f
     GuidInternal: 
-    m_lastTime: -8585319004400134999
+    m_lastTime: -8585317123859605777
     List: []
   - PhysicalPath: Events\Interface.wwu
     PathAndIcons:
@@ -319,7 +416,7 @@ MonoBehaviour:
     ParentPath: Events\Interface
     guid: 1fbcdad6b5879f4d956f5aae2fdc5202
     GuidInternal: 
-    m_lastTime: -8585323504376500516
+    m_lastTime: -8585317144285650852
     List:
     - name: General
       guid: dbd929764abad3479d5bda6af3adbdf6
@@ -335,6 +432,23 @@ MonoBehaviour:
         ObjectType: 4
         guid: dbd929764abad3479d5bda6af3adbdf6
       Path: Events\Interface\General
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Ingame
+      guid: 901de10b4a432c4686b54aa84ca8f813
+      id: 984691642
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Interface
+        ObjectType: 12
+        guid: 1fbcdad6b5879f4d956f5aae2fdc5202
+      - ElementName: Ingame
+        ObjectType: 4
+        guid: 901de10b4a432c4686b54aa84ca8f813
+      Path: Events\Interface\Ingame
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -356,8 +470,8 @@ MonoBehaviour:
         guid: 119a3571b783be46ba9517438eaf15d0
       Path: Events\Interface\General\UI_Button_Click_Neg
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0.452417
+      minDuration: 0.452417
     - name: UI_Button_Click_Pos
       guid: ff08db1b98d8b74a93af92001f8e9b7b
       id: 1729881340
@@ -376,8 +490,8 @@ MonoBehaviour:
         guid: ff08db1b98d8b74a93af92001f8e9b7b
       Path: Events\Interface\General\UI_Button_Click_Pos
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0.379667
+      minDuration: 0.379667
     - name: UI_Button_Enable
       guid: ddc81f88f5532849ac3a3f99ccb0d84a
       id: 4004560084
@@ -396,8 +510,8 @@ MonoBehaviour:
         guid: ddc81f88f5532849ac3a3f99ccb0d84a
       Path: Events\Interface\General\UI_Button_Enable
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0.069312
+      minDuration: 0.069312
     - name: UI_Button_Leave
       guid: d1c106dd3d89474d9d2ae9e75f1e407e
       id: 4078704050
@@ -416,8 +530,8 @@ MonoBehaviour:
         guid: d1c106dd3d89474d9d2ae9e75f1e407e
       Path: Events\Interface\General\UI_Button_Leave
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0.641042
+      minDuration: 0.641042
     - name: UI_Button_Ready
       guid: 9a5fa6c64a552a4fa9baea575bec3153
       id: 186347966
@@ -436,8 +550,8 @@ MonoBehaviour:
         guid: 9a5fa6c64a552a4fa9baea575bec3153
       Path: Events\Interface\General\UI_Button_Ready
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0.586375
+      minDuration: 0.586375
     - name: UI_Button_Start
       guid: 36d164d0578e8e4ea33f37711c00cbc1
       id: 1937610011
@@ -456,8 +570,8 @@ MonoBehaviour:
         guid: 36d164d0578e8e4ea33f37711c00cbc1
       Path: Events\Interface\General\UI_Button_Start
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 1.031125
+      minDuration: 1.031125
     - name: UI_Click
       guid: 87378c1a6a1f9649b82da4a9f002327f
       id: 2249769530
@@ -476,8 +590,168 @@ MonoBehaviour:
         guid: 87378c1a6a1f9649b82da4a9f002327f
       Path: Events\Interface\General\UI_Click
       maxAttenuation: 0
+      maxDuration: 0.377167
+      minDuration: 0.377167
+    - name: UI_Fishing_End
+      guid: 0a4bf29b5b2f4c408d124b04f0684052
+      id: 3315380374
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Interface
+        ObjectType: 12
+        guid: 1fbcdad6b5879f4d956f5aae2fdc5202
+      - ElementName: Ingame
+        ObjectType: 4
+        guid: 901de10b4a432c4686b54aa84ca8f813
+      - ElementName: UI_Fishing_End
+        ObjectType: 3
+        guid: 0a4bf29b5b2f4c408d124b04f0684052
+      Path: Events\Interface\Ingame\UI_Fishing_End
+      maxAttenuation: 0
+      maxDuration: 0.943042
+      minDuration: 0.943042
+    - name: UI_Fishing_Loop
+      guid: 54813161911b3e40a04c2467190b65d2
+      id: 2557893665
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Interface
+        ObjectType: 12
+        guid: 1fbcdad6b5879f4d956f5aae2fdc5202
+      - ElementName: Ingame
+        ObjectType: 4
+        guid: 901de10b4a432c4686b54aa84ca8f813
+      - ElementName: UI_Fishing_Loop
+        ObjectType: 3
+        guid: 54813161911b3e40a04c2467190b65d2
+      Path: Events\Interface\Ingame\UI_Fishing_Loop
+      maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: UI_Fishing_N
+      guid: b8475eded8266c418ed98795f822968b
+      id: 3769850483
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Interface
+        ObjectType: 12
+        guid: 1fbcdad6b5879f4d956f5aae2fdc5202
+      - ElementName: Ingame
+        ObjectType: 4
+        guid: 901de10b4a432c4686b54aa84ca8f813
+      - ElementName: UI_Fishing_N
+        ObjectType: 3
+        guid: b8475eded8266c418ed98795f822968b
+      Path: Events\Interface\Ingame\UI_Fishing_N
+      maxAttenuation: 0
+      maxDuration: 1.31825
+      minDuration: 1.31825
+    - name: UI_Fishing_PhB
+      guid: 7931829d9c48e041b84a6e043e6d72f1
+      id: 3984763919
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Interface
+        ObjectType: 12
+        guid: 1fbcdad6b5879f4d956f5aae2fdc5202
+      - ElementName: Ingame
+        ObjectType: 4
+        guid: 901de10b4a432c4686b54aa84ca8f813
+      - ElementName: UI_Fishing_PhB
+        ObjectType: 3
+        guid: 7931829d9c48e041b84a6e043e6d72f1
+      Path: Events\Interface\Ingame\UI_Fishing_PhB
+      maxAttenuation: 0
+      maxDuration: 1.989542
+      minDuration: 1.989542
+    - name: UI_Fishing_PhC
+      guid: 7ddea1fbdf2bac44828b779861e50542
+      id: 3984763918
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Interface
+        ObjectType: 12
+        guid: 1fbcdad6b5879f4d956f5aae2fdc5202
+      - ElementName: Ingame
+        ObjectType: 4
+        guid: 901de10b4a432c4686b54aa84ca8f813
+      - ElementName: UI_Fishing_PhC
+        ObjectType: 3
+        guid: 7ddea1fbdf2bac44828b779861e50542
+      Path: Events\Interface\Ingame\UI_Fishing_PhC
+      maxAttenuation: 0
+      maxDuration: 2.120854
+      minDuration: 2.120854
+    - name: UI_Fishing_R
+      guid: 44ce16cacfc3cb44b53d6d5a3094d55c
+      id: 3769850479
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Interface
+        ObjectType: 12
+        guid: 1fbcdad6b5879f4d956f5aae2fdc5202
+      - ElementName: Ingame
+        ObjectType: 4
+        guid: 901de10b4a432c4686b54aa84ca8f813
+      - ElementName: UI_Fishing_R
+        ObjectType: 3
+        guid: 44ce16cacfc3cb44b53d6d5a3094d55c
+      Path: Events\Interface\Ingame\UI_Fishing_R
+      maxAttenuation: 0
+      maxDuration: 1.580542
+      minDuration: 1.580542
+    - name: UI_Fishing_S
+      guid: ec06f151d4ebc14ca626d4613b9cd35c
+      id: 3769850478
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Interface
+        ObjectType: 12
+        guid: 1fbcdad6b5879f4d956f5aae2fdc5202
+      - ElementName: Ingame
+        ObjectType: 4
+        guid: 901de10b4a432c4686b54aa84ca8f813
+      - ElementName: UI_Fishing_S
+        ObjectType: 3
+        guid: ec06f151d4ebc14ca626d4613b9cd35c
+      Path: Events\Interface\Ingame\UI_Fishing_S
+      maxAttenuation: 0
+      maxDuration: 1.578208
+      minDuration: 1.578208
+    - name: UI_Fishing_Start
+      guid: 7dc70e5fef2fb94ea3f5813ae2eebd59
+      id: 402900349
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Interface
+        ObjectType: 12
+        guid: 1fbcdad6b5879f4d956f5aae2fdc5202
+      - ElementName: Ingame
+        ObjectType: 4
+        guid: 901de10b4a432c4686b54aa84ca8f813
+      - ElementName: UI_Fishing_Start
+        ObjectType: 3
+        guid: 7dc70e5fef2fb94ea3f5813ae2eebd59
+      Path: Events\Interface\Ingame\UI_Fishing_Start
+      maxAttenuation: 0
+      maxDuration: 2
+      minDuration: 1.143188
   - PhysicalPath: Events\Music.wwu
     PathAndIcons:
     - ElementName: Events
@@ -489,7 +763,7 @@ MonoBehaviour:
     ParentPath: Events\Music
     guid: 95f48089720f8642aeccba4b14f185e2
     GuidInternal: 
-    m_lastTime: -8585318727960119582
+    m_lastTime: -8585317742168514218
     List:
     - name: Music_Play
       guid: d1821400aaacd748a0364d1529862b69
@@ -519,7 +793,7 @@ MonoBehaviour:
     ParentPath: Events\NPC
     guid: 80431ce63b5b1b49a6b68ec8f3a76d87
     GuidInternal: 
-    m_lastTime: -8585342961759858873
+    m_lastTime: -8585342961117783426
     List: []
   - PhysicalPath: Events\Player.wwu
     PathAndIcons:
@@ -532,7 +806,7 @@ MonoBehaviour:
     ParentPath: Events\Player
     guid: c72524b77b0b7d4a8e03f2574a7e1afa
     GuidInternal: 
-    m_lastTime: -8585342961759858873
+    m_lastTime: -8585342961117783426
     List: []
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
@@ -546,7 +820,7 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: 5b60ca76b2218742930c74282c21b47a
     GuidInternal: 
-    m_lastTime: -8585323504376480569
+    m_lastTime: -8585318547218129580
     List:
     - name: Volume
       guid: a0f38bc4cbf8de4ead48cebed624ebd1
@@ -659,7 +933,7 @@ MonoBehaviour:
     ParentPath: States\Default Work Unit
     guid: b768e8c006b3df4bb6507824fcfc4107
     GuidInternal: 
-    m_lastTime: -8585323504376153900
+    m_lastTime: -8585318547209001130
     List:
     - name: BGM
       guid: 9709ffecc2a66c4bb67a5713a05098a2
@@ -771,7 +1045,7 @@ MonoBehaviour:
     ParentPath: Switches\Default Work Unit
     guid: 9fb0ec05e1de064b86b766dc3dff1b35
     GuidInternal: 
-    m_lastTime: -8585342961756836943
+    m_lastTime: -8585323883868676708
     List: []
   TriggerWwu:
   - PhysicalPath: Triggers\Default Work Unit.wwu
@@ -785,7 +1059,7 @@ MonoBehaviour:
     ParentPath: Triggers\Default Work Unit
     guid: d93ec54ad49c4343bd068b054b96a8bd
     GuidInternal: 
-    m_lastTime: -8585342961756836943
+    m_lastTime: -8585342961115325058
     List: []
   ExpandedFileSystemItemIds: 
   ExpandedWaapiItemIds: 

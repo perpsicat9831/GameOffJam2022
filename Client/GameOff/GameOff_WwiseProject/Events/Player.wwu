@@ -1,6 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{B72425C7-0B7B-4A7D-8E03-F2574A7E1AFA}" SchemaVersion="103">
 	<Events>
-		<WorkUnit Name="Player" ID="{B72425C7-0B7B-4A7D-8E03-F2574A7E1AFA}" PersistMode="Standalone"/>
+		<WorkUnit Name="Player" ID="{B72425C7-0B7B-4A7D-8E03-F2574A7E1AFA}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="Player_Ram_Imp" ID="{641D9A0C-6C01-441A-AF41-FA29137E8861}">
+					<ChildrenList>
+						<Action Name="" ID="{6FE6E62B-BF9C-4CCF-98E5-396A2A21D750}" ShortID="390120122">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Player_Ram_Imp" ID="{3870646C-02E3-4CC4-8056-553B65C179F3}" WorkUnitID="{0CABCEF5-9317-4674-89AE-FADB8BB899AD}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Player_Ram" ID="{0B5A213A-7008-4110-8E5A-878789CE7281}">
+					<ChildrenList>
+						<Action Name="" ID="{D83E9B0E-2907-4126-94C0-9D525A791E63}" ShortID="463087260">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Player_Ram" ID="{91959FA8-5FCC-4E6D-985B-8050E770C14B}" WorkUnitID="{0CABCEF5-9317-4674-89AE-FADB8BB899AD}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
 	</Events>
 </WwiseDocument>

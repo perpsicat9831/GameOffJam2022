@@ -12,6 +12,172 @@
 							<ObjectRef Name="Player" ID="{54E4C139-233B-4730-B2AF-FC9A36B875DB}" WorkUnitID="{881B6AFD-C15B-45D7-9A90-5260F7D4E557}"/>
 						</Reference>
 					</ReferenceList>
+					<ChildrenList>
+						<RandomSequenceContainer Name="Player_Ram" ID="{91959FA8-5FCC-4E6D-985B-8050E770C14B}" ShortID="641523956">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E1BE0BEA-3F5B-4A86-8597-3688E3CF6288}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{881B6AFD-C15B-45D7-9A90-5260F7D4E557}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="Player_Ram_01" ID="{6586233E-059A-4AEC-8DA3-3D72DF494487}" ShortID="510778023">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E1BE0BEA-3F5B-4A86-8597-3688E3CF6288}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Player" ID="{54E4C139-233B-4730-B2AF-FC9A36B875DB}" WorkUnitID="{881B6AFD-C15B-45D7-9A90-5260F7D4E557}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Player_Ram_01" ID="{4C43B2DC-9576-4D7F-A7DE-60BEC5D17201}">
+											<Language>SFX</Language>
+											<AudioFile>Player\Player_Ram_01.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="612198336"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="Player_Ram_01" ID="{4C43B2DC-9576-4D7F-A7DE-60BEC5D17201}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Player_Ram_02" ID="{B68E2309-890A-48A6-A2F3-C136A8B9391D}" ShortID="1049399868">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E1BE0BEA-3F5B-4A86-8597-3688E3CF6288}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Player" ID="{54E4C139-233B-4730-B2AF-FC9A36B875DB}" WorkUnitID="{881B6AFD-C15B-45D7-9A90-5260F7D4E557}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Player_Ram_02" ID="{6D38BDAE-4EE5-4048-823D-C94B9E803410}">
+											<Language>SFX</Language>
+											<AudioFile>Player\Player_Ram_02.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="250378078"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="Player_Ram_02" ID="{6D38BDAE-4EE5-4048-823D-C94B9E803410}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Player_Ram_03" ID="{E3D13283-B3BF-487D-BE30-8BEE1E36EFFF}" ShortID="1010314126">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E1BE0BEA-3F5B-4A86-8597-3688E3CF6288}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Player" ID="{54E4C139-233B-4730-B2AF-FC9A36B875DB}" WorkUnitID="{881B6AFD-C15B-45D7-9A90-5260F7D4E557}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Player_Ram_03" ID="{EE307B4E-6A44-4F8E-B478-EAEA269646AE}">
+											<Language>SFX</Language>
+											<AudioFile>Player\Player_Ram_03.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="682669627"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="Player_Ram_03" ID="{EE307B4E-6A44-4F8E-B478-EAEA269646AE}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+							<ObjectLists/>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="Player_Ram_Imp" ID="{3870646C-02E3-4CC4-8056-553B65C179F3}" ShortID="795344645">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E1BE0BEA-3F5B-4A86-8597-3688E3CF6288}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{881B6AFD-C15B-45D7-9A90-5260F7D4E557}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="Player_Ram_Imp_01" ID="{683F49B6-2A36-414E-9B29-3F78B566F294}" ShortID="534153475">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E1BE0BEA-3F5B-4A86-8597-3688E3CF6288}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Player" ID="{54E4C139-233B-4730-B2AF-FC9A36B875DB}" WorkUnitID="{881B6AFD-C15B-45D7-9A90-5260F7D4E557}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Player_Ram_Imp_01" ID="{B7968981-570C-4151-A986-43C008EE247D}">
+											<Language>SFX</Language>
+											<AudioFile>Player\Player_Ram_Imp_01.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="625835563"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="Player_Ram_Imp_01" ID="{B7968981-570C-4151-A986-43C008EE247D}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Player_Ram_Imp_02" ID="{0283D3F0-44A3-44D2-A589-25A92BB8932E}" ShortID="768038830">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E1BE0BEA-3F5B-4A86-8597-3688E3CF6288}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Player" ID="{54E4C139-233B-4730-B2AF-FC9A36B875DB}" WorkUnitID="{881B6AFD-C15B-45D7-9A90-5260F7D4E557}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Player_Ram_Imp_02" ID="{F70F3E79-9758-4741-856A-F43322CDB164}">
+											<Language>SFX</Language>
+											<AudioFile>Player\Player_Ram_Imp_02.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="951302679"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="Player_Ram_Imp_02" ID="{F70F3E79-9758-4741-856A-F43322CDB164}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Player_Ram_Imp_03" ID="{A2BD1B7F-1BEE-462C-8191-23717B861CED}" ShortID="459867716">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E1BE0BEA-3F5B-4A86-8597-3688E3CF6288}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Player" ID="{54E4C139-233B-4730-B2AF-FC9A36B875DB}" WorkUnitID="{881B6AFD-C15B-45D7-9A90-5260F7D4E557}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Player_Ram_Imp_03" ID="{44CC7099-5F2B-476B-B316-53E7CA49C9CF}">
+											<Language>SFX</Language>
+											<AudioFile>Player\Player_Ram_Imp_03.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="328318004"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="Player_Ram_Imp_03" ID="{44CC7099-5F2B-476B-B316-53E7CA49C9CF}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+							<ObjectLists/>
+						</RandomSequenceContainer>
+					</ChildrenList>
 					<ObjectLists/>
 				</ActorMixer>
 			</ChildrenList>

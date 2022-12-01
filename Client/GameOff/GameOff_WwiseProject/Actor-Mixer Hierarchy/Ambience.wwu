@@ -12,6 +12,290 @@
 							<ObjectRef Name="Amb" ID="{726722E3-5CB0-43E3-96D5-B56CFEEA695A}" WorkUnitID="{881B6AFD-C15B-45D7-9A90-5260F7D4E557}"/>
 						</Reference>
 					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="Ambience_Lake" ID="{F05862BC-DB64-4BED-A894-D9D357408E52}" ShortID="617224861">
+							<PropertyList>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="IsStreamingEnabled" Type="bool">
+									<ValueList>
+										<Value>True</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>7</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E1BE0BEA-3F5B-4A86-8597-3688E3CF6288}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{881B6AFD-C15B-45D7-9A90-5260F7D4E557}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Ambience_Lake" ID="{156CBF1D-E6D7-45B7-AEB6-1AE71611F3D6}">
+									<Language>SFX</Language>
+									<AudioFile>Ambience\Ambience_Lake.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="278185751"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="Ambience_Lake" ID="{156CBF1D-E6D7-45B7-AEB6-1AE71611F3D6}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<RandomSequenceContainer Name="Ambience_Ground_Fishdrop" ID="{071F0483-695C-4097-B563-964DBDB5B885}" ShortID="566761506">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E1BE0BEA-3F5B-4A86-8597-3688E3CF6288}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{881B6AFD-C15B-45D7-9A90-5260F7D4E557}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="Ambience_Ground_Fishdrop_01" ID="{0B2FAD5F-BF13-4F92-9C78-B24F53539DF7}" ShortID="784331091">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E1BE0BEA-3F5B-4A86-8597-3688E3CF6288}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Amb" ID="{726722E3-5CB0-43E3-96D5-B56CFEEA695A}" WorkUnitID="{881B6AFD-C15B-45D7-9A90-5260F7D4E557}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Ambience_Ground_Fishdrop_01" ID="{7B3419E1-9CBB-4BAD-8ABC-6232BEFDD78E}">
+											<Language>SFX</Language>
+											<AudioFile>Ambience\Ambience_Ground_Fishdrop_01.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="622413733"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="Ambience_Ground_Fishdrop_01" ID="{7B3419E1-9CBB-4BAD-8ABC-6232BEFDD78E}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Ambience_Ground_Fishdrop_02" ID="{CDFF021C-9C7B-45C4-A27C-DCF5E2016795}" ShortID="717032784">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E1BE0BEA-3F5B-4A86-8597-3688E3CF6288}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Amb" ID="{726722E3-5CB0-43E3-96D5-B56CFEEA695A}" WorkUnitID="{881B6AFD-C15B-45D7-9A90-5260F7D4E557}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Ambience_Ground_Fishdrop_02" ID="{EA8C45D8-7887-413A-90E7-42B61DA430B7}">
+											<Language>SFX</Language>
+											<AudioFile>Ambience\Ambience_Ground_Fishdrop_02.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="685187306"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="Ambience_Ground_Fishdrop_02" ID="{EA8C45D8-7887-413A-90E7-42B61DA430B7}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Ambience_Ground_Fishdrop_03" ID="{6437B81E-142F-4CBB-8D98-6DF9F8E5B803}" ShortID="108761503">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E1BE0BEA-3F5B-4A86-8597-3688E3CF6288}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Amb" ID="{726722E3-5CB0-43E3-96D5-B56CFEEA695A}" WorkUnitID="{881B6AFD-C15B-45D7-9A90-5260F7D4E557}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Ambience_Ground_Fishdrop_03" ID="{65B2E6F4-36D9-4E20-97FE-DC51CFD2092D}">
+											<Language>SFX</Language>
+											<AudioFile>Ambience\Ambience_Ground_Fishdrop_03.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="832665061"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="Ambience_Ground_Fishdrop_03" ID="{65B2E6F4-36D9-4E20-97FE-DC51CFD2092D}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+							<ObjectLists/>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="Ambience_Lake_Fishdrop" ID="{3E43DC89-E284-460A-A0BF-82DA29C171F7}" ShortID="1048338438">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E1BE0BEA-3F5B-4A86-8597-3688E3CF6288}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{881B6AFD-C15B-45D7-9A90-5260F7D4E557}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="Ambience_Lake_Fishdrop_01" ID="{59B525CD-72F4-40A8-AFCF-3CC0BA2B1B8E}" ShortID="33573254">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E1BE0BEA-3F5B-4A86-8597-3688E3CF6288}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Amb" ID="{726722E3-5CB0-43E3-96D5-B56CFEEA695A}" WorkUnitID="{881B6AFD-C15B-45D7-9A90-5260F7D4E557}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Ambience_Lake_Fishdrop_01" ID="{CCC9B8FE-8BA6-4A5E-911C-2E15F7CDFB18}">
+											<Language>SFX</Language>
+											<AudioFile>Ambience\Ambience_Lake_Fishdrop_01.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="773415116"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="Ambience_Lake_Fishdrop_01" ID="{CCC9B8FE-8BA6-4A5E-911C-2E15F7CDFB18}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Ambience_Lake_Fishdrop_02" ID="{FE362CD9-0E04-4F46-8619-061C2E505ACE}" ShortID="692930535">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E1BE0BEA-3F5B-4A86-8597-3688E3CF6288}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Amb" ID="{726722E3-5CB0-43E3-96D5-B56CFEEA695A}" WorkUnitID="{881B6AFD-C15B-45D7-9A90-5260F7D4E557}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Ambience_Lake_Fishdrop_02" ID="{48FA6663-0219-4BE6-9875-B065FBBD67B2}">
+											<Language>SFX</Language>
+											<AudioFile>Ambience\Ambience_Lake_Fishdrop_02.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="746461817"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="Ambience_Lake_Fishdrop_02" ID="{48FA6663-0219-4BE6-9875-B065FBBD67B2}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Ambience_Lake_Fishdrop_03" ID="{512B8729-ACAB-47A9-98BA-60C6092C59F1}" ShortID="125607236">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E1BE0BEA-3F5B-4A86-8597-3688E3CF6288}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Amb" ID="{726722E3-5CB0-43E3-96D5-B56CFEEA695A}" WorkUnitID="{881B6AFD-C15B-45D7-9A90-5260F7D4E557}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Ambience_Lake_Fishdrop_03" ID="{37044445-FF97-49FC-86FC-6086A450B395}">
+											<Language>SFX</Language>
+											<AudioFile>Ambience\Ambience_Lake_Fishdrop_03.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="729976483"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="Ambience_Lake_Fishdrop_03" ID="{37044445-FF97-49FC-86FC-6086A450B395}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+							<ObjectLists/>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="Ambience_Lake_Playerfall" ID="{3F1F4A5A-B32E-4E5A-83A4-4DF8F58F80AD}" ShortID="581864097">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E1BE0BEA-3F5B-4A86-8597-3688E3CF6288}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{881B6AFD-C15B-45D7-9A90-5260F7D4E557}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="Ambience_Lake_Playerfall_01" ID="{30F2EEE6-6B27-420C-B923-012A4FBF5D7D}" ShortID="598792892">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E1BE0BEA-3F5B-4A86-8597-3688E3CF6288}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Amb" ID="{726722E3-5CB0-43E3-96D5-B56CFEEA695A}" WorkUnitID="{881B6AFD-C15B-45D7-9A90-5260F7D4E557}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Ambience_Lake_Playerfall_01" ID="{1658F7F1-AF0F-4FF2-B530-DFD3495B84B8}">
+											<Language>SFX</Language>
+											<AudioFile>Ambience\Ambience_Lake_Playerfall_01.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="346385774"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="Ambience_Lake_Playerfall_01" ID="{1658F7F1-AF0F-4FF2-B530-DFD3495B84B8}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Ambience_Lake_Playerfall_02" ID="{C9A9F5FC-5A7B-4418-8C50-ED08059B8DD6}" ShortID="208380582">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E1BE0BEA-3F5B-4A86-8597-3688E3CF6288}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Amb" ID="{726722E3-5CB0-43E3-96D5-B56CFEEA695A}" WorkUnitID="{881B6AFD-C15B-45D7-9A90-5260F7D4E557}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Ambience_Lake_Playerfall_02" ID="{43AFDBD9-BA68-4722-8F4D-8F1E672FCCFF}">
+											<Language>SFX</Language>
+											<AudioFile>Ambience\Ambience_Lake_Playerfall_02.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="453920644"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="Ambience_Lake_Playerfall_02" ID="{43AFDBD9-BA68-4722-8F4D-8F1E672FCCFF}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Ambience_Lake_Playerfall_03" ID="{0D8627B9-4575-4C7F-AA72-04360F58DADE}" ShortID="609134888">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E1BE0BEA-3F5B-4A86-8597-3688E3CF6288}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Amb" ID="{726722E3-5CB0-43E3-96D5-B56CFEEA695A}" WorkUnitID="{881B6AFD-C15B-45D7-9A90-5260F7D4E557}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Ambience_Lake_Playerfall_03" ID="{7506418C-E4A0-4E03-A845-41DA9FC45A9B}">
+											<Language>SFX</Language>
+											<AudioFile>Ambience\Ambience_Lake_Playerfall_03.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="459922195"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="Ambience_Lake_Playerfall_03" ID="{7506418C-E4A0-4E03-A845-41DA9FC45A9B}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+							<ObjectLists/>
+						</RandomSequenceContainer>
+					</ChildrenList>
 					<ObjectLists/>
 				</ActorMixer>
 			</ChildrenList>

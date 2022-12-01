@@ -84,6 +84,108 @@
 						</Event>
 					</ChildrenList>
 				</Folder>
+				<Folder Name="Ingame" ID="{0BE11D90-434A-462C-86B5-4AA84CA8F813}" ShortID="1023908598">
+					<ChildrenList>
+						<Event Name="UI_Fishing_Start" ID="{5F0EC77D-2FEF-4EB9-A3F5-813AE2EEBD59}">
+							<ChildrenList>
+								<Action Name="" ID="{D613B31C-84D8-4353-BA06-31696E2257D2}" ShortID="911740880">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="UI_Fishing_Start" ID="{E5D7A935-5F1B-4A3E-AE35-4DD5913845C9}" WorkUnitID="{B1CABE8B-7D41-4667-A55F-48094AAB5C30}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="UI_Fishing_Loop" ID="{61318154-1B91-403E-A04C-2467190B65D2}">
+							<ChildrenList>
+								<Action Name="" ID="{3B730578-4ECB-4332-8103-E1DE72AFD5EC}" ShortID="908562697">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="UI_Fishing_Loop" ID="{93C66922-9E95-49B5-A978-6900EE55C66A}" WorkUnitID="{B1CABE8B-7D41-4667-A55F-48094AAB5C30}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="UI_Fishing_N" ID="{DE5E47B8-26D8-416C-8ED9-8795F822968B}">
+							<ChildrenList>
+								<Action Name="" ID="{95AFE9C4-8D07-4085-B747-3A00BD7EA8A9}" ShortID="580602698">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="UI_Fishing_N" ID="{AAD61066-5399-4F60-A0C0-3533AA0F1334}" WorkUnitID="{B1CABE8B-7D41-4667-A55F-48094AAB5C30}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="UI_Fishing_End" ID="{9BF24B0A-2F5B-404C-8D12-4B04F0684052}">
+							<ChildrenList>
+								<Action Name="" ID="{77683CB4-E862-4472-86C6-2060E3BD55EF}" ShortID="346306478">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="UI_Fishing_Loop" ID="{93C66922-9E95-49B5-A978-6900EE55C66A}" WorkUnitID="{B1CABE8B-7D41-4667-A55F-48094AAB5C30}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{9D165903-28BC-4844-A2D8-89738621C87B}" ShortID="997968057">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="UI_Fishing_End" ID="{E75A8E7E-582B-4875-B8FF-3AF82FA7E3EC}" WorkUnitID="{B1CABE8B-7D41-4667-A55F-48094AAB5C30}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="UI_Fishing_PhB" ID="{9D823179-489C-41E0-B84A-6E043E6D72F1}">
+							<ChildrenList>
+								<Action Name="" ID="{58EA3DFD-8B0D-4BF3-A40C-5E519868F80A}" ShortID="811254111">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="UI_Fishing_PhB" ID="{B887A808-0645-4CF2-BBBC-614E96F4500C}" WorkUnitID="{B1CABE8B-7D41-4667-A55F-48094AAB5C30}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="UI_Fishing_PhC" ID="{FBA1DE7D-2BDF-44AC-828B-779861E50542}">
+							<ChildrenList>
+								<Action Name="" ID="{1D327283-354F-45C4-AB7F-FD42C5116CA8}" ShortID="778748738">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="UI_Fishing_PhC" ID="{113E7E1F-8FC6-423D-8018-BC73B445D3B9}" WorkUnitID="{B1CABE8B-7D41-4667-A55F-48094AAB5C30}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="UI_Fishing_R" ID="{CA16CE44-C3CF-44CB-B53D-6D5A3094D55C}">
+							<ChildrenList>
+								<Action Name="" ID="{087D39CC-AAD6-48FA-98D9-388CA2B3171A}" ShortID="270947039">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="UI_Fishing_R" ID="{AC15AFA4-9225-433F-8530-1722F979AFA9}" WorkUnitID="{B1CABE8B-7D41-4667-A55F-48094AAB5C30}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="UI_Fishing_S" ID="{51F106EC-EBD4-4CC1-A626-D4613B9CD35C}">
+							<ChildrenList>
+								<Action Name="" ID="{27C9A41D-3337-4589-A8A2-87832462750F}" ShortID="260735839">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="UI_Fishing_S" ID="{398D99B1-9C00-4C15-A338-0D8536D80A73}" WorkUnitID="{B1CABE8B-7D41-4667-A55F-48094AAB5C30}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

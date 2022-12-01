@@ -13,7 +13,13 @@ namespace AK
 {
     namespace EVENTS
     {
+        static const AkUniqueID AMBIENCE_GROUND_FISHDROP = 2480631109U;
+        static const AkUniqueID AMBIENCE_LAKE = 2314053613U;
+        static const AkUniqueID AMBIENCE_LAKE_FISHDROP = 1326028445U;
+        static const AkUniqueID AMBIENCE_LAKE_PLAYERFALL = 686852632U;
         static const AkUniqueID MUSIC_PLAY = 202194903U;
+        static const AkUniqueID PLAYER_RAM = 1337349819U;
+        static const AkUniqueID PLAYER_RAM_IMP = 2062180764U;
         static const AkUniqueID UI_BUTTON_CLICK_NEG = 1020395736U;
         static const AkUniqueID UI_BUTTON_CLICK_POS = 1729881340U;
         static const AkUniqueID UI_BUTTON_ENABLE = 4004560084U;
@@ -21,6 +27,14 @@ namespace AK
         static const AkUniqueID UI_BUTTON_READY = 186347966U;
         static const AkUniqueID UI_BUTTON_START = 1937610011U;
         static const AkUniqueID UI_CLICK = 2249769530U;
+        static const AkUniqueID UI_FISHING_END = 3315380374U;
+        static const AkUniqueID UI_FISHING_LOOP = 2557893665U;
+        static const AkUniqueID UI_FISHING_N = 3769850483U;
+        static const AkUniqueID UI_FISHING_PHB = 3984763919U;
+        static const AkUniqueID UI_FISHING_PHC = 3984763918U;
+        static const AkUniqueID UI_FISHING_R = 3769850479U;
+        static const AkUniqueID UI_FISHING_S = 3769850478U;
+        static const AkUniqueID UI_FISHING_START = 402900349U;
     } // namespace EVENTS
 
     namespace STATES

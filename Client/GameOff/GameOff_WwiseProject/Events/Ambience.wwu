@@ -1,6 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{0840B7DC-EED3-459A-9E3F-B74D80A11274}" SchemaVersion="103">
 	<Events>
-		<WorkUnit Name="Ambience" ID="{0840B7DC-EED3-459A-9E3F-B74D80A11274}" PersistMode="Standalone"/>
+		<WorkUnit Name="Ambience" ID="{0840B7DC-EED3-459A-9E3F-B74D80A11274}" PersistMode="Standalone">
+			<ChildrenList>
+				<Folder Name="Amb_3D" ID="{A09B055E-1BD8-4C7E-8F36-991F3B55E564}" ShortID="625984401">
+					<ChildrenList>
+						<Event Name="Ambience_Ground_Fishdrop" ID="{C7F231A3-C2F6-46F6-B49E-367AD7E1A3AD}">
+							<ChildrenList>
+								<Action Name="" ID="{BB73323B-C1C3-4975-8C33-38CF9695F61F}" ShortID="62049889">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Ambience_Ground_Fishdrop" ID="{071F0483-695C-4097-B563-964DBDB5B885}" WorkUnitID="{D9FD1AC6-6BE6-4AE4-921F-BE35E2E3B99E}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Ambience_Lake_Playerfall" ID="{A2469670-9DD6-41A2-8C4D-2F200CDEF3F0}">
+							<ChildrenList>
+								<Action Name="" ID="{13176F5B-20D4-4E7C-AA37-3EB254CB109B}" ShortID="332125413">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Ambience_Lake_Playerfall" ID="{3F1F4A5A-B32E-4E5A-83A4-4DF8F58F80AD}" WorkUnitID="{D9FD1AC6-6BE6-4AE4-921F-BE35E2E3B99E}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Ambience_Lake" ID="{8ADDECB0-B19C-4F0C-915D-4032696549DB}">
+							<ChildrenList>
+								<Action Name="" ID="{701BE470-26F2-45B3-B791-E442C0DFAF38}" ShortID="501673878">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Ambience_Lake" ID="{F05862BC-DB64-4BED-A894-D9D357408E52}" WorkUnitID="{D9FD1AC6-6BE6-4AE4-921F-BE35E2E3B99E}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Ambience_Lake_Fishdrop" ID="{B06614A4-64EE-4535-9315-B26F9430941D}">
+							<ChildrenList>
+								<Action Name="" ID="{02632A88-7EB3-4D81-90EB-0E9FAC8BE2FA}" ShortID="348268901">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Ambience_Lake_Fishdrop" ID="{3E43DC89-E284-460A-A0BF-82DA29C171F7}" WorkUnitID="{D9FD1AC6-6BE6-4AE4-921F-BE35E2E3B99E}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+			</ChildrenList>
+		</WorkUnit>
 	</Events>
 </WwiseDocument>
