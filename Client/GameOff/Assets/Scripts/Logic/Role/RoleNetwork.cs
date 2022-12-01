@@ -20,8 +20,10 @@ namespace Logic
         [SerializeField]
         Transform followTarget;
 
-        private string abRolePath = "Prefab/Role/Cat/Cat";
-        private string abRolePrefabName = "Cat";
+        //private string abRolePath = "Prefab/Role/Cat/Cat";
+        //private string abRolePrefabName = "Cat";
+        private string abRolePath = "Prefab/Role/Cat/Cat2";
+        private string abRolePrefabName = "Cat2";
 
         private Action actRoleDead;
         private GameObject goBaseRole;
