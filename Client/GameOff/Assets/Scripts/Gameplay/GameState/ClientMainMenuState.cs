@@ -33,6 +33,7 @@ namespace Unity.BossRoom.Gameplay.GameState
 
         protected override void Awake()
         {
+            
             base.Awake();
 
             if (string.IsNullOrEmpty(Application.cloudProjectId))

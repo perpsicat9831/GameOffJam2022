@@ -26,6 +26,11 @@ namespace Logic
         private RoleController roleControlMono;
 
 
+        private void Awake()
+        {
+            AkSoundEngine.SetState("BGM", "Gameplay");
+        }
+
         public void SpawnRoles()
         {
             if (IsServer)
